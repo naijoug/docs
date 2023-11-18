@@ -1,0 +1,19 @@
+name: sync-to-gitee
+on:
+  push:
+    branches:
+      - gh-pages
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror the Github organization repos to Gitee.
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: "github/naijoug"
+          dst: "gitee/naijoug"
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: "docs"
+          force_update: true
+          debug: true
