@@ -33,6 +33,14 @@ $ pnpm docs:build   # 构建
 
 > GitHub Actions
 
+```shell
+# 创建新的空分支 gh-pages
+$ git checkout --orphan gh-pages
+# 清空分支的暂存内容
+$ git rm -rf .
+```
 
-- [ghaction-github-pages](https://github.com/crazy-max/ghaction-github-pages) : 部署到 GitHub Pages
-- [hub-mirror-action](https://github.com/Yikun/hub-mirror-action) : 同步 GitHub 到 Gitee
+```yml
+
+```
+
