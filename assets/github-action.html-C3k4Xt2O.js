@@ -1,1 +1,0 @@
-import{_ as t,o as a,c,a as e,b as o}from"./app-iaALpFdf.js";const i={},n=e("h1",{id:"github-actions",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#github-actions","aria-hidden":"true"},"#"),o(" Github Actions")],-1),s=[n];function r(_,h){return a(),c("div",null,s)}const u=t(i,[["render",r],["__file","github-action.html.vue"]]);export{u as default};
