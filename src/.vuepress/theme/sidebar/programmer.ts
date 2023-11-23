@@ -6,11 +6,11 @@ export const programmer = arraySidebar([
     collapsible: true, children: "structure",
   },
   {
-    text: "网络知识", icon: "sitemap", link: "network/", prefix: "network/",
+    text: "操作系统", icon: "microchip", link: "system/", prefix: "system/",
     collapsible: true, children: "structure",
   },
   {
-    text: "操作系统", icon: "microchip", link: "system/", prefix: "system/",
+    text: "网络知识", icon: "sitemap", link: "network/", prefix: "network/",
     collapsible: true, children: "structure",
   },
   {

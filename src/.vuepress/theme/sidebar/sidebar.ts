@@ -13,5 +13,5 @@ export default sidebar({
   "/trending/": trending,
   
   // --- fallback ---
-  "/": [""],
+  "/": ["", "guide"],
 });
