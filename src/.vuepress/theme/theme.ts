@@ -1,22 +1,25 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
+import sidebar from "./sidebar/sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://naijoug.github.io/docs",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "naijoug",
+    url: "https://github.com/naijoug",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: "fontawesome",
+  // iconPrefix: "fas fa-", // 设置图标前缀
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "naijoug/docs",
 
   docsDir: "src",
+
+  //pure: true,
 
   // navbar
   navbar,
@@ -24,29 +27,22 @@ export default hopeTheme({
   // sidebar
   sidebar,
 
-  footer: "默认页脚",
-
+  footer: "",
   displayFooter: true,
-
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-    },
-  },
-
-  // page meta
-  metaLocales: {
-    editLink: "在 GitHub 上编辑此页",
-  },
+  
+  // // page meta
+  // metaLocales: {
+  //   editLink: "在 GitHub 上编辑此页",
+  // },
 
   plugins: {
     // You should generate and use your own comment service
     comment: {
       provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
+      repo: "naijoug/giscus-discussions",
+      repoId: "R_kgDOKwe0uw",
       category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      categoryId: "DIC_kwDOKwe0u84CbJIL",
     },
 
     // All features are enabled for demo, only preserve features you need here
