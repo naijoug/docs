@@ -7,10 +7,10 @@ index: true
 
 “Hexo & Pages = Blog”
 
-[Hexo](https://hexo.io/zh-cn/)一个基于 `Node.js` 的静态博客网站生成器。
+[Hexo](https://hexo.io/zh-cn/) 一个基于 `Node.js` 的静态博客网站生成器。
   > `Hexo - Slogan` : ` A fast, simple & powerful blog framework`(快速、简洁且高效的博客框架)
 
-在线的 `Git` 仓库([Github](https://github.com)、[Gitee](https://gitee.com))都提供了免费的 `Pages` 服务(静态网页托管和发布服务)。
+在线的 `Git` 仓库([Github](https://github.com)、[Gitee](https://gitee.com) 都提供了免费的 `Pages` 服务(静态网页托管和发布服务)。
 > 是一个静态网页托管和发布服务，支持个人博客搭建和项目主页搭建等。
 
 - [GitHub-Pages](https://pages.github.com/)  : GitHub提供的Pages服务，可能访问速度慢。

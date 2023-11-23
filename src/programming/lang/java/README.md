@@ -23,12 +23,6 @@ index: false
 - [📚 think-in-java](https://github.com/quanke/think-in-java)
     > Thinking in Java (Java 编程思想)
 
-## Note
-
-- [Java](notes/Java.md)
-- [Java X](notes/JavaX.md)
-- [Java API](notes/JavaAPI.md)
-
 ## OracleJDK vs OpenJDK
 
 ## Java Web

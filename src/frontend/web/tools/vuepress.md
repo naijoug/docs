@@ -78,10 +78,7 @@ $ git checkout --orphan gh-pages
 $ git rm -rf .
 ```
 
-```yml
-
-```
-
+```html
 <script src="https://giscus.app/client.js"
         data-repo="naijoug/giscus-discussions"
         data-repo-id="R_kgDOKwe0uw"
@@ -97,6 +94,9 @@ $ git rm -rf .
         crossorigin="anonymous"
         async>
 </script>
+```
+
+
 
 ## hope
 

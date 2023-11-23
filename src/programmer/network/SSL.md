@@ -34,7 +34,7 @@
 
   | 编码格式 | 全称 | 常用于 | 格式
   | --- | --- | --- | ---
-  | PEM | Privacy Enhanced Mail          | Linux (Apache) | 文本格式 </br>(开头: `-----BEGIN` </br>内容: BASE64编码 </br>结尾: `-----END`)
+  | PEM | Privacy Enhanced Mail          | Linux (Apache) | 文本格式 : (开头: `-----BEGIN` 内容: BASE64编码 结尾: `-----END`)
   | DER | Distinguished Encoding Rules   | Windows (Java) | 二进制格式 (不可读)
 
 - 扩展名

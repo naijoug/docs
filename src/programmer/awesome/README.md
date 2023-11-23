@@ -144,3 +144,10 @@ icon: gift
 - [Thief](https://github.com/cteamx/Thief)
     > 一款基于 `Electron` 开发的创新跨平台摸鱼神器
 - [程序员考公指南](https://github.com/coder2gwy/coder2gwy)
+
+- [Build your own X](https://github.com/codecrafters-io/build-your-own-x)
+    > 
+- [Random Street View](https://randomstreetview.com)
+- [Quuick, Draw!](https://quickdraw.withgoogle.com)
+- [OKR](https://www.okr.com/)
+    > OKR（Objectives & Key Results），中文名称是“目标与关键结果”

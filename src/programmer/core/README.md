@@ -1,7 +1,8 @@
 ---
 title: 数据结构 + 算法
-index: false
 icon: infinity
+
+index: false
 
 ---
 

@@ -1,3 +1,13 @@
+---
+title: ROS
+icon: hashtag
+
+index: false
+
+---
+
+<!-- more -->
+
 ## Wiki
 
 - [ROS.org](http://wiki.ros.org/cn)
@@ -117,7 +127,7 @@ $ evince frames.pdf         # 产看pdf文件
 
 ### [URDF](http://wiki.ros.org/urdf)
 
-- [<ROS> 机器人描述--URDF和XACRO](http://blog.csdn.net/sunbibei/article/details/52297524)
+- [ROS 机器人描述--URDF和XACRO](http://blog.csdn.net/sunbibei/article/details/52297524)
 
 - `joint` 类型
     * `continuous`  : 连续(360°无限转动，轮子、底座等)
@@ -135,8 +145,6 @@ $ evince frames.pdf         # 产看pdf文件
 
 - [ROS 单行安装](http://wiki.ros.org/ROS/Installation/TwoLineInstall)
 - [ROS: 安装数据包](http://blog.csdn.net/philthinker/article/details/72801430)
-
-- [ROS launch file: <arg> vs <param> vs <rosparam>](http://durant35.github.io/2017/07/14/ROS_%3Carg%3E$%3Cparam%3E$%3Crosparam%3E/)
 
 ### 多机器连接
 

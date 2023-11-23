@@ -17,31 +17,6 @@ icon: laptop-code
 - [Learn X in Y minutes](https://learnxinyminutes.com/)
 - [📚 Go语言圣经中文版](https://github.com/golang-china/gopl-zh)
 
-## lanuages
-
-- [C++](./languages/C++.md)
-- [Java](./languages/Java/README.md)
-- [Swift](./languages/Swift/README.md)
-- [Python](./languages/Python.md)
-- [Ruby](./languages/Ruby.md)
-- [JavaScript](./languages/JavaScript.md)
-- [TypeScript](./languages/TypeScript.md)
-
-## topics
-
-- [Paradigm](topics/paradigm.md)
-- [Code Style](topics/code-style.md)
-- [Cryptology](topics/cryptology.md)
-- [Multithread](topics/thread.md)
-- [Design Pattern](topics/design-pattern.md)
-- [Memory Management](topics/memory.md)
-- [Regular Expression](topics/regular.md)
-
-## Programming Language
-
-- [comprehensive-rust](https://github.com/google/comprehensive-rust)
-    > This is the Rust course used by the Android team at Google. It provides you the material to quickly teach Rust.
-
 ## Basic
 
 - `Type` (基本类型) & `Conversion` (类型转换)

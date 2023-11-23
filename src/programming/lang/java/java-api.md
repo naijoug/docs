@@ -1,4 +1,12 @@
-# JAVA API
+---
+title: Java - API
+icon: hashtag
+
+index: true
+
+---
+
+<!-- more -->
 
 ## Object
 > `Object`描述的是所有类的通用属性与方法。
@@ -127,8 +135,8 @@ reverse() // 把字符串反序输出。
 | 类型 | 使用场景 
 | --- | ---   
 | `Collection`  | 保存若干个对象的时候使用集合。
-| `List`        | 需要保留存储顺序, 并且保留重复元素, 使用`List`. </br> 如果查询较多, 那么使用`ArrayList`. </br> 如果存取较多, 那么使用`LinkedList`. </br>如果需要线程安全, 那么使用`Vector`. 
-|  `Set`        | 不需要保留存储顺序, 并且需要去掉重复元素, 使用`Set`. </br> 如果我们需要将元素排序, 那么使用`TreeSet`. </br> 如果我们不需要排序, 使用`HashSet`, `HashSet`比`TreeSet`效率高. </br> 如果我们需要保留存储顺序, 又要过滤重复元素, 那么使用`LinkedHashSet`.  
+| `List`        | 需要保留存储顺序, 并且保留重复元素, 使用`List`. 如果查询较多, 那么使用`ArrayList`. 如果存取较多, 那么使用`LinkedList`. 如果需要线程安全, 那么使用`Vector`. 
+|  `Set`        | 不需要保留存储顺序, 并且需要去掉重复元素, 使用`Set`. 如果我们需要将元素排序, 那么使用`TreeSet`. 如果我们不需要排序, 使用`HashSet`, `HashSet`比`TreeSet`效率高. 如果我们需要保留存储顺序, 又要过滤重复元素, 那么使用`LinkedHashSet`.  
 
 - Array vs Collection
 

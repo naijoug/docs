@@ -1,6 +1,9 @@
 ---
 title: 文档目录
 icon: lightbulb
+
+index: false
+
 ---
 
 <!-- more -->
