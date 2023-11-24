@@ -20,6 +20,8 @@ export default navbar([
         children: [
           "swift/",
           "java/",
+          "dart/",
+          "python",
         ]
       },
       { // 概念知识

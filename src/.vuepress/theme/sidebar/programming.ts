@@ -7,9 +7,10 @@ export const programming = arraySidebar([
     children: [
       Builder.structure("swift", "swift/"),
       Builder.structure("Java", "java/"),
-      "python",
-      "javascript",
-      "typescript",
+      Builder.structure("Dart", "dart/"),
+      Builder.structure("Python", "python/"),
+      Builder.structure("JavaScript", "javascript/"),
+      Builder.structure("TypeScript", "typescript/"),
       "cpp",
       "ruby",
     ],
