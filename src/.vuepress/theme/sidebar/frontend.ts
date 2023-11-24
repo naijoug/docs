@@ -13,13 +13,25 @@ export const frontend = arraySidebar([
         collapsible: true, children: "structure",
       },
       {
-        text: "Cross Platform", icon: "hashtag", link: "cross-platform/", prefix: "corss-platform/",
+        text: "Cross Platform", icon: "hashtag", link: "cross-platform/", prefix: "cross-platform/",
         collapsible: true, children: "structure",
       },
     ],
   },
   {
     text: "Web 端", icon: "globe", link: "web/", prefix: "web/",
-    collapsible: true, children: "structure",
+    collapsible: true, children: [
+      {
+        text: "HTML", icon: "hashtag", link: "html/", prefix: "html/",
+        collapsible: true, children: "structure",
+      },
+      "vue",
+      "react",
+      "browser",
+      {
+        text: "工具箱", icon: "hashtag", link: "tool/", prefix: "tool/",
+        collapsible: true, children: "structure",
+      },
+    ],
   },
 ])

@@ -1,6 +1,13 @@
+---
+title: 命令行工具
+icon: hashtag
 
-# cleos 
-> cli eos
+index: true
+order: 2
+
+---
+
+> `cleos` : cli eos
 
 ``` shell
 # cleos [OPTIONS] SUBCOMMAND

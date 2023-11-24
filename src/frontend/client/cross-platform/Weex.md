@@ -1,7 +1,9 @@
 ---
 title: Weex
-index: false
 icon: hashtag
+
+index: false
+order: 3
 
 ---
 

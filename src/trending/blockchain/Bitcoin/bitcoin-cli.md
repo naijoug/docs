@@ -1,3 +1,12 @@
+---
+title: Bitcoin 命令行工具
+icon: hashtag
+
+index: true
+order: 2
+
+---
+
 # bitcoin-cli 
 > Bitcoin Core RPC 客户端
 

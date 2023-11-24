@@ -1,7 +1,20 @@
-# Linux
+---
+title: Linux
+icon: hashtag
+
+index: false
+
+---
+
 > Linux is not Unix
 
-## Reference
+<!-- more -->
+
+## catalog
+
+- [Linux 命令](command.md)
+
+## reference
 
 - [snapcraft](https://snapcraft.io/) : The app store for Linux
 - [Linux 内核](https://www.kernel.org/)
@@ -9,11 +22,6 @@
 - [Linux 工具快速教程](https://github.com/me115/linuxtools_rst)
 - [Linux Command](https://github.com/jaywcjlove/linux-command)
 - [跟阿铭学 Linux（第2版）](http://www.apelearn.com/study_v2/)
-
-## notes
-
-- [Commands](Commands.md)
-- [Funny Commands](FunnyCommands.md)
 
 ## Linux Tools
 

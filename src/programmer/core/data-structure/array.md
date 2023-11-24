@@ -1,4 +1,13 @@
-# `Array` - “数组”
+---
+title: Array - “数组”
+icon: hashtag
+
+index: true
+order: 1
+
+---
+
+<!-- more -->
 
 ## `Two Pointers` - “双指针”
 

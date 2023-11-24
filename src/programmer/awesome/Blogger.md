@@ -1,4 +1,12 @@
-# Blogger
+---
+title: Blogger
+icon: hashtag
+
+index: true
+
+---
+
+<!-- more -->
 
 ## Personal
 

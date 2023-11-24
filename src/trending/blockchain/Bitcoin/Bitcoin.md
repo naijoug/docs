@@ -1,4 +1,13 @@
-## Reference
+---
+title: Bitcoin
+icon: hashtag
+
+index: true
+order: 1
+
+---
+
+## reference
 
 - [bitcoinbook][ref-01] : 精通比特币 Github
 - [精通比特币 第二版][ref-02] : 中文翻译 Github

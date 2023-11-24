@@ -7,12 +7,6 @@ icon: box-open
 
 <!-- more -->
 
-## notes
-
-- [Node](notes/node.md)
-- [Flask](notes/flask.md)
-- [SpringBoot](notes/spring-boot.md)
-
 ## Framework
 
 - [xmpp](https://xmpp.org/)

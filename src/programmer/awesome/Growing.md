@@ -1,6 +1,12 @@
-# Growing
+---
+title: 技术成长
+icon: hashtag
 
-## Reference
+index: true
+
+---
+
+## reference
 
 - [2023.07.20 译·如何做出伟大的工作](https://tw93.fun/2023-07-20/great.html)
 - [2023.03.10 - 计算机基础学习心得](https://xiaolincoding.com/cs_learn/)

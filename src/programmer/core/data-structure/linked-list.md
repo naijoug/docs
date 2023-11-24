@@ -1,4 +1,14 @@
-# `Linked List` - “链表”
+---
+title: Linked List - “链表”
+icon: hashtag
+
+index: true
+order: 2
+
+---
+
+<!-- more -->
+
 
 ## `Reverse Linked List` - “反转链表”
 

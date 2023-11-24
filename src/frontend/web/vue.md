@@ -1,11 +1,12 @@
 ---
 title: Vue
-index: true
 icon: hashtag
+
+index: true
 
 ---
 
-## Reference
+## reference
 
 - [Vue](https://github.com/vuejs/core)
     > 🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.

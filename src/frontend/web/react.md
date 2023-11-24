@@ -1,7 +1,8 @@
 ---
 title: React
-index: true
 icon: hashtag
+
+index: true
 
 ---
 

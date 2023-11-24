@@ -1,7 +1,8 @@
 ---
 title: 编程知识
-index: true
 icon: laptop-code
+
+index: false
 
 ---
 

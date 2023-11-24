@@ -1,7 +1,8 @@
 ---
 title: 网络知识
-index: false
 icon: sitemap
+
+index: false
 
 ---
 
@@ -38,11 +39,6 @@ icon: sitemap
   > expose yourself
 - [ngrok](https://github.com/inconshreveable/ngrok)
   > Introspected tunnels to localhost
-
-## notes
-
-- [HTTP](HTTP.md)
-- [HTTPS](HTTPS.md)
 
 ## Concept
 

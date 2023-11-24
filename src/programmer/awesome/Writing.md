@@ -1,4 +1,12 @@
-# Writing
+---
+title: 写作
+icon: hashtag
+
+index: false
+
+---
+
+<!-- more -->
 
 ## Reference
 

@@ -1,4 +1,11 @@
-# Ubuntu
+---
+title: Ubuntu
+icon: hashtag
+
+index: true
+order: 3
+
+---
 
 ## Reference
 

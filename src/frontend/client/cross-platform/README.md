@@ -1,7 +1,8 @@
 ---
 title: Cross Platform
-index: false
 icon: hashtag
+
+index: false
 
 ---
 
@@ -9,5 +10,5 @@ icon: hashtag
 
 ## catalog
 
-- [Flutter](Flutter.md)
-- [ReactNative](ReactNative.md)
+- [Flutter](flutter.md)
+- [ReactNative](react-native.md)

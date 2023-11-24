@@ -3,7 +3,20 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const programmer = arraySidebar([
   {
     text: "数据结构 + 算法", icon: "infinity", link: "core/", prefix: "core/",
-    collapsible: true, children: "structure",
+    collapsible: true, children: [
+      {
+        text: "数据结构", icon: "hashtag", link: "data-structure/", prefix: "data-structure/",
+        collapsible: true, children: "structure",
+      },
+      {
+        text: "算法", icon: "hashtag", link: "algorithm/", prefix: "algorithm/",
+        collapsible: true, children: "structure",
+      },
+      {
+        text: "书籍", icon: "hashtag", link: "book/", prefix: "book/",
+        collapsible: true, children: "structure",
+      },
+    ]
   },
   {
     text: "操作系统", icon: "microchip", link: "system/", prefix: "system/",
@@ -18,7 +31,7 @@ export const programmer = arraySidebar([
     collapsible: true, children: "structure",
   },
   {
-    text: "使用工具", icon: "screwdriver-wrench", link: "topic/", prefix: "topic/",
+    text: "实用工具", icon: "screwdriver-wrench", link: "tool/", prefix: "tool/",
     collapsible: true, children: "structure",
   },
   {

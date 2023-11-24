@@ -1,24 +1,27 @@
 ---
 title: 人工智能
-index: false
 icon: robot
 
+index: false
+
 ---
+
+<!-- more -->
+
+## catalog
+
+- [ChatGPT](chatgpt.md)
+- [Prompt](prompt.md)
+- [ML](ml.md)
+- [NLP](nlp.md)
+- [LLMs](llms.md)
+- [AIGC](aigc.md)
 
 ## reference
 
 - [AI 工具集](https://ai-bot.cn/)
 - [awesome-ai-painting](https://github.com/hua1995116/awesome-ai-painting)
     > AI绘画资料合集（包含国内外可使用平台、使用教程、参数教程、部署教程、业界新闻等等） stable diffusion tutorial、disco diffusion tutorial、 AI Platform
-
-## notes
-
-- [NLP](notes/NLP.md)
-- [ML](notes/ML.md)
-- [LLMs](notes/LLMs.md)
-- [AIGC](notes/AIGC.md)
-- [ChatGPT](notes/ChatGPT.md)
-- [Prompt](notes/Prompt.md)
 
 ## Concept
 

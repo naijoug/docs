@@ -1,20 +1,21 @@
 ---
 title: 数据库
-index: false
 icon: database
+
+index: false
 
 ---
 
 <!-- more -->
 
-## notes
+## catalog
 
-- [SQL](notes/SQL.md)
-- [SQLite](notes/SQLite.md)
-- [MySQL](notes/MySQL.md)
-- [MongoDB](notes/MongoDB.md)
+- [SQL](sql.md)
+- [SQLite](sqlite.md)
+- [MySQL](mysql.md)
+- [MongoDB](mongodb.md)
 
-## Reference
+## reference
 
 - [db-tutorial](https://github.com/dunwu/db-tutorial)
     > 📚 db-tutorial 是一个数据库教程。

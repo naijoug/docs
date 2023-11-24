@@ -1,3 +1,12 @@
+---
+title: 命令行工具
+icon: hashtag
+
+index: true
+order: 2
+
+---
+
 ## Install
 
 ``` shell

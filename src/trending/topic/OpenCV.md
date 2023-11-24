@@ -1,6 +1,13 @@
-# OpenCV
+---
+title: OpenCV
+icon: hashtag
 
-## Reference
+index: true
+order: 1
+
+---
+
+## reference
 
 - [OpenCV Docs](https://docs.opencv.org/)
 - [OpenCV Python Tutorial](https://github.com/makelove/OpenCV-Python-Tutorial)

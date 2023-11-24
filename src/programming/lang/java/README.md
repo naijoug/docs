@@ -8,7 +8,7 @@ index: false
 
 <!-- more -->
 
-## Reference
+## reference
 
 - [OpenJDK](https://github.com/openjdk)
 - [💯 Java 全栈知识体系](https://pdai.tech)
@@ -55,17 +55,9 @@ index: false
 - [JUnit](https://github.com/junit-team/junit5)
     > The programmer-friendly testing framework for Java and the JVM
 
-## Build
-
-- [Ant]
-- [Maven](notes/Maven.md)
-- [Gradle](notes/Gradle.md)
-
 ## Netty
 
 - [通俗地讲，Netty 能做什么？](https://www.zhihu.com/question/24322387)
-
-## [Activiti](notes/Activiti.md)
 
 ## Kafka
 

@@ -1,3 +1,12 @@
+---
+title: Omni 命令行工具
+icon: hashtag
+
+index: true
+order: 4
+
+---
+
 # omnicore-cli 
 > Omni Core RPC 客户端
 

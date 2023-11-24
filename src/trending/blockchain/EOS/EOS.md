@@ -1,4 +1,13 @@
-## Reference
+---
+title: EOS
+icon: hashtag
+
+index: true
+order: 1
+
+---
+
+## reference
 
 - [developers.eos.io](https://developers.eos.io/)
 - [EOS 区块链开发指南](http://www.eosdata.io/)

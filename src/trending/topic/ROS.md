@@ -2,7 +2,8 @@
 title: ROS
 icon: hashtag
 
-index: false
+index: true
+order: 4
 
 ---
 

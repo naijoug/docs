@@ -8,7 +8,7 @@ export default navbar([
       { text: "网络知识", icon: "sitemap", link: "network/" },
       { text: "操作系统", icon: "microchip", link: "system/" },
       { text: "业务知识", icon: "business-time", link: "biz/" },
-      { text: "实用工具", icon: "screwdriver-wrench", link: "topic/" },
+      { text: "实用工具", icon: "screwdriver-wrench", link: "tool/" },
       { text: "Awesome", icon: "gift", link: "awesome/" }
     ]
   },

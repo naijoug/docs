@@ -1,7 +1,8 @@
 ---
 title: 前端
-index: false
 icon: display
+
+index: false
 
 ---
 

@@ -1,6 +1,12 @@
-# Mirror
+---
+title: 中国镜像
+icon: hashtag
 
-## Reference
+index: true
+
+---
+
+## reference
 
 - [阿里云镜像](https://mirrors.aliyun.com/)
 - [腾讯云镜像](https://mirrors.tencent.com/)

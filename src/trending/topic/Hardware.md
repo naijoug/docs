@@ -1,3 +1,12 @@
+---
+title: Hardware
+icon: hashtag
+
+index: true
+order: 5
+
+---
+
 ## PLC
 > PLC : Programmable Logic Controller (可编程控制器)
 

@@ -1,4 +1,14 @@
-## Reference
+---
+title: 股票知识
+icon: hashtag
+
+index: true
+
+---
+
+<!-- more -->
+
+## reference
 
 - [MA](https://zh.wikipedia.org/wiki/%E7%A7%BB%E5%8B%95%E5%B9%B3%E5%9D%87)
 - [MACD](https://zh.wikipedia.org/wiki/MACD)

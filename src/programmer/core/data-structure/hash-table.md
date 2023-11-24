@@ -1,4 +1,13 @@
-# `Hash Table` - “哈希表”
+---
+title: Hash Table - “哈希表”
+icon: hashtag
+
+index: true
+order: 3
+
+---
+
+<!-- more -->
 
 ## `LRU Cache` - “最近最少使用缓存”
 

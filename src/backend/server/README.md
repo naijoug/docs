@@ -20,13 +20,6 @@ icon: server
     * 驻留于因特网上某种类型计算机的程序, 只有当 `Internet` 上运行在其他计算机中的浏览器发出请求时，服务器才会响应。
     * 也称为 `WWW(WORLD WIDE WEB)` 服务器，主要功能是提供网上信息浏览服务。`Web` 服务器是可以向发出请求的浏览器提供文档的程序。
 
-## notes
-
-- [docker](docker/README.md)
-- [Apache](notes/Apache.md)
-- [Tomcat](notes/Tomcat.md)
-- [Nginx](notes/Nginx.md)
-
 ## IaaS & Paas & SaaS
 
 - [2013.09.13 IaaS、PaaS、SaaS 的区别？](https://www.zhihu.com/question/21641778)

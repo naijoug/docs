@@ -1,11 +1,18 @@
 ---
 title: iOS
-index: false
 icon: hashtag
+
+index: false
 
 ---
 
 <!-- more -->
+
+## catalog
+
+- [基础知识](basic/README.md)
+- [进阶知识](advanced/README.md)
+- [小技巧](tip/README.md)
 
 ## reference
 
@@ -26,13 +33,6 @@ icon: hashtag
 - [ObjC 中国](https://objccn.io/)
 - [NSHipster 中文](https://nshipster.cn/)
 - [iOS Core Animation: Advanced Techniques中文译本](https://github.com/ZsIsMe/ios_core_animation_advanced_techniques)
-
-## notes
-
-- [iOS-X](notes/iOS-X.md)
-- [UIKit](notes/UIKit.md)
-- [SwiftUI](notes/SwiftUI.md)
-- [Objective-C](notes/Objective-C.md)
 
 ## Concept
 
