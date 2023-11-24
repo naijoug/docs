@@ -1,37 +1,27 @@
 import { arraySidebar } from "vuepress-theme-hope";
+import { Builder } from "./builder";
 
 export const frontend = arraySidebar([
   {
     text: "客户端", icon: "mobile", link: "client/", prefix: "client/", collapsible: true,
     children: [
-      {
-        text: "iOS", icon: "hashtag", link: "ios/", prefix: "ios/",
-        collapsible: true, children: "structure",
-      },
-      {
-        text: "Android", icon: "hashtag", link: "android/", prefix: "android/",
-        collapsible: true, children: "structure",
-      },
-      {
-        text: "Cross Platform", icon: "hashtag", link: "cross-platform/", prefix: "cross-platform/",
-        collapsible: true, children: "structure",
-      },
+      Builder.group("iOS", "ios/", [
+        Builder.structure("基础知识", "basic/"),
+        Builder.structure("进阶知识", "advanced/"),
+        Builder.structure("小技巧", "tip"),
+      ]),
+      Builder.structure("Android", "android/"),
+      Builder.structure("Corss Platform", "cross-platform/"),
     ],
   },
   {
     text: "Web 端", icon: "globe", link: "web/", prefix: "web/",
     collapsible: true, children: [
-      {
-        text: "HTML", icon: "hashtag", link: "html/", prefix: "html/",
-        collapsible: true, children: "structure",
-      },
+      Builder.structure("HTML", "html/"),
       "vue",
       "react",
-      "browser",
-      {
-        text: "工具箱", icon: "hashtag", link: "tool/", prefix: "tool/",
-        collapsible: true, children: "structure",
-      },
+      Builder.page("浏览器", "browser.md"),
+      Builder.structure("工具箱", "tool/"),
     ],
   },
 ])

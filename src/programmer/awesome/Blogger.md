@@ -63,6 +63,8 @@ index: true
     > A static blog build on top of Notion and NextJS, deployed on Vercel.
 - [VuePress](https://github.com/vuejs/vuepress)
     > 📝 Minimalistic Vue-powered static site generator
+- [Pagic](https://github.com/xcatliu/pagic)
+    > A static site generator powered by Deno + React
 - [Publish](https://github.com/johnsundell/publish)
     > A static site generator for Swift developers
     * - [用Publish创建博客](https://zhuanlan.zhihu.com/p/348232897)

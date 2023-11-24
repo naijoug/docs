@@ -1,17 +1,12 @@
 import { arraySidebar } from "vuepress-theme-hope";
+import { Builder } from "./builder";
 
 export const programming = arraySidebar([
   {
     text: "编程语言", icon: "code", link: "lang/", prefix: "lang/", collapsible: true,
     children: [
-      { 
-        text: "Swift", icon: "hashtag", link: "swift/", prefix: "swift/", 
-        collapsible: true, children: "structure"
-      },
-      { 
-        text: "Java", icon: "hashtag", link: "java/", prefix: "java/", 
-        collapsible: true, children: "structure"
-      },
+      Builder.structure("swift", "swift/"),
+      Builder.structure("Java", "java/"),
       "python",
       "javascript",
       "typescript",

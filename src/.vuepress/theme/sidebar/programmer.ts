@@ -1,21 +1,13 @@
 import { arraySidebar } from "vuepress-theme-hope";
+import { Builder } from "./builder";
 
 export const programmer = arraySidebar([
   {
     text: "数据结构 + 算法", icon: "infinity", link: "core/", prefix: "core/",
     collapsible: true, children: [
-      {
-        text: "数据结构", icon: "hashtag", link: "data-structure/", prefix: "data-structure/",
-        collapsible: true, children: "structure",
-      },
-      {
-        text: "算法", icon: "hashtag", link: "algorithm/", prefix: "algorithm/",
-        collapsible: true, children: "structure",
-      },
-      {
-        text: "书籍", icon: "hashtag", link: "book/", prefix: "book/",
-        collapsible: true, children: "structure",
-      },
+      Builder.structure("数据结构", "data-structure"),
+      Builder.structure("算法", "algorithm"),
+      Builder.structure("书籍", "book/"),
     ]
   },
   {

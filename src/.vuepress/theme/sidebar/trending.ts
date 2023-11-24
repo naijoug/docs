@@ -1,4 +1,5 @@
 import { arraySidebar } from "vuepress-theme-hope";
+import { Builder } from "./builder";
 
 export const trending = arraySidebar([
   {
@@ -8,18 +9,9 @@ export const trending = arraySidebar([
   {
     text: "区块链", icon: "boxes-stacked", link: "blockchain/", prefix: "blockchain/",
     collapsible: true, children: [
-      {
-        text: "比特币", icon: "hashtag", link: "bitcoin/", prefix: "bitcoin/",
-        collapsible: true, children: "structure",
-      },
-      {
-        text: "以太坊", icon: "hashtag", link: "ethereum/", prefix: "ethereum/",
-        collapsible: true, children: "structure",
-      },
-      {
-        text: "EOS", icon: "hashtag", link: "eos/", prefix: "eos/",
-        collapsible: true, children: "structure",
-      },
+      Builder.structure("比特币", "bitcoin/"),
+      Builder.structure("以太坊", "ethereum"),
+      Builder.structure("EOS", "eos/"),
     ],
   },
   {
