@@ -51,7 +51,7 @@ index: false
 - `Math` (数学)
 - `Time` (时间) & `Date` (日期)
     
-## Advance   
+## Advanced   
 
 - `Regular Expression` (正则表达式)
 - `IO` (输入输出)
