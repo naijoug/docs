@@ -16,8 +16,7 @@ order: 3
 
 - [设计模式](https://refactoringguru.cn/design-patterns/catalog)
 - [图说设计模式](https://github.com/me115/design_patterns)
-- [设计模式之禅](http://static.kancloud.cn/sstd521/design/193489)
-- [Java 设计模式](http://c.biancheng.net/design_pattern)
+- [📚 Java 23种设计模式全归纳](https://github.com/youlookwhat/DesignPattern)
 - [设计模式 Java版本](https://github.com/quanke/design-pattern-java)
 
 ## SOLID 设计原则

@@ -9,39 +9,7 @@ order: 1
 
 <!-- more -->
 
-> Flutter makes it easy and fast to build beautiful apps for mobile and beyond
-
-## Reference
-
-- [Flutter](https://github.com/flutter/flutter)
-- [Flutter 中文网](https://flutter.cn)
-- [深入浅出 Dart](https://www.coding-time.cn/dart/preamble.html)
-- [猫哥 Flutter](https://wiki.ducafecat.tech/)
-- [Flutter 实战](https://github.com/flutterchina/flutter_in_action_2nd)
-- [Flutter开发实战详解系列](https://github.com/CarGuo/gsy_flutter_book)
-    > 本系列将完整讲述：如何快速从 0 开发一个完整的 Flutter APP，配套高完成度 Flutter 开源项目 GSYGithubAppFlutter ，同时会提供一些Flutter的开发细节技巧，之后深入源码和实战为你全面解析 Flutter 。
-- [fvm](https://github.com/leoafarias/fvm)
-    > Flutter Version Management: A simple CLI to manage Flutter SDK versions.
-
-------
-
 - [2023-10-23 FlutterCandies](https://juejin.cn/post/7292450647303208999)
-
-## Usage
-
-```shell
-$ flutter doctor # 检查 flutter 环境是否正确
-# flutter create 创建工程
-#  配置
-#   -template=(app/module/package/plugin/skeleton) 创建工程模板
-#   -platforms=(ios/android/windows/linux/macos/web) 指定平台
-#   -a 指定 android 开发语言 (默认: kotlin)
-#   -i 指定 ios 开发语言 (默认: swift)
-$ flutter create test # 创建 flutter test 项目
-$ flutter pub get
-$ flutter run
-$ flutter clean
-```
 
 ## Concept
 
@@ -51,14 +19,12 @@ $ flutter clean
 | `Moudle`  | 模块，适用于 `flutter` 以模块集成的混合开发方式
 | `Plugin`  | 插件，包含原生代码的插件包
 | `Package` | 包，纯 `dart` 的工具包
-  
-`pub.dev`
-  
-```shell
-# 发布 packages
-$ flutter packages pub publish --dry-run # 检查包
-$ flutter packages pub pushlish # 发布包
-```
+
+## 混合开发
+
+- module 方式
+- framework 方式
+- Cocoapods 方式
  
 ## Native 消息通道
 
@@ -190,21 +156,6 @@ flutter_tools
   * Local
   * Git
   * Pub
-  
-## 混合开发
-
-- module 方式
-- framework 方式
-- Cocoapods 方式
-
-```shell
-
-# 构建 framework
-$ flutter build ios-framework --output=path/to/
-
-# 构建 cocoapods framework
-$ flutter build ios-framework --cocoapods --output=path/to/
-```
 
 ## lib
 

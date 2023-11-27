@@ -26,6 +26,8 @@ export default hopeTheme({
 
   // sidebar
   sidebar,
+  // "structure" (结构化侧边栏) 排序规则
+  sidebarSorter: ["readme", "order", "filename", "title"],
 
   footer: "",
   displayFooter: true,
