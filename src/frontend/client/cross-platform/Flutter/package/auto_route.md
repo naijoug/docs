@@ -26,7 +26,7 @@ index: true
 
 > 生成路由文件
 ```dart
-flutter packages pub run build_run build
+flutter packages pub run build_runner build 
 ```
 
 > 实时监控变化生成路由
