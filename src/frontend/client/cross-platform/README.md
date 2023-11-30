@@ -10,5 +10,5 @@ index: false
 
 ## catalog
 
-- [Flutter](flutter.md)
+- [Flutter](flutter/README.md)
 - [ReactNative](react-native.md)
