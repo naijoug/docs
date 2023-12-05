@@ -14,14 +14,13 @@ index: true
     > A Flutter plugin for launching a URL.
     > Flutter 官方插件，用于唤起 URL 
 
-## install
+## usage
+
+> 添加 url_launcher 依赖
 
 ```shell
-# 添加 url_launcher 依赖
 flutter pub add url_launcher
 ```
-
-## usage
 
 ### 打开网页
 

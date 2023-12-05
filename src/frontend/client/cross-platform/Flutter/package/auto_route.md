@@ -16,20 +16,19 @@ index: true
     > Flutter route generator 
     > Flutter 路由生成器
 
-## install
-
-```shell
-
-```
-
 ## usage
 
+> 安装依赖包
+```shell
+flutter pub add auto_route
+```
+
 > 生成路由文件
-```dart
+```shell
 flutter packages pub run build_runner build 
 ```
 
 > 实时监控变化生成路由
-```dart
+```shell
 flutter packages pub run build_runner watch
 ```
