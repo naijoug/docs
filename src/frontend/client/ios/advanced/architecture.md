@@ -7,7 +7,7 @@ order: 5
 
 ---
 
-## Reference
+## reference
 
 - [2018.05.29 Trip-to-iOS-Design-Patterns](https://github.com/skyming/Trip-to-iOS-Design-Patterns)
 - [2018.02.04 iOS架构之View层的架构方案](https://mp.weixin.qq.com/s/t_IBkCClPBZFBPmtZT0WsQ)

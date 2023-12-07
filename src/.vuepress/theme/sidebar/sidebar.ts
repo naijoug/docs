@@ -4,6 +4,7 @@ import { programming } from "./programming";
 import { frontend } from "./frontend";
 import { backend } from "./backend";
 import { trending } from "./trending";
+import { article } from "./article";
 
 export default sidebar({
   "/programmer/": programmer,
@@ -11,6 +12,7 @@ export default sidebar({
   "/frontend/": frontend,
   "/backend/": backend,
   "/trending/": trending,
+  "/article/": article,
   
   // --- fallback ---
   "/": ["", "guide"],
