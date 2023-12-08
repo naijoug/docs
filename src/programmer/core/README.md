@@ -15,6 +15,7 @@ index: false
 
 ## reference
 
+- [数据结构与算法之美](https://time.geekbang.org/column/intro/100017301)
 - [The Algorithms](https://github.com/TheAlgorithms): [website](https://the-algorithms.com)
     > Open Source resource for learning Data Structures & Algorithms and their implementation in any Programming Language
 - [Hello 算法](https://github.com/krahets/hello-algo)
