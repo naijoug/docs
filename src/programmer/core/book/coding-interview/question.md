@@ -7,9 +7,9 @@ order: 1
 
 ---
 
-<!-- more -->
-
 > Coding Interviews: Questions, Analysis and Solutions (剑指Offer 2th) (68) 
+
+<!-- more -->
 
 ## C++ & C# (3)
 
@@ -17,18 +17,18 @@ order: 1
 
     > 如下为类型 CMyString 的声明，请为该类型添加赋值运算符函数
 
-``` c++
-class CMyString
-{
-public:
-    CMyString(char* pData = nullptr);
-    CMyString(const CMyString& str);
-    ~CMyString(void);
-    
-private:
-    char* m_pData;
-};
-```
+    ``` c++
+    class CMyString
+    {
+    public:
+        CMyString(char* pData = nullptr);
+        CMyString(const CMyString& str);
+        ~CMyString(void);
+        
+    private:
+        char* m_pData;
+    };
+    ```
  
 - **实现 Singleton 模式** (2)
 
@@ -50,7 +50,7 @@ private:
         
     * 不修改数组找出重复的数字
 
-        > 在一个长度为 n+1 的数组里的所有数字都在 0~n 的范围内，所以数组中至少有一个数字是重复的。请找出数组中任意一个重复的数字，但是不能修改输入的数组。例如，如果输入长度为 8 的数组 {2,3,5,4,3,2,6，7}, 那么对应的输出是重复的数字 2 或者 3。
+        > 在一个长度为 n+1 的数组里的所有数字都在 0~n 的范围内，数组中至少有一个数字是重复的。请找出数组中任意一个重复的数字，但是不能修改输入的数组。例如，如果输入长度为 8 的数组 {2,3,5,4,3,2,6，7}, 那么对应的输出是重复的数字 2 或者 3。
     
 - **二维数组中的查找** (4)
 

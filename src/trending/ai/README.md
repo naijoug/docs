@@ -118,6 +118,8 @@ index: false
     > ⏩ the open-source coding copilot—bring the power of ChatGPT to VS Code
 - [Sweep](https://github.com/sweepai/sweep)
     > Sweep: AI-powered Junior Developer for small features and bug fixes.
+- [Cursor](https://github.com/getcursor/cursor)
+    > An AI-powered code editor based on VSCode 🤖
 
 ## Tutorial
 
