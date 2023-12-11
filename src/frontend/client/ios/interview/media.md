@@ -8,6 +8,8 @@ index: false
 
 <!-- more -->
 
+## `AVFoundation`
+
 > `AVFoundation` & `GPUImage` & `OpenGL ES` & `MetalKit`
 
 > `samplebuffer` 与 `pixelbuffer` 区别
@@ -24,3 +26,4 @@ index: false
 
 > 边播边下
 
+## 设计一个通用视频播放器
