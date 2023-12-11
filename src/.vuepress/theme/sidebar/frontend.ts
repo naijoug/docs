@@ -8,7 +8,8 @@ export const frontend = arraySidebar([
       Builder.group("iOS", "ios/", [
         Builder.structure("基础知识", "basic/"),
         Builder.structure("进阶知识", "advanced/"),
-        Builder.structure("小技巧", "tip"),
+        Builder.structure("小技巧", "tip/"),
+        Builder.structure("面试题", "interview/"),
       ]),
       Builder.structure("Android", "android/"),
       Builder.structure("Corss Platform", "cross-platform/"),
