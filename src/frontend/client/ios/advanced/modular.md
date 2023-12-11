@@ -9,7 +9,7 @@ order: 3
 
 <!-- more -->
 
-## starter
+## 缘起
 
 - [2016-03-10 蘑菇街 App 的组件化之路](http://limboy.me/tech/2016/03/10/mgj-components.html)
 - [2016-03-13 iOS应用架构谈 组件化方案](https://casatwy.com/iOS-Modulization.html)

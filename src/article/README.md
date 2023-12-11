@@ -1,6 +1,6 @@
 ---
-title: 关于写作
-icon: cube
+title: 文章
+icon: pencil
 
 index: false
 

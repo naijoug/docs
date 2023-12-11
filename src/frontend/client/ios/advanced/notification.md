@@ -1,4 +1,11 @@
-# `Notification` - “通知”
+---
+title: 通知中心
+icon: hashtag
+
+index: true
+order: 5
+
+---
 
   `Notification` 是观察者模式的一种实现，程序中一种一对多的通信方式。`androind` 类似的机制叫做 `Broadcast` 广播。
 

@@ -120,13 +120,15 @@ order: 1
 - `ReplayKit` : 录屏
     > Record or stream video from the screen, and audio from the app and microphone.
 
+------
+
 [applinks]: https://developer.apple.com/documentation/bundleresources/applinks
 
 ## iOS 8
 
 - **`Swift`**
     > Build apps using a powerful open language.
-- [`UIVisualEffect`][UIVisualEffect] : 毛玻璃效果
+- [`UIVisualEffect`][uivisualeffect] : 毛玻璃效果
     > An initializer for visual effect views and blur and vibrancy effect objects.
 - `WebKit` : 网页框架
     > Integrate web content seamlessly into your app, and customize content interactions to meet your app’s needs.
@@ -139,7 +141,21 @@ order: 1
 - `HomeKit` : 物联网
     > Configure, control, and communicate with home automation accessories.
 
-[UIVisualEffect]: https://developer.apple.com/documentation/uikit/uivisualeffect
+- [`Network Extension`][networkextension] : 网络扩展
+    > Customize and extend core networking features.
+    
+    * [VPNClient](https://github.com/wlixcc/VPNClient)
+    * [Potatso](https://github.com/haxpor/Potatso)
+    * [NEKit](https://github.com/zhuhaow/NEKit)
+    
+    ------
+    
+    * [2019-04-23 iOS中Network Extension](https://juejin.cn/post/6844903829146697742)
+
+------
+
+[uivisualeffect]: https://developer.apple.com/documentation/uikit/uivisualeffect
+[networkextension]: https://developer.apple.com/documentation/networkextension
 
 ## iOS 7
 

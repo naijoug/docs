@@ -1,5 +1,5 @@
 ---
-title: iOS 多线程
+title: 多线程
 icon: hashtag
 
 index: true

@@ -2,8 +2,7 @@
 title: 面试题
 icon: hashtag
 
-index: true
-order: 9
+index: false
 
 ---
 

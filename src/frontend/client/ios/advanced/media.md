@@ -2,7 +2,7 @@
 title: 音视频
 icon: hashtag
 
-index: true
+index: false
 order: 7
 
 ---

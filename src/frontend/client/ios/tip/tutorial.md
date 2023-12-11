@@ -7,7 +7,7 @@ order: 2
 
 ---
 
-## Reference
+## reference
 
 - [Developing iOS 8 Apps with Swift](https://github.com/x140yu/Developing_iOS_8_Apps_With_Swift)
 

@@ -2,8 +2,7 @@
 title: Runtime
 icon: hashtag
 
-index: true
-order: 1
+index: false
 
 ---
 

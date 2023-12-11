@@ -2,8 +2,7 @@
 title: Runloop
 icon: hashtag
 
-index: true
-order: 2
+index: false
 
 ---
 
