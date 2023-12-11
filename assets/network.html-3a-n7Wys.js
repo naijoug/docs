@@ -1,1 +1,0 @@
-import{_ as o}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as t,c as n,a as c,b as e}from"./app-YAxt81r4.js";const l={},r=e("blockquote",null,[e("p",null,"如何解决两个网络请求之间的依赖?")],-1),s=e("blockquote",null,[e("p",null,"如何优化网络？")],-1);function _(a,m){return t(),n("div",null,[c(" more "),r,s])}const f=o(l,[["render",_],["__file","network.html.vue"]]);export{f as default};
