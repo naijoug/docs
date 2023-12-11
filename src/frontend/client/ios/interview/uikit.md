@@ -1,8 +1,16 @@
-# `UIView` 那些事 
+---
+title: UIKit
+icon: hashtag
 
-## `UIView` vs `CALayer`
+index: true
 
-## `UIView` vs `CALayer` 为什么要这样设计？
+---
+
+<!-- more -->
+
+## `UIView`
+
+### `UIView` vs `CALayer` 为什么要这样设计？
 
 ## 屏幕渲染
 
@@ -22,3 +30,7 @@
   * 光栅化 `layer.shouldRasterize = YES`
   * 抗锯齿 `antialiasing`
   * 不透明 `opacity`
+
+## event dispatch - “事件分发”
+
+> 用户点击屏幕上按钮，整个过程讲一下？

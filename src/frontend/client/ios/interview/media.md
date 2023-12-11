@@ -1,10 +1,20 @@
-# 音视频
+---
+title: 音视频
+icon: hashtag
+
+index: false
+
+---
+
+<!-- more -->
 
 > `AVFoundation` & `GPUImage` & `OpenGL ES` & `MetalKit`
 
 > `samplebuffer` 与 `pixelbuffer` 区别
 
 > `CMTime` 结构
+
+> 如何使用 `AVFoundation` 给视频添加水印？
 
 ## `AVPlayer` 
 

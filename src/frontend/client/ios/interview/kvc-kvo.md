@@ -1,4 +1,12 @@
-# `KVC` & `KVO`
+---
+title: KVC & KVO
+icon: hashtag
+
+index: true
+
+---
+
+<!-- more -->
 
 ## `KVC`
 
@@ -23,3 +31,5 @@
 ## `KVO`
 
   `KVO`(Key Value Observer) : 是一种观察者模式的实现。
+  
+  > `KVO` 失效了怎么办？

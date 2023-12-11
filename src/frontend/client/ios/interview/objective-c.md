@@ -1,4 +1,12 @@
-# Objective-C
+---
+title: Objective-C
+icon: hashtag
+
+index: true
+
+---
+
+<!-- more -->
 
   `OC` 底层是使用 `C/C++` 实现。定一个继承 `NSObject` 的类，这个类底层使用 `C` 语言中的 `struct` 结构体来实现的。 
 
@@ -11,9 +19,21 @@
 `+load` : 
 `+initialize` :
   
+## `block`
+  
+### `block` 底层实现？
+
+  `block` 底层是使用结构体实现的。
+  
+  根据内存分区不同，分为三种 `block`
+    
+   * `__NSGlobalBlock__` : 全局 `block`，类似全局静态变量，存放在静态区 
+   * `__NSStackBlock__` : 栈区 `block`，保存在栈区
+   * `__NSMallocBlock__` : 堆区 `block`，保存在堆区
+  
 > `block` 的本质
 
-> `OC` 中的 Category 分类
+## `Category`
 
 - Category : 只能添加方法，不能添加实例变量(除非通过关联对象)。分类中的方法是运行时添加到方法列表中的。
 - Extension : 可以添加方法和计算属性，也可以添加构造方法，也可以实现以一个协议。编译时已经确定，不支持动态添加方法。
@@ -21,3 +41,24 @@
   如果分类中添加与类相同的方法签名会发生什么？
   
   分类中的方法是运行时添加到方法列表中，并且是添加中已有方法的前面。所以当分类与原类中的方法相同时，分类中的方法会优先调用，覆盖掉原类中的方法。
+ 
+## `msgSend`
+  
+> 以下代码输出？
+
+```objc
+@interface Animail
+@end
+@interface Dog : Animal
+@end
+@implementation Dog
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        NSLog(@"%@", NSStringFromClass([self class]));
+        NSLog(@"%@", NSStringFromClass([super class]));
+    }
+    return self;
+}
+@end
+```
