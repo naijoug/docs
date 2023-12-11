@@ -48,6 +48,8 @@ index: false
     > 算法模板，最科学的刷题方式，最快速的刷题路径，你值得拥有~
 - [代码随想录](https://github.com/youngyangyang04/leetcode-master)
     > 《代码随想录》LeetCode 刷题攻略：200道经典题目刷题顺序，共60w字的详细图解，视频难点剖析，50余张思维导图，支持C++，Java，Python，Go，JavaScript等多语言版本，从此算法学习不再迷茫！🔥🔥 来看看，你会发现相见恨晚！🚀
+- [LeetCode 101](https://github.com/changgyhub/leetcode_101)
+    > LeetCode 101：和你一起你轻松刷题（C++）
 - [LeetCode Animation](https://github.com/MisterBooo/LeetCodeAnimation)
     > Demonstrate all the questions on LeetCode in the form of animation.（用动画的形式呈现解LeetCode题目的思路）
 - [算法通关之路](https://github.com/azl397985856/leetcode)
@@ -56,6 +58,8 @@ index: false
     > 1000篇通俗易懂且高质量的 LeetCode 解析，动画题解，套路分析，模板分享
 - [LeetCode in Go](https://github.com/halfrost/LeetCode-Go)
     > ✅ Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解
+- [Leetcode-Solutions-Java-And-Kotlin](https://github.com/hi-dhl/Leetcode-Solutions-with-Java-And-Kotlin)
+    > 
 
 ## Concept
 
