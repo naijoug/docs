@@ -1,0 +1,4 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as a,c as s,f as n}from"./app-8at8Ga89.js";const t={},c=n(`<h2 id="类型" tabindex="-1"><a class="header-anchor" href="#类型" aria-hidden="true">#</a> 类型</h2><div class="language-typescript line-numbers-mode" data-ext="ts"><pre class="language-typescript"><code><span class="token keyword">class</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="接口" tabindex="-1"><a class="header-anchor" href="#接口" aria-hidden="true">#</a> 接口</h2>`,3),i=[c];function r(d,o){return a(),s("div",null,i)}const u=e(t,[["render",r],["__file","0x03.object-oriented.html.vue"]]);export{u as default};
