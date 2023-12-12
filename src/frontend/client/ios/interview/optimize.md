@@ -3,6 +3,7 @@ title: 性能优化
 icon: hashtag
 
 index: true
+order: 10
 
 ---
 

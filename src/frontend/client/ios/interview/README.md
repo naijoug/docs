@@ -30,6 +30,7 @@ index: false
 - [2018-07-24 出一套 iOS 高级面试题](juejin.im/post/5b56155e6fb9a04f8b78619b)
 - [2017-06-08 2017年5月iOS招人心得（附面试题）](https://juejin.cn/post/6844903480805556238)
     * [2017-06-29 面试题总结](https://zhangferry.com/2017/06/29/interview-question/)
+    * [iOS-Interview-Question-Answer](https://github.com/liberalisman/iOS-Interview-Question-Answer)
 - [2016-10-09 一份"有点难"的iOS面试题](https://zhuanlan.zhihu.com/p/22834934)
 - [2015-07-04 招聘一个靠谱的 iOS - 孙源(滴滴)](http://blog.sunnyxx.com/2015/07/04/ios-interview)
 

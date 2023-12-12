@@ -3,6 +3,7 @@ title: 其它知识点
 icon: hashtag
 
 index: true
+order: 12
 
 ---
 
