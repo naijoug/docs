@@ -55,7 +55,8 @@ export default hopeTheme({
       // install chart.js before enabling it
       // chart: true,
 
-      codetabs: true,
+      tabs: true, // 添加选项卡支持
+      codetabs: true, // 添加代码块分组支持
 
       // insert component easily
       // component: true,

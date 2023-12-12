@@ -10,6 +10,10 @@ index: true
 
 ## `Java` 中字符串的常用操作
 
+::: code:tabs
+
+@tab java
+
 ```java
 String str = "Hello, world!";
 // 获取字符串长度
@@ -25,6 +29,22 @@ String upperString = str.toUpperCase(); // 字母全部转化为大写
 String lowerString = str.toLowercase(); // 字母全部转化为小写
 char upperC = Character.toUpperCase(c); // 转化为大写字符
 char lowerC = Character.toLowerCase(c); // 转化为小写字符
+```
+
+@tab python
+
+```py
+s = 'Hello, world!'
+# 获取字符串长度
+l = len(s) # 13
+# 获取指定索引字符
+c = s[5] # ,
+# 判断字符类型
+is_alapha = c.isalpha() # 字符是否是字母
+is_digit = c.isdigit() # 字符是否是数字
+# 大小写转换
+upper_s = s.upper() # 字母全部转化为大写
+lower_s = s.lower() # 字母全部转化为小写
 ```
 
 ## `Palindrome` - “回文串”
