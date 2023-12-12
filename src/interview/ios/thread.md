@@ -134,28 +134,26 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(crea
 
 ### `NStimer` 定时器准确吗？如果不准确该怎样实现一个精确的 `NSTimer`? 
 
-`NSTimer` 的定时并不会非常精确，因为它依赖于 `RunLoop` 的执行情况，如果 `RunLoop` 处于除 `Default` 模式之外的状态或 `RunLoop` 是忙于其它事情，那么 `NSTimer` 是不会被执行的。因此，如果你启动了一个每秒触发一次的 NSTimer，实际上它触发的时间间隔可能会稍微大于一秒。
+  `NSTimer` 的定时并不会非常精确，因为它依赖于 `RunLoop` 的执行情况，如果 `RunLoop` 处于除 `Default` 模式之外的状态或 `RunLoop` 是忙于其它事情，那么 `NSTimer` 是不会被执行的。因此，如果你启动了一个每秒触发一次的 NSTimer，实际上它触发的时间间隔可能会稍微大于一秒。
 
-如果你需要更为精确的定时器，有几种常见的方案：
+  精确的定时器方案：
 
-1. GCD：使用 `dispatch_after` 来实现定时器功能，它可以脱离 `RunLoop` 工作。
+  - `GCD`：使用 `dispatch_after` 来实现定时器功能，它可以脱离 `RunLoop` 工作。
 
-```swift
-let time: TimeInterval = 2.0
-DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+  ```swift
+  let time: TimeInterval = 2.0
+  DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
     print("2 seconds later output")
-}
-```
+  }
+  ```
 
-2. `CADisplayLink`: 这是一个和屏幕刷新率同步的定时器，每一帧刷新都会被调用，精度很高，常用于做动画。
+  - `CADisplayLink`: 这是一个和屏幕刷新率同步的定时器，每一帧刷新都会被调用，精度很高，常用于做动画。
 
-```swift
-var displayLink: CADisplayLink? = CADisplayLink(target: self, selector: #selector(update))
-displayLink?.add(to: RunLoop.current, forMode: .common)
-```
+  ```swift
+  var displayLink: CADisplayLink? = CADisplayLink(target: self, selector: #selector(update))
+  displayLink?.add(to: RunLoop.current, forMode: .common)
+  ```
 
-3. 使用 `NSInvocation` 创造的 `NSTimer`，这种 `NSTimer` 精度较高。
-
-需要注意的是，更高的定时精度意味着更高的系统负荷，我们应该根据实际需求选择合适的定时器。
+  - 使用 `NSInvocation` 创造的 `NSTimer`，这种 `NSTimer` 精度较高。
 
   > iOS 计时器都有哪些，分别存在什么问题？

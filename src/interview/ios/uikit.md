@@ -17,6 +17,18 @@ order: 3
 
 ### `UIView` vs `CALayer` 为什么要这样设计？
 
+### `layoutSubviews` 那些情况下会触发？
+
+  > `layoutSubviews` 在 iOS 的 UIView 的生命周期中，是负责布局及排版子视图的方法。
+
+  - 在初始化 `UIView` 并添加到界面上时，系统会自动调用 `layoutSubviews` 方法进行子视图的布局。
+  - 当 `UIView` 的 `bounds` 发生变化，如改变宽高、旋转设备时，系统会调用 `layoutSubviews`。
+  - 当直接调用 `UIView` 的 `setNeedsLayout`或者 `layoutIfNeeded` 方法时，系统会调用 `layoutSubviews`。
+    * `setNeedsLayout` 会标记当前视图被标记为需要重新布局，然后在接下来的更新周期中，调用 `layoutSubviews` 对标记进行重新布局
+    * `layoutIfNeeded` 则会立即对视图进行重新布局，通常在动画的 `block` 内使用
+  - 当视图的某个子视图的 `frame` 被显式地修改，也会触发父视图的 `layoutSubviews`。
+  - 添加或者删除子视图的时候，也会触发父视图的 `layoutSubviews`。
+
 ### 根据 `UIControl` 实现 `UIButton`
 
 ## 屏幕渲染

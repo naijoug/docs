@@ -185,25 +185,46 @@ order: 1
  
   可以使用关联对象（`Associated Objects`）让分类拥有“伪属性”。
  
-## `msgSend`
+## `super` 是什么？
+
+  `super` 并不是一个指针，在 `OC` 进行消息调用时，其实是有两个隐藏参数的，一个是接收者(receiver)，一个是方法选择器(selector)。
+  
+  常见的 `self` 表示的是接收者。而 `super` 其实是一个编译器标示符，当发送给 `super` 一个消息时，调用者仍然是 `self` ，但是运行时会从当前类的父类开始查找方法。
   
 > 以下代码输出？
 
-```objc
-@interface Animail
-@end
-@interface Dog : Animal
-@end
-@implementation Dog
-- (instancetype)init {
+  ```objc
+  @interface Animal
+  @end
+  @interface Dog : Animal
+  @end
+  @implementation Dog
+  - (instancetype)init {
     self = [super init];
     if (self) {
         NSLog(@"%@", NSStringFromClass([self class]));
         NSLog(@"%@", NSStringFromClass([super class]));
     }
     return self;
-}
-@end
+  }
+  @end
+  ```
+  
+  也就是说 `super` 并不会改变消息的接收者，所以当我们调用 `[super class]` 时，虽然是从父类开始查找 `class` 方法，但是方法的接收者依然是 `self` 本身，其类别自然是当前类本身。这也是为什么我们再调用 `[super class]` 时还会返回 `Dog` 类的原因。
+
+> `super` 的底层实现？
+
+  在 `Objective-C` 中，super的实现是通过 `runtime` 的 `objc_msgSendSuper` 和 `objc_msgSendSuper_stret` 两个函数来完成的。具体来说，当编译器遇到 `[super method]` 这种形式的调用时，会转化为 `objc_msgSendSuper(super_cls, sel)` 的形式。
+
+下面是 `` 函数的定义：
+```c
+// super 结构体
+struct objc_super {
+    __unsafe_unretained id receiver;        // 消息的接收者
+    __unsafe_unretained Class super_class;  // 父类(开始查找的类)
+};
+// objc_msgSendSuper
+void objc_msgSendSuper(struct objc_super *super, SEL op, ...)
 ```
 
 ## `runtime`
@@ -239,10 +260,9 @@ order: 1
 
   `RunLoop` 的内部实现可以简单地概括为一个 `while` 循环，在这个循环中处理各种输入源的事件。`RunLoop` 在开启后会一直在这个循环中执行，直到接收到停止 `RunLoop` 的消息。
 
-
   * `RunLoop` 在启动时会从预设的 Mode 中选择一个，然后进入RunLoop的循环。
   * 在循环的每一个周期内，`RunLoop` 会首先处理所有到期的定时器事件。
-  * 然后，`RunLoop` 会处理所有的输入源事件。输入源的事件包括来自 Port 的消息，以及用户定义的其他事件。
-  * 然后，如果有观察者的话，`RunLoop` 会通知观察者当前 RunLoop 的状态。
+  * 然后，`RunLoop` 会处理所有的输入源事件。输入源的事件包括来自 `Port` 的消息，以及用户定义的其他事件。
+  * 然后，如果有观察者的话，`RunLoop` 会通知观察者当前 `RunLoop` 的状态。
   * 其次，如果在处理事件的过程中没有任何源需要处理，那么 `RunLoop` 会进入休眠等待被唤醒。
   * 这个循环会一直持续下去，直到接收到结束RunLoop的消息。
