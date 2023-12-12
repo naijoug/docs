@@ -82,6 +82,7 @@ icon: gift
 ## Interviews
 
 - [反向面试](https://github.com/yifeikong/reverse-interview-zh)
+- [Awesome-Interview](https://github.com/Awesome-Interview/Awesome-Interview)
 - [技术面试必备基础知识](https://github.com/CyC2018/CS-Notes)
 - [android-interview](https://github.com/guoxiaoxing/android-interview)
 - [IT 行业应试学知识库](https://github.com/apachecn/Interview)
