@@ -57,6 +57,8 @@ index: true
   
   交换 : 按照排序要求看看是否需要进行两个元素交换。每一轮遍历完，会有一个已排序的元素浮上来。所以叫形象的将这种排序叫做“冒泡排序”，根据排序顺序不同，又可以分为“大冒泡”和“小冒泡”。
   
+::: details 💡
+  
 ```swift
 func bubbleSort(nums: [Int]) -> [Int] {
     var nums = nums
@@ -74,14 +76,19 @@ func bubbleSort(nums: [Int]) -> [Int] {
 }
 ```
   
+:::
+  
 #### `Quick Sort` - “快速排序”
   
+::: details 💡
 
 ```swift
 func quickSort(nums: [Int]) -> [Int] {
     
 }
 ```
+ 
+:::
  
 ### 插入排序
 

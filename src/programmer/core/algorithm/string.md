@@ -58,7 +58,11 @@ lower_s = s.lower() # 字母全部转化为小写
 - 基础版 [🟢 LeetCode 125 - 验证回文串](https://leetcode.cn/problems/valid-palindrome)
  > 判断字符串中的字母(大小不敏感，大写字母与小字可以看作相等)和数字是否为回文串，字符中的的其它字符不参与回文串校验。
 
-::: details
+::: details 💡
+
+::: code-tabs 💡
+
+@tab java
 
 ```java
 boolean isPalindrome(String s) {
@@ -88,10 +92,12 @@ boolean isPalindrome(String s) {
 
 :::
 
+:::
+
 - 变形版 [🟢 LeetCode 680 - 验证回文串 II](https://leetcode.cn/problems/valid-palindrome-ii)
 > 给定一个字符串，判断改字符(在最多可以删除一个字符的情况下)是否可以成为回文串。
 
-::: details Solution
+::: details 💡
 
 ```java
 class Solution {
@@ -123,10 +129,14 @@ class Solution {
 }
 ```
 
+:::
+
 - 升级版 [🟡 LeetCode 1616 - 分割两个字符串得到回文串](https://leetcode.cn/problems/split-two-strings-to-make-palindrome)
 > a、b 两个字符串长度相同，将两个字符串从相同位置分割，a 的前半部分与 b 的后半部分，或者 b 的前半部分与 a 的后半部分拼接是否可以组成回文串。
 
-```java
+::: details 💡
+
+```java 
 class Solution {
     public boolean checkPalindromeFormation(String a, String b) {
         return checkPalindrome(a, b) || checkPalindrome(b, a);
@@ -158,6 +168,8 @@ class Solution {
     } 
 }
 ```
+
+:::
 
 ### 分割回文串
 
