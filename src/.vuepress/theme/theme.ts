@@ -55,7 +55,6 @@ export default hopeTheme({
       // install chart.js before enabling it
       // chart: true,
 
-      tabs: true, // 添加选项卡支持
       codetabs: true, // 添加代码块分组支持
 
       // insert component easily
@@ -113,7 +112,7 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
+      tabs: true, // 添加选项卡支持
       vPre: true,
 
       // install @vue/repl before enabling it

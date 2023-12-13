@@ -10,7 +10,7 @@ index: true
 
 ## `Java` 中字符串的常用操作
 
-::: code:tabs
+::: code-tabs
 
 @tab java
 
