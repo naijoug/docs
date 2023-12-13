@@ -13,7 +13,6 @@ index: true
 ::: code-tabs
 
 @tab java
-
 ```java
 String str = "Hello, world!";
 // 获取字符串长度
@@ -32,7 +31,6 @@ char lowerC = Character.toLowerCase(c); // 转化为小写字符
 ```
 
 @tab python
-
 ```py
 s = 'Hello, world!'
 # 获取字符串长度
@@ -47,6 +45,8 @@ upper_s = s.upper() # 字母全部转化为大写
 lower_s = s.lower() # 字母全部转化为小写
 ```
 
+:::
+
 ## `Palindrome` - “回文串”
 
 > 回文串 : 字符串收尾形成对称
@@ -57,6 +57,8 @@ lower_s = s.lower() # 字母全部转化为小写
 
 - 基础版 [🟢 LeetCode 125 - 验证回文串](https://leetcode.cn/problems/valid-palindrome)
  > 判断字符串中的字母(大小不敏感，大写字母与小字可以看作相等)和数字是否为回文串，字符中的的其它字符不参与回文串校验。
+
+::: details
 
 ```java
 boolean isPalindrome(String s) {
@@ -84,8 +86,12 @@ boolean isPalindrome(String s) {
 }
 ```
 
+:::
+
 - 变形版 [🟢 LeetCode 680 - 验证回文串 II](https://leetcode.cn/problems/valid-palindrome-ii)
 > 给定一个字符串，判断改字符(在最多可以删除一个字符的情况下)是否可以成为回文串。
+
+::: details Solution
 
 ```java
 class Solution {
