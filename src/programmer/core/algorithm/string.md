@@ -58,9 +58,9 @@ lower_s = s.lower() # 字母全部转化为小写
 - 基础版 [🟢 LeetCode 125 - 验证回文串](https://leetcode.cn/problems/valid-palindrome)
  > 判断字符串中的字母(大小不敏感，大写字母与小字可以看作相等)和数字是否为回文串，字符中的的其它字符不参与回文串校验。
 
-::: details 💡
+:::: details 💡
 
-::: code-tabs 💡
+::: code-tabs solutions
 
 @tab java
 
@@ -90,7 +90,17 @@ boolean isPalindrome(String s) {
 }
 ```
 
+@tab python
+
+```python
+isPalindrome():
+  left = 0
+  right
+```
+
 :::
+
+::::
 
 :::
 
