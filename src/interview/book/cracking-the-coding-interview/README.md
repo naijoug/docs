@@ -1,15 +1,14 @@
 ---
-title: 问题
+title: 程序员面试金典
 icon: hashtag
 
-index: true
-order: 1
+index: false
 
 ---
 
-<!-- more -->
-
 > Cracking the Coding Interviews (150)
+
+<!-- more -->
 
 ## 1 数组与字符串 (8)
 
@@ -474,8 +473,3 @@ order: 1
 - 18.13 最大字母矩阵
     
     > 有一个单词清单，请设计一个高效算法，计算由清单中单词组成的最大子矩阵，要求矩阵中的行和列都是清单中的单词。
-
-
-
-
-

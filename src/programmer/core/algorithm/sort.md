@@ -10,6 +10,23 @@ index: true
 
 <!-- more -->
 
+## reference
+
+- [排序算法](https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
+
+## 排序算法一览
+
+| 排序算法 | 时间复杂度 | 空间复杂度 | 稳定性
+| --- | --- | --- | ---
+| 冒泡排序 | O(n²)    | O(1) | ✅
+| 选择排序 | O(n²)    | O(1) | ✅
+| 插入排序 | O(n²)    | O(1) | ✅
+| 归并排序 | O(nlogn) | O(1) | ✅
+| 快速排序 | O(nlogn) | O(1) | ❌
+| 希尔排序 | O(nlogn) | O(1) | ❌
+| 堆排序  | O(nlogn)  | O(1) | ❌
+| 计数排序 | O(n)     | O(n) | ✅ 
+
 ## concept
 
 ### 衡量指标
@@ -27,19 +44,6 @@ index: true
 逆序度 : 数组中的数据与排序方向相反顺序排序的元素的个数
 
 逆序度 = 满有序度 - 逆序度
-
-## 排序算法一览
-
-| 排序算法 | 时间复杂度 | 空间复杂度 | 稳定性
-| --- | --- | --- | ---
-| 冒泡排序 | O(n²)    | O(1) | ✅
-| 选择排序 | O(n²)    | O(1) | ✅
-| 插入排序 | O(n²)    | O(1) | ✅
-| 快速排序 | O(nlogn) | O(1) | ✅
-| 归并排序 | O(nlogn) | O(1) | ✅
-| 希尔排序 | O(n²)    | O(1) | ✅
-| 堆排序  | O(n²)     | O(1) | ✅
-| 计数排序 | O(n)     | O(n) | ✅ 
 
 ## 比较排序
 
@@ -101,6 +105,8 @@ func quickSort(nums: [Int]) -> [Int] {
   比较 : 每次选择无序部分的的第一个元素，然后与有序部分进行比较查找到需要插入的有序位置
   插入 : 将需要插入位置后面的元素往后移动，将需要插入的元素插入到有序的位置
 
+::: details 💡
+
 ```swift
 func insertionSort(nums: [Int]) -> [Int] {
     var nums = nums
@@ -114,7 +120,12 @@ func insertionSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 #### `Shell Sort` - “希尔排序”
+
+
+::: details 💡
 
 ```swift
 func shellSort(nums: [Int]) -> [Int] {
@@ -122,11 +133,15 @@ func shellSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ### 选择排序
 
   每次遍历选择
 
 #### `Selection Sort` - “简单选择排序”
+
+::: details 💡
 
 ```swift
 func selectionSort(nums: [Int]) -> [Int] {
@@ -134,7 +149,11 @@ func selectionSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 #### `Heap Sort` - “堆排序”
+
+::: details 💡
 
 ```swift
 func heapSort(nums: [Int]) -> [Int] {
@@ -142,11 +161,15 @@ func heapSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ### 归并排序
 
   将数组进行递归分割成子数组，将子数组进行合并排序，最终形成有序数组。
 
 #### `Binary Merge Sort` - “二路归并排序”
+
+::: details 💡
 
 ```swift
 func mergeSort(nums: [Int]) -> [Int] {
@@ -154,7 +177,11 @@ func mergeSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 #### `Multi Merge Sort` - “多路归并排序”
+
+::: details 💡
 
 ```swift
 func multiMergeSort(nums: [Int]) -> [Int] {
@@ -162,11 +189,15 @@ func multiMergeSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ## 非比较排序
 
   排序的过程中，不涉及元素之间的比较，而是利用的数据特性进行巧妙排序。
 
-### 桶排序
+### `Bucket Sort` - “桶排序”
+
+::: details 💡
 
 ```swift
 func bucketSort(nums: [Int]) -> [Int] {
@@ -174,7 +205,11 @@ func bucketSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ### `Counting Sort` - “计数排序”
+
+::: details 💡
 
 ```swift
 func countingSort(nums: [Int]) -> [Int] {
@@ -182,7 +217,11 @@ func countingSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ### `Radix Sort` - “基数排序”
+
+::: details 💡
 
 ```swift
 func radixSort(nums: [Int]) -> [Int] {
@@ -190,9 +229,13 @@ func radixSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ## 还有什么排序算法吗？
 
 ### `Monkey Sort` - “猴子排序”
+
+::: details 💡
 
 ```swift
 func monkeySort(nums: [Int]) -> [Int] {
@@ -200,7 +243,12 @@ func monkeySort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ### `Sleep Sort` - “睡眠排序”
+
+
+::: details 💡
 
 ```swift
 func sleepSort(nums: [Int]) -> [Int] {
@@ -208,11 +256,17 @@ func sleepSort(nums: [Int]) -> [Int] {
 }
 ```
 
+:::
+
 ### `Noodle Sort` - “面条排序”
+
+::: details 💡
 
 ```swift
 func noodleSort(nums: [Int]) -> [Int] {
     
 }
 ```
+
+:::
 

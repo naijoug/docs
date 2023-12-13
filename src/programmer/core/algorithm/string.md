@@ -8,7 +8,7 @@ index: true
 
 <!-- more -->
 
-## `Java` 中字符串的常用操作
+## 字符串的常用操作
 
 ::: code-tabs
 
@@ -58,14 +58,11 @@ lower_s = s.lower() # 字母全部转化为小写
 - 基础版 [🟢 LeetCode 125 - 验证回文串](https://leetcode.cn/problems/valid-palindrome)
  > 判断字符串中的字母(大小不敏感，大写字母与小字可以看作相等)和数字是否为回文串，字符中的的其它字符不参与回文串校验。
 
-:::: details 💡
-
-::: code-tabs solutions
-
-@tab java
+::: details 💡
 
 ```java
-boolean isPalindrome(String s) {
+class Solution
+  public boolean isPalindrome(String s) {
     int left = 0;
     int right = s.length() - 1;
     while ( left < right ) {
@@ -87,20 +84,9 @@ boolean isPalindrome(String s) {
         right -= 1;
     }
     return true;
+  }
 }
 ```
-
-@tab python
-
-```python
-isPalindrome():
-  left = 0
-  right
-```
-
-:::
-
-::::
 
 :::
 
@@ -124,7 +110,6 @@ class Solution {
         }
         return true;
     }
-
     // 判断一个字符串在指定左右索引范围字符是否为回文串
     boolean isPalindrome(String s, int left, int right) {
         while ( left < right ) {

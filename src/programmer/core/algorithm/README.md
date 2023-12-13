@@ -8,9 +8,9 @@ index: false
 
 <!-- more -->
 
-## 算法知多少
+## 算法一览
 
-| Algorithm | 说明
+| algorithm | description
 | -- | --
 | traverse              | 遍历
 | recursion             | 递归
