@@ -7,7 +7,6 @@ export const programmer = arraySidebar([
     collapsible: true, children: [
       Builder.structure("数据结构", "data-structure"),
       Builder.structure("算法", "algorithm"),
-      Builder.structure("书籍", "book/"),
     ]
   },
   {
