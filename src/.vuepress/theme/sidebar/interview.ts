@@ -6,7 +6,7 @@ export const interview = arraySidebar([
     collapsible: true, children: "structure",
   },
   {
-    text: "📚", icon: "", link: "book/", prefix: "book/",
+    text: "📚", icon: "hashtag", link: "book/", prefix: "book/",
     collapsible: true, children: "structure",
   },
   {
