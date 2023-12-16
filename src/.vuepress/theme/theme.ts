@@ -1,6 +1,9 @@
+import { getDirname, path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar/sidebar.js";
+
+const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
   hostname: "https://naijoug.github.io/docs",
@@ -75,7 +78,17 @@ export default hopeTheme({
 
       imgLazyload: true,
       imgSize: true,
-      include: true,
+      
+      // include: true, // 启用导入文件功能
+      include: {
+        resolvePath: (file) => {
+          // 添加别名
+          if (file.startsWith("@leetcode")) 
+            return file.replace("@leetcode", path.resolve(__dirname, "../../interview/leetcode"));
+          
+          return file;
+        },
+      },
 
       // install katex before enabling it
       // katex: true,

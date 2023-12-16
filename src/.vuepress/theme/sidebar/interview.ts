@@ -9,8 +9,4 @@ export const interview = arraySidebar([
     text: "📚", icon: "hashtag", link: "book/", prefix: "book/",
     collapsible: true, children: "structure",
   },
-  {
-    text: "LeetCode", icon: "hashtag", link: "leetcode/", prefix: "leetcode/",
-    collapsible: true, children: "structure",
-  },
 ])

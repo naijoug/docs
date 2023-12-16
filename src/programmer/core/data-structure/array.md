@@ -17,9 +17,12 @@ order: 1
 
 
 
-## `prefix sum` - “前缀和”
+## `Prefix Sum` - “前缀和”
+
+
 
 ## `Hash Table` - “哈希表”
+
 
 
 ## `Stack & Queue` - “栈与队列”

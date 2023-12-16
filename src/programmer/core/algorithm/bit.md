@@ -36,61 +36,19 @@ index: true
 
 :::
 
+
 ### `single number` - “只出现一次的数字”
 
-- [LeetCode 136](https://leetcode.cn/problems/single-number/)
-  > 一个非空的整数数组，除了某个元素只出现一次外，其余元素均出现两次。找出只出现一次的数字 
+<!-- @include: @leetcode/problems/0x0100.md#0136 -->
 
-【思路】
-  由于存在相同的元素均出现两次，刚好可以使用 `x ^ x = 0` 的特性。将所有数字进行异或操作，则相同的数字异或结果为 0，只出现一次的数与 0 进行异或结果就是只出现一次的数。
-  时间复杂度: O(n)  空间复杂度: O(1)
+<!-- @include: @leetcode/problems/0x0200.md#0260 -->
 
-::: details 💡
+<!-- @include: @leetcode/problems/0x0100.md#0137 -->
 
-:::
-
-- 升级版 [LeetCode 260](https://leetcode.cn/problems/single-number-iii)
-  > 一个非空的整数数组中，除了两个元素只出现一次外，其余元素均出现两次。找出两个只出现一次的数字
-  > 时间复杂度: O(n)  空间复杂度: O(1)
-
-::: details 💡
-:::
-
- - 再升级版
-   > 一个非空的整数数组，除了三个元素只出现一次外，其余元素均出现两次。找出三个只出现一次的数字。
-   > 时间复杂度: O(n)  空间复杂度: O(1)
-
-::: details 💡
-:::
-
-- 变形版 [LeetCode 137](https://leetcode.cn/problems/single-number-ii)
-  > 一个非空的整数数组中，除了某个元素只出现一次外，其余元素均出现三次。找出只出现一次的数字 
-  > 时间复杂度: O(n)  空间复杂度: O(1)
-
-【思路】
-  这道题是 136 的变形版本，不能使用 `x ^ x = 0` 特性。但是但是还是可以使用位运算的特性进行求解。
-  
-  ::: details 💡
-  
-  :::
   
 ### `missing number` - “丢失的数”
 
-- [LeetCode 268](https://leetcode.cn/problems/missing-number)
-  > 给定一个包含 [0, n] 中的 n 个数的数组 nums，找出 [0, n] 这个范围中没有出现在数组中的那个数。
-
-【思路】
-  由于这个数组的值范围为[0, n]，则表明刚好是长度为 n+1 长度的数组。数字刚好与所在的索引的位置匹配，而缺失的数表明该位置没有数。那么使用 `x ^ x = 0` 的特性。只要将数组中数值与所有的索引进行异或操作，那么结果刚好就是缺失的那个数。
-  代码实现时，必须要构造一个 0~n 的数组，可以在循环变量数组时，直接使用索引值。需要注意的是 nums 长度为 n，不是 n+1。所以遍历时索引值只能到 n-1，所以可以将进行异或操作的结果值初始值设置为 n。
-
-::: details 💡
-:::
-
-- 升级版
-  > 给定一个包含 [0, n] 中的 n-1 个数的数组 nums，找出 [0, n] 这个范围中没有出现在数组中的两个数。
-
-::: details 💡
-:::
+<!-- @include: @leetcode/problems/0x0200.md#0268 -->
 
 ## `n & n-1 = 0` & `n ^ n+1 = 1`5
 
@@ -112,20 +70,9 @@ index: true
   9 = 0b1001
   ```
 
-- [LeetCode 231](https://leetcode.cn/problems/power-of-two)
-  > 判断一个整数是否为 2 的幂次方
+<!-- @include: @leetcode/problems/0x0200.md#0231 -->
 
-::: details 💡
-:::
+<!-- @include: @leetcode/problems/0x0300.md#0326 -->
 
-- [LeetCode 326](https://leetcode.cn/problems/power-of-three)
-  > 判断一个整数是否为 3 的幂次方
+<!-- @include: @leetcode/problems/0x0300.md#0342 -->
 
-::: details 💡
-:::
-
-- [LeetCode 342](https://leetcode.cn/problems/power-of-four)
-  > 判断一个整数是否为 4 的幂次方
-
-::: details 💡
-:::
