@@ -64,6 +64,8 @@ lower_s = s.lower() # 字母全部转化为小写
 
 <!-- @include: @leetcode/problems/0x1600.md#1616 -->
 
+<!-- @include: @leetcode/problems/0x0000.md#0005 -->
+
 
 ### 分割回文串
 
