@@ -16,6 +16,8 @@ export default sidebar({
   "/article/": article,
   "/interview/": interview,
   
+  "/interview/leetcode/problems/": "structure",
+
   // --- fallback ---
   "/": ["", "guide"],
 });
