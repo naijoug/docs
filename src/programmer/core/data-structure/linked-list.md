@@ -15,7 +15,7 @@ order: 2
 <!-- @include: @leetcode/problems/0x0000.md#0019 -->
 
 <!-- 链表的中间结点 -->
-<!-- @include: @leetcode/problems/0x0876.md#0876 -->
+<!-- @include: @leetcode/problems/0x0800.md#0876 -->
 
 ## `merge` - “合并”
 
