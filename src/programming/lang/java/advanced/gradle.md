@@ -16,7 +16,7 @@ order: 5
 
 ## Usage
 
-``` bash
+```shell
 $ gradle -q hello # 执行 hello.gradle 脚本
 # -q : quiet 模式，不会生成 Gradle 日志信息。
 # -x : 排除默写任务
@@ -40,7 +40,7 @@ task hello << {
 }
 ```
 
-``` bash
+```shell
 $ gradle build      # 编译和测试，并生成所有类和资源的 jar 文件
 $ gradle clean      # 删除 build 目录和所有构建生成的文件
 $ gradle assemble   # 编译打包，不运行单元测试

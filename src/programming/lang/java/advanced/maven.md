@@ -16,7 +16,7 @@ order: 4
 
 ## Usage
 
-```bash
+```shell
 # mvn [插件名]:[目标操作名]
 $ mvn help:effective-pom # 查看 effective pom 
 $ mvn clean package # 清理目标目录 & 构建项目输打成 jar 包 
@@ -141,7 +141,7 @@ $ mvn package -Dmaven.test.skip=true
 
 - maven-surefire-plugin
 
-    ```bash 
+    ```shell 
     $ mvn install -Dmaven.test.skip=true    # 不执行测试用例，不编译测试用例
     $ mvn install -DskipTests # 不执行测试用例，编译测试用例
     ```

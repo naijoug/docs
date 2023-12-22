@@ -47,28 +47,6 @@ order: 1
     | war | web archive file        | web 程序打包文件
     | ear | enterprise archive file | 企业打包文件
 
-- 访问修饰符
-
-    | 位置 | public | protected | default | private   
-    | --- | --- | --- | --- | ---
-    | 同一类中 | √ | √ | √ | √       
-    | 同一包中 | √ | √ | √
-    | 子类     | √ | √        
-    | 不同包中 | √   
-
-- 基本数据类型
-
-    | 类型 | 说明 | 比特位 | 位数 | 范围 
-    | --- | --- | --- | --- | --- 
-    | byte      | 一个字节的大小 | 8 bit  | 2(8)  | -128~127 
-    | short     | 两个字节的大小 | 16 bit | 2(16) | -2(15)~2(15)-1 
-    | int       | 四个字节的大小 | 32 bit | 2(32) | -2(31)~2(31)-1 
-    | long      | 八个字节的大小 | 64 bit | 2(64) | -2(63)~2(63)-1 
-    | float     | 四个字节的大小 | 32 bit 
-    | double    | 八个字节的大小 | 64 bit 
-    | char      | 两个字节的大小 | 16 bit | 2(16) 
-    | boolean   | 一个字节的大小 | 8 bit
-
 ## 代码执行顺序
 > `静态代码块` -> `main方法` -> `构造代码块` -> `构造方法`
 >
@@ -90,30 +68,6 @@ order: 1
     * 必须具有公共 `Public` 无参数构造函数
     * 所有属性私有化 `Private`, 并且提供公共 `Public` 的访问方法(get & set)
     * 可以序列化(如: 实现 `Serializable` 接口)
-
-## `?` 泛型通配符
-> - `? extends T` : 限定通配符的上边界，接收 T 类型或者 T 的子类型
-> - `? super T`   : 限定通配符的下边界，接收 T 类型或者 T 的父类型
-
-  ``` java
-  // extends，接收 Number 类型或者 Number 的子类型
-  Vector<? extends Number> x = new Vector<Integer>(); // 正确
-  Vector<? extends Number> x = new Vector<String>();  // 错误
-  // super，接收 Integer 或者 Integer 的父类型
-  Vector<? super Integer> x = new Vector<Number>();   // 正确
-  Vector<? super Integer> x = new Vector<Byte>();     // 错误
-  ```
-
-## `abstract` 不可共存的关修饰符
-
-- `final` : 修饰类不能继承，修饰方法不能重写；abstract 修饰必须继承和重写
-- `static` : 使用类名调用；abstract 修饰方法没有实现，不能直接调用
-- `private` : 修饰的类智能在本类使用；abstract 修饰需要子类重写
-
-## `interface` 接口默认修饰符
-
-- 属性 : `public static final`
-- 方法 : `public abstract`
 
 ## 字节流 & 字符流
 
