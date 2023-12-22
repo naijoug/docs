@@ -1,5 +1,5 @@
 ---
-title: 书籍
+title: Book
 icon: hashtag
 
 index: false

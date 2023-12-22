@@ -6,14 +6,16 @@ index: true
 
 ---
 
-# PHP
-> `PHP`（`PHP`: `Hypertext` `Preprocessor`的缩写，中文名：“超文本预处理器”）是一种通用开源脚本语言。入门门槛较低，易于学习，使用广泛，主要适用于Web开发领域。
+  > `PHP`（`PHP`: `Hypertext` `Preprocessor`的缩写，中文名：“超文本预处理器”）是一种通用开源脚本语言。入门门槛较低，易于学习，使用广泛，主要适用于Web开发领域。
 
-## Reference
+<!-- more -->
 
-- [PHP 手册](http://php.net/manual/zh/index.php)
+## reference
 
-## Concept
+- [PHP](https://www.php.net)
+- [PHP 手册](https://php.net/manual/zh/index.php)
+
+## concept
 
 - PHP特点
     * PHP 独特的语法混合了 C、Java、Perl 以及 PHP 自创新的语法

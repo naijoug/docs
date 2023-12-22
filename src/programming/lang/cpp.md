@@ -6,12 +6,15 @@ index: true
 
 ---
 
-# C++
+## reference
 
-## Reference
-
+- [C++](https://cpp-lang.net)
 - [C++ 参考手册](http://zh.cppreference.com/)
-- [📚 Modern C++ Tutorial: C++11/14/17/20 On the Fly](https://github.com/changkun/modern-cpp-tutorial)
+
+------
+
+- [C++ 那些事](https://light-city.github.io) 👉🏻 [GitHub](https://github.com/Light-City/CPlusPlusThings)
+- [现代 C++ 教程：高速上手 C++ 11/14/17/20](https://changkun.de/modern-cpp) 👉🏻 [GitHub](https://github.com/changkun/modern-cpp-tutorial)
 
 ------ 
 
@@ -105,7 +108,7 @@ index: true
     * 使用 `dlconfig` 工具将动态库的路径加载到系统库列表中
 
 ## extern "C"
-> `extern "C"` 声明的函数使用函数名作为符号名(跟 C 函数一样)，不能重载(只有非成员函数才能被声明为 `extern "C"`)，可以被 dlopen 动态加载。
+  > `extern "C"` 声明的函数使用函数名作为符号名(跟 C 函数一样)，不能重载(只有非成员函数才能被声明为 `extern "C"`)，可以被 dlopen 动态加载。
 
   | 符号名 | 说明
   | -- | --
@@ -124,9 +127,10 @@ index: true
   ```
 
 ## C++ 默认参数
-> - 如果某个参数是默认参数，那么它后面的参数必须都是默认参数
-> - 默认参数可以放在函数声明或者定义中，但只能放在二者之一
-> - 函数重载时谨慎使用默认参数值
+
+  - 如果某个参数是默认参数，那么它后面的参数必须都是默认参数
+  - 默认参数可以放在函数声明或者定义中，但只能放在二者之一
+  - 函数重载时谨慎使用默认参数值
 
   ```cpp
   int sum(int a, int b = 3, int c = 5) {
@@ -139,7 +143,7 @@ index: true
 
 ## Make & CMake
 
-- make : 通过 Makefile 文件进行编译和链接程序 (Makefile 缺陷 : 工程大时手写 Makefile 比较困难，更换平台需要修改 Makefile)
+  - make : 通过 Makefile 文件进行编译和链接程序 (Makefile 缺陷 : 工程大时手写 Makefile 比较困难，更换平台需要修改 Makefile)
 
     ```shell 
     # Makefile
@@ -173,7 +177,7 @@ index: true
     $ make clean # 按照 Makefile 清除中间文件
     ```
 
-- `CMake` : (Cross-platform Make) 跨平台 make 工具, 通过 CMakeLists.txt 文件生成 Makefile
+  - `CMake` : (Cross-platform Make) 跨平台 make 工具, 通过 CMakeLists.txt 文件生成 Makefile
 
     ```shell 
     # CMakeLists.txt
@@ -189,8 +193,8 @@ index: true
     aux_source_directory(. DIR_LIB_SOURCES)
     add_library(hello ${DIR_LIB_SOURCES})
     ```
-        
-    ```bash
+    
+    ```shell
     $ cmake .   # 根据 CMakeLists.txt 生成 Makefile
     $ make      # 根据生成的 Makefile 进行编译链接
     ```

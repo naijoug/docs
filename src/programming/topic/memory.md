@@ -7,14 +7,11 @@ order: 4
 
 ---
 
-# Memory Management
-> 内存管理
-
 <!-- more -->
 
-## Reference
+## reference
 
-## Concept
+## concept
 
 - 程序可执行文件结构
 

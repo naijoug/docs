@@ -6,7 +6,7 @@ index: true
 
 ---
 
-## Reference
+## reference
 
 - [Airbnb Lottie Files](https://lottiefiles.com/)
 - [及时设计](https://js.design/courses)
@@ -14,7 +14,7 @@ index: true
 - [Adobe全套下载](https://www.yuque.com/qianxun-nzpyh/kb)
 - [设计师口袋心理学](https://iason.notion.site/6719c7650fd1406c92287f556520fbc3)
 
-## Tool
+## tool
 
 - [Obsidian](https://obsidian.md/)
     > Obsidian 既是一个 Markdown 编辑器，也是一个知识管理软件。

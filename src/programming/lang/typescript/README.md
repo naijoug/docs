@@ -8,15 +8,19 @@ index: false
 
 ## reference
 
-- [TypeScript](https://github.com/microsoft/TypeScript)
+- [TypeScript](https://www.typescriptlang.org/) 👉🏻 [GitHub](https://github.com/microsoft/TypeScript)
     > TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 - [TypeScript Docs](https://www.typescriptlang.org/docs) : [TypeScript 中文网](https://ts.nodejs.cn/docs/)
-- [typescript-tutorial](https://github.com/xcatliu/typescript-tutorial) : [TypeScript 入门教程](https://ts.xcatliu.com/)
-- [TypeScript](https://github.com/zhongsp/TypeScript) : [TypeScript 使用指南手册](https://www.patrickzhong.com/TypeScript)
-- [typescript-book](https://github.com/basarat/typescript-book)
+
+------
+
+- [TypeScript 入门教程](https://ts.xcatliu.com/) 👉🏻 [GitHub](https://github.com/xcatliu/typescript-tutorial)
+- [TypeScript 使用指南手册](https://www.patrickzhong.com/TypeScript) 👉🏻 [GitHub](https://github.com/zhongsp/TypeScript)
+- [TypeScript Deep Dive 中文版](https://jkchao.github.io/typescript-book-chinese) 👉🏻 [GitHub](https://github.com/jkchao/typescript-book-chinese)
+    > [TypeScript Deep Dive](https://basarat.gitbook.io/typescript) 👉🏻 [GitHub](https://github.com/basarat/typescript-book)
     > 📚 The definitive guide to TypeScript and possibly the best TypeScript book 📖. Free and Open Source 🌹
-- [typescript-book-chinese](https://github.com/jkchao/typescript-book-chinese) : [TypeScript Deep Dive 中文版](https://jkchao.github.io/typescript-book-chinese)
-- [clean-code-typescript](https://github.com/labs42io/clean-code-typescript) : [TypeScript 代码整洁之道](https://github.com/pipiliang/clean-code-typescript)
+- [TypeScript 代码整洁之道](https://github.com/pipiliang/clean-code-typescript) 
+    > [Clean Code concepts adapted for TypeScript](https://labs42io.github.io/clean-code-typescript) 👉🏻 [GitHub](https://github.com/labs42io/clean-code-typescript)
 
 ------
 

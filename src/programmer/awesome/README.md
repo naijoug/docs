@@ -79,14 +79,6 @@ icon: gift
 - [ML For Beginners](https://github.com/microsoft/ML-For-Beginners)
     > 12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all
 
-## Interviews
-
-- [反向面试](https://github.com/yifeikong/reverse-interview-zh)
-- [Awesome-Interview](https://github.com/Awesome-Interview/Awesome-Interview)
-- [技术面试必备基础知识](https://github.com/CyC2018/CS-Notes)
-- [android-interview](https://github.com/guoxiaoxing/android-interview)
-- [IT 行业应试学知识库](https://github.com/apachecn/Interview)
-
 ## Tool
 
 - [RSSHub](https://github.com/DIYgod/RSSHub)
@@ -112,14 +104,6 @@ icon: gift
 
 - [cubic-bezier](http://cubic-bezier.com)
 - [Easing Functions Cheat Sheet](https://github.com/ai/easings.net)
-
-## Browser
-
-- [Tampermonkey](https://www.tampermonkey.net/)
-    > 一款免费的浏览器扩展和最为流行的用户脚本管理器
-- [Greasy Fork](https://greasyfork.org/zh-CN)
-- [OpenUserJS](https://openuserjs.org/)
-- [Google Chinese ResultsBlocklist](https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist)
 
 ## Money
 

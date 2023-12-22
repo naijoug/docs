@@ -3,11 +3,49 @@ title: Java X
 icon: hashtag
 
 index: true
-order: 2
 
 ---
 
 <!-- more -->
+
+## OracleJDK vs OpenJDK
+
+## concept
+
+- Java 的三大平台
+
+    | 类型 | 全称 | 说明 
+    | --- | --- | ---
+    | Java SE | Java Platform Standard Edition      | 基础版本，开发 Java 应用程序
+    | Java EE | Java Platform Enterprise Edition    | 企业版本，开发 Java 服务端程序...
+    | Java ME | Java Platform Micro Edition         | 嵌入(移动)设备版本
+
+- `JDK` & `JRE` & `JVM`
+
+    | 类型 | 全称 | 说明
+    | --- | --- | ---
+    | `JDK`   | Java Development Kit      | 包括了 Java 运行环境、Java 工具和 Java 基础类库
+    | `JRE`   | Java Runtime Environment  | 包括 Java 虚拟机和 Java 程序所需的核心类库等
+    | `JVM`   | Java Virtual Machine      | Java 虚拟机
+
+- JDK 目录
+
+    | 目录 | 说明
+    | --- | ---
+    | `bin`       | 存放 Java 的编译器、解释器等工具(可执行文件)
+    | `include`   | 存放的调用系统资源的接口文件
+    | `jre`       | 存放 Java 运行环境文件
+    | `lib`       | 存放 Java 的类库文件
+    | `man`       | man 帮助文件
+    | `src.zip`   | JDK 提供的类的源代码
+
+- `jar` & `war` & `ear`
+
+    | 打包类型 | 全称 | 说明
+    | --- | --- | ---
+    | `jar` | java archive file       | java 程序打包文件，与 zip 兼容
+    | `war` | web archive file        | web 程序打包文件
+    | `ear` | enterprise archive file | 企业打包文件
 
 ## Java 5
 
@@ -16,21 +54,21 @@ order: 2
  
  > 语法 : `import static 包名.类名.静态属性|静态方法|*`
 
-  ```java
-  import static java.lang.System.out
-  out.println("Hello!");
-  ```
+```java
+import static java.lang.System.out
+out.println("Hello!");
+```
 
 ### 增强 for 循环
   > 增强 for 循环只能用在数组、或实现 Iterable 接口的集合类上
 
   > 语法 : `for(变量类型 变量 : 需迭代的数组或集合){ }`
 
-  ```java
-  for(int num : nums) {
-      System.out.println(num);
-  } 
-  ```
+```java
+for(int num : nums) {
+    System.out.println(num);
+} 
+```
 
 ### 可变参数
   > 允许为方法定义长度可变的参数。
@@ -83,15 +121,15 @@ order: 2
 ### `Optional`
   > 可选类型，用于解决空指针异常的问题
 
-### 接口方法可以定义默认实现
+### 接口定义默认实现
     
-  ```java
-  public interface Tool {
+```java
+public interface Tool {
     default void work() {
         System.out.println("use tool to work!");
     }
-  }
-  ```
+}
+```
 
 ### Functional Interface 
   >函数式接口，也称为 SAM。

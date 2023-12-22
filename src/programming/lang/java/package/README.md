@@ -1,20 +1,19 @@
 ---
-title: Maven
+title: 包管理
 icon: hashtag
 
-index: true
-order: 4
+index: false
 
 ---
 
 <!-- more -->
 
-## Reference
+## Maven
 
-- [Maven](https://maven.apache.org/)
+- [Maven](https://maven.apache.org/) 👉🏻 [GitHub](https://github.com/apache/maven)
 - [MVNRepository](https://mvnrepository.com/)
 
-## Usage
+### command
 
 ```shell
 # mvn [插件名]:[目标操作名]
@@ -35,7 +34,7 @@ $ mvn package -DskipTests
 $ mvn package -Dmaven.test.skip=true 
 ```
 
-## pom.xml
+### pom.xml
 
 | 配置文件 | 说明
 | --- | ---
@@ -72,12 +71,13 @@ $ mvn package -Dmaven.test.skip=true
 </project>
 ```
 
-## Dependency
-> - groupId : 所属组织的名称 (类似 Java 包名)
-> - artifactId : jar 包的名称 (类似 Java 类名)
-> - scope : 依赖作用域
-> - version : jar 包版本
-> - systemPath : 外部依赖 jar 的路径(相对于项目)
+### `Dependency` - “依赖”
+
+- groupId : 所属组织的名称 (类似 Java 包名)
+- artifactId : jar 包的名称 (类似 Java 类名)
+- scope : 依赖作用域
+- version : jar 包版本
+- systemPath : 外部依赖 jar 的路径(相对于项目)
     
     | Scope | 说明
     | --- | --- 
@@ -99,8 +99,9 @@ $ mvn package -Dmaven.test.skip=true
     </dependency>
     ```
 
-## Repository
-> Maven 仓库, 一个地方或者目录, 存储项目 jar 包、库、插件或任何其它项目制定组件。
+### `Repository` - “仓库”
+    
+  > Maven 仓库, 一个地方或者目录, 存储项目 jar 包、库、插件或任何其它项目制定组件。
 
 - Maven 仓库类型
     * local : 本地仓库
@@ -113,10 +114,11 @@ $ mvn package -Dmaven.test.skip=true
     3. 搜索远程仓库中的依赖, 未找到 -> 第 4 步 
     4. 未找到, 停止构建 & 抛出异常(找不到依赖)
 
-## Plugin
-> Maven 是一个执行插件的框架，所有任务均由插件完成。一个插件提供一系列的目标操作
-> 
-> 插件名字格式 : `maven-[name]-plugin`
+### `Plugin` - “插件”
+
+  > Maven 是一个执行插件的框架，所有任务均由插件完成。一个插件提供一系列的目标操作
+ 
+  > 插件名字格式 : `maven-[name]-plugin`
 
 - 插件类型
 
@@ -237,3 +239,52 @@ $ mvn package -Dmaven.test.skip=true
         </executions>
     </plugin>
     ```
+
+## Gradle
+
+- [gradle](https://gradle.org/) 👉🏻 [GitHub](https://github.com/gradle/gradle)
+    > Adaptable, fast automation for all
+- [Gradle User Guide 中文版](https://dongchuan.gitbooks.io/gradle-user-guide-) 👉🏻 [GitHub](https://github.com/DONGChuan/GradleUserGuide)
+
+### command
+
+```shell
+$ gradle -q hello # 执行 hello.gradle 脚本
+# -q : quiet 模式，不会生成 Gradle 日志信息。
+# -x : 排除默写任务
+# -b ：指定 build.gradle 脚本所在位置
+# -p : 指定构建的目录
+$ gradle dependencies   # 查询依赖列表
+
+$ gradle build      # 编译和测试，并生成所有类和资源的 jar 文件
+$ gradle clean      # 删除 build 目录和所有构建生成的文件
+$ gradle assemble   # 编译打包，不运行单元测试
+$ gralde check      # 编译和测试代码
+```
+
+### `build.gradle`
+
+```gradle build.gradle
+task hello {
+    doFrist {
+        println 'Hello'
+    }
+    doLast {
+        println ' world!'
+    }
+}
+// 快捷任务定义 doLast : <<
+task hello << {
+    println 'Hello world!'
+}
+
+repositories { // 外部依赖仓库
+    mavenCentral() // 加入 maven 仓库
+}
+dependencies { // 外部依赖
+    // compile : 编译项目源代码的依赖
+    // runtime : 运行时被生成类使用的依赖，包含 compile
+    // testCompile : 编译测试所需依赖，包含 compile & runtime
+    // testRuntime : 运行测试所需的依赖，包含 compile & runtime & testCompile
+}
+```

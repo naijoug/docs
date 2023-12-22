@@ -2,7 +2,7 @@
 title: 编码规范
 icon: hashtag
 
-index: false
+index: true
 
 ---
 

@@ -7,7 +7,7 @@ order: -1
 
 ---
 
-## Reference
+## reference
 
 - [swift-evolution](https://github.com/apple/swift-evolution)
 - [Swift Change Log](https://github.com/apple/swift/blob/main/CHANGELOG.md)

@@ -10,8 +10,8 @@ index: false
 
 ## reference
 
-- [Swift](https://swift.org/)
-- [Swift 中文文档](https://github.com/SwiftGGTeam/the-swift-programming-language-in-chinese)
+- [Swift](https://swift.org)
+- [Swift 中文文档](https://gitbook.swiftgg.team/swift) 👉🏻 [GitHub](https://github.com/SwiftGGTeam/the-swift-programming-language-in-chinese)
 - [Swift Best Practices](https://github.com/Lickability/swift-best-practices)
     > A repository that contains information related to Lickability's best practices.
 - [Swift 开源精选](https://github.com/ipader/SwiftGuide)

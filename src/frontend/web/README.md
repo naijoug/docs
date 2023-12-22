@@ -14,9 +14,10 @@ index: false
 - [React](react.md)
 - [Vue](vue.md)
 
-## Reference
+## reference
 
 - [MDN Web Technology](https://developer.mozilla.org/zh-CN/docs/Web)
+- [阮一峰 - 全栈工程师培训材料](https://github.com/ruanyf/jstraining)
 - [Front-End-Develop-Guide](https://github.com/icepy/Front-End-Develop-Guide)
     > 💰 Awesome The Front End Develop Guide
 - [Front End Handbook](https://github.com/dwqs/front-end-handbook)
@@ -24,31 +25,9 @@ index: false
     > VScode 说明文档翻译
 - [Web](https://github.com/qianguyihao/Web)
     > 千古前端图文教程，超详细的前端入门到进阶知识库。从零开始学前端，做一名精致优雅的前端工程师。
-- [dev-zuo 笔记](https://fe.zuo11.com/) : 
+- [dev-zuo 笔记](https://fe.zuo11.com/)
 - [30 seconds of code](https://github.com/30-seconds/30-seconds-of-code)
     > Short JavaScript code snippets for all your development needs
-
-## `npm` vs `yarn` vs `pnpm`
-
-- [npm](https://github.com/npm/cli)
-    > the package manager for JavaScript
-- [yarn](https://github.com/yarnpkg/yarn)
-    > Fast, reliable, and secure dependency management.
-- [pnpm](https://github.com/pnpm/pnpm) : [中文文档](https://pnpm.io/zh/)
-    > Fast, disk space efficient package manager
-
-## Usage
-
-```shell
-# npm
-$ npm get registry  # 查看到当前镜像
-$ npm config set registry https://registry.npmmirror.com # 设置为阿里镜像
-$ npm config set registry https://registry.npmjs.org/
-# yarn
-$ yarn config get registry 
-$ yarn config set registry https://registry.npmmirror.com
-$ yarn config set registry https://registry.yarnpkg.com
-```
 
 ## Concept
 

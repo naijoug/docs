@@ -1,7 +1,16 @@
-# Activiti
+---
+title: Activiti
+icon: hashtag
+
+index: true
+
+---
+
 > `Activiti`是一个工作流引擎， `Activiti`可以将业务系统中复杂的业务流程抽取出来，使用专门的建模语言（`BPMN2.0`）进行定义，业务系统按照预先定义的流程进行执行，实现了业务系统的业务流程由`Activiti`进行管理，减少业务系统由于流程变更进行系统升级改造的工作量，从而提高系统的健壮性，同时也减少了系统开发维护成本。
 
-## Reference
+<!-- more -->
+
+## reference
 
 - [Activiti](https://github.com/Activiti/Activiti)
 - [Activiti 5.x 用户指南](https://github.com/waylau/activiti-5.x-user-guide)
@@ -522,4 +531,5 @@
 
 
 ## 总结
+
 流程文件部署主要涉及到3个表，分别是：`ACT_GE_BYTEARRAY`、`ACT_RE_DEPLOYMENT`、`ACT_RE_PROCDEF`。主要完成“部署包”-->“流程定义文件”-->“所有包内文件”的解析部署关系。从表结构中可以看出，流程定义的元素需要每次从数据库加载并解析，因为流程定义的元素没有转化成数据库表来完成，当然流程元素解析后是放在缓存中的，具体的还需要后面详细研究。 

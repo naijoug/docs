@@ -7,12 +7,9 @@ order: 3
 
 ---
 
-# Design Pattern
-> 设计模式
-
 <!-- more -->
 
-## Reference
+## reference
 
 - [设计模式](https://refactoringguru.cn/design-patterns/catalog)
 - [图说设计模式](https://github.com/me115/design_patterns)
@@ -29,4 +26,4 @@ order: 3
   | `ISP` | Interface Segregation Principle   | 接口隔离原则  | 根据功能设计单独的接口，不要设置一个臃肿的接口
   | `DIP` | Dependency Inversion Principle    | 依赖倒置原则  | 抽象不依赖具体，具体依赖于抽象
 
-- `LoD` : Law of Demeter 迪米特法则 (LKP Least Knowledge Principle 最少知识原则) 高内聚，低耦合
+  - `LoD` : Law of Demeter 迪米特法则 (LKP Least Knowledge Principle 最少知识原则) 高内聚，低耦合

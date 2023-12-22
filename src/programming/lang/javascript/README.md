@@ -10,13 +10,7 @@ index: false
 
 - [JavaScript MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 - [JavaScript 菜鸟教程](https://www.runoob.com/js/js-tutorial.html)
-- [JavaScript 教程](https://www.liaoxuefeng.com/wiki/1022910821149312)
-- [JavaScript Tutorial](https://github.com/wangdoc/javascript-tutorial)
-- [ECMAScript 6入门](https://github.com/ruanyf/es6tutorial)
-- [JS Training](https://github.com/ruanyf/jstraining)
-    > 阮一峰 - 全栈工程师培训材料
-
-## libraries
-
-- [JQuery](https://github.com/jquery/jquery)
-- [Underscore](https://github.com/jashkenas/underscore)
+- [廖雪峰 - JavaScript 教程](https://www.liaoxuefeng.com/wiki/1022910821149312)
+- [阮一峰 - JavaScript 教程](https://github.com/wangdoc/javascript-tutorial)
+- [阮一峰 - ECMAScript 6入门](https://es6.ruanyifeng.com/) 👉🏻 [GitHub](https://github.com/ruanyf/es6tutorial)
+- [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
