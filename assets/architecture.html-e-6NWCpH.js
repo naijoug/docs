@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c,a as r,b as e}from"./app-jZxpMbcW.js";const l={},n=e("blockquote",null,[e("p",null,"如何设计一个网络库？")],-1),a=e("blockquote",null,[e("p",null,"持续集成方案？")],-1);function s(_,u){return o(),c("div",null,[r(" more "),n,a])}const d=t(l,[["render",s],["__file","architecture.html.vue"]]);export{d as default};
