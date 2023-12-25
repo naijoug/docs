@@ -40,16 +40,24 @@ index: false
 - [ngrok](https://github.com/inconshreveable/ngrok)
   > Introspected tunnels to localhost
 
-## Concept
+## concept
 
-  | 缩写 | 说明
-  | -- | --
-  | `DNS`     | (Domain Name Server) 域名解析服务器
-  | `IM`      | (Instant Messaging) 即时通讯
-  | `SSH`     | (Secure Shell) 安全(加密) Shell
-  | `CDN`     | (Content Delivery Network) 内容分发网络
-  | `VPN`     | (Virtual Private Network) 虚拟私人网络
-  | `VPS`     |（Virtual Private Server）虚拟专用服务器技术，将一台服务器分割成多个虚拟专享服务器的优质服务。 实现VPS的技术分为容器技术，和虚拟化技术。 每个VPS主机都可分配独立公网IP地址、独立操作系统、独立超大空间、独立内存、独立CPU资源、独立执行程序和独立系统配置等.
+| abbr      | full  | description
+| --        | --    | --
+| `OSI`     | Open System Interconnection           | 开放式系统互联通信参考模型
+| `CA`      | Certificate Authority                 | 证书颁发机构
+| `IP`      | Internet Protocol                     | 网络传输协议
+| `TCP`     | Transmission Control Protocol         | 传输控制协议
+| `UDP`     | User Datagram Protocol                | 用户数据报协议
+| `HTTP`    | Hyper Text Transfer Protocol          | 超文本传输协议
+| `HTTPS`   | Hyper Text Transfer Protocol Secure   | 超文本安全传输协议
+| `QUIC`    | Quick UDP Internet Connections        | 快速 `UDP` 网络连接协议
+| `DNS`     | Domain Name Server                    | 域名解析服务器
+| `IM`      | Instant Messaging                     | 即时通讯
+| `SSH`     | Secure Shell                          | 安全(加密) Shell
+| `CDN`     | Content Delivery Network              | 内容分发网络
+| `VPN`     | Virtual Private Network               | 虚拟私人网络
+| `VPS`     |Virtual Private Server                 | 虚拟专用服务器技术
 
 - TCP & UDP & HTTP
 
@@ -58,19 +66,6 @@ index: false
   | `TCP\IP`  | 传输速度慢，不容易丢包   | 传输协议，长连接          | 聊天
   | `UDP`     | 传输速度快，容易丢包     | 传输协议，长连接          | 局域网游戏，网络游戏
   | `HTTP`    | 传输速度慢，单次传输     | 超文本传输协议，短连接     | 网站
-
-- 网络请求状态码
-
-  | 状态码 | 说明
-  | --- | ---
-  | 1xx   | 代表临时响应，需要请求者继续执行操作的状态代码。
-  | 2xx   | 代表的多是操作成功。
-  | `200` | 请求成功
-  | 3xx   | 代表重定向，表示要完成请求，需要进一步操作
-  | 4xx   | 代表请求错误，表示请求可能出错，妨碍了服务器的处理。
-  | `404` | NotFound
-  | 5xx   | 代表服务器错误，表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错
-  | `500` | 服务器内部错误
 
 ## OSI 模型 (Open Systems Interconnection Model)
 > 国际标准组织定义的开放式系统环境通信协议

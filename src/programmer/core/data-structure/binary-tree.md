@@ -7,6 +7,15 @@ order: 4
 
 ---
 
+> `Balanced Binary Tree` - “平衡二叉树”
+
+  平衡二叉树需要保证左右子树高度差不超过 1。
+    
+  常见的平衡二叉树
+  
+  * `AVL` 二叉树 (名称来源于两位作者名 G. M. Adelson-Velsky 和 E. M. Landis)
+  * 红黑树
+
 <!-- more -->
 
 ## `traversal` - “遍历”

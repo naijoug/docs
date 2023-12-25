@@ -11,11 +11,13 @@ order: 8
 
 ## 内存分配
 
+### 一个 `objc` 对象如何进行内存布局？
+
 ### ❓`OC` 中一个 `NSObject` 对象，占几个字节？
 
 ::: details 💡
 
-  一个 `NSObject` 对象应该就是存放这个对象的指针地址。一个指针的大小应该是占用 16 个直接。
+  一个 `NSObject` 对象应该就是存放这个对象的指针地址。一个指针的大小应该是占用 16 个字节。
 
   ```objc
   @interface Todo: NSObject 
@@ -28,6 +30,10 @@ order: 8
   ```
 
 :::
+
+### `UIImage` 使用 `imageNamed` 生成的对象什么时候被释放？
+
+
 
 ### ❓如何使用 `UIImageView` 显示一个超大图片，并且支持缩放功能？
 
@@ -67,8 +73,24 @@ order: 8
   
 :::
   
-## `autoreleasepool` - “自动释放池”
+## 内存管理
+
+### `ARC` 是为了解决什么问题诞生的？
+
+### `ARC` 下哪些情况会造成内存泄漏？
+
+### `ARC` 的实现原理？
+
+### `ARC` 对 `retain & release` 做了哪些优化？
+
+### `weak` 的实现原理？`SideTable` 的结构是什么样？
+
+### 如果让你实现属性的 `weak`，如何实现的？
   
+## 自动释放池
+  
+### 不手动指定 `autoreleasepool` 的前提下，一个 `autorealese` 对象在什么时刻释放？
+
 ### 什么情况下需要手动创建 `autoreleasepool` ？
   
 ::: details 💡
@@ -126,10 +148,9 @@ order: 8
   不会有问题，这是因为枚举器方法实现时，已经将 `block` 嵌套在 `@autoreleasepool` 中。
   
 :::
-  
-## 引用计数
 
-### 如果让你实现属性的 `weak`，如何实现的？
+### ❓`Autorelease Pool` 的底层实现？
+
 
 ## 内存分析
 

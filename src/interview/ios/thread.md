@@ -81,6 +81,8 @@ order: 7
     
 :::
 
+### `sqlite` 中的读写是线程安全的吗？
+
 ### ❓`OC` 中的锁有哪些？
     
 ::: details 💡
@@ -273,9 +275,15 @@ order: 7
 :::
 
 
-## `GCD`
+### 为什么只有主线程的 `runloop` 是开启的?
 
-  > `Grand Central Dispatch`（GCD）是 Apple 开发的一个多核编程的解决方案。它主要是通过向指定的队列（`Dispatch Queue`）中添加要执行的任务（任务 = 工作项 = 代码块）来进行工作的。`GCD` 的目标是为了最大化利用处理器的多核，同时最小化线程创建和管理的开销。
+### 为什么只在主线程刷新 `UI`?
+
+------
+
+## GCD
+
+  > `GCD (Grand Central Dispatch)` 是 Apple 开发的一个多核编程的解决方案。它主要是通过向指定的队列（`Dispatch Queue`）中添加要执行的任务（任务 = 工作项 = 代码块）来进行工作的。`GCD` 的目标是为了最大化利用处理器的多核，同时最小化线程创建和管理的开销。
 
 ### ❓`GCD` 执行原理？
 
@@ -297,7 +305,41 @@ order: 7
 
 :::
 
+### `GCD` 主线程 & 主队列的关系?
+
+### 如何用 `GCD` 同步若干个异步调用？
+
+### `dispatch_barrier_async` 的作用是什么？
+
+### `GCD` 的队列（`dispatch_queue_t`）分哪两种类型？默认提供哪些队列?
+
+### 苹果为什么要废弃 `dispatch_get_current_queue`？
+
+### `dispatch_once` 实现原理？
+
+### 有哪些场景是 `NSOperation` 比 `GCD` 更容易实现的？
+
+### `GCD` 背后的线程模型是什么？
+
+### 下面代码执行结果？
+
+```objc
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@"1");
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+}
+```
+
 ## 线程设计
+
+### `iOS` 中的常用线程相关类型有哪些？
+
+### `NSOperationQueue` 中的 `maxConcurrentOperationCount` 默认值？
 
 ### ❓`iOS` 中线程间如何通信？
 
@@ -412,3 +454,9 @@ order: 7
     ```
 
 :::
+
+### `NSTimer`、`CADisplayLink`、`dispatch_source_t` 的优劣?
+
+### `iOS` 下如何实现指定线程数目的线程池？
+
+### 如何终止正在运行的工作线程？

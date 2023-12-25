@@ -13,9 +13,19 @@ order: 3
 
 ### ❓你了解的 `UIKit` 结构？
 
+### `applicationWillEnterForeground` 和 `applicationDidBecomeActive` 都会在哪些场景下被调用？
+
 ### `UITableView` 的 `delegate` 和 `dataSource` 代理有什么区别？
 
 ### `UICollectionView` 自定义布局如何处理？
+
+### `loadView` 的作用？
+
+### `viewWillLayoutSubView` 的作用？
+
+### `AutoLayout` 的原理，性能如何？
+
+### `iOS` App 中的 `UI` 刷新原理？
 
 ## `UIView`
 
@@ -59,6 +69,8 @@ order: 3
 
 :::
 
+### `drawRect` 有使用过吗，调用时机？
+
 ### ❓根据 `UIControl` 实现 `UIButton`
 
 ::: details
@@ -67,7 +79,7 @@ order: 3
 
 :::
 
-## 屏幕渲染
+### ❓什么是屏幕渲染？
 
 ::: details 💡
 
@@ -111,7 +123,33 @@ order: 3
 
 :::
 
-## event dispatch - “事件分发”
+
+------
+
+## 图片
+
+### `imageName` vs `imageWithContentsOfFile`
+
+### 多个相同的图片，会重复加载吗？
+
+### 如何高性能的给 `UIImageView` 加圆角？
+
+### `UITableView` 中的图片加载逻辑？
+
+### 图片是什么时候解码的，如何优化？
+
+### 图片渲染怎么优化？
+
+
+------
+
+## 动画
+
+### 隐式动画 & 显示动画区别？
+
+------
+
+## 事件分发
 
 ### ❓用户点击屏幕上按钮，整个过程讲一下？
 
@@ -156,3 +194,35 @@ order: 3
   这种设计机制可以保证所有的事件或消息都能得到处理，并且事件或消息的处理是有优先级的，即由具体的视图优先处理，若其无法处理再逐级上报，直到找到可以处理的对象。且每一个响应者都可以选择向上层的响应者传递事件，以便于上层响应者做一些统一的处理。
 
 :::
+
+
+------
+
+## 通知机制
+
+### `NSNotification` 实现原理？
+
+### 通知的发送时同步还是异步？
+
+### `NSNotificationCenter` 接受消息和发送消息是在一个线程里吗？如何异步发送消息？
+
+### `NSNotificationQueue` 是异步还是同步发送？在哪个线程响应？
+
+### `NSNotificationQueue` 和 `runloop`的关系？
+
+### 如何保证通知接收的线程在主线程？
+
+### 页面销毁时不移除通知会崩溃吗？
+
+### 多次添加同一个通知会是什么结果？多次移除通知呢？
+
+### 下面代码可以接受通知吗？
+
+```objc
+NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+// 发送通知
+[center addObserver:self selector:@selector(handleNotification:) name:@"One" object:@1];
+// 接收通知
+[center postNotificationName:@"One" object:nil];
+```
+

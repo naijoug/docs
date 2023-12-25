@@ -9,6 +9,11 @@ order: 1
 
 <!-- more -->
 
+## reference
+
+- [Swift Array](https://github.com/apple/swift/blob/main/stdlib/public/core/Array.swift)
+- [NSArray](https://github.com/apple/swift-corelibs-foundation/blob/main/Sources/Foundation/NSArray.swift)
+
 ## `Two Pointers` - “双指针”
 
 

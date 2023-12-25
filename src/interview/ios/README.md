@@ -16,6 +16,7 @@ index: false
 - [iOSInterviewsAndDevNotes](https://github.com/DevDragonLi/iOSInterviewsAndDevNotes)
     > 🚴 iOS Interviews, Dev Notes && Git ...
 - [iOS-Interview-Strategy](https://github.com/iOS-Mayday/iOS-Interview-Strategy)
+- [Interview-series](https://github.com/miniLV/Interview-series)
 - [全网各大厂iOS面试题-文集大全 1](https://github.com/iOS-Mayday/heji) [2](https://github.com/LGBamboo/iOS-Advanced)
 
 ------
@@ -23,17 +24,18 @@ index: false
 - [2020-08-16 iOS面试总结（2020年6月）参考答案](https://zhangferry.com/2020/08/16/interview_202006_answer/)
 - [2020-08-15 iOS面试梳理](https://juejin.cn/post/6860888953638256654)
 - [2020-07-20 iOS面试了20几家总结出来的面试题](https://juejin.cn/post/6854573212165111822)
-- [2020-02-14 阿里、字节：一套高效的iOS面试题](https://juejin.cn/post/6844904064937902094)
+- [](✅)[2020-02-14 阿里、字节：一套高效的iOS面试题](https://juejin.cn/post/6844904064937902094)
     * [2023-04-06 Answer](https://juejin.cn/post/7218915344119234616)
     * [2020-07-06 Answer](https://www.sunyazhou.com/tags/ios%E9%9D%A2%E8%AF%95%E9%A2%98/)
-- [2019-12-30 iOS从入门到进阶](https://github.com/miniLV/Interview-series)
-- [2018-07-24 出一套 iOS 高级面试题](juejin.im/post/5b56155e6fb9a04f8b78619b)
+    * [2020-03-05 Answer](https://www.cnblogs.com/zbblog/articles/12419312.html)
+- [](✅)[2018-07-24 出一套 iOS 高级面试题](https://juejin.im/post/5b56155e6fb9a04f8b78619b)
 - [](✅)[2017-06-08 2017年5月iOS招人心得（附面试题）](https://juejin.cn/post/6844903480805556238) 
-    * [2018-03-21 答面试题](https://juejin.cn/post/6844903581254959117)
-    * [2017-06-29 面试题总结](https://zhangferry.com/2017/06/29/interview-question/)
+    * [2018-03-21 Answer](https://juejin.cn/post/6844903581254959117)
+    * [2017-06-29 Answer](https://zhangferry.com/2017/06/29/interview-question/)
     * [iOS-Interview-Question-Answer](https://github.com/liberalisman/iOS-Interview-Question-Answer)
-- [2016-10-09 一份"有点难"的iOS面试题](https://zhuanlan.zhihu.com/p/22834934)
-- [2015-07-04 招聘一个靠谱的 iOS - 孙源(滴滴)](http://blog.sunnyxx.com/2015/07/04/ios-interview)
+- [](✅)[2016-10-09 一份"有点难"的iOS面试题](https://zhuanlan.zhihu.com/p/22834934)
+    * [2018-03-23](https://www.jianshu.com/p/66977486006e)
+- [](✅)[2015-07-04 招聘一个靠谱的 iOS - 孙源(滴滴)](http://blog.sunnyxx.com/2015/07/04/ios-interview)
 
 ------
 

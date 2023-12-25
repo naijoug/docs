@@ -1,0 +1,12 @@
+---
+title: Stack - “栈”
+icon: hashtag
+
+index: true
+order: 2
+
+---
+
+  栈是一种先进后出的数据结构，主要包含两个操作，入栈(`push`)和出栈(`pop`)。入栈，在栈顶添加元素；出栈，在栈顶移除元素。
+  
+<!-- more -->
