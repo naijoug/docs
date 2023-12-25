@@ -67,7 +67,7 @@ order: 11
 
 ### `M、V、C` 相互通讯规则你知道的有哪些？
 
-### MVC、MVVM、Coordinator
+### MVC、MVP、MVVM、Coordinator
 
 ### 单向数据流 (Redux、ReSwift、RxFeedback)
 
