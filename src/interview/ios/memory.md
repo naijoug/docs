@@ -31,6 +31,15 @@ order: 8
 
 :::
 
+### `C` 中如下结构体，占用几个字节？
+
+```c
+struct Foo {
+    char c;
+    int i;
+} foo;
+```
+
 ### `UIImage` 使用 `imageNamed` 生成的对象什么时候被释放？
 
 
@@ -86,6 +95,18 @@ order: 8
 ### `weak` 的实现原理？`SideTable` 的结构是什么样？
 
 ### 如果让你实现属性的 `weak`，如何实现的？
+  
+### `IBOutlet` 连出来的视图属性为什么可以被设置成 `weak`?
+  
+::: details 💡
+
+  `_topLevelObjectsToKeepAliveFromStoryboard`
+
+:::
+  
+### `Swift` 内存管理中的 `pwt`、`vwt`？
+
+### `Swift` 统一类型的变量可选值与非选值内存有什么区别?
   
 ## 自动释放池
   

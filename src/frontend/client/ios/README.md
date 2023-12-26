@@ -20,6 +20,8 @@ index: false
 - [App Store Connect](https://appstoreconnect.apple.com)
 - [Apple Developer Documentation](https://developer.apple.com/documentation)
 
+------
+
 - [Awesome iOS](https://github.com/kechengsou/awesome-ios)
     > iOS 开发者资源大全
 - [Open-Source iOS Apps](https://github.com/dkhamsing/open-source-ios-apps)
