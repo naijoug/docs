@@ -9,6 +9,14 @@ order: 12
 
 <!-- more -->
 
+## 推送
+
+### `APN` 的基本原理？
+
+
+
+------
+
 ## 打包
 
 ### 苹果使用证书的目的是什么？
@@ -30,10 +38,15 @@ order: 12
 
 ### `YYAsyncLayer` 如何异步绘制？
 
-### 经典库：`AFNetworking` `SDWebImage`
+### `AFNetworking` 
+
+### `SDWebImage` 的缓存机制？
+
+### `SDWebImage` 是如何解决 `UITableViewCell` 复用时出现图片错乱问题？
 
 ### `JSPatch`、`Aspects`
 
+### json 转 model 实现
 
 ------
 
@@ -51,12 +64,17 @@ order: 12
 
 ### 沙盒目录的每个文件夹划分的作用？
 
+### 动态库静态库区别?
+
 ### `lild` 重签名
 
 ### 简述下 `Match-O` 文件结构？
 
 ### 怎么防止别人反编译你的 app？
 
+### app 逆向分析
+
+### `leak` 工具使用
 
 ------
 

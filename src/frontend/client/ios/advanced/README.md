@@ -7,5 +7,3 @@ index: false
 ---
 
 <!-- more -->
-
-## catalog
