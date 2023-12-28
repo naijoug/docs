@@ -8,6 +8,10 @@ index: true
 
 <!-- more -->
 
+## reference
+
+- [寻找循环的问题](https://visualgo.net/zh/cyclefinding/print)
+
 ## 搜索算法
 
  | 算法 | 说明

@@ -110,6 +110,10 @@ struct Foo {
   
 ## 自动释放池
   
+### `@autorelease{ NSString s; }` 和 `NSString s;` 有什么区别？
+  
+### 说说你对 `autorelease` 的理解?
+  
 ### 不手动指定 `autoreleasepool` 的前提下，一个 `autorealese` 对象在什么时刻释放？
 
 ### 什么情况下需要手动创建 `autoreleasepool` ？

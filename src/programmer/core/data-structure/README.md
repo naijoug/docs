@@ -28,5 +28,5 @@ index: false
 | heap (priority queue)     | 堆 (优先级队列)
 | binary search tree (BST)  | 二叉搜索树
 | trie                      | 前缀树 (字典树)
-| disjoint set              | 并查集
+| union-find disjoint set   | 并查集
 | bloom filter              | 布隆过滤器

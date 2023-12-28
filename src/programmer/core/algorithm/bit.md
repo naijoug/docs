@@ -8,6 +8,10 @@ index: true
 
 <!-- more -->
 
+## reference
+
+- [位掩码](https://visualgo.net/zh/bitmask/print)
+
 ## 位运算符
 
   * `|` : 与

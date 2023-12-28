@@ -13,6 +13,12 @@ index: false
 - [算法](algorithm/README.md)
 - [数据结构](data-structure/README.md)
 
+## visualizer
+
+- [algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
+- [VisuAlgo](http://visualgo.net/) 
+- [Data Structure Visualizations](http://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
 ## reference
 
 - [数据结构与算法之美](https://time.geekbang.org/column/intro/100017301)
@@ -28,8 +34,6 @@ index: false
 - [The-Art-of-Linear-Algebra](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra) : 线性代数的艺术
     > Graphic notes on Gilbert Strang's "Linear Algebra for Everyone"
 
-## Visualizer
+------
 
-- [algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
-- [VisuAlgo](http://visualgo.net/) 
-- [Data Structure Visualizations](http://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- [2022-05-16 十大排序从入门到入赘](https://leetcode.cn/circle/discuss/eBo9UB/)

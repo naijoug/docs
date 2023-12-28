@@ -15,6 +15,10 @@ order: 2
 
 <!-- more -->
 
+## reference
+
+- [链表](https://visualgo.net/zh/list/print)
+
 ## `CURD`
 
 <!-- 删除链表的倒数第 N 个结点 -->

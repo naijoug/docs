@@ -11,6 +11,10 @@ order: 7
 
 ## 线程安全
 
+### `iOS` 中的常用线程相关类型有哪些？
+
+### `iOS` 中线程同步策略有哪些？
+
 ### `UIKit` 是线程安全的吗？为什么？
 
 ### ❓`atomic` 线程安全吗？
@@ -84,6 +88,14 @@ order: 7
 :::
 
 ### `sqlite` 中的读写是线程安全的吗？
+
+### 为什么只有主线程的 `runloop` 是开启的?
+
+### 为什么只在主线程刷新 `UI`?
+
+------
+
+## 线程锁
 
 ### ❓`OC` 中的锁有哪些？
     
@@ -276,11 +288,6 @@ order: 7
 
 :::
 
-
-### 为什么只有主线程的 `runloop` 是开启的?
-
-### 为什么只在主线程刷新 `UI`?
-
 ------
 
 ## GCD
@@ -309,39 +316,51 @@ order: 7
 
 ### `GCD` 主线程 & 主队列的关系?
 
+### `GCD` 的队列（`dispatch_queue_t`）分哪两种类型？默认提供哪些队列?
+
 ### 如何用 `GCD` 同步若干个异步调用？
 
 ### `dispatch_barrier_async` 的作用是什么？
 
-### `GCD` 的队列（`dispatch_queue_t`）分哪两种类型？默认提供哪些队列?
+### `dispatch_barrier_sync` 与 `dispatch_group_t` 的区别？
 
-### 苹果为什么要废弃 `dispatch_get_current_queue`？
+### `dispatch_get_current_queue` 为什么被废弃？
 
 ### `dispatch_once` 实现原理？
-
-### 有哪些场景是 `NSOperation` 比 `GCD` 更容易实现的？
 
 ### `GCD` 背后的线程模型是什么？
 
 ### 下面代码执行结果？
 
 ```objc
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    NSLog(@"1");
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        NSLog(@"2");
-    });
-    NSLog(@"3");
-}
+NSLog(@"1");
+dispatch_sync(dispatch_get_main_queue(), ^{
+    NSLog(@"2");
+});
+NSLog(@"3");
 ```
+
+### 下面代码输出结果？
+
+```objc
+dispatch_queue_t queue = dispatch_get_main_queue();
+BOOL isEqual = [queue isKindOfClass:[NSObject class]];
+NSLog(@"isEqual=%d", isEqual);
+```
+
+------
+
+## NSOperation
+
+### 了解 `NSOperation` 与 `NSOperationQueue` 吗？
+
+### 有哪些场景是 `NSOperation` 比 `GCD` 更容易实现的？
+
+### `NSOperationQueue` 中的 `maxConcurrentOperationCount` 默认值？
 
 ## 线程设计
 
-### `iOS` 中的常用线程相关类型有哪些？
-
-### `NSOperationQueue` 中的 `maxConcurrentOperationCount` 默认值？
+### 如何实现一个线程安全的 NSMutableArray?
 
 ### ❓`iOS` 中线程间如何通信？
 
@@ -401,6 +420,8 @@ order: 7
 ### `iOS` 下如何实现指定线程数目的线程池？
 
 ### 如何终止正在运行的工作线程？
+
+### 有a、b、c、d 4个异步请求，如何判断a、b、c、d都完成执行？如果需要a、b、c、d顺序执行，该如何实现？
 
 ------
 

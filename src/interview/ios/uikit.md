@@ -27,17 +27,13 @@ order: 3
 
 :::
 
-### `loadView` 的作用？
-
-### `viewWillLayoutSubView` 的作用？
-
-### `AutoLayout` 的原理，性能如何？
-
-### `iOS` 中界面渲染机制？
-
 ------
 
-## UIView
+## 视图
+
+### `loadView` 的作用？
+
+### `iOS` 中界面渲染机制？
 
 ### ❓`UIView` & `CALayer` 是什么关系？ 
 
@@ -63,25 +59,23 @@ order: 3
 
 :::
 
-### ❓`layoutSubviews` 那些情况下会触发？
-
-::: details 💡
-
-  > `layoutSubviews` 在 iOS 的 UIView 的生命周期中，是负责布局及排版子视图的方法。
-
-  - 在初始化 `UIView` 并添加到界面上时，系统会自动调用 `layoutSubviews` 方法进行子视图的布局。
-  - 当 `UIView` 的 `bounds` 发生变化，如改变宽高、旋转设备时，系统会调用 `layoutSubviews`。
-  - 当直接调用 `UIView` 的 `setNeedsLayout`或者 `layoutIfNeeded` 方法时，系统会调用 `layoutSubviews`。
-    * `setNeedsLayout` 会标记当前视图被标记为需要重新布局，然后在接下来的更新周期中，调用 `layoutSubviews` 对标记进行重新布局
-    * `layoutIfNeeded` 则会立即对视图进行重新布局，通常在动画的 `block` 内使用
-  - 当视图的某个子视图的 `frame` 被显式地修改，也会触发父视图的 `layoutSubviews`。
-  - 添加或者删除子视图的时候，也会触发父视图的 `layoutSubviews`。
-
-:::
-
-### `drawRect` 有使用过吗，调用时机？
-
 ### ❓根据 `UIControl` 实现 `UIButton`
+
+```swift
+protocol ButtonProtocol {
+    func setTitle(_ title: String);
+    func setTitleColor(_ titleColor: UIColor);
+    func setTitleEdgeInsets(_ edgeInsets: UIEdgeInsets);
+    func setImage(_ image: UIImage);
+    func setBackgroundImage(_ image: UIImage);
+    func setImageEdgeInsets(_ edgeInsets: UIEdgeInsets);
+}
+
+class MyButton: UIControl, ButtonProtocol { 
+    // todo
+}
+
+```
 
 ::: details
 
@@ -139,6 +133,36 @@ order: 3
 
 :::
 
+## 布局
+
+### `viewWillLayoutSubView` 的作用？
+
+### ❓`layoutSubviews` 那些情况下会触发？
+
+::: details 💡
+
+  > `layoutSubviews` 在 iOS 的 UIView 的生命周期中，是负责布局及排版子视图的方法。
+
+  - 在初始化 `UIView` 并添加到界面上时，系统会自动调用 `layoutSubviews` 方法进行子视图的布局。
+  - 当 `UIView` 的 `bounds` 发生变化，如改变宽高、旋转设备时，系统会调用 `layoutSubviews`。
+  - 当直接调用 `UIView` 的 `setNeedsLayout`或者 `layoutIfNeeded` 方法时，系统会调用 `layoutSubviews`。
+    * `setNeedsLayout` 会标记当前视图被标记为需要重新布局，然后在接下来的更新周期中，调用 `layoutSubviews` 对标记进行重新布局
+    * `layoutIfNeeded` 则会立即对视图进行重新布局，通常在动画的 `block` 内使用
+  - 当视图的某个子视图的 `frame` 被显式地修改，也会触发父视图的 `layoutSubviews`。
+  - 添加或者删除子视图的时候，也会触发父视图的 `layoutSubviews`。
+
+:::
+
+### `drawRect` 有使用过吗，调用时机？
+
+### `AutoLayout` 的原理，性能如何？
+
+### `Masonry` 的约束应该写在哪里？
+
+### `sizeToFit`、`sizeThatFits` 了解吗？
+
+### `intrinsicContentSize` 使用过吗？
+
 ------
 
 ## 图片
@@ -160,7 +184,11 @@ order: 3
 
 ## 动画
 
+### `UIView` 动画与核心动画的区别?
+
 ### 隐式动画 & 显示动画区别？
+
+### 做一些基于 `CALayer` 的动画时，有时需要设置 `layer` 的锚点来配合动画，需要注意什么？
 
 ------
 
@@ -210,34 +238,8 @@ order: 3
 
 :::
 
+### `hitTest` 有尝试过重写吗？
 
-------
 
-## 通知机制
 
-### `NSNotification` 实现原理？
-
-### 通知的发送时同步还是异步？
-
-### `NSNotificationCenter` 接受消息和发送消息是在一个线程里吗？如何异步发送消息？
-
-### `NSNotificationQueue` 是异步还是同步发送？在哪个线程响应？
-
-### `NSNotificationQueue` 和 `runloop`的关系？
-
-### 如何保证通知接收的线程在主线程？
-
-### 页面销毁时不移除通知会崩溃吗？
-
-### 多次添加同一个通知会是什么结果？多次移除通知呢？
-
-### 下面代码可以接受通知吗？
-
-```objc
-NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-// 发送通知
-[center addObserver:self selector:@selector(handleNotification:) name:@"One" object:@1];
-// 接收通知
-[center postNotificationName:@"One" object:nil];
-```
 

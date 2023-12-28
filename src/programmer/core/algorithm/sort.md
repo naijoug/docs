@@ -13,6 +13,7 @@ index: true
 ## reference
 
 - [排序算法](https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
+- [排序问题和排序算法](https://visualgo.net/zh/sorting/print)
 
 ## 排序算法一览
 

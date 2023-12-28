@@ -18,6 +18,10 @@ order: 4
 
 <!-- more -->
 
+## reference
+
+- [二叉搜索树](https://visualgo.net/zh/bst/print)
+
 ## `traversal` - “遍历”
 
 <!-- 前序遍历 -->

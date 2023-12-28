@@ -11,4 +11,5 @@ order: 3
 
 ## reference
 
+- [二叉堆](https://visualgo.net/zh/heap/print)
 - [Swift - Heap](https://github.com/apple/swift-collections/blob/main/Sources/HeapModule/Heap.swift)

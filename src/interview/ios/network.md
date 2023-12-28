@@ -9,6 +9,10 @@ order: 6
 
 <!-- more -->
 
+## 了解 `NSURLConnection` 和 `NSURLSession` 吗？
+
+## 说一下 `NSURLSession` 具体的实现原理？
+
 ### 设计一个通用网络模块
 
 ### 网络层的优化方案有哪些？

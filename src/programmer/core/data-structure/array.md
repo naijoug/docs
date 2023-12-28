@@ -11,6 +11,7 @@ order: 1
 
 ## reference
 
+- [后缀数组](https://visualgo.net/zh/suffixarray/print)
 - [Swift Array](https://github.com/apple/swift/blob/main/stdlib/public/core/Array.swift)
 - [NSArray](https://github.com/apple/swift-corelibs-foundation/blob/main/Sources/Foundation/NSArray.swift)
 
