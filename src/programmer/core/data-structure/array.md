@@ -17,6 +17,9 @@ order: 1
 
 ## `Two Pointers` - “双指针”
 
+<!-- 删除有序数组中的重复项 -->
+<!-- @include: @leetcode/problems/0x0000.md#0026 -->
+
 
 
 ## `Sliding Window` - “滑动窗口”
