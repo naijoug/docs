@@ -40,6 +40,10 @@ struct Foo {
 } foo;
 ```
 
+### 结构体的字节对齐和 `OC` 对象的字节对齐？
+
+
+
 ### `UIImage` 使用 `imageNamed` 生成的对象什么时候被释放？
 
 
@@ -81,6 +85,8 @@ struct Foo {
   ```
   
 :::
+
+------
   
 ## 内存管理
 
@@ -92,7 +98,17 @@ struct Foo {
 
 ### `ARC` 对 `retain & release` 做了哪些优化？
 
-### `weak` 的实现原理？`SideTable` 的结构是什么样？
+### `Swift` 内存管理中的 `pwt`、`vwt`？
+
+### `Swift` 统一类型的变量可选值与非选值内存有什么区别?
+
+------
+
+## weak
+
+### `weak` 是怎么实现的，有没有性能问题？
+
+### ❓`weak` 的实现原理？`SideTable` 的结构是什么样？
 
 ### 如果让你实现属性的 `weak`，如何实现的？
   
@@ -103,12 +119,12 @@ struct Foo {
   `_topLevelObjectsToKeepAliveFromStoryboard`
 
 :::
-  
-### `Swift` 内存管理中的 `pwt`、`vwt`？
 
-### `Swift` 统一类型的变量可选值与非选值内存有什么区别?
-  
+------
+ 
 ## 自动释放池
+  
+### 一个局部变量是什么时候释放的，`autorelease` 什么时候释放？
   
 ### `@autorelease{ NSString s; }` 和 `NSString s;` 有什么区别？
   
@@ -176,6 +192,7 @@ struct Foo {
 
 ### ❓`Autorelease Pool` 的底层实现？
 
+------
 
 ## 内存分析
 

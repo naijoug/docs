@@ -10,6 +10,8 @@ index: true
 
 <!-- more -->
 
+## 对象模型
+
 ### ❓`OC` 的对象模型
 
 ::: details 💡
@@ -40,9 +42,41 @@ index: true
 
 :::
 
+### ❓类结构体的组成，`isa` 指针指向了什么？
+
+::: details 💡
+
+  先给出答案 `isa` 指针是指向类对象，每一个对象都包含 `isa` 指针，通过这个指针可以找到类对象。
+  
+  当一个对象调用某个方法时(消息发送)，运行时先在当前方法列表中查找，如果不存在，通过 `isa` 指针查找类对象中是否存在方法，如果还不存在会通过父类指针进一步往上查找，最后还是找不到就会抛出未找到异常。
+  
+  ```objc
+  // id 就是 objc_object
+  struct objc_object {
+    Class _Nonnull isa;         // 指向对象所属的类
+  };
+  // Class 就是 objc_class
+  struct objc_class {
+    Class _Nonnull isa;         // 指向元类
+    Class _Nullable superclass; // 指向父类
+    cache_t cache;              // 方法缓存
+    class_data_bits_t bits;     // 包含方法列表和其他信息
+  };
+  ```
+
+:::
+
+### `isa` 指针里面都存了什么，32和64位分别讲一下?
+
+### 64位后怎么获取 `isa` 指针？
+
 ### 讲一下对象，类对象，元类，跟元类结构体的组成以及他们是如何相关联的？
 
 ### 为什么要设计 `metaclass`？
+
+------
+
+## 属性
 
 ### 为什么对象方法没有保存的对象结构体里，而是保存在类对象的结构体里？
 
@@ -52,11 +86,17 @@ index: true
 
 ### 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？
 
+------
+
+## 方法
+
 ### 对象方法 与 类方法存放在哪？
 
 ### `class`、`objc_getClass`、`object_getclass` 三个方法的区别？
 
 ### 在运行时创建类的方法 `objc_allocateClassPair` 的方法名尾部为什么是pair（成对的意思）？
+
+### `method_t` 里包含什么？
 
 ### ❓`super` 是什么？
 
@@ -107,6 +147,20 @@ index: true
 
 :::
 
-### ❓`weak` 的底层实现？
-
 ### ❓`OC` 运行时在工程中的有过实践运用吗？
+
+------
+
+## Method Swizzling
+
+### `Method Swizzling` 原理？
+
+### `Method Swizzling` 时, 不替换父类, 只替换子类，怎么处理?
+
+### `Method Swizzling` 的优缺点? 缺点会导致什么问题?
+
+### 如何安全的进行方法替换？
+
+### 方法交换和分类同时去 `hook` 一个方法,结果会怎么样? 具体交换的是什么? 交换时是如何处理传参数? 
+
+  > 如果使用 `NSInvocation` 的话, 是否能处理方法有返回值的场景?具体怎么处理的?

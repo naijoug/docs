@@ -56,14 +56,21 @@ index: true
   
 ## `state` - “状态管理”
 
+### 说一下什么是状态管理，为什么需要它？
+
 > `Provider` `BLoc` `GetX` 区别
   
-## `AOT` vs `JIT` 
+> 说一下 BLoC 模式？
+
+> 如何统一管理错误页面？
+  
+  
+## `hot reload` - “热重载”
+
+### `AOT` vs `JIT` 
 
 - AOT(Ahead Of Time) : 提前编译或运行前编译，程序运行前已经编译成对应平台的机器码，可以直接运行。
 - JIT(Just In Time) : 即时编译或运行时编译，程序运行时编译成运行平台的机器码，提高运行效率。
-  
-## `hot reload` - “热重载”
 
 > `hot reload`(热重载)、`hot restart`(热重启)、`hot update`(热更新)？
 

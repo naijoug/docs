@@ -18,6 +18,10 @@ order: 8
 - [iOS-Runtime-Headers](https://github.com/nst/iOS-Runtime-Headers)
 - [iOS 安全 wiki](https://github.com/wufawei/iossecurity)
 - [iOS 安全资料整理](https://github.com/satan1a/awesome-ios-security-cn)
+
+------
+
+- [2019-11-07 iOS逆向 RSA理论](https://juejin.cn/post/6844903989666906125)
 - [iOS 逆向工程资料整理](https://niyaoyao.github.io/2017/05/09/Learning-Reverse-From-Today-D4)
 - [iOS8下代码安装/卸载APP](https://blog.0xbbc.com/2014/12/ios8%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%AE%89%E8%A3%85%E5%8D%B8%E8%BD%BDapp/)
 - [iOS 逆向: 越狱使用 SSH](http://www.veryitman.com/2018/05/12/iOS-%E9%80%86%E5%90%91-%E8%B6%8A%E7%8B%B1%E4%BD%BF%E7%94%A8-SSH/)

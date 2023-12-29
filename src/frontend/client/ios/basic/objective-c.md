@@ -172,7 +172,8 @@ NSArray *prices = [student valueForKeyPath:@"books.@distinctUnionOfObjects.price
 ## Block
 
 - [How Do I Declare A Block in Objective-C?](http://fuckingblocksyntax.com/)
-- [对 Objective-C 中 Block 的追探](http://www.cnblogs.com/biosli/archive/2013/05/29/iOS_Objective-C_Block.html)
+- [2013-11-27 objc 中的 block](https://blog.ibireme.com/2013/11/27/objc-block/)
+- [2013-05-29 对 Objective-C 中 Block 的追探](http://www.cnblogs.com/biosli/archive/2013/05/29/iOS_Objective-C_Block.html)
 
 ```objc
 // 定义 block

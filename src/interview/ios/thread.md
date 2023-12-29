@@ -169,6 +169,8 @@ order: 7
     // Access shared resource here.
     pthread_spin_unlock(&spinlock);
     ```
+
+  - `os_unfair_lock`：`OSSpinLock` 的替代品，安全性更好，推荐用于低延迟和高并发的场景。
     
 :::
     
@@ -288,11 +290,15 @@ order: 7
 
 :::
 
+### ❓用一句话描述 `GCD` 发生的死锁现象？
+
 ------
 
 ## GCD
 
   > `GCD (Grand Central Dispatch)` 是 Apple 开发的一个多核编程的解决方案。它主要是通过向指定的队列（`Dispatch Queue`）中添加要执行的任务（任务 = 工作项 = 代码块）来进行工作的。`GCD` 的目标是为了最大化利用处理器的多核，同时最小化线程创建和管理的开销。
+
+### `GCD` 的一些常用的函数？
 
 ### ❓`GCD` 执行原理？
 
@@ -314,9 +320,13 @@ order: 7
 
 :::
 
+### `GCD` 的队列（`dispatch_queue_t`）分哪两种类型？默认提供哪些队列?
+
 ### `GCD` 主线程 & 主队列的关系?
 
-### `GCD` 的队列（`dispatch_queue_t`）分哪两种类型？默认提供哪些队列?
+### 线程和队列的关系？一个线程是否可能存在于两个队列?
+
+### 队列一定会创建线程吗? 队列是否可以无限制创建?
 
 ### 如何用 `GCD` 同步若干个异步调用？
 
@@ -324,17 +334,33 @@ order: 7
 
 ### `dispatch_barrier_sync` 与 `dispatch_group_t` 的区别？
 
+### `dispatch_group_t` 如何实现 `dispatch_barrier_sync` 类似的功能?
+
 ### `dispatch_get_current_queue` 为什么被废弃？
 
 ### `dispatch_once` 实现原理？
 
+### `DispatchQoS` 的作用？
+
 ### `GCD` 背后的线程模型是什么？
+
+### `GCD` 已经调用能不能取消？
 
 ### 下面代码执行结果？
 
 ```objc
 NSLog(@"1");
 dispatch_sync(dispatch_get_main_queue(), ^{
+    NSLog(@"2");
+});
+NSLog(@"3");
+```
+
+> 改为 `global queue` 呢？
+
+```objc
+NSLog(@"1");
+dispatch_sync(dispatch_get_global_queue(), ^{
     NSLog(@"2");
 });
 NSLog(@"3");
@@ -357,6 +383,10 @@ NSLog(@"isEqual=%d", isEqual);
 ### 有哪些场景是 `NSOperation` 比 `GCD` 更容易实现的？
 
 ### `NSOperationQueue` 中的 `maxConcurrentOperationCount` 默认值？
+
+### `NSOperation` 是如何终止/取消任务的?
+
+------
 
 ## 线程设计
 
@@ -413,6 +443,8 @@ NSLog(@"isEqual=%d", isEqual);
 
 :::
 
+### 执行一个 `NSThread` 任务, 如何在执行过程中让他终止?
+
 ### `AFNetworking` 2.0 中常驻线程设计是为了解决什么问题？
 
 
@@ -458,6 +490,14 @@ NSLog(@"isEqual=%d", isEqual);
     } 
     ```
 
+  - `CADisplayLink`: 这是一个和屏幕刷新率同步的定时器，每一帧刷新都会被调用，精度很高，常用于做动画。
+
+    ```swift
+    // 与屏幕刷新同步刷新调用 render 函数
+    var displayLink: CADisplayLink? = CADisplayLink(target: self, selector: #selector(render))
+    displayLink?.add(to: RunLoop.current, forMode: .common)
+    ```
+
   - `GCD`：使用 `dispatch_after` 来实现定时器功能
 
     ```swift
@@ -478,14 +518,6 @@ NSLog(@"isEqual=%d", isEqual);
       }
     })
     gcdTimer?.resume() 
-    ```
-    
-  - `CADisplayLink`: 这是一个和屏幕刷新率同步的定时器，每一帧刷新都会被调用，精度很高，常用于做动画。
-
-    ```swift
-    // 与屏幕刷新同步刷新调用 render 函数
-    var displayLink: CADisplayLink? = CADisplayLink(target: self, selector: #selector(render))
-    displayLink?.add(to: RunLoop.current, forMode: .common)
     ```
 
 :::

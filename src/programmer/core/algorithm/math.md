@@ -14,3 +14,4 @@ index: true
 - [凸边形](https://visualgo.net/zh/convexhull/print)
 - [问题简化](https://visualgo.net/zh/reductions/print)
 
+## 求 `N!`
