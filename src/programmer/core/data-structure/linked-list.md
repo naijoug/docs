@@ -30,6 +30,12 @@ order: 2
 <!-- 删除排序链表中的重复元素 -->
 <!-- @include: @leetcode/problems/0x0000.md#0083 -->
 
+<!-- 移除链表元素 -->
+<!-- @include: @leetcode/problems/0x0200.md#0203 -->
+
+<!-- 删除链表中的节点 -->
+<!-- @include: @leetcode/problems/0x0200.md#0237 -->
+
 <!-- 链表的中间结点 -->
 <!-- @include: @leetcode/problems/0x0800.md#0876 -->
 

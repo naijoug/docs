@@ -20,7 +20,17 @@ order: 1
 <!-- 删除有序数组中的重复项 -->
 <!-- @include: @leetcode/problems/0x0000.md#0026 -->
 
+<!-- 删除有序数组中的重复项 II -->
+<!-- @include: @leetcode/problems/0x0000.md#0080 -->
 
+<!-- 移除元素 -->
+<!-- @include: @leetcode/problems/0x0000.md#0027 -->
+
+<!-- 移动零 -->
+<!-- @include: @leetcode/problems/0x0200.md#0283 -->
+
+<!-- 两数之和 II - 输入有序数组 -->
+<!-- @include: @leetcode/problems/0x0100.md#0167 -->
 
 ## `Sliding Window` - “滑动窗口”
 

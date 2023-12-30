@@ -30,6 +30,13 @@ String upperString = str.toUpperCase(); // 字母全部转化为大写
 String lowerString = str.toLowercase(); // 字母全部转化为小写
 char upperC = Character.toUpperCase(c); // 转化为大写字符
 char lowerC = Character.toLowerCase(c); // 转化为小写字符
+
+// String -> char[]
+String str = "hello";
+char[] charArray = str.toCharArray();
+// char[] -> String
+char[] charArray = new char[] {'H','e','l','l','o'};
+String str = new String(charArray);
 ```
 
 @tab python
@@ -49,6 +56,20 @@ lower_s = s.lower() # 字母全部转化为小写
 
 :::
 
+## `Reverse` - “反转”
+
+<!-- 反转字符串 -->
+<!-- @include: @leetcode/problems/0x0300.md#0344 -->
+
+<!-- 反转字符串中的元音字母 -->
+<!-- @include: @leetcode/problems/0x0300.md#0345 -->
+
+<!-- 反转字符串 II -->
+<!-- @include: @leetcode/problems/0x0500.md#0541 -->
+
+<!-- 反转字符串中的单词 III -->
+<!-- @include: @leetcode/problems/0x0500.md#0577 -->
+
 
 ## `Palindrome` - “回文串”
 
@@ -58,12 +79,16 @@ lower_s = s.lower() # 字母全部转化为小写
 
   这个类型的题目根据一定的条件，判断字符串是否是一个回文串。
   
+<!--  -->
 <!-- @include: @leetcode/problems/0x0100.md#0125 -->
 
+<!--  -->
 <!-- @include: @leetcode/problems/0x0600.md#0680 -->
 
+<!--  -->
 <!-- @include: @leetcode/problems/0x1600.md#1616 -->
 
+<!--  -->
 <!-- @include: @leetcode/problems/0x0000.md#0005 -->
 
 
