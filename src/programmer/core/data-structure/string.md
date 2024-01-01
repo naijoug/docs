@@ -91,6 +91,15 @@ lower_s = s.lower() # 字母全部转化为小写
 <!--  -->
 <!-- @include: @leetcode/problems/0x0000.md#0005 -->
 
+### 回文子串
+
+<!-- 最长回文子串 -->
+<!-- @include: @leetcode/problems/0x0000.md#0005 -->
+
+### 创建回文串
+
+<!-- 最短回文串 -->
+<!-- @include: @leetcode/problems/0x0200.md#0214 -->
 
 ### 分割回文串
 
