@@ -27,6 +27,10 @@ order: 3
 
 :::
 
+### 在 `init` 方法里面设置背景颜色，会生效吗？
+
+### 怎么自定义导航跳转？
+
 ### `WKWebView` 缓存和清理缓存的方法？
 
 ------
@@ -88,6 +92,12 @@ class MyButton: UIControl, ButtonProtocol {
 
 
 :::
+
+### UI 的渲染步骤？
+
+### 视图打包流程？
+
+### `CPU` 和 `GPU` 是如何工作，为什么要双缓冲区？
 
 ### ❓什么是屏幕渲染？
 
@@ -155,7 +165,9 @@ class MyButton: UIControl, ButtonProtocol {
 
 :::
 
-### `drawRect` 有使用过吗，调用时机？
+### `drawRect` 有使用过吗，调用时机？会有性能影响吗？
+
+### `layoutIfNeeded` 和 `setNeedsLayout` 的区别？
 
 ### `AutoLayout` 的原理，性能如何？
 
@@ -181,6 +193,10 @@ class MyButton: UIControl, ButtonProtocol {
 
 ### 图片渲染怎么优化？
 
+### 图片怎么显示的，以及图片缓冲区？
+
+### 如何用 `UIImageView` 显示超大分辨率的图？如果要支持缩放呢？
+
 ### 如何将一张内存极大的图片可以像地图一样的加载出来？
 
 ------
@@ -190,6 +206,8 @@ class MyButton: UIControl, ButtonProtocol {
 ### `UIView` 动画与核心动画的区别?
 
 ### 隐式动画 & 显示动画区别？
+
+### `UI Dynamics` 与 `UIKit Animation` 的最本质区别是什么？
 
 ### 做一些基于 `CALayer` 的动画时，有时需要设置 `layer` 的锚点来配合动画，需要注意什么？
 

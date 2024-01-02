@@ -11,7 +11,16 @@ order: 8
 
 ## 内存分配
 
-### 一个 `objc` 对象如何进行内存布局？
+### ❓一个 `objc` 对象如何进行内存布局？
+
+::: details 💡
+
+主要分为两大类：实例对象内存和类对象内存布局
+
+  - 实例对象内存布局：包括 `isa` 和实例变量。(通过 `isa` 可以找到类对象)
+  - 类对象内存布局：包括属性列表、方法列表、协议列表。
+
+:::
 
 ### ❓`OC` 中一个 `NSObject` 对象，占几个字节？
 
@@ -19,15 +28,23 @@ order: 8
 
   一个 `NSObject` 对象应该就是存放这个对象的指针地址。一个指针的大小应该是占用 16 个字节。
 
-  ```objc
-  @interface Todo: NSObject 
-  {
-     int: _no;
-     String: _title;
-     String: _detail;
-  }
-  @end
-  ```
+```objc
+@interface Todo: NSObject 
+{
+ int: _no;
+ String: _title;
+ String: _detail;
+}
+@end
+```
+
+:::
+
+  > `NSObject` 结构体里面有什么，大小为什么是 `16` 字节？
+
+::: details 💡
+
+
 
 :::
 
@@ -41,8 +58,6 @@ struct Foo {
 ```
 
 ### 结构体的字节对齐和 `OC` 对象的字节对齐？
-
-
 
 ### `UIImage` 使用 `imageNamed` 生成的对象什么时候被释放？
 
@@ -61,30 +76,34 @@ struct Foo {
 
 ::: details 💡
 
-  `placement new` : 是一种可以已分配内存的位置直接构造对象的特性，而这个已分配内存可以栈区也可以是堆区。
+> `placement new` : 是一种可以已分配内存的位置直接构造对象的特性，而这个已分配内存可以栈区也可以是堆区。
   
-  ```cpp
-  // 栈内存
-  char buffer[sizeof(Foo)]; 
-  Foo* foo = new(buffer) Foo(args);
-  // 堆内存
-  char* buffer = new char[sizeof(Foo)]; 
-  Foo* foo = new(buffer) Foo(args);
-  ```
+```cpp
+// 栈内存
+char buffer[sizeof(Foo)]; 
+Foo* foo = new(buffer) Foo(args);
+// 堆内存
+char* buffer = new char[sizeof(Foo)]; 
+Foo* foo = new(buffer) Foo(args);
+```
   
-  `OC` 是不具备这个特性，但是可以借助 `C` 语言分配内存。
+`OC` 是不具备这个特性，但是可以借助 `C` 语言分配内存。
   
-  ```objc
-  // OC 常规方案
-  Foo* foo = [[Foo alloc] init];
-  // 使用 C 分配内存
-  Foo* foo = (Foo*) malloc(sizeof(Foo));
-  if (foo != NULL) {
-      [foo init];
-  }
-  ```
-  
+```objc
+// OC 常规方案
+Foo* foo = [[Foo alloc] init];
+// 使用 C 分配内存
+Foo* foo = (Foo*) malloc(sizeof(Foo));
+if (foo != NULL) {
+  [foo init];
+}
+```
+
 :::
+
+### `malloc` 的指针两次 `free` 产生的异常与访问 `freed` 指针有可能产生的异常有什么区别？为什么访问 `freed` 指针不一定产生异常？
+
+
 
 ------
   
@@ -98,9 +117,13 @@ struct Foo {
 
 ### `ARC` 对 `retain & release` 做了哪些优化？
 
-### `Swift` 内存管理中的 `pwt`、`vwt`？
+### 在 `ARC` 环境下如何用 `C++` 标准库容器来管理 `OC` 对象？
+
+### 为什么 `ARC` 环境下不允许我们调用 `[super dealloc]`？
 
 ### `Swift` 统一类型的变量可选值与非选值内存有什么区别?
+
+### `Swift` 内存管理中的 `pwt`、`vwt`？
 
 ------
 
@@ -120,17 +143,29 @@ struct Foo {
 
 :::
 
+### `Swift` 中 `weak` 和 `unowned` 的区别？
+
+
+
 ------
  
 ## 自动释放池
-  
-### 一个局部变量是什么时候释放的，`autorelease` 什么时候释放？
   
 ### `@autorelease{ NSString s; }` 和 `NSString s;` 有什么区别？
   
 ### 说说你对 `autorelease` 的理解?
   
-### 不手动指定 `autoreleasepool` 的前提下，一个 `autorealese` 对象在什么时刻释放？
+### 一个局部变量是什么时候释放的，`autorelease` 什么时候释放？
+  
+### 不手动指定 `autoreleasepool`，一个 `autorealese` 对象在什么时刻释放？
+
+
+
+### 手动创建的 `autoreleasepool`，一个 `autorealese` 对象在什么时刻释放？
+
+### 子线程中需要加 `autoreleasepool` 吗？
+
+### 子线程中的 `autorelease` 变量什么时候释放？
 
 ### 什么情况下需要手动创建 `autoreleasepool` ？
   

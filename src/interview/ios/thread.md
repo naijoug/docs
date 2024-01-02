@@ -443,7 +443,6 @@ NSLog(@"isEqual=%d", isEqual);
 
 :::
 
-### 执行一个 `NSThread` 任务, 如何在执行过程中让他终止?
 
 ### `AFNetworking` 2.0 中常驻线程设计是为了解决什么问题？
 
@@ -451,9 +450,47 @@ NSLog(@"isEqual=%d", isEqual);
 
 ### `iOS` 下如何实现指定线程数目的线程池？
 
+### 执行一个 `NSThread` 任务, 如何在执行过程中终止该线程?
+
+### 开启一条线程的方法？线程可以取消吗？
+
 ### 如何终止正在运行的工作线程？
 
 ### 有a、b、c、d 4个异步请求，如何判断a、b、c、d都完成执行？如果需要a、b、c、d顺序执行，该如何实现？
+
+
+
+### 下面这段伪代码存在什么问题？应该如何改进？
+
+```objc
+int main(int argc, const char * argv[]) {
+    // ...
+    
+    NSUInteger threadCount = [NSProcessInfo processInfo].activeProcessorCount;
+    NSCondition *cond = [NSCondition new];
+    for (int i = 0; i < threadCount; i++) {
+        [NSThread detachNewThreadWithBlock:^{
+            while (YES) {
+                [cond lock];
+                while (/* Queue is empty */) {
+                    [cond wait];
+                }
+                // Dequeue an item.
+                [cond unlock];
+                // Handle the item.
+            }
+        }];
+    }
+
+    while (YES) {
+        // Enqueue something when it comes.
+        [cond broadcast];
+    }
+    
+    // ...
+}
+
+```
 
 ------
 

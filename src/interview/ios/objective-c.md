@@ -31,7 +31,13 @@ order: 1
 
 ### `OC` 是否支持重载? 为什么?
 
+### `id`、`self`、`super` 语法上有什么区别？
+
+
+
 ### 说说对 `self` 和 `super` 的理解？
+
+
 
 ### 说一下 `dealloc` 的实现机制？
 
@@ -123,6 +129,8 @@ order: 1
 
 ### 类簇的优缺点？
 
+### `OC` 是如何保证系统升级后的 `ABI` 稳定性的？
+
 ------
 
 ## NSString
@@ -171,6 +179,10 @@ order: 1
 
 ### `NSCache` 中缓存的对象，在什么时候被释放？
 
+### `NSDictionary` 与 `NSHashTable` 有什么区别，分别有哪些使用场景？
+
+### `isEqual` 和 `hash` 的关系？
+
 ------
 
 ## NSMutableArray
@@ -188,6 +200,12 @@ order: 1
 ### ❓`copy` 和 `mutablecopy` 的区别？
 
 ### ❓`@property (copy) NSMutableArray *array;` 这个写法正确吗？
+
+### 为什么不可变对象要用 `copy`？
+
+
+
+------
 
 ## 属性
 
@@ -240,6 +258,10 @@ order: 1
   选择哪种属性修饰符要视情况而定，如果数据是不可变的，那么选择 `assign` 或 `copy` 较好；如果数据是可变的，可以选择 `strong` 或 `weak`。
 
 :::
+
+### `assign` 可以用于 `OC` 对象吗？
+
+
 
 ### `nonnull` 用过吗？
 
@@ -332,6 +354,8 @@ order: 1
 
 ### `block` 在捕获自变量，局部静态变量，全局变量，全局静态变量有什么区别?
 
+### `block` 修改捕获变量除了用 `__block` 还可以怎么做？有哪些局限性？
+
 ### ❓`__block` 的作用？
 
 ### `__block` vs `__weak`？
@@ -373,7 +397,7 @@ order: 1
 
 ### `block` 访问对象类型的 `auto` 变量时，在 `ARC` 和 `MRC` 下有什么区别？
 
-### 在block里面使用_property会造成循环引用吗？怎么解决？除了使用self->_property，可以使用valueforkey来访问吗  在block里面可以修改它的值吗setvalueforkey？可以修改它的值，可以用valueforkey来解决，显式的的使用self，block外先持有self的弱引用。
+### `block` 中访问会造成循环引用吗？怎么解决？可以使用 `KVC` 来访问吗？可以使用 `KVC` 修改它的值吗？
 
 ------
 
@@ -514,6 +538,8 @@ order: 1
   类方法与实例方法
 
 :::
+
+### `C++` 调用虚方法与 `OC` 发消息有什么区别？
 
 ### 消息转发机制和其他语言的消息机制优劣对比？
 

@@ -74,30 +74,6 @@ index: true
 
 ### 为什么要设计 `metaclass`？
 
-------
-
-## 属性
-
-### 为什么对象方法没有保存的对象结构体里，而是保存在类对象的结构体里？
-
-### `class_copyIvarList` vs `class_copyPropertyList`
-
-### `class_ro_t` vs `class_rw_t`
-
-### 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？
-
-------
-
-## 方法
-
-### 对象方法 与 类方法存放在哪？
-
-### `class`、`objc_getClass`、`object_getclass` 三个方法的区别？
-
-### 在运行时创建类的方法 `objc_allocateClassPair` 的方法名尾部为什么是pair（成对的意思）？
-
-### `method_t` 里包含什么？
-
 ### ❓`super` 是什么？
 
 ::: details 💡
@@ -147,6 +123,30 @@ index: true
 
 :::
 
+------
+
+## 属性
+
+### 为什么对象方法没有保存的对象结构体里，而是保存在类对象的结构体里？
+
+### `class_copyIvarList` vs `class_copyPropertyList`
+
+### `class_ro_t` vs `class_rw_t`
+
+### 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？
+
+------
+
+## 方法
+
+### 对象方法 与 类方法存放在哪？
+
+### `class`、`objc_getClass`、`object_getclass` 三个方法的区别？
+
+### 在运行时创建类的方法 `objc_allocateClassPair` 的方法名尾部为什么是pair（成对的意思）？
+
+### `method_t` 里包含什么？
+
 ### ❓`OC` 运行时在工程中的有过实践运用吗？
 
 ------
@@ -164,3 +164,11 @@ index: true
 ### 方法交换和分类同时去 `hook` 一个方法,结果会怎么样? 具体交换的是什么? 交换时是如何处理传参数? 
 
   > 如果使用 `NSInvocation` 的话, 是否能处理方法有返回值的场景?具体怎么处理的?
+  
+------
+
+## 其它知识点
+
+### `runtime` 中 `SideTables`（不是 SideTable）存在的意义是什么？
+
+### `fastpath`、`slowpath` 是什么？

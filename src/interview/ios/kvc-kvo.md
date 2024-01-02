@@ -28,6 +28,8 @@ order: 4
 
 ### 若一个类有实例变量 `NSString *_foo`，调用 `setValue:forKey:` 时，可以以 `foo` 还是 `_foo` 作为 `key`？
 
+### `KVC` 成员变量会不会触发？
+
 ### `KVC` 的 `keyPath` 中的集合运算符如何使用？
 
 ### `KVC` 和 `KVO` 的 `keyPath` 一定是属性么？
@@ -38,6 +40,8 @@ order: 4
   * 可以读取或修改类的私有属性
 
 ### `KVC` 的底层实现？
+
+------
 
 ## `KVO`
 

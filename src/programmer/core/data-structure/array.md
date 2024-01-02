@@ -32,6 +32,10 @@ order: 1
 <!-- 两数之和 II - 输入有序数组 -->
 <!-- @include: @leetcode/problems/0x0100.md#0167 -->
 
+<!-- 颜色分类 -->
+<!-- @include: @leetcode/problems/0x0000.md#0075 -->
+
+
 ## `Sliding Window` - “滑动窗口”
 
 
