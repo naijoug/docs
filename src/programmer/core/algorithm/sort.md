@@ -271,3 +271,16 @@ func noodleSort(nums: [Int]) -> [Int] {
 
 :::
 
+
+## 数组排序
+
+<!-- 颜色分类 -->
+<!-- @include: @leetcode/problems/0x0000.md#0075 -->
+
+## 链表排序
+
+<!-- 对链表进行插入排序 -->
+<!-- @include: @leetcode/problems/0x0100.md#0147 -->
+
+<!-- 排序链表 -->
+<!-- @include: @leetcode/problems/0x0100.md#0148 -->

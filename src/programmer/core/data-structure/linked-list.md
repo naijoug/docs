@@ -75,7 +75,12 @@ order: 2
 <!-- 环形链表 II -->
 <!-- @include: @leetcode/problems/0x0100.md#0142 -->
 
-  
-  
+## `sort` - “排序”
+
+<!-- 对链表进行插入排序 -->
+<!-- @include: @leetcode/problems/0x0100.md#0147 -->
+
+<!-- 排序链表 -->
+<!-- @include: @leetcode/problems/0x0100.md#0148 -->
   
   
