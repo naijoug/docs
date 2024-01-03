@@ -1,16 +1,39 @@
 ---
-title: Runtime
+title: 运行时
 icon: hashtag
 
 index: false
 
 ---
 
+> 参考源码 [objc-876](https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime)
+
 <!-- more -->
+
+## `runtime` 是什么
+
+[Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide)
+
+> The Objective-C language defers as many decisions as it can from compile time and link time to runtime. Whenever possible, it does things dynamically. 
+> This means that the language requires not just a compiler, but also a runtime system to execute the compiled code. 
+> The runtime system acts as a kind of operating system for the Objective-C language; it’s what makes the language work. 
+>
+> Objective-C 语言尽可能地将许多决策从编译时间和链接时间推迟到运行时。它就会尽可能地动态地执行任务。
+> 这意味着该语言不仅需要一个编译器，而且还需要一个运行时系统来执行编译过的代码。
+> 运行时系统就像是 Objective-C 语言的操作系统；这是语言运行工作的原理所在。
+  
+  这段说明可以分三段理解
+  
+  * `OC` 的设计者为了让它具备动态能力，所以将只要可以动态处理的任务都迁移到运行时。
+  * 编译器只完成了部分代码编译链接工作，还剩一部分需要运行时处理，所以需要设计这个 `runtime` 来进行代码的动态处理。
+  * 将 `runtime` 看做 `OC` 语言的操作系统。操作系统是计算机运行的核心，用来进行系统资源分配，各种任务调度，是计算机可以正常运行的关键。说明了 `runtime` 对于 `OC` 语言的重要性，也是必不可少的一部分。
+
+  这也很好地解释了“为什么是 OC 是一个动态语言？”。
 
 ## reference
 
 - [objc4](https://github.com/apple-oss-distributions/objc4)
+- [A debuggable objc runtime](https://github.com/RetVal/objc-runtime)
 - [iOS-Runtime-Headers](https://github.com/nst/iOS-Runtime-Headers) : iOS 运行时头文件(包括私有 API)
     > iOS Objective-C headers as derived from runtime introspection
 - [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide)
@@ -19,11 +42,19 @@ index: false
 
 ------
 
-- [2013.11.26 Objective-C 中的消息与消息转发](https://blog.ibireme.com/2013/11/26/objective-c-messaging/)
-- [2014.11.05 Objective-C Runtime](http://yulingtianxia.com/blog/2014/11/05/objective-c-runtime/)
-- [2014.11.06 神经病院objc runtime入院考试](https://blog.sunnyxx.com/2014/11/06/runtime-nuts)
-- [2016.06.15 Objective-C 消息发送与转发机制原理](http://yulingtianxia.com/blog/2016/06/15/Objective-C-Message-Sending-and-Forwarding/)
-- [2018.03.16 读 objc4 源码，深入理解 Objective-C Runtime](https://shannonchenchn.github.io/2018/03/16/objc-runtime-learning-notes/)
+- [2020-01-23 Aspects深度解析-iOS面向切面编程](https://juejin.cn/post/6844904052778598408)
+- [2018-03-16 读 objc4 源码，深入理解 Objective-C Runtime](https://shannonchenchn.github.io/2018/03/16/objc-runtime-learning-notes/)
+- [2017-09-15 Why is MetaClass in Objective-C？](https://nemocdz.github.io/post/why-is-metaclass-in-objective-c/) 💯
+    > 作者从自己遇到的一个面试题出发，按照第一性原理进行问题推导。
+      👉🏻 首先去研究了 `OC` 中的源码，梳理了 `isa`、`MetaClass` 关系。
+      👉🏻 在搜索 `MetaClass` 的过程，发现了 `Python` 中也有这个设计。进而了解到是源于 `Smalltalk` 的设计，而 `OC` 就是借鉴的 `Smalltalk` 的设计思想。
+      👉🏻 进一步思考如果没有 `MetaClass` 是否可行。在宏观成面思考了面向对象的两种设计思想，以 `C++` (借鉴 `Simula`)为代表的*类的划分*，还有以 `OC` (借鉴 `Smalltalk`)为代表的`消息传递`。
+- [2016-06-15 Objective-C 消息发送与转发机制原理](http://yulingtianxia.com/blog/2016/06/15/Objective-C-Message-Sending-and-Forwarding/)
+- [2014-11-06 神经病院objc runtime入院考试](https://blog.sunnyxx.com/2014/11/06/runtime-nuts)
+- [2014-11-05 Objective-C Runtime](http://yulingtianxia.com/blog/2014/11/05/objective-c-runtime/)
+- [2013-11-26 Objective-C 中的消息与消息转发](https://blog.ibireme.com/2013/11/26/objective-c-messaging/)
+
+
 
 ## concept
 
@@ -119,70 +150,3 @@ struct class_ro_t { // 只读
     property_list_t *baseProperties;    // 属性列表
 };
 ```
-
-## Runtime Function
-
-| 函数 | 说明
-| --- | ---
-| *Class*       | 
-| `class_getName`                       | 获取类名
-| `class_getSuperclass`                 | 获取父类
-| `class_getInstanceSize`               | 获取实例尺寸
-| `class_getInstanceVariable`           | 获取实例变量的信息
-| `class_getClassVariable`              | 获取类成员变量的信息
-| `class_getVersion`                    | 获取类版本号
-| `class_setVersion`                    | 设置类版本号
-| `class_isMetaClass`                   | 是否是一个元类
-| *Ivar*        |
-| `class_addIvar`                       | 添加成员变量
-| `class_copyIvarList`                  | 获取整个成员变量列表
-| *Property*    |
-| `class_addProperty`                   | 为类添加属性
-| `class_replaceProperty`               | 替换类属性
-| `class_getProperty`                   | 获取指定的属性
-| `class_copyPropertyList`              | 获取属性列表
-| *Method*      |
-| `class_addMethod`                     | 添加方法
-| `class_replaceMethod`                 | 替换方法实现
-| `class_getInstanceMethod`             | 获取实例方法
-| `class_getClassMethod`                | 获取类方法
-| `class_copyMethodList`                | 获取所有方法的数组
-| `class_getMethodImplementation`       | 返回方法实现
-| `class_respondsToSelector`            | 类实例是否响应指定的 selector
-| *Protocol*    | 
-| `class_addProtocol`                   | 添加协议
-| `class_conformsToProtocol`            | 是否实现指定的协议
-
-## Message Forward
-> 消息转发 : `resolveInstanceMethod: -> forwardingTargetForSelector: -> methodSignatureForSelector: -> forwardInvocation:`
-
-| 函数 | 说明
-| --- | ---
-| `resolveInstanceMethod:`          | 实例方法是否为动态添加
-| `resolveClassMethod`              | 类方法是否为动态添加
-| `forwardingTargetForSelector:`    | 指定那个对象响应消息
-| `methodSignatureForSelector:`     | 进行方法签名
-| `forwardInvocation:`              | 根据签名创建 NSInvocation
-
-## Associated Object
-> 关联对象
-
-``` objc
-@interface NSObject (Extension)
-@property (nonatomic, copy) NSString *name;
-@end
-@implementation NSObject (Extension)
-- (void)setName:(NSString *)name {   
-    objc_setAssociatedObject(self, @selector(name), name, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-- (NSString *)name {   
-    return objc_getAssociatedObject(self,@selector(name));
-}
-@end
-```
-
-## Method Swizzling
-> 方法交换
-
-## Type Encoding
-> 类型编码

@@ -9,6 +9,16 @@ order: 2
 
 ## `OC` 中的消息转发
 
+> 消息转发 : `resolveInstanceMethod: -> forwardingTargetForSelector: -> methodSignatureForSelector: -> forwardInvocation:`
+
+| 函数 | 说明
+| --- | ---
+| `resolveInstanceMethod:`          | 实例方法是否为动态添加
+| `resolveClassMethod`              | 类方法是否为动态添加
+| `forwardingTargetForSelector:`    | 指定那个对象响应消息
+| `methodSignatureForSelector:`     | 进行方法签名
+| `forwardInvocation:`              | 根据签名创建 NSInvocation
+
 ## `Swift` 中的方法派发
 
 派发方式 :
