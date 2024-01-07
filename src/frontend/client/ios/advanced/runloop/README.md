@@ -16,9 +16,10 @@ index: false
 
 ------
 
-- [2020-07-15 秒杀面试官的RunLoop底层原理](https://juejin.cn/post/6850418117169840135)
-- [2022-04-04 由点入面吃透RunLoop](https://juejin.cn/post/7082739417370066974)
 - [2022-04-02 当面试官问Runloop时，想听到的答案是什么？](https://juejin.cn/post/7081932582576717831)
+- [2022-04-04 由点入面吃透RunLoop](https://juejin.cn/post/7082739417370066974)
+- [2020-07-15 秒杀面试官的RunLoop底层原理](https://juejin.cn/post/6850418117169840135)
+
 
 ## UIApplicationMain
 > `iOS` 程序启动的入口 `main` 函数中的 `UIApplicationMain` 就是启动了一个 `RunLoop`
