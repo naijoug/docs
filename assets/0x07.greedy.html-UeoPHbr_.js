@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as r,c as o,a as t}from"./app-QmDm9YZL.js";const c={};function _(n,a){return r(),o("div",null,[t(" more ")])}const l=e(c,[["render",_],["__file","0x07.greedy.html.vue"]]);export{l as default};
