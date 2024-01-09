@@ -19,7 +19,7 @@ index: false
     > 汇总各大互联网公司容易考察的高频leetcode题🔥
 - [leetcode](https://github.com/doocs/leetcode)
     > 🔥LeetCode solutions in any programming language | 多种编程语言实现 LeetCode、《剑指 Offer（第 2 版）》、《程序员面试金典（第 6 版）》题解
-- [labuladong 的算法小抄](https://github.com/labuladong/fucking-algorithm)
+- [labuladong 的算法笔记](https://labuladong.github.io/algo) 👉🏻 [GitHub](https://github.com/labuladong/fucking-algorithm)
     > 刷算法全靠套路，认准 labuladong 就够了！English version supported! Crack LeetCode, not only how, but also why.
 - [算法模板](https://github.com/greyireland/algorithm-pattern)
     > 算法模板，最科学的刷题方式，最快速的刷题路径，你值得拥有~
