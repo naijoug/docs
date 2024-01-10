@@ -37,6 +37,11 @@ order: 1
 
 ## Tools
 
+- [Awesome-gptlike-shellsite](https://github.com/bleedline/Awesome-gptlike-shellsite)
+- [ChatGPT-Next-Web](https://app.nextchat.dev/) 👉🏻 [GitHub](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
+    > A cross-platform ChatGPT/Gemini UI (Web / PWA / Linux / Win / MacOS). 一键拥有你自己的跨平台 ChatGPT/Gemini 应用。
+- [Chatbot UI ](https://chatbotui.com) 👉🏻 [GitHub](https://github.com/mckaywrigley/chatbot-ui)
+    > The open-source AI chat app for everyone.
 - [ChatALL](https://github.com/sunner/ChatALL)
     > Concurrently chat with ChatGPT, Bing Chat, bard, Alpaca, Vincuna, Claude, ChatGLM, MOSS, iFlytek Spark, ERNIE and more, discover the best answers
 - [Open-Assistant](https://github.com/LAION-AI/Open-Assistant)
