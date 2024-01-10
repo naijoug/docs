@@ -19,11 +19,11 @@ index: false
 
 | data structure | description
 | -- | --
-| array                     | 数组
+| string / array            | 字符串 / 数组
+| stack / queue             | 栈 / 队列
 | linked list               | 链表
 | binary tree / tree        | 二叉树 / 树
 | graph                     | 图
-| stack / queue             | 栈 / 队列
 | hash table                | 哈希表
 | heap (priority queue)     | 堆 (优先级队列)
 | binary search tree (BST)  | 二叉搜索树
