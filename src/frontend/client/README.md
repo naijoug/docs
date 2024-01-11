@@ -1,7 +1,8 @@
 ---
 title: 客户端
-index: true
 icon: mobile
+
+index: false
 
 ---
 
@@ -11,7 +12,7 @@ icon: mobile
 
 - [iOS](ios/README.md)
 - [Android](android/README.md)
-- [Flutter](cross-platform/README.md)
+- [Flutter](flutter/README.md)
 
 ## Corss Platform
 
@@ -23,4 +24,4 @@ icon: mobile
     > 使用 Ruby 开发 iOS, Android 以及 OS X 原生应用
 - [Flybirds](https://github.com/ctripcorp/flybirds)
     > 基于自然语言的，跨端跨框架 BDD UI 自动化测试方案，BDD testing, Python style, Present by Trip Flight
-- [Kotlin Multiplatform Mobile]()
+- [Kotlin Multiplatform Mobile](https://kotlinlang.org/docs/multiplatform.html)

@@ -3,7 +3,6 @@ title: Weex
 icon: hashtag
 
 index: false
-order: 3
 
 ---
 
@@ -13,4 +12,4 @@ order: 3
 
 ## Reference
 
-- [Weex](https://github.com/alibaba/weex)
+- [Weex](https://weexapp.com) 👉🏻 [GitHub](https://github.com/alibaba/weex)

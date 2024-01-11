@@ -2,8 +2,7 @@
 title: ReactNative
 icon: hashtag
 
-index: true
-order: 2
+index: false
 
 ---
 
@@ -13,5 +12,5 @@ order: 2
 
 ## Reference
 
-- [ReactNative](https://github.com/facebook/react-native)
+- [ReactNative](https://reactnative.dev/) 👉🏻 [GitHub](https://github.com/facebook/react-native)
 - [ReactNative 中文网](https://reactnative.cn/)
