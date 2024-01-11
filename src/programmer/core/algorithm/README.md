@@ -14,7 +14,7 @@ index: false
 | -- | --
 | traverse              | 遍历
 | recursion             | 递归
-| backtrace             | 回溯
+| backtracking          | 回溯
 | greedy                | 贪婪
 | divide conquer        | 分治
 | sort                  | 排序
