@@ -34,17 +34,3 @@ icon: server
     * [七牛](https://www.qiniu.com/)
     * [imgur](https://imgur.com/)
     * [sm.ms](https://sm.ms/)
-
-## Cloud
-
-- ECS (Elastic Compute Service) : 动态计算服务 (AWS 云服务器)
-- SSE (Server-Sent Events) : 服务推送事件 
-
-- [Vercel](https://vercel.com/)
-    > Vercel's frontend cloud gives developers frameworks, workflows, and infrastructure to build a faster, more personalized web.
-- [zeabur](https://zeabur.com/)
-    > Zeabur is a platform that helps developers deploy services with a single click, no matter what programming language or development framework your project uses.
-- [deno](https://dash.deno.com)
-    > Deploy JavaScript Globally
-- [Supabase](https://github.com/supabase/supabase)
-    > Supabase is an open source Firebase alternative.

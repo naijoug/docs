@@ -28,3 +28,8 @@ index: false
 - [ClickHouse](https://github.com/ClickHouse)
     > ClickHouse® is a free analytics DBMS for big data
 - [ClickHouse Docs](https://clickhouse.com/docs/zh/)
+
+## Serverless
+
+- [upStash](https://upstash.com/) 👉🏻 [GitHub](https://github.com/upstash)
+    > Serverless Data Platform

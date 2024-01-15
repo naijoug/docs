@@ -15,7 +15,7 @@ order: 2
 
 ## server.xml
 
-```xml server.xml
+```xml
 <!-- HTTPS 单向验证 设置 -->
 <Connector port="8443" 
            protocol="org.apache.coyote.http11.Http11Protocol"

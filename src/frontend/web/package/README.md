@@ -10,7 +10,8 @@ index: true
 
 ## `npm`
 
-  > [npm](https://github.com/npm/cli) : the package manager for JavaScript
+- [npm](https://www.npmjs.com) 👉🏻 [GitHub](https://github.com/npm/cli) 
+  > the package manager for JavaScript
   
 ```shell
 $ npm get registry  # 查看到当前仓库
@@ -20,7 +21,8 @@ $ npm config set registry https://registry.npmjs.org        # 设置为官方地
 
 ## `yarn`
 
-  > [yarn](https://github.com/yarnpkg/yarn) : Fast, reliable, and secure dependency management.
+- [yarn](https://classic.yarnpkg.com) 👉🏻 [GitHub](https://github.com/yarnpkg/yarn) 
+    > Fast, reliable, and secure dependency management.
 
 ```shell
 $ yarn config get registry # 查看当前仓库
@@ -30,9 +32,12 @@ $ yarn config set registry https://registry.yarnpkg.com     # 设置为官方地
 
 ## `pnpm`
 
-  > [pnpm](https://github.com/pnpm/pnpm) : Fast, disk space efficient package manager
+- [pnpm](https://pnpm.io) 👉🏻 [GitHub](https://github.com/pnpm/pnpm) 
+    > Fast, disk space efficient package manager
+    
+```shell
 
-  - [中文文档](https://pnpm.io/zh/)
+```
 
 
 
