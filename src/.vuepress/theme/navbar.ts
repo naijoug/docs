@@ -43,7 +43,7 @@ export default navbar([
         children: [
           "ios/",
           "android/",
-          "cross-platform/",
+          "flutter/",
         ],
       },
       { // Web 端
