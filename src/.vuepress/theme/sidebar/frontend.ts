@@ -12,7 +12,7 @@ export const frontend = arraySidebar([
         Builder.structure("面试题", "interview/"),
       ]),
       Builder.structure("Android", "android/"),
-      Builder.structure("Corss Platform", "cross-platform/"),
+      Builder.structure("Flutter", "flutter/"),
     ],
   },
   {
