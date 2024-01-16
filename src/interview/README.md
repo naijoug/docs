@@ -24,4 +24,5 @@ index: false
 ------
 
 - [2023-09-19 有Tomcat，为什么还要Nginx？](https://juejin.cn/post/7280088532377534505)
+- [2020-07-23 如何在面试中筛选/不做一个「背题家」](https://ipotato.me/article/66)
 - [2018-11-23 一道面试题引起的思考](https://juejin.cn/post/6844903719792803847)
