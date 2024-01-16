@@ -7,11 +7,14 @@
 ```
 
 ```shell
-# cd 进入项目根目录
-fly launch --now # 部署并启动项目
+# 登录授权
+fly auth login 
 
+# cd 进入项目根目录
+# 部署并启动项目
+fly launch --now 
 # 部署
-fly deply
+fly deploy
 
 # 查询当前服务列表
 fly services list

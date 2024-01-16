@@ -22,6 +22,10 @@ order: 2
 - [理解 Prompt](https://github.com/prompt-engineering/understand-prompt)
     > 理解 Prompt：基于编程、绘画、写作的 AI 探索与总结
 
+------
+
+- [2023-07-18 如何写出高质量的 Prompt？](https://baoyu.io/blog/prompt-engineering/how-to-write-high-quality-prompt)
+
 ## [GPT Engineer](https://github.com/AntonOsika/gpt-engineer)
 > Specify what you want it to build, the AI asks for clarification, and then builds it.
 
