@@ -2,7 +2,7 @@
 title: Widget
 icon: hashtag
 
-index: true
+index: false
 
 ---
 
