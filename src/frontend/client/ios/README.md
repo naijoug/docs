@@ -8,12 +8,6 @@ index: false
 
 <!-- more -->
 
-## catalog
-
-- [基础知识](basic/README.md)
-- [进阶知识](advanced/README.md)
-- [小技巧](tip/README.md)
-
 ## reference
 
 - [Apple Developer](https://developer.apple.com)

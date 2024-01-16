@@ -60,8 +60,6 @@ index: true
     > A static blog built with NextJS and Notion API, supporting multiple deployment options. No server required, zero threshold to set up a website. Designed for Notion and all creators.
 - [nobelium](https://github.com/craigary/nobelium)
     > A static blog build on top of Notion and NextJS, deployed on Vercel.
-- [VuePress](https://github.com/vuejs/vuepress)
-    > 📝 Minimalistic Vue-powered static site generator
 - [Pagic](https://github.com/xcatliu/pagic)
     > A static site generator powered by Deno + React
 - [Publish](https://github.com/johnsundell/publish)
@@ -72,10 +70,17 @@ index: true
 - [Hugo](https://gohugo.io/)
     > The world’s fastest framework for building websites
 - [Typecho](http://typecho.org/)
-    > A PHP Blogging Platform. Simple and Powerful. 
-- [docsifyjs](https://docsify.js.org/)
-    > A magical documentation site generator.
+    > A PHP Blogging Platform. Simple and Powerful.
 - [Symphony](https://github.com/88250/symphony)
     > 🎶 一款用 Java 实现的现代化社区（论坛/问答/BBS/社交网络/博客）系统平台。A modern community (forum/Q&A/BBS/SNS/blog) system platform implemented in Java.
 - [blog](https://github.com/songquanpeng/blog)
     > 基于 Node.js 的个人博客系统. Node.js based blog system.
+
+------
+
+- [VuePress](https://vuepress.vuejs.org) 👉🏻 [GitHub](https://github.com/vuejs/vuepress)
+    > 📝 Minimalistic Vue-powered static site generator
+- [Docusaurus](https://docusaurus.io) 👉🏻 [GitHub](https://github.com/facebook/docusaurus)
+    > Easy to maintain open source documentation websites.
+- [docsifyjs](https://docsify.js.org) 👉🏻 [GitHub](https://github.com/docsifyjs/docsify)
+    > 🃏 A magical documentation site generator.
