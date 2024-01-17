@@ -15,6 +15,11 @@ index: false
 - [TxThinking Talks](https://talks.txthinking.com/)
 - [网络安全学习资料](https://github.com/findneo/Newbie-Security-List)
 
+------
+
+- [TCP/IP、Http、Socket的区别?](https://www.zhihu.com/question/39541968)
+- [2022-12-20 一文梳理 HTTP、TCP、Socket 和 WebSocket 的区别和联系](https://xie.infoq.cn/article/95f80659760d8dd230db7b548)
+
 ## Tool
 
 - [JSDelivr](https://www.jsdelivr.com) 
