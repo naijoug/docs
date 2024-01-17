@@ -8,6 +8,8 @@ index: false
 
 <!-- more -->
 
+> 循环不变量
+
 ## 算法一览
 
 | algorithm | description

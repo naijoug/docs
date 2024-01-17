@@ -9,11 +9,12 @@ order: 1
 
 <!-- more -->
 
-
 - [2023-10-23 FlutterCandies](https://juejin.cn/post/7292450647303208999)
 - [2018-09-03 Flutter快速上车之Widget](https://juejin.cn/post/6844903669108834311)
 
 - [Flutter 单例模式](https://flutter.cn/community/tutorials/singleton-pattern-in-flutter-n-dart)
+
+
 
 ## Concept
 
