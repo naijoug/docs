@@ -37,6 +37,10 @@ index: true
 - [everettjf](https://everettjf.github.io) : Fullstack
 - [ExplainThis](https://www.explainthis.io/zh-hans)
 
+------
+
+- [Henry Heffernan](https://henryheffernan.com/)
+
 ## Corporate
 
 - [🥇掘金翻译计划](https://github.com/xitu/gold-miner)

@@ -13,6 +13,15 @@ index: true
 - [OurSketch](https://oursketch.com/)
 - [Adobe全套下载](https://www.yuque.com/qianxun-nzpyh/kb)
 - [设计师口袋心理学](https://iason.notion.site/6719c7650fd1406c92287f556520fbc3)
+- [1000 inspiring websites](https://supercreative.design/1000-inspiring-websites)
+
+------
+
+- [2023-12-12 万字文章深入解读，让用户养成使用习惯的产品逻辑](https://www.zcool.com.cn/work/ZNjczMDA1NzY=.html)
+
+## assets
+
+- [svgl](https://svgl.vercel.app/) 👉🏻 [GitHub](https://github.com/pheralb/svgl)
 
 ## tool
 
