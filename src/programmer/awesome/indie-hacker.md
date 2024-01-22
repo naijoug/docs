@@ -18,6 +18,7 @@ index: true
     > New startups, startup ideas, great business ideas.
 - [V2EX](https://www.v2ex.com)
     > way to explore
+- [Trending Papers](https://trendingpapers.com)
 - [Hacker News](https://news.ycombinator.com)
 - [Makerlog](https://getmakerlog.com)
 - [DEV](https://dev.to)
