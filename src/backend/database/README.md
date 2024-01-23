@@ -22,6 +22,8 @@ index: false
 - [设计数据密集型应用](https://github.com/Vonng/ddia)
     > 《Designing Data-Intensive Application》DDIA中文翻译
     > [一本神书：《数据密集型应用系统设计》](https://fuxuemingzhu.cn/ddia)
+- [Awesome Database Learning](https://github.com/pingcap/awesome-database-learning)
+    > A list of learning materials to understand databases internals
     
 ## ClickHouse
     

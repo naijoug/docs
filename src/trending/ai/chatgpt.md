@@ -3,7 +3,6 @@ title: ChatGPT
 icon: hashtag
 
 index: true
-order: 1
 
 ---
 

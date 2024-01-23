@@ -18,6 +18,8 @@ index: false
 - [📚 《Python Cookbook in Chinese》 3rd Edition 翻译](http://python3-cookbook.readthedocs.org/zh_CN) 👉🏻 [GitHub](https://github.com/yidao620c/python3-cookbook)
 - [📚 Python 最佳实践指南](https://pythonguidecn.readthedocs.io/zh) 👉🏻 [GitHub](https://github.com/Prodesire/Python-Guide-CN)
 - [📘《Python进阶》](https://github.com/eastlakeside/interpy-zh)
+- [Python 工匠](https://www.piglei.com/book/index.html) 👉🏻 [🐙](https://github.com/piglei/one-python-craftsman)
+    > 来自一位 Pythonista 的编程经验分享，内容涵盖编码技巧、最佳实践与思维模式等方面。
 - [JavaScript 工程师的 Python 指南](https://luckrnx09.com/python-guide-for-javascript-engineers) 👉🏻 [GitHub](https://github.com/luckrnx09/python-guide-for-javascript-engineers)
 - [廖雪峰 - Python 教程](https://www.liaoxuefeng.com/wiki/1016959663602400)
 - [Python 中文学习大本营](http://www.pythondoc.com/)

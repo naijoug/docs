@@ -3,7 +3,6 @@ title: Prompt - “提示词”
 icon: hashtag
 
 index: true
-order: 2
 
 ---
 

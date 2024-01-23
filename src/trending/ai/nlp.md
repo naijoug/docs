@@ -3,7 +3,6 @@ title: NLP - “自然语言处理”
 icon: hashtag
 
 index: true
-order: 4
 
 ---
 
@@ -56,6 +55,7 @@ order: 4
     > Natural Language Toolkit for bahasa Malaysia
 - [indonesian-roberta-base-posp-tagger](https://huggingface.co/w11wo/indonesian-roberta-base-posp-tagger)   
     > Indonesian RoBERTa Base POSP Tagger
+
 
 ## embedding
 

@@ -3,7 +3,6 @@ title: AIGC - “AI 内容生成”
 icon: hashtag
 
 index: true
-order: 6
 
 ---
 
