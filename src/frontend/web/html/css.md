@@ -11,12 +11,12 @@ order: 2
 
 > Cascading Style Sheet : 层叠式样式表
 
-## Reference
+## reference
 
-- [CSS-Guidelines](https://github.com/chadluo/CSS-Guidelines)
+- [CSS Guidelines](https://github.com/chadluo/CSS-Guidelines)
     > 通用 CSS 笔记、建议与指导
 
-## Concept
+## concept
 
 - CSS 特点
   * CSS会忽略缩进和换行
@@ -44,7 +44,7 @@ order: 2
     * id 属性 : 用于标识唯一元素，同一页面不能重复
     * class 属性 : 用于标记同类元素，同一页可以重复
 
-## Usage
+## usage
 
 - CSS 常用属性
     * `color : red;` : 文字颜色

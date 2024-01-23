@@ -2,7 +2,7 @@
 title: 浏览器
 icon: hashtag
 
-index: true
+index: false
 
 ---
 
@@ -10,11 +10,11 @@ index: true
 
 ## reference
 
-- [Tampermonkey](https://www.tampermonkey.net/)
+- [Tampermonkey](https://www.tampermonkey.net)
     > 一款免费的浏览器扩展和最为流行的用户脚本管理器
 - [Greasy Fork](https://greasyfork.org/zh-CN)
-- [OpenUserJS](https://openuserjs.org/)
-- [Google Chinese ResultsBlocklist](https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist)
+    > 这里是一个提供用户脚本的网站。用户脚本是一段代码，它们能够优化您的网页浏览体验。
+- [OpenUserJS](https://openuserjs.org)
 - [全网最详细的谷歌插件开发小册](https://gitee.com/linwu-hi/coding-time-chrome)
 
 ------

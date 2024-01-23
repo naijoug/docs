@@ -10,7 +10,7 @@ index: true
 
 ## reference
 
-- [vuepress-theme-hope](https://github.com/vuepress-theme-hope/vuepress-theme-hope)
+- [VuePress Theme Hope](https://theme-hope.vuejs.press) 👉🏻 [🐙](https://github.com/vuepress-theme-hope/vuepress-theme-hope)
   > A vuepress theme with tons of features✨
 
 ##

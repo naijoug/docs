@@ -29,7 +29,8 @@ index: true
 - [钟颖 (Cyan) - 微软](https://www.zhihu.com/people/ios_dev/posts) : `Pin` 作者
 - [戴铭 (ming1016) - 快手](https://github.com/ming1016/study)
 - [翁培钧 - 滴滴](https://github.com/windstormeye/iOS-Course)
-- [崔江涛 (kenshincui)](http://www.cnblogs.com/kenshincui/)
+- [邓国雄 (Airing) - 腾讯](https://blog.ursb.me)
+- [崔江涛 (kenshincui)](http://www.cnblogs.com/kenshincui)
 - [图拉鼎](https://imtx.me)
 - [knowledge-kit](https://github.com/FantasticLBP/knowledge-kit) : iOS、Web前端、后端、数据库、计算机网络、设计模式经验总结
 - [zhihaozhang](https://zhihaozhang.github.io/)

@@ -11,5 +11,4 @@ index: false
 ## catalog
 
 - [Java - SpringBoot](spring-boot.md)
-- [JavaScript - Koa](koa.md)
 - [Python - Flask](flask.md)

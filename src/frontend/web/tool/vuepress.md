@@ -8,7 +8,8 @@ index: true
 
 ## reference
 
-- [VuePress V2 docs](https://v2.vuepress.vuejs.org/zh/guide)
+- [VuePress](https://v2.vuepress.vuejs.org) 👉🏻 [🐙](https://github.com/vuepress/core)
+    > Vue-Powered Static Site Generator
 
 ## starter
 

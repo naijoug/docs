@@ -16,13 +16,13 @@ order: 1
 ## reference
 
 - [MDN - HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
-- [htmx](https://github.com/bigskysoftware/htmx)
-    > </> htmx - high power tools for HTML
 - [绿叶学习网](www.lvyestudy.com)
 - [从 0 到 1: HTML+CSS 快速上手](https://weread.qq.com/web/reader/1053223071cad78210554c5)
-- [CANVAS](https://github.com/airingursb/canvas)
+- [htmx](https://htmx.org/) 👉🏻 [🐙](https://github.com/bigskysoftware/htmx)
+    > </> htmx - high power tools for HTML
+- [Canvas：Draw on the Web](https://airingursb.gitbooks.io/canvas) 👉🏻 [🐙](https://github.com/airingursb/canvas)
 
-## Concept
+## concept
 
 - 标准文档流
     > 元素默认自动从左往右，从上往下的流式排列方式。前面元素发生变化，后面的元素也相应地改变。
@@ -74,7 +74,7 @@ order: 1
     * CSS : 控制网页的外观
     * JavaScript : 控制网页的行为
 
-## Element
+## element
 
 ### 常用标签
 

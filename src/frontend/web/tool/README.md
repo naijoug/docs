@@ -12,3 +12,4 @@ index: false
 
 - [Hexo](hexo.md)
 - [VuePress](vuepress.md)
+- [VuePress Hope](vuepress-theme-hope.md)

@@ -44,8 +44,10 @@ icon: gift
 
 - [shu](https://github.com/shjwudp/shu)
     > 中文书籍收录整理
-- [chinese-poetry](https://github.com/chinese-poetry/chinese-poetry)
+- [中文诗歌](https://shici.store) 👉🏻 [🐙](https://github.com/chinese-poetry/chinese-poetry)
     > The most comprehensive database of Chinese poetry 🧶最全中华古诗词数据库, 唐宋两朝近一万四千古诗人, 接近5.5万首唐诗加26万宋诗. 两宋时期1564位词人，21050首词。
+- [看见统计](https://seeing-theory.brown.edu) 👉🏻 [🐙](https://github.com/seeingtheory/Seeing-Theory)
+    > A visual introduction to probability and statistics.
 - [RoadMap](https://github.com/xx-zh/xx-zh-roadmap)
 - [书栈网](https://www.bookstack.cn/)
 - [BookStash](https://bookstash.io)

@@ -8,20 +8,20 @@ index: true
 
 “Hexo & Pages = Blog”
 
-[Hexo](https://hexo.io/zh-cn/) 一个基于 `Node.js` 的静态博客网站生成器。
+[Hexo](https://hexo.io) 👉🏻 [🐙](https://github.com/hexojs/hexo) 一个基于 `Node.js` 的静态博客网站生成器。
   > `Hexo - Slogan` : ` A fast, simple & powerful blog framework`(快速、简洁且高效的博客框架)
 
 在线的 `Git` 仓库([Github](https://github.com)、[Gitee](https://gitee.com) 都提供了免费的 `Pages` 服务(静态网页托管和发布服务)。
 > 是一个静态网页托管和发布服务，支持个人博客搭建和项目主页搭建等。
 
-- [GitHub-Pages](https://pages.github.com/)  : GitHub提供的Pages服务，可能访问速度慢。
+- [GitHub-Pages](https://pages.github.com)  : GitHub提供的Pages服务，可能访问速度慢。
 - [Gitee-Pages](https://help.gitee.com/services/gitee-pages/intro) : Gitee提供的Pages服务，国内服务器访问速度快。
 
 <!-- more -->
 
 ## init
 
-``` bash
+```shell
 # 在电脑中安装了`Hexo`环境(前提: 已安装`Node`)    
 $ npm install -g hexo-cli 
 # 创建目录并使用 hexo 初始化
@@ -56,7 +56,7 @@ $ npm intall    # 安装`hexo`相关的依赖库(`package.json`)
     * `timezone` : 网站时区，中国应该使用`Asian/Shanghai`  
     * `deploy` : 部署设置，使用`GitHub`和`Gitee`是部署到git上  
         
-``` yml  Blog/_config.yml
+```yml  Blog/_config.yml
 # 方法一 :
     deploy:  
     type: git  
@@ -110,7 +110,7 @@ theme_config:
 	
 ## usage
 
-``` bash
+```shell
 # 写文章
 $ hexo new name        # 通过`scaffolds/post.md`模板,新建文章到默认布局(post : source/_posts),文章名字有空格需要用`“”`
 $ hexo new post name   # 同上
