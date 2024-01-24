@@ -13,8 +13,4 @@ export const interview = arraySidebar([
     text: "Flutter", icon: "hashtag", link: "flutter/", prefix: "flutter/",
     collapsible: true, children: "structure",
   },
-  {
-    text: "📚", icon: "hashtag", link: "book/", prefix: "book/",
-    collapsible: true, children: "structure",
-  },
 ])

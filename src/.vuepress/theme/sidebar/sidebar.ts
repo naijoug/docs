@@ -6,6 +6,7 @@ import { backend } from "./backend";
 import { trending } from "./trending";
 import { article } from "./article";
 import { interview } from "./interview";
+import { leetcode } from "./leetcode";
 
 export default sidebar({
   "/programmer/": programmer,
@@ -15,8 +16,7 @@ export default sidebar({
   "/trending/": trending,
   "/article/": article,
   "/interview/": interview,
-  
-  "/interview/leetcode/problems/": "structure",
+  "/leetcode/": leetcode,
 
   // --- fallback ---
   "/": ["", "guide"],

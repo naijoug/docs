@@ -1,6 +1,6 @@
 ---
-title: Book
-icon: hashtag
+title: Books
+icon: book
 
 index: false
 

@@ -112,20 +112,21 @@ index: true
   
   这样可以很方便的组织文件结构，也可以很方便的复用文件内容。
 
-  > `markdwon` 文件
+  > `markdwon` 文件 : `test.md`
   
-  ```md test.md
+  ```md 
   # one
   
   ## two
   
   ### three
   
+  <!-- #region #endregion 用于包裹标记的区域 -->
   // #region tag
   
-  #### four
+  ### four
   
-  #### five
+  ### five
   
   // #endregion tag
   
@@ -133,23 +134,19 @@ index: true
 
   > 导入整个文件
   
-  ```md 
-  <!-- @include: ./test.md -->
-  ```
+  `<!-- @include: ./test.md -->`
   
   > 导入指定行数
   
-  ```md
-  <!-- @include: ./test.md{2-4} -->
-  <!-- @include: ./test.md{2-} -->
-  <!-- @include: ./test.md{-4} -->
-  ```
+  `<!-- @include: ./test.md{2-4} -->` : 导入 2 ~ 4 行内容
+  
+  `<!-- @include: ./test.md{2-} -->` : 导入 2 行后面的所有内容
+  
+  `<!-- @include: ./test.md{-4} -->` : 导入 4 行之前的所有内容
 
   > 导入指定区域
   
-  ```md
-  <!-- @include: ./test.md#tag -->
-  ```
+  `<!-- @include: ./test.md#tag -->` : 导入 tag 标记的区域内容
   
 ## 案例
 

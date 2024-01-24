@@ -84,7 +84,7 @@ export default hopeTheme({
         resolvePath: (file) => {
           // 添加别名
           if (file.startsWith("@leetcode")) 
-            return file.replace("@leetcode", path.resolve(__dirname, "../../interview/leetcode"));
+            return file.replace("@leetcode", path.resolve(__dirname, "../../leetcode"));
           
           return file;
         },
