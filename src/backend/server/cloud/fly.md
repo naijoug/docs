@@ -1,9 +1,22 @@
+---
+title: Fly.io
+icon: hashtag
 
+index: true
+
+---
+
+<!-- more -->
+
+## reference
+
+- [Fly.io](https://fly.io) 👉🏻 [🐙](https://github.com/superfly)
 
 ## usage
 
 ```shell
-
+# 安装 flyctl
+brew install flyctl
 ```
 
 ```shell

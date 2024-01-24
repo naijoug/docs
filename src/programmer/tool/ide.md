@@ -1,5 +1,5 @@
 ---
-title: 集成开发环境
+title: IDE
 icon: hashtag
 
 index: true
@@ -7,7 +7,7 @@ order: 2
 
 ---
 
-> IDE : 
+> IDE (Integrated Development Environment) : 集成开发环境
 
 <!-- more -->
 

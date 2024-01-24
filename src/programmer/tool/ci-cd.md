@@ -1,5 +1,5 @@
 ---
-title: 持续集成/部署
+title: CI/CD
 icon: hashtag
 
 index: true
@@ -7,8 +7,8 @@ order: 7
 
 ---
 
-- `CI` : (Continuous Integration) 持续集成
-- `CD` : (Continuous Deploy) 持续部署
+- `CI` (Continuous Integration) : 持续集成
+- `CD` (Continuous Deploy) : 持续部署
 
 <!-- more -->
 

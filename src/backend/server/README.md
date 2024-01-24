@@ -1,7 +1,8 @@
 ---
 title: 服务器
-index: false
 icon: server
+
+index: false
 
 ---
 
