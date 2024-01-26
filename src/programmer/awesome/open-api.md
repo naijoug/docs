@@ -1,5 +1,5 @@
 ---
-title: OpenAPI
+title: Open API
 icon: hashtag
 
 index: false

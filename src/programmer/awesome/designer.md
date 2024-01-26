@@ -1,5 +1,5 @@
 ---
-title: 设计
+title: Designer
 icon: hashtag
 
 index: true

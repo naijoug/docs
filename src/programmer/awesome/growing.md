@@ -1,12 +1,17 @@
 ---
-title: 技术成长
+title: Growing
 icon: hashtag
 
 index: true
 
 ---
 
-## reference
+## 人生观
+
+- [2023-12-10 存在主义哲学--人生的意义](https://windliang.wang/2023/12/10/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6-%E4%BA%BA%E7%94%9F%E7%9A%84%E6%84%8F%E4%B9%89)
+- [2023-10-25 谈谈存在的价值与人生体验](https://sspai.com/post/83743)
+
+## 技术观
 
 - [2023-07-20 译·如何做出伟大的工作](https://tw93.fun/2023-07-20/great.html)
 - [2023-03-10 计算机基础学习心得](https://xiaolincoding.com/cs_learn/)

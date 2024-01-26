@@ -42,3 +42,5 @@ index: false
     > 🚀🚀🚀vue admin,vue3 admin,vue3.0 admin,vue后台管理,vue-admin,vue3.0-admin,admin,vue-admin,vue-element-admin,ant-design,vue-admin-beautiful-pro,vab admin pro,vab admin plus,vue admin plus,vue admin pro
 - [vue-vben-admin](https://vben.vvbin.cn) 👉🏻 [🐙](https://github.com/vbenjs/vue-vben-admin)
     > A modern vue admin. It is based on Vue3, vite and TypeScript. It's fast！
+- [Ray Template](https://xiaodaigua-ray.github.io/ray-template-doc) 👉🏻 [🐙](https://github.com/XiaoDaiGua-Ray/ray-template)
+    > Ray Template, A concise vue middle and background template.

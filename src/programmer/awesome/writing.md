@@ -1,5 +1,5 @@
 ---
-title: 写作
+title: Writing
 icon: hashtag
 
 index: false
