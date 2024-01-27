@@ -95,17 +95,17 @@ highlights:
       - title: iOS
         icon: hashtag
         details: 
-        link: /frontend/mobile/iOS/
+        link: /frontend/client/iOS/
 
       - title: Android
         icon: hashtag
         details: 
-        link: /frontend/mobile/android/
+        link: /frontend/client/android/
 
-      - title: Cross Plaform
+      - title: Flutter
         icon: hashtag
         details: 
-        link: /frontend/mobile/crossplaform/
+        link: /frontend/client/flutter/
 
       - title: HTML
         icon: hashtag
@@ -115,7 +115,7 @@ highlights:
       - title: Vue
         icon: hashtag
         details: 
-        link: /frontend/mobile/vue.md
+        link: /frontend/web/vue
       
       - title: React
         icon: hashtag
@@ -131,17 +131,17 @@ highlights:
     highlights:
       - title: 服务器
         icon: server
-        details: 作为后端技术的基石
+        details: 后端技术的基石
         link: /backend/server/
 
       - title: 数据库
         icon: database
-        details: 大数据时代的核心竞争力“数据”
+        details: 程序的核心资源
         link: /backend/databse/
       
       - title: 服务框架
         icon: box-open
-        details: 各种编程语言各显神通
+        details: 各显神通的服务
         link: /backend/service/
   
   # -------------------------------------------------

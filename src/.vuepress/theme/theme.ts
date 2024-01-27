@@ -24,10 +24,10 @@ export default hopeTheme({
 
   //pure: true,
 
-  // navbar
+  // navbar 导航栏
   navbar,
 
-  // sidebar
+  // sidebar 侧边栏
   sidebar,
   // "structure" (结构化侧边栏) 排序规则
   sidebarSorter: ["readme", "order", "filename", "title"],
@@ -41,7 +41,7 @@ export default hopeTheme({
   // },
 
   plugins: {
-    // You should generate and use your own comment service
+    // Giscus 评论系统
     comment: {
       provider: "Giscus",
       repo: "naijoug/giscus-discussions",
