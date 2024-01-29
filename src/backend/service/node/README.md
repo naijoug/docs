@@ -10,9 +10,21 @@ index: false
 
 ## reference
 
-- [Node](https://github.com/nodejs/node)
-- [Node 入门](https://www.nodebeginner.org/index-zh-cn.html)
-- [七天学会 NodeJS](https://nqdeng.github.io/7-days-nodejs/)
+- [Node](https://nodejs.org) 👉🏻 [🐙](https://github.com/nodejs/node)
+    > Node.js JavaScript runtime ✨🐢🚀✨
+
+------
+
+- [Awesome Node.js](https://github.com/sindresorhus/awesome-nodejs)
+    > ⚡ Delightful Node.js packages and resources
+- [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
+    > ✅ The Node.js best practices list
+- [Node 入门](https://www.nodebeginner.org/index-zh-cn.html) 👉🏻 [🐙](https://github.com/manuelkiessling/nodebeginner.org)
+    > A comprehensive Node.js tutorial for beginners
+- [七天学会 NodeJS](https://nqdeng.github.io/7-days-nodejs/) 👉🏻 [🐙](https://github.com/nqdeng/7-days-nodejs)
+- [《深入理解Node.js：核心思想与源码分析》](https://jianghua-yjhs-organization.gitbook.io/in-depth-understanding-of-node.js-core-ideas-and/) 👉🏻 [🐙](https://github.com/yjhjstz/deep-into-node)
+- [《Node.js 包教不包会》](https://github.com/alsotang/node-lessons)
+- [Nodejs 学习笔记](https://github.com/chyingp/nodejs-learning-guide)
 - [极简 Node.js 入门教程](https://www.yuque.com/sunluyong/node)
 
 ## framework
