@@ -28,7 +28,7 @@ index: false
     > AI绘画资料合集（包含国内外可使用平台、使用教程、参数教程、部署教程、业界新闻等等） stable diffusion tutorial、disco diffusion tutorial、 AI Platform
 - [最懂程序员的新一代 AI 搜索引擎](https://devv.ai) 👉🏻 [🐙](https://github.com/devv-ai/devv)
 
-## Concept
+## concept
 
 | abbr | full | description
 | --- | --- | ---
@@ -51,7 +51,7 @@ index: false
 | `TF`      | Term Frequency                        | 词频
 | `SW`      | Stop Words                            | 停用词
 | `IDF`     | Inverse Document Frequency            | 逆文档频率
-|           | Fine Tuning                           | 微调
+| `FT`      | Fine Tuning                           | 微调
 
 ## community
 
@@ -87,7 +87,7 @@ index: false
 - [Reflex](https://github.com/reflex-dev/reflex)
     > (Previously Pynecone) 🕸 Web apps in pure Python 🐍
 
-## Tools
+## tools
 
 - [Transformers](https://github.com/huggingface/transformers)
     > 🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX. 为 Jax、PyTorch 和 TensorFlow 打造的先进的自然语言处理
@@ -106,27 +106,7 @@ index: false
 - [guidance](https://github.com/microsoft/guidance)
     > A guidance language for controlling large language models. 
 
-## AI Coder
-
-- [Github Copilot](https://github.com/features/copilot)
-    > Your AI pair programmer
-- [Amazon CodeWhisperer](https://aws.amazon.com/cn/codewhisperer)
-- [Alibaba cosy](https://github.com/alibaba-cloud-toolkit/cosy) 
-    > 阿里云智能编码插件（Alibaba Cloud AI Coding Assistant）是一款AI编程助手，它提供代码智能补全和IDE内的代码示例搜索能力，帮助你更快更高效地写出高质量代码。
-- [CodeGeeX](https://github.com/THUDM/CodeGeeX)
-    > CodeGeeX: An Open Multilingual Code Generation Model
-- [Bito AI](https://github.com/gitbito/bitoai)
-    > 🚀 Bito AI – Bring ChatGPT to your IDE to 10x your dev abilities!
-- [CopilotForXcode](https://github.com/intitni/CopilotForXcode)
-    > The missing GitHub Copilot, Codeium and ChatGPT Xcode Source Editor Extension
-- [Continue](https://github.com/continuedev/continue)
-    > ⏩ the open-source coding copilot—bring the power of ChatGPT to VS Code
-- [Sweep](https://github.com/sweepai/sweep)
-    > Sweep: AI-powered Junior Developer for small features and bug fixes.
-- [Cursor](https://github.com/getcursor/cursor)
-    > An AI-powered code editor based on VSCode 🤖
-
-## Tutorial
+## tutorial
 
 - [Microsoft - ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners)
     > 12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all

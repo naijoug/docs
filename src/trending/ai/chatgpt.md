@@ -6,7 +6,7 @@ index: true
 
 ---
 
-## Reference
+## reference
 
 - [chatGPT](chat.openai.com)
 - [ChatGPT-API-Faucet](https://github.com/terobox/ChatGPT-API-Faucet)
@@ -37,9 +37,9 @@ index: true
 ## Tools
 
 - [Awesome-gptlike-shellsite](https://github.com/bleedline/Awesome-gptlike-shellsite)
-- [ChatGPT-Next-Web](https://app.nextchat.dev/) 👉🏻 [GitHub](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
+- [ChatGPT-Next-Web](https://app.nextchat.dev/) 👉🏻 [🐙](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
     > A cross-platform ChatGPT/Gemini UI (Web / PWA / Linux / Win / MacOS). 一键拥有你自己的跨平台 ChatGPT/Gemini 应用。
-- [Chatbot UI ](https://chatbotui.com) 👉🏻 [GitHub](https://github.com/mckaywrigley/chatbot-ui)
+- [Chatbot UI](https://chatbotui.com) 👉🏻 [🐙](https://github.com/mckaywrigley/chatbot-ui)
     > The open-source AI chat app for everyone.
 - [ChatALL](https://github.com/sunner/ChatALL)
     > Concurrently chat with ChatGPT, Bing Chat, bard, Alpaca, Vincuna, Claude, ChatGLM, MOSS, iFlytek Spark, ERNIE and more, discover the best answers
@@ -53,7 +53,6 @@ index: true
     > 🤖️ 桌面端AI语言练习应用
 - [myGPTReader](https://github.com/madawei2699/myGPTReader)
     > A community-driven way to read and chat with AI bots - powered by chatGPT.
-
 
 ## Tutorial
 
