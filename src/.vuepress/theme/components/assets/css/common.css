@@ -1,0 +1,87 @@
+/* 设置全局字体 */
+body {
+    font-family: PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, PingFang SC-Light, Microsoft YaHei;
+}
+
+/* 按钮通用样式 */
+button {
+    margin: 0; 
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: transparent;
+}
+/* 按钮按下状态 */
+button:active {
+    opacity: 0.6;
+}
+
+/* flex 竖向布局 */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* flex 横向布局 */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* flex 主轴对齐方式 */
+
+/* flex 主轴起点对齐 */
+.justify-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* flex 主轴居中对齐 */
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* flex 主轴终点对齐 */
+.justify-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 主轴元素之间等间距 */
+.justify-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 主轴元素两侧等间距 */
+.justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 主轴元素平均分割 */
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 交叉轴对齐方式 */
+
+/* 交叉轴起点对齐 */
+.align-start {
+   display: flex;
+   align-items: flex-start; 
+}
+
+/* 交叉轴居中对齐 */
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+/* 交叉轴终点对齐 */
+.align-end {
+    display: flex;
+    align-items: flex-end;
+}
