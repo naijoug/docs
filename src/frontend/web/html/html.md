@@ -16,8 +16,11 @@ order: 1
 ## reference
 
 - [MDN - HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
-- [绿叶学习网](www.lvyestudy.com)
+- [绿叶学习网](http://www.lvyestudy.com)
 - [从 0 到 1: HTML+CSS 快速上手](https://weread.qq.com/web/reader/1053223071cad78210554c5)
+
+------
+
 - [htmx](https://htmx.org/) 👉🏻 [🐙](https://github.com/bigskysoftware/htmx)
     > </> htmx - high power tools for HTML
 - [Canvas：Draw on the Web](https://airingursb.gitbooks.io/canvas) 👉🏻 [🐙](https://github.com/airingursb/canvas)

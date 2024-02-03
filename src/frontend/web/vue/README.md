@@ -14,6 +14,7 @@ index: false
 
 ------    
 
+- [Vue3 One Piece](https://vue3js.cn)
 - [awesome-vue](https://github.com/vuejs/awesome-vue)
     > 🎉 A curated list of awesome things related to Vue.js
 - [Nuxt](https://nuxt.com) 👉🏻 [🐙](https://github.com/nuxt/nuxt)
