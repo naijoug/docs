@@ -15,8 +15,6 @@ onMounted(() => {
 
 <template>
     <div id="home">
-        <h1>欢迎来到我的知识库！</h1>
-
         <!-- Banner -->
         <Banner/>
 
@@ -38,11 +36,9 @@ onMounted(() => {
 </template>
 
 <style src="./assets/css/common.css"></style>
-<style>
-div {
-    text-align: center;
-}
+<style src="./assets/css/theme.css"></style>
 
+<style scoped>
 #home {
     width: 100vw;
     height: auto;
@@ -51,5 +47,6 @@ div {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    text-align: center;
 }
 </style>
