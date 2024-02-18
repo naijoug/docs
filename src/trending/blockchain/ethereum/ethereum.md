@@ -9,7 +9,6 @@ order: 1
 
 ## Reference
 
-- [Ethereum](https://www.ethereum.org/) : 以太坊官网
 - [EthFans](https://ethfans.org/) : 以太坊爱好者
 - [Ethplorer](https://ethplorer.io/) : 以太坊代币浏览器
 - [Ethersacn](https://etherscan.io/) : 以太坊区块浏览器

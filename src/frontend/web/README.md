@@ -39,3 +39,14 @@ index: false
 ------
 
 - [2023-05-29 Vue 和 React 的区别看这里](https://juejin.cn/post/7238199999733088313)
+
+## concept
+
+### SSR (Server Side Rendering) : 服务端渲染
+
+- [NEXT](https://nextjs.org) 👉🏻 [🐙](https://github.com/vercel/next.js) [🇨🇳](https://www.nextjs.cn)
+    > The React Framework
+- [Astro](https://astro.build) 👉🏻 [🐙](https://github.com/withastro/astro)
+    > The web framework for content-driven websites. ⭐️ Star to support our work!
+
+### SSG (Static Site Generation) : 静态网站生成

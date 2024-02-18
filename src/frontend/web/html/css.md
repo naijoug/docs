@@ -19,6 +19,14 @@ order: 2
     > Expressive, robust, feature-rich CSS language built for nodejs
 - [PostCSS](https://postcss.org/) 👉🏻 [🐙](https://github.com/postcss/postcss)
     > Transforming styles with JS plugins
+- [JSS](https://cssinjs.org) 👉🏻 [🐙](https://github.com/cssinjs/jss)
+    > JSS is an authoring tool for CSS which uses JavaScript as a host language.
+- [Panda CSS](https://panda-css.com) 👉🏻 [🐙](https://github.com/chakra-ui/panda)
+    > 🐼 Universal, Type-Safe, CSS-in-JS Framework for Product Teams ⚡️
+- [Open Props](https://open-props.style) 👉🏻 [🐙](https://github.com/argyleink/open-props) 
+    > CSS custom properties to help accelerate adaptive and consistent design.
+- [StyleX](https://stylexjs.com) 👉🏻 [🐙](https://github.com/facebook/stylex)
+    > StyleX is the styling system for ambitious user interfaces. 
 
 ## concept
 
