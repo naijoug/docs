@@ -13,6 +13,9 @@ index: true
 [objc-runtime-new.h#L1405]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.h#L1405
 [objc-runtime-new.h#L1411]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.h#L1411
 
+[objc-runtime-new.mm#L5701]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.mm#L5701
+[objc-runtime-new.mm#L5739]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.mm#L5739
+
 ------
 
 ## 看源码
@@ -69,13 +72,13 @@ struct property_list_t : entsize_list_tt<property_t, property_list_t, 0> {
 };
 ```
 
-> `class_copyIvarList()` vs `class_copyPropertyList()`
+### `class_copyIvarList()` vs `class_copyPropertyList()`
+  > [👉🏻][objc-runtime-new.mm#L5701] vs [👉🏻][objc-runtime-new.mm#L5739]
 
 ```objc
-// file: objc-runtime-new.m
-// line: 6082 获取类的实例变量列表
+// objc-runtime-new.mm#L5701
 Ivar * class_copyIvarList(Class cls, unsigned int *outCount)
-{
+{ // 获取类的实例变量列表
     const ivar_list_t *ivars;
     Ivar *result = nil;
     unsigned int count = 0;
@@ -100,9 +103,10 @@ Ivar * class_copyIvarList(Class cls, unsigned int *outCount)
     if (outCount) *outCount = count;
     return result;
 }
-// 获取类属性列表
+
+// objc-runtime-new.mm#L5739 
 objc_property_t * class_copyPropertyList(Class cls, unsigned int *outCount)
-{
+{ // 获取类属性列表
     if (!cls) {
         if (outCount) *outCount = 0;
         return nil;
