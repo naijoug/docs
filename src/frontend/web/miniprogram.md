@@ -24,3 +24,8 @@ index: true
     > Mpx，一款具有优秀开发体验和深度性能优化的增强型跨端小程序框架
 - [美团 - mpvue](http://mpvue.com) 👉🏻 [🐙](https://github.com/Meituan-Dianping/mpvue)
     > 基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。
+    
+------
+
+- [Telegram Mini Apps](https://docs.telegram-mini-apps.com) 👉🏻 [🐙](https://github.com/Telegram-Mini-Apps/tma.js)
+    > Made from scratch TypeScript packages, examples and documentation you will surely need to start developing on Telegram Mini Apps.

@@ -36,3 +36,6 @@ icon: hashtag
 
 - [EOS - “柚子”](https://eosnetwork.com/zh) 👉🏻 [智能合约文档](https://docs.eosnetwork.com/zh/docs/latest/quick-start/write-a-contract)
     > 一个具有高吞吐量的区块链，支持分布式应用程序。使用 `C++` 编程语言。
+    
+- [TON - “The Open Network”](https://ton.org) 👉🏻 [智能合约文档](https://docs.ton.org/develop/smart-contracts)
+    >  一个去中心化和开放的互联网，由社区使用Telegram设计的技术创建。使用 `Func` 编程语言。
