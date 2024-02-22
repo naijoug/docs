@@ -20,6 +20,7 @@ index: false
     > An interview guide for Android development engineers.
 - [IT 行业应试学知识库](https://github.com/apachecn/Interview) 
     > Interview = 简历指南 + 算法题 + 八股文 + 源码分析
+- [路人张的面试笔记](https://www.mianshi.online)
 
 ------
 
