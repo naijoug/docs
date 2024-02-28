@@ -6,6 +6,8 @@ index: false
 
 ---
 
+`LCR` : LeetCode Coding Interviews
+
 <!-- more -->
 
 ## reference
@@ -43,6 +45,5 @@ index: false
     > LeetCode 101：和你一起你轻松刷题（C++）
 
 ------
-
 
 - [知乎 - 你们初刷leetcode时会怀疑自己的智商吗？](https://www.zhihu.com/question/388971497)

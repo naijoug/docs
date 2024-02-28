@@ -36,4 +36,5 @@ index: false
 
 ------
 
+- [2024-02-25 学算法要读《算法导论》吗？](https://fangyuan.life/leetcode19)
 - [2022-05-16 十大排序从入门到入赘](https://leetcode.cn/circle/discuss/eBo9UB/)
