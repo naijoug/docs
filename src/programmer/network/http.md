@@ -15,7 +15,9 @@ order: 1
 
 ## reference
 
-- [2023-08-22 post为什么会发送两次请求？](https://juejin.cn/post/7269952188927017015)
+- [HTTP API Design Guide](https://github.com/interagent/http-api-design)
+- [httpbin](https://httpbin.org) 👉🏻 [🐙](https://github.com/postmanlabs/httpbin)
+    > HTTP Request & Response Service, written in Python + Flask.
 
 ## concept
 

@@ -32,8 +32,9 @@ index: true
 - [邓国雄 (Airing) - 腾讯](https://blog.ursb.me)
 - [崔江涛 (kenshincui)](http://www.cnblogs.com/kenshincui)
 - [图拉鼎](https://imtx.me)
+- [SHERlocked93](https://github.com/SHERlocked93/blog)
 - [knowledge-kit](https://github.com/FantasticLBP/knowledge-kit) : iOS、Web前端、后端、数据库、计算机网络、设计模式经验总结
-- [zhihaozhang](https://zhihaozhang.github.io/)
+- [zhihaozhang](https://zhihaozhang.github.io)
 - [OldBirds](https://oldbird.run/) : SwiftUI、Flutter、Vapor
 - [everettjf](https://everettjf.github.io) : Fullstack
 - [ExplainThis](https://www.explainthis.io/zh-hans)

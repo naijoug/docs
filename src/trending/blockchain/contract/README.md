@@ -1,11 +1,18 @@
 ---
-title: Contract - “智能合约”
+title: Smart Contract - “智能合约”
 index: false
 icon: hashtag
 
 ---
 
 <!-- more -->
+
+## reference
+
+- [OpenZeppelin](https://www.openzeppelin.com)
+    > Securely Code, Depoly and Operate your Smart Contracts.
+
+## Smart Contract
 
 - [Ethereum - “以太坊”](https://ethereum.org) 👉🏻 [智能合约文档](https://ethereum.org/zh/developers/docs/smart-contracts)
     > 最早支持智能合约的区块链平台之一，以太坊具有广泛的开发者社区和丰富的生态系统。使用 `Solidity` 编程语言来编写智能合约。
@@ -39,3 +46,7 @@ icon: hashtag
     
 - [TON - “The Open Network”](https://ton.org) 👉🏻 [智能合约文档](https://docs.ton.org/develop/smart-contracts)
     >  一个去中心化和开放的互联网，由社区使用Telegram设计的技术创建。使用 `Func` 编程语言。
+    
+------
+
+- [2024-02-28 破解 Ethernaut GateKeeperThree](https://mp.weixin.qq.com/s/5feFtjNYk7NkAzjDqnztgw)

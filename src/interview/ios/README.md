@@ -35,7 +35,7 @@ index: false
     * [2023-04-06 Answer](https://juejin.cn/post/7218915344119234616)
     * [2020-07-06 Answer](https://www.sunyazhou.com/tags/ios%E9%9D%A2%E8%AF%95%E9%A2%98/)
     * [2020-03-05 Answer](https://www.cnblogs.com/zbblog/articles/12419312.html)
-- [2019-09-29 给iOS中高级求职者的一份面试题解答](https://juejin.cn/post/6844903955424608263)
+- [](✅)[2019-09-29 给iOS中高级求职者的一份面试题解答](https://juejin.cn/post/6844903955424608263)
 - [](✅)[2018-07-30 另一份有点难的 iOS 面试题](https://juejin.cn/post/6844903647399116813)
 - [](✅)[2018-07-24 出一套 iOS 高级面试题](https://juejin.im/post/5b56155e6fb9a04f8b78619b)
     * [2019-12-24 Answer](https://juejin.cn/post/6844904030750130183)
