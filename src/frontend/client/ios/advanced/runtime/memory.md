@@ -3,16 +3,8 @@ title: 内存管理
 icon: hashtag
 
 index: true
-order: 3
 
 ---
-
-## reference
-
-- [2022-09-09 探秘AutoreleasePool实现原理](https://juejin.cn/post/7141285896250195982)
-- [2022-05-07 Swift 中的 ARC 机制: 从基础到进阶](https://juejin.cn/post/7094799538455576584)
-- [2021-03-20 一个 NSObject 对象占用多少个字节](https://juejin.cn/post/6941732574913888269)
-- [2014-10-15 黑幕背后的Autorelease](http://blog.sunnyxx.com/2014/10/15/behind-autorelease/)
 
 ## 引用计数
 
@@ -21,27 +13,6 @@ order: 3
   `ARC`(Automatic Reference Counting) : 自动引用计数，是 iOS 中的内存管理技术。编译器在编译阶段，在代码需要内存管理的地方插入内存管理操作(`retain`、`release`、`autorelase`)，当对象引用计数为 0 时，在 `dealloc` 的时候，会释放掉对象占用内存，自动地管理对象的生命周期。
 
   `autorelease` 用于延迟对象的释放。正常情况下，如果申请的对象超出作用域会释放。而使用 `autorelease` 的对象，会加入自动释放池中，延迟对象的释放时机。
-
-### `autoreleasepool`
-
-  自动释放池，`NSAutoreleasePool` 类，`ARC` 之后简化为 `OC` 中的 `@autoreleasepool`，`swift` 中的 `autoreleasepool`。通俗一点理解，就是使用 `autorelease` 的对象，会临时存放在这个池子里面，等到所在的线程的 `RunLoop` 一次循环结束时，会进行引用计数的 -1 操作。
-  
-  `autoreleasepool` 实现使用的数据结构：栈 + 双向链表。底层实现类为 `AutoreleasePoolPage`，这个是自动释放池的一页，创建时会存储双向链表的一个节点，剩下的空间设计为一个数据栈，用于存放加入自动释放池中的数据。
-  对象加入自动释放池时，会调用 `Push` 函数，这个函数会返回一个地址 (这个地址很重要，是释放时 `Pop` 函数的入参，标记释放时的终点)。当着一页数据放满时，会新建一页，连接链表，新数据会继续存放在新创建的 `AutoreleasePoolPage` 的数据栈中。
-  对象释放时，调用 `Pop` 函数，从栈顶开始释放对象，一直释放到 `Push` 函数标记的位置。如果释放完一页自动释放池中的全部对象，则根据链表向后一直释放，直到标记位置。
-
-```objc
-void * objc_autoreleasePoolPush(void) {
-    return AutoreleasePoolPage::push();
-}
-void objc_autoreleasePoolPop(void *context) {
-    AutoreleasePoolPage::pop(context);
-}
-```
-
-### `RunLoop` 什么时候释放内存
-
-  `RunLoop` : 运行循环，从最基本编程语言语法层面来说就是一个循环 (`for`、`while`)。只不过这个循环结束条件，依赖于与这个 `RunLoop` 一一对应的线程，这个 `RunLoop` 循环结束的条件就是线程结束。而对于 `iOS` 程序来说，程序启动时会启动一个主 `RunLoop` 运行主线程，可以理解为一个死循环，程序结束时才会结束。
 
 ## `weak` - “弱引用”
 
@@ -201,6 +172,7 @@ class AutoreleasePoolPage : private AutoreleasePoolPageData
 	friend struct thread_data_t;
 }
 ```
+
 ```objc
 // file: NSObject-internal.h
 // line: 132
@@ -217,21 +189,3 @@ struct AutoreleasePoolPageData
 	uint32_t hiwat;
 };
 ```
-
-## 经典面试题
-
-> 下面代码会发生什么？
-
-```objc
-@property (nonatomic, strong) NSString *target;
-//....
-
-dispatch_queue_t queue = dispatch_queue_create("parallel", DISPATCH_QUEUE_CONCURRENT);
-for (int i = 0; i < 1000000 ; i++) {
-	dispatch_async(queue, ^{
-     	self.target = [NSString stringWithFormat:@"ksddkjalkjd%d",i];
-	});
-}
-```
-
-- [2017-08-25 浅谈 Objective-C 线程安全](https://nemocdz.github.io/post/%E4%BB%8E%E4%B8%80%E9%81%93%E7%BD%91%E6%98%93%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B5%85%E8%B0%88-objective-c-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/)

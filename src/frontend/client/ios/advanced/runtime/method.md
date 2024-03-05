@@ -6,7 +6,7 @@ index: true
 
 ---
 
-  > `method` - “方法”
+> `method` - “方法”
   
 <!-- more -->
 

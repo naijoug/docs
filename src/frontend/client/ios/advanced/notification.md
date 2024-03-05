@@ -3,11 +3,12 @@ title: 通知中心
 icon: hashtag
 
 index: true
-order: 5
 
 ---
 
-  `Notification` 是观察者模式的一种实现，程序中一种一对多的通信方式。`androind` 类似的机制叫做 `Broadcast` 广播。
+> `Notification` 是观察者模式的一种实现，程序中一种一对多的通信方式。`androind` 类似的机制叫做 `Broadcast` 广播。
+
+<!-- more -->
 
 ## `NotificationCenter` - “通知中心”
 
@@ -334,7 +335,3 @@ void GSPrivateNotifyIdle(NSString *mode);
   * now : 立即发送，只要 runloop 模式匹配，则直接调用通知中心进行通知发送。
   * asap : 尽快发送，runloop 会在时间循环间隙，调用该队列进行通知发送。
   * idle : 空闲时发送，runloop 闲置期间，调用该队列进行通知发送。
-
-## reference
-
-- [2020-03-05 一文全解iOS通知机制](https://juejin.cn/post/6844904082516213768)

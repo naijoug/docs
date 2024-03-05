@@ -1,16 +1,21 @@
 ---
-title: runtime
+title: 数据类型
 icon: hashtag
 
 index: true
-order: 1
 
 ---
 
+> Objc Types Defined: objc 类型定义
 
-## `Objc` 类型定义 
+<!-- more -->
 
-  > [Objc Types Defined](https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/runtime.h#L41)
+[runtime.h#L41]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/runtime.h#L41
+
+------
+
+## 看源码
+  > [👉🏻][runtime.h#L41]
 
 ```objc
 // file: runtime.h | line:41
@@ -33,8 +38,6 @@ typedef struct objc_object Protocol; // 非 OC 环境下是 objc_object 的别�
 #endif
 ```
 
-
-  
 
 > `OC` 中 `Method`、`SEL`、`IMP` 是什么关系？
 

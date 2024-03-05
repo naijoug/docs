@@ -9,13 +9,6 @@ order: 2
 
 <!-- more -->
 
-## reference
-
-- [2015-12-08 如何正确地写好一个界面](http://oncenote.com/2015/12/08/How-to-build-UI/)
-- [2015-05-25 如何设计一个 iOS 控件?(iOS 控件完全解析)](https://www.codingtour.com/posts/%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA-ios-%E6%8E%A7%E4%BB%B6-ios-%E6%8E%A7%E4%BB%B6%E5%AE%8C%E5%85%A8%E8%A7%A3%E6%9E%90/)
-- [2015-05-17 优化`UITableViewCell`高度计算的那些事](http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/)
-- [2014-12-25 `UIScrollView` 实践经验](https://tech.glowing.com/cn/practice-in-uiscrollview)
-
 ## UIView
 
 - `UIView` vs `CALayer`

@@ -6,7 +6,7 @@ index: true
 
 ---
 
-  > `Category` - “分类”
+> `Category` - “分类”
 
 <!-- more -->
 

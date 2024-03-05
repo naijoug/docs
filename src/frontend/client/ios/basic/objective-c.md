@@ -9,10 +9,6 @@ order: 1
 
 <!-- more -->
 
-## reference
-
-- [2018-07-01 isa && 元类 && 函数调用](https://minilv.github.io/2018/07/01/ias-class-metaClass/)
-
 ## concept
 
 - Foundation & Core Foundation
@@ -93,9 +89,6 @@ order: 1
 
 ## KVC & KVO
 
-- [KVO 的内部实现](http://limboy.me/tech/2013/08/05/internal-implementation-of-kvo.html)
-- [如何自己动手实现 KVO](https://tech.glowing.com/cn/implement-kvo/)
-
 - `KVC`（Key Value Coding）
     > 是一种间接更改对象状态的方式，使用字符串来描述对象需要更改的属性(以字符串的形式向对象发送消息)。
 
@@ -172,8 +165,6 @@ NSArray *prices = [student valueForKeyPath:@"books.@distinctUnionOfObjects.price
 ## Block
 
 - [How Do I Declare A Block in Objective-C?](http://fuckingblocksyntax.com/)
-- [2013-11-27 objc 中的 block](https://blog.ibireme.com/2013/11/27/objc-block/)
-- [2013-05-29 对 Objective-C 中 Block 的追探](http://www.cnblogs.com/biosli/archive/2013/05/29/iOS_Objective-C_Block.html)
 
 ```objc
 // 定义 block
@@ -504,13 +495,6 @@ NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS '1' &&
 NSArray *result = [personList filteredArrayUsingPredicate: predicate];
 ```
 
-### NSCache
-> 线程安全, 具有自动移除对象来释放内存的 `NSMutableDictionary`, key 不需要实现 `NSCopying` 协议.
-
-- [NSCache](http://nshipster.cn/nscache/)
-- [Foundation: NSCache](http://southpeak.github.io/2015/02/11/cocoa-foundation-nscache/)
-- [NSCache 源码分析](https://github.com/nixzhu/dev-blog/blob/master/2015-12-09-nscache.md)
-
 ### NSTimer & CADisplayLink
 
 | 类型 | 说明
@@ -604,18 +588,6 @@ ARC 运行时阶段 : 处理 `weak` 修饰变量，引用计数为0时，将其�
 | `Allocations` | 主要思路是在一个时间切片内检测对象的声明周期以观察内存是否会无限增长。通过 `hook` 掉 `alloc，dealloc，retain，release` 等方法，来记录对象的生命周期。
 
 ## Multithread
-
-### Reference
-
-- [不再安全的 OSSpinLock](https://blog.ibireme.com/2016/01/16/spinlock_is_unsafe_in_ios/)
-- [使用 dispatch_group 来进行线程同步](http://www.jianshu.com/p/228403206664)
-- [Run repeating NSTimer with GCD?](https://stackoverflow.com/questions/10522928/run-repeating-nstimer-with-gcd)
-- [iOS Swift GCD 开发教程](https://juejin.im/post/5acaea17f265da239a601a01#heading-17)
-
-- [2018-03-03 5 道 iOS 多线程“面试题”](https://juejin.cn/post/6844903569322164232)
-
-- NSMachPort
-    > Mach: 第一个以多线程方式处理任务的系统。
 
 ### iOS 的三种多线程技术
 

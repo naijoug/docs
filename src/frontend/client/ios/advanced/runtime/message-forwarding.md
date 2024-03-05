@@ -3,9 +3,12 @@ title: 消息转发
 icon: hashtag
 
 index: true
-order: 2
 
 ---
+
+> `Message Forwarding` - “消息转发”
+
+<!-- more -->
 
 ## `OC` 中的消息转发
 
@@ -81,9 +84,9 @@ LReturnZero:
 	END_ENTRY _objc_msgSend
 ```
 
-> `Message Forwarding` - “消息转发”
 
-  `resolveInstanceMethod` -> `forwardingTargetForSelector` -> `methodSignatureForSelector` -> `forwardInvocation` -> 无法处理
+
+转发流程： `resolveInstanceMethod` -> `forwardingTargetForSelector` -> `methodSignatureForSelector` -> `forwardInvocation` -> 无法处理
   
 ```objc
 // file: objc-runtime-new.mm

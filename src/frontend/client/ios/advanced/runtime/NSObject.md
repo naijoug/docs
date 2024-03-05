@@ -6,6 +6,8 @@ index: true
 
 ---
 
+<!-- more -->
+
 ## `NSObject` 
 
 ```objc

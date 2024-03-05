@@ -10,6 +10,16 @@ index: false
 
 <!-- more -->
 
+## reference
+
+- [objc4](https://github.com/apple-oss-distributions/objc4)
+- [A debuggable objc runtime](https://github.com/RetVal/objc-runtime)
+- [iOS-Runtime-Headers](https://github.com/nst/iOS-Runtime-Headers) : iOS 运行时头文件(包括私有 API)
+    > iOS Objective-C headers as derived from runtime introspection
+- [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide)
+- [Aspects](https://github.com/steipete/Aspects)
+    > Delightful, simple library for aspect oriented programming in Objective-C and Swift.
+
 ## `runtime` 是什么
 
 [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide)
@@ -29,33 +39,6 @@ index: false
   * 将 `runtime` 看做 `OC` 语言的操作系统。操作系统是计算机运行的核心，用来进行系统资源分配，各种任务调度，是计算机可以正常运行的关键。说明了 `runtime` 对于 `OC` 语言的重要性，也是必不可少的一部分。
 
   这也很好地解释了“为什么是 OC 是一个动态语言？”。
-
-## reference
-
-- [objc4](https://github.com/apple-oss-distributions/objc4)
-- [A debuggable objc runtime](https://github.com/RetVal/objc-runtime)
-- [iOS-Runtime-Headers](https://github.com/nst/iOS-Runtime-Headers) : iOS 运行时头文件(包括私有 API)
-    > iOS Objective-C headers as derived from runtime introspection
-- [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide)
-- [Aspects](https://github.com/steipete/Aspects)
-    > Delightful, simple library for aspect oriented programming in Objective-C and Swift.
-
-------
-
-- [2020-01-23 Aspects深度解析-iOS面向切面编程](https://juejin.cn/post/6844904052778598408)
-- [2019-08-05 Runtime原理探究](https://www.jianshu.com/p/30de582dbeb7)
-- [](✅) [2019-03-07 OC对象的本质](https://www.jianshu.com/p/1bf78e1b3594)
-    > 作者的 Slogan : 汇编是检验一切语法糖的唯一标准
-- [2018-03-16 读 objc4 源码，深入理解 Objective-C Runtime](https://shannonchenchn.github.io/2018/03/16/objc-runtime-learning-notes/)
-- [](✅) [2017-09-15 Why is MetaClass in Objective-C？](https://nemocdz.github.io/post/why-is-metaclass-in-objective-c/) 💯
-    > 作者从自己遇到的一个面试题出发，按照第一性原理进行问题推导。
-      👉🏻 首先去研究了 `OC` 中的源码，梳理了 `isa`、`MetaClass` 关系。
-      👉🏻 在搜索 `MetaClass` 的过程，发现了 `Python` 中也有这个设计。进而了解到是源于 `Smalltalk` 的设计，而 `OC` 就是借鉴的 `Smalltalk` 的设计思想。
-      👉🏻 进一步思考如果没有 `MetaClass` 是否可行。在宏观成面思考了面向对象的两种设计思想，以 `C++` (借鉴 `Simula`)为代表的*类的划分*，还有以 `OC` (借鉴 `Smalltalk`)为代表的`消息传递`。
-- [2016-06-15 Objective-C 消息发送与转发机制原理](http://yulingtianxia.com/blog/2016/06/15/Objective-C-Message-Sending-and-Forwarding/)
-- [2014-11-06 神经病院objc runtime入院考试](https://blog.sunnyxx.com/2014/11/06/runtime-nuts)
-- [2014-11-05 Objective-C Runtime](http://yulingtianxia.com/blog/2014/11/05/objective-c-runtime/)
-- [2013-11-26 Objective-C 中的消息与消息转发](https://blog.ibireme.com/2013/11/26/objective-c-messaging/)
 
 ## concept
 
@@ -118,36 +101,3 @@ NSString *protocolName = NSStringFromProtocol(protocol);
 | `class_ro_t`          | ro : 只读，类在编译期间就确定的方法、属性、协议
 | `cache_t`             | 缓存已经使用过的方法
 | `bucket_t`            | 缓存使用的哈希表结构体 (`key: SEL ; value: IMP`)
-
-
-``` objc
-struct class_rw_t { // 可读可写
-    uint32_t flags;
-    uint32_t version;
-
-    const class_ro_t *ro;           // 指向只读的结构体,存放类初始信息
-    
-    method_array_t methods;         // 方法列表（类对象存放对象方法，元类对象存放类方法）
-    property_array_t properties;    // 属性列表
-    protocol_array_t protocols;     // 协议列表
-
-    Class firstSubclass;
-    Class nextSiblingClass;
-}
-struct class_ro_t { // 只读 
-    uint32_t flags;
-    uint32_t instanceStart;
-    uint32_t instanceSize;
-    uint32_t reserved;
-
-    const uint8_t * ivarLayout;
-
-    const char * name;
-    method_list_t * baseMethodList;     // 方法列表
-    protocol_list_t * baseProtocols;    // 协议列表
-    const ivar_list_t * ivars;          // 成员变量列表
-
-    const uint8_t * weakIvarLayout;
-    property_list_t *baseProperties;    // 属性列表
-};
-```

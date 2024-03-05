@@ -18,4 +18,4 @@ order: 6
 
 ------
 
-- [使用RxSwift编写iOS的wanandroid客户端](https://github.com/seasonZhu/RxStudy)
+- [使用 RxSwift 编写 iOS 的 wanandroid 客户端](https://github.com/seasonZhu/RxStudy)

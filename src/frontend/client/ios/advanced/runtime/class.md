@@ -3,7 +3,6 @@ title: 类
 icon: hashtag
 
 index: true
-order: 1
 
 ---
 
@@ -205,8 +204,6 @@ struct swift_class_t : objc_class {
   
   * `class_ro_t` : 这个是编译期间可以确定的，包括类名、实例变量，弱引用实例，基本的属性、方法、协议。
   * `class_rw_t` : 这是运行时期间可以确定的，里面包含一个指向 `class_ro_t`。就是说运行时还会添加一下属性、方法、协议。
-
-
 
 ## `metaClass` 是什么？
 
