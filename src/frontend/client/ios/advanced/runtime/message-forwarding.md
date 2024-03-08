@@ -21,20 +21,6 @@ index: true
 | `forwardingTargetForSelector:`    | 指定那个对象响应消息
 | `methodSignatureForSelector:`     | 进行方法签名
 | `forwardInvocation:`              | 根据签名创建 NSInvocation
-
-## `Swift` 中的方法派发
-
-派发方式 :
-  - 静态派发
-  - 动态派发
-    * 函数表派发 : 基于 `VTable` (Virtual Method Table)
-    * 消息派发 : 基于 OC 运行时机制      
-   
-派发效率 : `静态派发` > `函数表派发` > `消息派发`
-   
-  * 静态派发 : `swift` 中大多数类型被设计为值类型(`struct`、`enum`)，值类型的方法都是静态派发。如果是 `final` 修饰引用类型也是静态派发。`extension` 中的方法也是静态派发。通过 `function_ref` 指令调用方法。
-  * 函数表派发 : 属于动态派发，对于引用类型，不是 `extension` 中的方法是通过 `VTable`(Virtual Method Table) 虚方法表进行派发。还存在一中 `WTable`(Witness Table) 见证者表，用于保存引用类型实现的协议方法。通过 `class_method` 指令调用方法。
-  * 消息转发 : 属于动态派发，使用 `@objc` 和 `dynamic` 修饰的方法通过消息转发。仅通过 `@objc` 修饰的方法，不会改变派发方式，仅生成一个可供 `OC` 使用的方法。通过 `objc_method` 指令调用方法。 
   
 ## `objc_msgSend` - “消息发送”
 
