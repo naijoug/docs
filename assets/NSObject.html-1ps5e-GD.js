@@ -1,9 +1,0 @@
-import{_ as s}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as n,c as a,a as e,f as c}from"./app-Uwa1jUhy.js";const t={},o=c(`<h2 id="nsobject" tabindex="-1"><a class="header-anchor" href="#nsobject" aria-hidden="true">#</a> <code>NSObject</code></h2><div class="language-objc line-numbers-mode" data-ext="objc"><pre class="language-objc"><code><span class="token comment">// file: NSObject.h</span>
-<span class="token comment">// line:53 NSObject 头文件定义</span>
-<span class="token keyword">@interface</span> NSObject <span class="token operator">&lt;</span>NSObject<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">clang diagnostic push</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">clang diagnostic ignored </span><span class="token string">&quot;-Wobjc-interface-ivars&quot;</span></span>
-    Class isa  OBJC_ISA_AVAILABILITY<span class="token punctuation">;</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">clang diagnostic pop</span></span>
-<span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,2);function i(p,r){return n(),a("div",null,[e(" more "),o])}const m=s(t,[["render",i],["__file","NSObject.html.vue"]]);export{m as default};
