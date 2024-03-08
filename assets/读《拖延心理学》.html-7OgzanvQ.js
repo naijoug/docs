@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as _,c as o,a as t,b as c}from"./app-g9omgN1g.js";const r={},a=c("p",null,"这个本书主要分四个方面去分析拖延，行为、心理、大脑、征服。",-1);function n(s,l){return _(),o("div",null,[t(" more "),a])}const d=e(r,[["render",n],["__file","读《拖延心理学》.html.vue"]]);export{d as default};
