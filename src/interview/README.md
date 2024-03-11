@@ -20,10 +20,8 @@ index: false
     > An interview guide for Android development engineers.
 - [IT 行业应试学知识库](https://github.com/apachecn/Interview) 
     > Interview = 简历指南 + 算法题 + 八股文 + 源码分析
-- [路人张的面试笔记](https://www.mianshi.online)
 
 ------
 
 - [2023-09-19 有Tomcat，为什么还要Nginx？](https://juejin.cn/post/7280088532377534505)
-- [2020-07-23 如何在面试中筛选/不做一个「背题家」](https://ipotato.me/article/66)
 - [2018-11-23 一道面试题引起的思考](https://juejin.cn/post/6844903719792803847)
