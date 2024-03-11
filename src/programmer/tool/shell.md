@@ -18,7 +18,7 @@ order: 6
 - [Shell 教程](https://www.runoob.com/linux/linux-shell.html)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [shell-book](https://github.com/52fhy/shell-book)
-- [explainshell](https://github.com/idank/explainshell)
+- [Explain Shell](https://www.explainshell.com) 👉🏻 [🐙](https://github.com/idank/explainshell)
     > match command-line arguments to their help text
 
 ## Concept
