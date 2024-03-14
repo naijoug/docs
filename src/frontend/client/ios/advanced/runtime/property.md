@@ -16,11 +16,15 @@ index: true
 [objc-runtime-new.mm#L5701]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.mm#L5701
 [objc-runtime-new.mm#L5739]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.mm#L5739
 
+[objc-class.mm#L365]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-class.mm#L365
+
 ------
 
 ## 看源码
 
-### ivar_t
+### 实例变量
+
+#### ivar_t
   > [👉🏻][objc-runtime-new.h#L1243]
 
 ```objc
@@ -40,7 +44,7 @@ struct ivar_t { // 实例变量结构体定义
 };
 ```
 
-### ivar_list_t
+#### ivar_list_t
   > [👉🏻][objc-runtime-new.h#L1405]
 
 ```objc
@@ -52,7 +56,48 @@ struct ivar_list_t : entsize_list_tt<ivar_t, ivar_list_t, 0> {
 };
 ```
 
-### property_t
+#### object_setIvar
+  > [👉🏻][objc-class.mm#L365]
+  
+```objc
+// objc-class.mm#L365
+void object_setIvar(id obj, Ivar ivar, id value)
+{
+    return _object_setIvar(obj, ivar, value, false /*not strong default*/);
+}
+
+// line: 342
+// 设置实例变量
+void _object_setIvar(id obj, Ivar ivar, id value, bool assumeStrong)
+{
+    // 判断是否为 TaggedPointer，如果是直接返回
+    if (!ivar || _objc_isTaggedPointerOrNil(obj)) return;
+    
+    // 查询实例变量的偏移量和内存管理规则
+    ptrdiff_t offset;
+    objc_ivar_memory_management_t memoryManagement;
+    _class_lookUpIvar(obj->ISA(), ivar, offset, memoryManagement);
+    
+    // 如果为找内存管理规则，则进行默认值设置 (strong 或 unsafe_unretained)
+    if (memoryManagement == objc_ivar_memoryUnknown) {
+        if (assumeStrong) memoryManagement = objc_ivar_memoryStrong;
+        else memoryManagement = objc_ivar_memoryUnretained;
+    }
+    // 根据偏移值找到变量对应内存位置
+    id *location = (id *)((char *)obj + offset);
+    
+    switch (memoryManagement) { // 根据内存管理规则，进行不同的处理
+    case objc_ivar_memoryWeak:       objc_storeWeak(location, value); break;
+    case objc_ivar_memoryStrong:     objc_storeStrong(location, value); break;
+    case objc_ivar_memoryUnretained: *location = value; break;
+    case objc_ivar_memoryUnknown:    _objc_fatal("impossible");
+    }
+}
+```
+
+### 属性
+
+#### property_t
   > [👉🏻][objc-runtime-new.h#L1265]
   
 ```objc
@@ -63,7 +108,7 @@ struct property_t { // 属性结构体定义
 };
 ```
 
-### property_list_t
+#### property_list_t
   > [👉🏻][objc-runtime-new.h#L1411]
 
 ```objc
@@ -72,7 +117,7 @@ struct property_list_t : entsize_list_tt<property_t, property_list_t, 0> {
 };
 ```
 
-### `class_copyIvarList()` vs `class_copyPropertyList()`
+### class_copyIvarList() vs class_copyPropertyList()
   > [👉🏻][objc-runtime-new.mm#L5701] vs [👉🏻][objc-runtime-new.mm#L5739]
 
 ```objc
