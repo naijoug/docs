@@ -18,7 +18,7 @@ index: true
   > [👉🏻][runtime.h#L41]
 
 ```objc
-// file: runtime.h | line:41
+// runtime.h#L41
 /// An opaque type that represents a method in a class definition.
 typedef struct objc_method *Method; // 一个非透明类型，表示一个类定义中的方法
 

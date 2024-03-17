@@ -6,6 +6,8 @@ index: true
 
 ---
 
+<!-- more -->
+
 [objc-private.h#L75]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-private.h#L75
 [objc-private.h#L76]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-private.h#L76
 [objc-private.h#L83]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-private.h#L83
@@ -18,6 +20,7 @@ index: true
 [objc-runtime-new.h#L2254]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.h#L2254
 [objc-runtime-new.h#L2787]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime-new.h#L2787
 
+[objc-runtime.mm#L204]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/objc-runtime.mm#L204
 
 ## 看源码
 
@@ -196,20 +199,12 @@ struct swift_class_t : objc_class {
 };
 ```
 
-## 写总结
-
-  首先回答问题，通过 `objc_class` 读取数据函数返回 `class_rw_t` 类型，还有安全读取数据返回 `class_ro_t`。可以得知类中实例变量、属性、方法存放在 `class_rw_t` 和 `class_ro_t` 中。
-
-  然后需要明白 `class_ro_t` 与 `class_rw_t` 的区别
-  
-  * `class_ro_t` : 这个是编译期间可以确定的，包括类名、实例变量，弱引用实例，基本的属性、方法、协议。
-  * `class_rw_t` : 这是运行时期间可以确定的，里面包含一个指向 `class_ro_t`。就是说运行时还会添加一下属性、方法、协议。
-
-## `metaClass` 是什么？
+### objc_getMetaClass
+  > [👉🏻][objc-runtime.mm#L204]
 
 ```objc
-// file: objc-runtime.mm
-// line:192 通过类名获取 metaClass
+// objc-runtime.mm#L204
+// 通过类名获取 metaClass
 /***********************************************************************
 * objc_getMetaClass.  Return the id of the meta class the named class.
 * Warning: doesn't work if aClassName is the name of a posed-for class's isa!
@@ -229,10 +224,18 @@ Class objc_getMetaClass(const char *aClassName)
 
     return cls->ISA();
 }
-
 ```
 
 ## 写总结
+
+  首先回答问题，通过 `objc_class` 读取数据函数返回 `class_rw_t` 类型，还有安全读取数据返回 `class_ro_t`。可以得知类中实例变量、属性、方法存放在 `class_rw_t` 和 `class_ro_t` 中。
+
+  然后需要明白 `class_ro_t` 与 `class_rw_t` 的区别
+  
+  * `class_ro_t` : 这个是编译期间可以确定的，包括类名、实例变量，弱引用实例，基本的属性、方法、协议。
+  * `class_rw_t` : 这是运行时期间可以确定的，里面包含一个指向 `class_ro_t`。就是说运行时还会添加一下属性、方法、协议。
+
+> `metaClass` 是什么？
 
 - `isa` 是一个联合体，包含一个指向类的指针 `cls`，`cls` 是 `Class` 类型。
 

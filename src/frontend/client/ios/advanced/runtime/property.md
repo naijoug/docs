@@ -20,11 +20,9 @@ index: true
 
 ------
 
-## 看源码
+## 实例变量
 
-### 实例变量
-
-#### ivar_t
+### ivar_t
   > [👉🏻][objc-runtime-new.h#L1243]
 
 ```objc
@@ -44,7 +42,7 @@ struct ivar_t { // 实例变量结构体定义
 };
 ```
 
-#### ivar_list_t
+### ivar_list_t
   > [👉🏻][objc-runtime-new.h#L1405]
 
 ```objc
@@ -56,7 +54,7 @@ struct ivar_list_t : entsize_list_tt<ivar_t, ivar_list_t, 0> {
 };
 ```
 
-#### object_setIvar
+### object_setIvar
   > [👉🏻][objc-class.mm#L365]
   
 ```objc
@@ -95,30 +93,8 @@ void _object_setIvar(id obj, Ivar ivar, id value, bool assumeStrong)
 }
 ```
 
-### 属性
-
-#### property_t
-  > [👉🏻][objc-runtime-new.h#L1265]
-  
-```objc
-// objc-runtime-new.h#L1265
-struct property_t { // 属性结构体定义
-    const char *name;       // 属性名
-    const char *attributes; // 特性
-};
-```
-
-#### property_list_t
-  > [👉🏻][objc-runtime-new.h#L1411]
-
-```objc
-// objc-runtime-new.h#L1411
-struct property_list_t : entsize_list_tt<property_t, property_list_t, 0> {
-};
-```
-
-### class_copyIvarList() vs class_copyPropertyList()
-  > [👉🏻][objc-runtime-new.mm#L5701] vs [👉🏻][objc-runtime-new.mm#L5739]
+### class_copyIvarList()
+  > [👉🏻][objc-runtime-new.mm#L5701]
 
 ```objc
 // objc-runtime-new.mm#L5701
@@ -148,7 +124,36 @@ Ivar * class_copyIvarList(Class cls, unsigned int *outCount)
     if (outCount) *outCount = count;
     return result;
 }
+```
 
+------
+
+## 属性
+
+### property_t
+  > [👉🏻][objc-runtime-new.h#L1265]
+  
+```objc
+// objc-runtime-new.h#L1265
+struct property_t { // 属性结构体定义
+    const char *name;       // 属性名
+    const char *attributes; // 特性
+};
+```
+
+### property_list_t
+  > [👉🏻][objc-runtime-new.h#L1411]
+
+```objc
+// objc-runtime-new.h#L1411
+struct property_list_t : entsize_list_tt<property_t, property_list_t, 0> {
+};
+```
+
+### class_copyPropertyList()
+  > [👉🏻][objc-runtime-new.mm#L5739]
+
+```objc
 // objc-runtime-new.mm#L5739 
 objc_property_t * class_copyPropertyList(Class cls, unsigned int *outCount)
 { // 获取类属性列表

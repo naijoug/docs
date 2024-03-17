@@ -6,6 +6,10 @@ index: true
 
 ---
 
+> `Memory Management` - “内存管理”
+
+<!-- more -->
+
 ## 引用计数
 
   `MRC`(Manual Reference Counting) : 手动引用计数。需要程序员自己申请(`retain`)和释放(`release`、`autorelease`)
@@ -23,9 +27,7 @@ index: true
 [NSObject.mm#L275]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/NSObject.mm#L275
 [NSObject.mm#L403]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/NSObject.mm#L403
 
-### 看源码
-
-#### SideTable
+### SideTable
   > [👉🏻][NSObject-private.h#L47]
 
 ```objc
@@ -58,7 +60,7 @@ struct SideTable {
 };
 ```
 
-#### weak_table_t
+### weak_table_t
   > [👉🏻][objc-weak.h#L119]
 
 ```objc
@@ -118,7 +120,7 @@ struct weak_entry_t {
 };
 ```
 
-#### objc_storeStrong
+### objc_storeStrong
   > [👉🏻][NSObject.mm#L275]
 
 ```objc
@@ -136,7 +138,7 @@ void objc_storeStrong(id *location, id obj)
 }
 ```
 
-#### objc_storeWeak
+### objc_storeWeak
   > [👉🏻][NSObject.mm#L403]
 
 ```objc
@@ -231,9 +233,7 @@ static id storeWeak(id *location, objc_object *newObj)
 
 [NSObject-internal.h#L133]: https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime/NSObject-internal.h#L133
 
-### 看源码
-
-#### AutoreleasePoolPage
+### AutoreleasePoolPage
   > [👉🏻][NSObject.mm#L659]
 
 ```objc
@@ -322,7 +322,7 @@ class AutoreleasePoolPage : private AutoreleasePoolPageData
 }
 ```
 
-#### AutoreleasePoolPageData
+### AutoreleasePoolPageData
   > [👉🏻][NSObject-internal.h#L133]
 
 ```objc
