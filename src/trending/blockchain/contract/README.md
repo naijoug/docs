@@ -47,6 +47,8 @@ icon: hashtag
 - [TON - “The Open Network”](https://ton.org) 👉🏻 [智能合约文档](https://docs.ton.org/develop/smart-contracts)
     >  一个去中心化和开放的互联网，由社区使用Telegram设计的技术创建。使用 `Func` 编程语言。
     
+- [TRON](https://tron.network) 👉🏻 [智能合约文档](https://developers.tron.network/docs/smart-contracts-introduction)
+    
 ------
 
 - [2024-02-28 破解 Ethernaut GateKeeperThree](https://mp.weixin.qq.com/s/5feFtjNYk7NkAzjDqnztgw)
