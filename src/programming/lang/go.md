@@ -14,6 +14,7 @@ index: true
     > The Go programming language
 - [💯]()[Go 语言圣经](https://gopl-zh.github.io/) 👉🏻 [🐙](https://github.com/golang-china/gopl-zh)
     > 📚 Go语言圣经中文版 🇨🇳
+- [⭐️]()[Go 语言设计与实现](https://draveness.me/golang)
 
 <!-- Awsome -->
 
@@ -26,7 +27,7 @@ index: true
 
 <!-- OpenSource Books -->
 
-- [《Go2编程指南》](https://golang-china.github.io/go2-book/) 👉🏻 [🐙](https://github.com/golang-china/go2-book)
+- [《Go2 编程指南》](https://golang-china.github.io/go2-book/) 👉🏻 [🐙](https://github.com/golang-china/go2-book)
     > 📚 《Go2编程指南》开源图书，重点讲解Go2新特性，以及Go1教程中较少涉及的特性
 - [Go 语言之旅](https://tour.go-zh.org) 👉🏻 [🐙](https://github.com/Go-zh/tour)
     > Go 语言官方教程中文版
