@@ -1,5 +1,5 @@
 ---
-title: 运行时
+title: runtime
 icon: hashtag
 
 index: false
@@ -40,64 +40,48 @@ index: false
 
   这也很好地解释了“为什么是 OC 是一个动态语言？”。
 
-## concept
-
-- `instance -> class -> method -> SEL -> IMP -> 实现函数`
-- `objc_msgSend` : Objective-C 消息传递函数 `id objc_msgSend(id self, SEL op, ... );`
-
-- SEL & IMP
-
-| 类型 | 说明
-| --- | --- 
-| `SEL`     | 方法选择器 (方法的 ID)
-| `IMP`     | 函数指针，方法实现的指针
-
-- 反射
-
-``` objc
-/** SEL 反射 */
-//  String -> SEL
-SEL selector = NSSelectorFromString(@"setName:");
-[stu performSelector:selector withObject:@"Kobe"];
-//  SEL -> String
-NSStringFromSelector(@selector(setName:));
-
-/**  Class 反射 */
-//  String -> Class
-Class class = NSClassFromString(@"Student");
-Student *student = [[class alloc] init]; 
-//  Class -> String
-Class class = [Student class];
-NSString *className = NSStringFromClass(class);
-
-/** Protocol 反射 */
-//  String -> Protocol
-Protocol protocol = NSProtocolFromString(@"People");
-//  Protocol -> String
-NSString *protocolName = NSStringFromProtocol(protocol);
-```
-
-## OC 的动态特性
-
-- 动态类型（Dynamic typing）
-    * `isKindOfClass:` : 判断某一对象是否是某个类或其子类的实例
-    * `isMemberOfClass:` : 判断某一对象是否是某个类的实例
-
-- 动态绑定（Dynamic binding）
-    * 传统函数 : 编译时期，将函数参数和实现打包到源码
-    * OC的消息机制 : 运行时，才去动态查找与实例绑定的属性和方法
-
-- 动态加载（Dynamic loading）
-    * 根据需求动态加载资源(如 : @2x,@3x图片的加载)`
-
-## Runtime Struct
+## struct - “运行时结构体”
 
 | 结构体 | 说明
 | --- | ---
-| `objc_object`         | objc 对象 `id`，isa 指针包含指向对象的地址
-| `objc_class`          | objc 对象的类 `Class`
+| `objc_object`         | `objc` 对象 `id`，`isa` 指针包含指向对象的地址
+| `objc_class`          | `objc` 对象的类 `Class`
 | `class_data_bits_t`   | 包含 `class_rw_t` 信息 
-| `class_rw_t`          | rw : 可读可写，类在运行时才确定的方法、属性、协议 (包含指向 `class_ro_t`的指针)
-| `class_ro_t`          | ro : 只读，类在编译期间就确定的方法、属性、协议
+| `class_rw_t`          | `rw` : 可读可写，包含指向 `class_rw_ext_t` 或 `class_ro_t` 的指针
+| `class_rw_ext_t`      | 类在运行时才确定的方法、属性、协议 (包含指向 `class_ro_t`的指针)
+| `class_ro_t`          | `ro` : 只读，类在编译期间就确定的方法、属性、协议
 | `cache_t`             | 缓存已经使用过的方法
 | `bucket_t`            | 缓存使用的哈希表结构体 (`key: SEL ; value: IMP`)
+
+## function - “运行时函数”
+
+| 函数 | 说明
+| --- | ---
+| *Class*       | 
+| `class_getName`                       | 获取类名
+| `class_getSuperclass`                 | 获取父类
+| `class_getInstanceSize`               | 获取实例尺寸
+| `class_getInstanceVariable`           | 获取实例变量的信息
+| `class_getClassVariable`              | 获取类成员变量的信息
+| `class_getVersion`                    | 获取类版本号
+| `class_setVersion`                    | 设置类版本号
+| `class_isMetaClass`                   | 是否是一个元类
+| *Ivar*        |
+| `class_addIvar`                       | 添加成员变量
+| `class_copyIvarList`                  | 获取整个成员变量列表
+| *Property*    |
+| `class_addProperty`                   | 为类添加属性
+| `class_replaceProperty`               | 替换类属性
+| `class_getProperty`                   | 获取指定的属性
+| `class_copyPropertyList`              | 获取属性列表
+| *Method*      |
+| `class_addMethod`                     | 添加方法
+| `class_replaceMethod`                 | 替换方法实现
+| `class_getInstanceMethod`             | 获取实例方法
+| `class_getClassMethod`                | 获取类方法
+| `class_copyMethodList`                | 获取所有方法的数组
+| `class_getMethodImplementation`       | 返回方法实现
+| `class_respondsToSelector`            | 类实例是否响应指定的 `selector`
+| *Protocol*    | 
+| `class_addProtocol`                   | 添加协议
+| `class_conformsToProtocol`            | 是否实现指定的协议
