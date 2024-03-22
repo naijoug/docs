@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as _,c as o,a as t}from"./app-dpqdmZgS.js";const r={};function c(n,a){return _(),o("div",null,[t(" more ")])}const l=e(r,[["render",c],["__file","读《成为讲书人》.html.vue"]]);export{l as default};
