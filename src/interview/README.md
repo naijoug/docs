@@ -10,6 +10,7 @@ index: false
 
 ## reference
 
+- [Interview Cake](https://www.interviewcake.com)
 - [反向面试](https://github.com/yifeikong/reverse-interview-zh)
     > 技术面试最后反问面试官的话
 - [Awesome-Interview](https://github.com/Awesome-Interview/Awesome-Interview)
