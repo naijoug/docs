@@ -1,20 +1,17 @@
 ---
-title: Flutter
+title: Darft
 icon: hashtag
 
-index: true
-order: 1
+index: false
 
 ---
 
 <!-- more -->
 
 - [2023-10-23 FlutterCandies](https://juejin.cn/post/7292450647303208999)
-- [2018-09-03 Flutter快速上车之Widget](https://juejin.cn/post/6844903669108834311)
+- [2018-09-03 Flutter 快速上车之 Widget](https://juejin.cn/post/6844903669108834311)
 
 - [Flutter 单例模式](https://flutter.cn/community/tutorials/singleton-pattern-in-flutter-n-dart)
-
-
 
 ## Concept
 
@@ -111,6 +108,9 @@ padding vs margin
 ## 状态管理
 
 - [Flutter 状态管理框架 Provider 和 Get 分析](https://flutter.cn/community/tutorials/state-management-package-getx-provider-analysis)
+
+<!--  -->
+
 - [2021-07-14 Flutter GetX深度剖析](https://juejin.cn/post/6984593635681517582)
 - [2021-09-26 Flutter 对状态管理的认知与思考](https://juejin.cn/post/7012044249386450981)
 
@@ -161,23 +161,3 @@ flutter_tools
   * Local
   * Git
   * Pub
-
-## lib
-
-- [GetX](https://github.com/jonataslaw/getx)
-    > Open screens/snackbars/dialogs/bottomSheets without context, manage states and inject dependencies easily with Get.
-- [flutter_boost](https://github.com/alibaba/flutter_boost)
-    > FlutterBoost is a Flutter plugin which enables hybrid integration of Flutter for your existing native apps with minimum efforts
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -16,17 +16,14 @@ index: true
     > QR Code Scanner for Flutter
 - [qr_flutter](https://pub.dev/packages/qr_flutter) 👉🏻 [GitHub](https://github.com/theyakka/qr.flutter)
     > QR.Flutter is a Flutter library for simple and fast QR code rendering via a Widget or custom painter.
-    
-## usage
 
-> 安装 `mobile_scanner` 依赖
 
+> 添加 `mobile_scanner` 依赖
 ```shell
 flutter pub add mobile_scanner
 ```
 
-> 安装 `qr_flutter` 依赖
-
+> 添加 `qr_flutter` 依赖
 ```shell
 flutter pub add qr_flutter
 ```

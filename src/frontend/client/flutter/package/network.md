@@ -1,5 +1,5 @@
 ---
-title: openid_client
+title: 网络
 icon: hashtag
 
 index: true
@@ -8,13 +8,11 @@ index: true
 
 <!-- more -->
 
-## reference
+## openid_client
 
 - [openid_client](https://pub.dev/packages/openid_client)
 
-## usage
-
-> 安装依赖
+> 添加依赖
 ```shell
 flutter pub add openid_client
 ```
