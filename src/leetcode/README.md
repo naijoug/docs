@@ -17,7 +17,7 @@ index: false
 
 ------
 
-- [LeetcodeTop](https://github.com/afatcoder/LeetcodeTop)
+- [CodeTop](https://codetop.cc/home) 👉🏻 [🐙](https://github.com/afatcoder/LeetcodeTop)
     > 汇总各大互联网公司容易考察的高频leetcode题🔥
 - [labuladong 的算法笔记](https://labuladong.github.io/algo) 👉🏻 [🐙](https://github.com/labuladong/fucking-algorithm)
     > 刷算法全靠套路，认准 labuladong 就够了！English version supported! Crack LeetCode, not only how, but also why.
