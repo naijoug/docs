@@ -1,14 +1,14 @@
 ---
 home: true
 icon: home
-title: 知识库
+title: 文档库
 heroImage: /logo.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/4-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/4-dark.svg
 bgImageStyle:
   background-attachment: fixed
-heroText: 知识库
-tagline: 一个程序员的个人知识库
+heroText: 文档库
+tagline: 一个程序员的个人文档库
 actions:
   - text: 文档目录
     icon: lightbulb
