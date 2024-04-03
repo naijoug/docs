@@ -18,6 +18,8 @@ index: true
 $ flutter pub add easy_refresh
 ```
 
+------
+
 ## flutter_pulltorefresh
 
 - [flutter_pulltorefresh](https://github.com/peng8350/flutter_pulltorefresh)

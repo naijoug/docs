@@ -8,6 +8,17 @@ index: true
 
 <!-- more -->
 
+## reference
+
+- [](✅)[2023-11-01 flutter状态库到底用哪个！](https://juejin.cn/post/7296286286154776595)
+    > 作者对比了状态库 `GetX vs RiverPod + flutter_hooks`，路由库对比 `GetX router vs go_router`，国际化库对比 `GetX vs flutter_localizations`。作者的没有给出自己的选择，要么 `GetX` 全家桶梭哈或者其它搭配。
+- [](✅)[2022-11-09 Flutter 工程化框架选择 — 状态管理何去何从](https://juejin.cn/post/7163925807893577735)
+    > 作者对比了 `Provider vs Riverpod vs BLoC vs flutter_redux vs GetX`。最佳选择：`RiverPod`。
+- [](✅)[2022-02-20 Flutter 项目该如何选择状态管理？](https://juejin.cn/post/7066707540502904862)
+    > 作者对比了 `BLoC vs Provider vs GetX`。给出建议：大型工程化项目适合 `BLoC`；`Provider`很纯粹易用；`GetX` 一把梭哈，极度适合新手开发者。
+- [](✅)[2022-02-07 2021 年的 Flutter 状态管理：如何选择？](https://juejin.cn/post/7061784793150652452)
+    > 作者对比了 `Provider vs BLoc vs RiverPod`。最终结论：推荐使用 `RiverPod`。
+
 ## Provider
 
 - [provider](https://pub.dev/packages/provider) 👉🏻 [🐙](https://github.com/rrousselGit/provider)
@@ -15,7 +26,8 @@ index: true
 
 ------
 
-- [2019-06-13 状态管理指南篇——Provider](https://juejin.cn/post/6844903864852807694)
+- []()[2019-06-16 全面理解 State 与 Provider](https://juejin.cn/post/6844903866706706439)
+- []()[2019-06-13 状态管理指南篇 —— Provider](https://juejin.cn/post/6844903864852807694)
 
 ### concept
 
@@ -61,6 +73,30 @@ Consumer<MyModel>(
 - [RiverPod](https://riverpod.dev) 👉🏻 [pub](https://pub.dev/packages/riverpod) [🐙](https://github.com/rrousselGit/riverpod)
     > A reactive caching and data-binding framework. Riverpod makes working with asynchronous code a breeze.
 
+------
+
+- []()[2022-02-10 Flutter Riverpod 全面深入解析，为什么官方推荐它？](https://juejin.cn/post/7063111063427874847)
+
+
+### concept
+
+> `RiverPod` 对比 `Provider` 的优点：
+   - 更少的模版代码
+   - 不依赖 `BuildContext`
+   - 编译安全
+
+## usage
+
+> 安装依赖
+```shell
+flutter pub add flutter_riverpod
+flutter pub add riverpod_annotation
+flutter pub add dev:riverpod_generator
+flutter pub add dev:build_runner
+flutter pub add dev:custom_lint
+flutter pub add dev:riverpod_lint
+```
+
 
 
 ------
@@ -78,3 +114,11 @@ Consumer<MyModel>(
 
 - [GetX](https://pub.dev/packages/getx) 👉🏻 [🐙](https://github.com/jonataslaw/getx)
     > Open screens/snackbars/dialogs/bottomSheets without context, manage states and inject dependencies easily with Get.
+    
+------
+    
+## get_it
+
+- [get_it](https://pub.dev/packages/get_it) 👉🏻 [🐙](https://github.com/fluttercommunity/get_it)
+    > Get It - Simple direct Service Locator that allows to decouple the interface from a concrete implementation and to access the concrete implementation from everywhere in your App.
+    > 简单直接的服务定位器，可以使接口和具体的实现解耦，可以在应用的任意位置访问具体实现。
