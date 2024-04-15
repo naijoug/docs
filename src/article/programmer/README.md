@@ -20,3 +20,4 @@ index: false
 ## reference
 
 - [2023-12-12 技术写作的困境](https://mp.weixin.qq.com/s/sg3iR8_b8eHTy4Yn06rNRg)
+- [搭建个人知识库](https://yy6yuv63jj.feishu.cn/wiki/AE1rwFGI9ip3tHkBBhGcLYAMnFh)
