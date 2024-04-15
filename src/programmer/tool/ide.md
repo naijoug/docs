@@ -32,6 +32,24 @@ order: 2
   | `Command + Ctrl + Shift + <-`     | 折叠注释块 
   | `Command + Ctrl + Shift + ->`     | 展开注释块 
 
+## AndroidStudio
+
+- 忽略对某个特定单词的拼写检查(`Typo`)
+
+  * 在项目的根目录下建立一个名为 `.idea/dictionaries` 的目录（如果不存在）
+  * 创建一个以字典的 `xml` 文件，比如 `dict.xml`
+  * 将想要忽略检测的单词的加入字典单词 `words` 中
+
+    ```xml
+    <component name="ProjectDictionaryState">
+      <dictionary name="dict">
+        <words>
+          <w>ogo</w>
+        </words>
+      </dictionary>
+    </component>
+    ```
+
 ## JetBrains - IDEA
 
 - 设置文件夹为资源文件夹 : `Project Settings -> Modules -> Sources`，可以设置(`Mark as`)文件类型
