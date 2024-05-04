@@ -45,10 +45,17 @@ index: false
 - 无障碍支持
 - DevTools 增强
 
-## DevTools
+---
 
-- hot reload : 热启动
-- inspector 布局调试
+## 埋点
+
+- [2023-03-31 Flutter 全埋点方案详解](https://juejin.cn/post/7216604612404723770)
+- [2021-10-04 实现一个精准滑动埋点](https://flutter.cn/community/tutorials/flutter-accurate-rolling-exposure-practice)
+- [2020-11-07 Flutter 之全埋点思考与实现](https://juejin.cn/post/6892371163859976199)
+- [2019-06-13 一个高准确率的 Flutter 埋点框架如何设计](https://juejin.cn/post/6844903864479514631)
+
+- [flutter_page_tracker](https://github.com/SBDavid/flutter_page_tracker)
+    > flutter埋点、弹窗埋点、页面埋点事件捕获框架，支持普通页面的页面曝光事件（PageView），页面离开事件（PageExit）。支持在TabView和PageView组件中发送页面曝光和页面离开
 
 ## Widget
 
