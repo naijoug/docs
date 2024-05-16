@@ -19,6 +19,7 @@ index: false
 
 ## reference
 
+- [Datawhale](https://datawhale.cn)
 - [AI tools](https://dang.ai)
 - [AI Graveyard](https://dang.ai/ai-graveyard)
     > The wasteland of discontinued and dead AI projects.
