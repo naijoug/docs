@@ -29,4 +29,4 @@ index: false
     > 本系列将完整讲述：如何快速从 0 开发一个完整的 Flutter APP，配套高完成度 Flutter 开源项目 GSYGithubAppFlutter ，同时会提供一些 Flutter 的开发细节技巧，之后深入源码和实战为你全面解析 Flutter 。
 - [Flutter 实战](https://book.flutterchina.club) 👉🏻 [🐙](https://github.com/flutterchina/flutter_in_action_2nd)
 - [猫哥 Flutter](https://wiki.ducafecat.tech)
-
+- [OldBird Flutter](https://oldbird.run/flutter)
