@@ -12,11 +12,15 @@ index: true
 
 - [Open LLMs](https://github.com/eugeneyan/open-llms)
     > 🤖 A list of open LLMs available for commercial use.   
+- [开源大模型食用指南](https://github.com/datawhalechina/self-llm)
+    > 《开源大模型食用指南》基于Linux环境快速部署开源大模型，更适合中国宝宝的部署教程
 - [Z-Bench](https://github.com/zhenbench/z-bench)
     > Z-Bench 1.0 by 真格基金：一个麻瓜的大语言模型中文测试集。Z-Bench is a LLM prompt dataset for non-technical users, developed by an enthusiastic AI-focused team in Zhenfund
 - [动手学大模型应用开发](https://datawhalechina.github.io/llm-universe/#/) 👉🏻 [🐙](https://github.com/datawhalechina/llm-universe)
 - [One API](https://github.com/songquanpeng/one-api)
     > OpenAI 接口管理 & 分发系统，支持 Azure、Anthropic Claude、Google PaLM 2、智谱 ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360 智脑以及腾讯混元，可用于二次分发管理 key，仅单可执行文件，已打包好 Docker 镜像，一键部署，开箱即用. OpenAI key management & redistribution system, using a single API for all LLMs, and features an English UI.
+- [Dify](https://dify.ai) 👉🏻 [🐙](https://github.com/langgenius/dify)
+    > Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production.
 
 ## GPT
 
