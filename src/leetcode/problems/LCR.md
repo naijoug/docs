@@ -45,3 +45,92 @@ class Solution {
 :::
 
 // #endregion 126
+
+------
+
+## 136
+
+// #region 136
+
+- [🟢 136 - 删除链表的节点](https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
+    > 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
+    > 返回删除后的链表的头节点。
+
+        🌰
+        输入: head = [4,5,1,9], val = 5
+        输出: [4,1,9]
+        解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -> 1 -> 9.
+        示例 2:
+        
+        🌰
+        输入: head = [4,5,1,9], val = 1
+        输出: [4,5,9]
+        解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -> 5 -> 9.
+        
+        说明：
+        题目保证链表中节点的值互不相同
+
+::: details 💡
+
+【思路】核心点在于需要找到要删除节点的前一个节点
+
+::: code-tabs
+
+@tab dart 双指针
+```dart
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *   int val;
+ *   ListNode? next;
+ *   ListNode([this.val = 0, this.next]);
+ * }
+ */
+class Solution {
+  ListNode? deleteNode(ListNode? head, int val) {
+    final dummy = ListNode();
+    dummy.next = head;
+    // 思路：遍历找改值节点，
+    ListNode? prev = dummy; // 指向遍历节点的前一个节点
+    ListNode? node = dummy.next;
+    while (node?.val != val) {
+        prev = prev?.next;
+        node = node?.next;
+    }
+    // 前一个节点指向要删除的下一个节点
+    prev?.next = node?.next;
+    return dummy?.next;
+  }
+}
+```
+
+@tab dart 单指针
+```dart
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *   int val;
+ *   ListNode? next;
+ *   ListNode([this.val = 0, this.next]);
+ * }
+ */
+class Solution {
+  ListNode? deleteNode(ListNode? head, int val) {
+    // 带头节点，解决需要删除头结点的情况
+    final dummy = ListNode();
+    dummy.next = head;
+    // 思路：遍历找到目标值的前一个节点
+    ListNode? node = dummy;
+    while (node?.next?.val != val) {
+        node = node?.next;
+    }
+    // 前一个节点指向要删除的下一个节点
+    node?.next = node?.next?.next;
+    return dummy?.next;
+  }
+}
+```
+
+:::
+
+// #endregion 136
