@@ -8,7 +8,7 @@ index: true
 
 <!-- more -->
 
-## 126
+## 126 ✅
 
 // #region 126
 
@@ -48,7 +48,7 @@ class Solution {
 
 ------
 
-## 136
+## 136 ✅
 
 // #region 136
 
@@ -134,3 +134,60 @@ class Solution {
 :::
 
 // #endregion 136
+
+------
+
+## 147
+
+// #region 147
+
+- [🟢 147 - 最小栈](https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof)
+    > 请你设计一个最小栈 。它提供 `push，pop，top` 操作，并能在常数时间内检索到最小元素的栈。
+
+        实现 MinStack 类:
+        
+        MinStack() 初始化堆栈对象。
+        void push(int val) 将元素val推入堆栈。
+        void pop() 删除堆栈顶部的元素。
+        int top() 获取堆栈顶部的元素。
+        int getMin() 获取堆栈中的最小元素。
+
+::: details 💡
+
+【思路】入栈时，通过使用一个列表保存栈中值对应的最小值，出栈时同时进行移除。
+
+::: code-tabs
+
+@tab dart
+```dart
+class MinStack {
+
+  List<int> _list = [];
+  // 使用一个最小值列表保存栈中值对应的最小值
+  List<int> _minList = [];
+ 
+  MinStack() {}
+  
+  void push(int x) {
+    _list.add(x);
+    if (_minList.isEmpty) {
+        _minList.add(x);
+    } else {
+        _minList.add(min(_minList.last, x));
+    }
+  }
+  
+  void pop() {
+    _list.removeLast();
+    _minList.removeLast();
+  }
+  
+  int top() => _list.last;
+  
+  int getMin() => _minList.last;
+}
+```
+
+:::
+
+// #endregion 0000
