@@ -91,8 +91,6 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > Download websites to your computer.
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) : 抓包神器
     > An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
-    >
-    > MITM : Man in the middle attack (中间人攻击)
 - [Charles(青花瓷)](http://www.charlesproxy.com/) : 网络代理调试工具
     > Web debugging proxy application. 
 - [Kap](https://github.com/wulkano/Kap) : 录屏软件
