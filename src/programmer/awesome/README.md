@@ -114,6 +114,17 @@ icon: gift
 - [DevMoneySharing](https://github.com/loonggg/DevMoneySharing)
     > 独立开发者赚钱经验分享
     
+## IPTV
+
+- [awesome-iptv](https://github.com/iptv-org/awesome-iptv)
+    > A curated list of resources related to IPTV
+- [IPTV](https://iptv-org.github.io) 👉🏻 [🐙](https://github.com/iptv-org/iptv)
+    > Collection of publicly available IPTV channels from all over the world
+- [IPTV](https://github.com/joevess/IPTV)
+- [Live](https://github.com/YueChan/Live)
+- [awesome-iptv](https://github.com/DangJin/awesome-iptv)
+- [ChinaIPTV](https://github.com/hujingguang/ChinaIPTV)
+    
 ## Funny
 
 - [ASCII generator](https://github.com/uvipen/ASCII-generator)
