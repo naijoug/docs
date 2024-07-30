@@ -23,6 +23,7 @@ index: true
     
 ## ComfyUI
 
-- [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
+- [ComfyUI](https://www.comfy.org/) 👉🏻 [🐙](https://github.com/comfyanonymous/ComfyUI)
     > The most powerful and modular stable diffusion GUI, api and backend with a graph/nodes interface.
-    
+- [ComfyUI-ZHO-Chinese](https://github.com/ZHO-ZHO-ZHO/ComfyUI-ZHO-Chinese)    
+    > 简体中文版 ComfyUI

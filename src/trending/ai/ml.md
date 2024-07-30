@@ -6,7 +6,8 @@ index: true
 
 ---
 
-> `ML` : 
+> `ML` : Machine Learning
+> `DL` : Deep Learning
 
 ## Reference
 
@@ -20,3 +21,7 @@ index: true
 - [李宏毅深度学习教程LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
 - [推荐系统入门教程](https://datawhalechina.github.io/fun-rec) 👉🏻 [🐙](https://github.com/datawhalechina/fun-rec)
 - [pandas 中文教程](https://inter.joyfulpandas.datawhale.club) 👉🏻 [🐙](https://github.com/datawhalechina/joyful-pandas)
+
+------
+
+- [Understanding Deep Learning](https://udlbook.github.io/udlbook) 👉🏻 [🐙](https://github.com/udlbook/udlbook)
