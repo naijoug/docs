@@ -28,6 +28,8 @@ icon: gift
 
 - [awesome](https://github.com/sindresorhus/awesome)
     > 😎 Awesome lists about all kinds of interesting topics
+- [awesome-readme-generator-tools](https://github.com/DangJin/awesome-readme-generator-tools)
+    > 收录了一些可以快速创建出精美 `readme.md` 的工具集合
 - [awesome-cn](https://github.com/icopy-site/awesome-cn)
     > 超赞列表合集
 - [free-programming-books](https://github.com/EbookFoundation/free-programming-books)

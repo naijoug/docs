@@ -106,6 +106,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > An ultra-light MacOS utility that helps hide menu bar icons
 - [Dozer](https://github.com/Mortennn/Dozer) : 菜单栏 icon 管理
     > Hide menu bar icons on macOS
+- [BetterDisplay](https://betterdisplay.pro/) 👉🏻 [🐙](https://github.com/waydabber/BetterDisplay)
+    > Unlock your displays on your Mac! Flexible HiDPI scaling, XDR/HDR extra brightness, virtual screens, DDC control, extra dimming, PIP/streaming, EDID override and lots more!
 - [xScope](https://xscopeapp.com/) : 屏幕测量工具 
     > A powerful set of tools that are ideal for measuring, inspecting & testing on-screen graphics and layouts.
 - [spectacle](https://github.com/eczarny/spectacle) : 屏幕分屏
