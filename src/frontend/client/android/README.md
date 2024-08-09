@@ -12,6 +12,11 @@ index: false
 
 - [android-lifcycle](https://github.com/xxv/android-lifecycle)
     > A diagram of the Android Activity / Fragment lifecycle
+- [Shizuku](https://shizuku.rikka.app) 👉🏻 [🐙](https://github.com/RikkaApps/Shizuku)
+    > Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.
+
+------
+    
 - [Kotlin](https://github.com/JetBrains/kotlin)
 - [Kotlin 语言中文站](https://github.com/hltj/kotlin-web-site-cn)
 

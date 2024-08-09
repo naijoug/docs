@@ -22,15 +22,20 @@ index: false
 
 ## Tool
 
+- [curl](https://curl.se/) 👉🏻 [🐙](https://github.com/curl/curl)
+  > A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET, TFTP, WS and WSS. libcurl offers a myriad of powerful features
+- [HTTPie](https://httpie.io/) 👉🏻 [🐙](https://github.com/httpie/cli)
+    > 🥧 HTTPie CLI — modern, user-friendly command-line HTTP client for the API era. JSON support, colors, sessions, downloads, plugins & more.
+- [Proxyman](https://proxyman.io/) 👉🏻 [🐙](https://github.com/ProxymanApp)
+    > Modern and Delightful Web Debugging Proxy for macOS, iOS, and Android ⚡️
+    
+------
+
 - [JSDelivr](https://www.jsdelivr.com) 
     > A free CDN for Open Source
 - [OpenSSH](https://github.com/openssh/openssh-portable)
-- [curl](https://github.com/curl/curl)
-  > A command line tool and library for transferring data with URL syntax
 - [SwitchHosts](https://github.com/oldj/SwitchHosts)
 - [ping test](https://ping.chinaz.com/)
-- [Proxyman](https://github.com/ProxymanApp)
-    > Modern and Delightful Web Debugging Proxy for macOS, iOS, and Android ⚡️
 - [whistle](https://github.com/avwo/whistle)
     > HTTP, HTTP2, HTTPS, Websocket debugging proxy
 

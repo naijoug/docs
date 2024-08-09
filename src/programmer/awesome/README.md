@@ -9,6 +9,8 @@ icon: gift
 
 ## GitHub
 
+- [OpenAlternative](https://openalternative.co/) 👉🏻 [🐙](https://github.com/piotrkulpinski/openalternative)
+    > A community driven list of open source alternatives to proprietary software and applications.
 - [GitHub Hosts](https://github.com/ineo6/hosts/) : [GitLab](https://gitlab.com/ineo6/hosts/)
     > GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。
 - [gh-proxy](https://github.com/hunshcn/gh-proxy)
@@ -52,6 +54,7 @@ icon: gift
     > A visual introduction to probability and statistics.
 - [RoadMap](https://github.com/xx-zh/xx-zh-roadmap)
 - [书栈网](https://www.bookstack.cn/)
+- [iBook](https://github.com/fancy88/iBook)
 - [BookStash](https://bookstash.io)
     > Top books recommended by famous folk, in 3m or less.
 - [给程序员的开源、免费图书集合](https://github.com/waylau/books-collection)
@@ -99,10 +102,13 @@ icon: gift
     > AI Code Completions
 - [Copilot](https://github.com/features/copilot) : GitHub AI 程序员
     > Your AI pair programmer
-- [HTTPie](https://github.com/httpie/httpie)
-    > 🥧 HTTPie for Terminal — modern, user-friendly command-line HTTP client for the API era. JSON support, colors, sessions, downloads, plugins & more.
 - [Talk](https://github.com/vasanthv/talk) : [Talk](https://tlk.li)
     > Group video call for the web.
+
+## Notion
+
+- [Tweets Raw](https://cooperative-sea-1e8.notion.site/d52db741a85748aead2235e7376f1974)
+- [📝 生活与工作手记](https://houjoe.notion.site/16f1b09dbf9443e8993a66d49c6e720e)
 
 ## Animation
 
