@@ -11,6 +11,8 @@ icon: gift
 
 - [OpenAlternative](https://openalternative.co/) 👉🏻 [🐙](https://github.com/piotrkulpinski/openalternative)
     > A community driven list of open source alternatives to proprietary software and applications.
+- [grep.app](https://grep.app/)
+    > Search across a half million git repos
 - [GitHub Hosts](https://github.com/ineo6/hosts/) : [GitLab](https://gitlab.com/ineo6/hosts/)
     > GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。
 - [gh-proxy](https://github.com/hunshcn/gh-proxy)

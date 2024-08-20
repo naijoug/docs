@@ -13,6 +13,11 @@ index: false
 
 - [Flutter 单例模式](https://flutter.cn/community/tutorials/singleton-pattern-in-flutter-n-dart)
 
+## Google Pay
+
+- [2024-06-05 2024年Google Play 最新内购/订阅实现](https://juejin.cn/post/7376532114106236979)
+- [2023-05-15 App集成谷歌内购(GooglePay)的全过程](https://juejin.cn/post/7233310081809760317)
+
 ## Concept
 
 | flutter 项目 | 说明
