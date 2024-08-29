@@ -25,3 +25,10 @@ index: true
 ------
 
 - [Understanding Deep Learning](https://udlbook.github.io/udlbook) 👉🏻 [🐙](https://github.com/udlbook/udlbook)
+
+------
+
+<!-- Video -->
+
+- [李宏毅《机器学习》（2021年春）](https://www.bilibili.com/video/BV1JA411c7VT/?p=1)
+    > [李宏毅文字视频课程对照表](https://datawhaler.feishu.cn/sheets/YVTHsOKoWh44EgtA11bcUMSQnsd)
