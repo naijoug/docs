@@ -8,21 +8,26 @@ index: true
 
 ## reference
 
-- [Github Copilot](https://github.com/features/copilot)
+- [Github - Copilot](https://github.com/features/copilot)
     > Your AI pair programmer
-- [Amazon CodeWhisperer](https://aws.amazon.com/cn/codewhisperer)
-- [Alibaba cosy](https://github.com/alibaba-cloud-toolkit/cosy) 
-    > 阿里云智能编码插件（Alibaba Cloud AI Coding Assistant）是一款AI编程助手，它提供代码智能补全和IDE内的代码示例搜索能力，帮助你更快更高效地写出高质量代码。
-- [CodeFuse](https://github.com/codefuse-ai)
-- [CodeGeeX](https://github.com/THUDM/CodeGeeX)
-    > CodeGeeX: An Open Multilingual Code Generation Model
-- [Bito AI](https://github.com/gitbito/bitoai)
-    > 🚀 Bito AI – Bring ChatGPT to your IDE to 10x your dev abilities!
-- [CopilotForXcode](https://github.com/intitni/CopilotForXcode)
+- [CopilotForXcode](https://copilotforxcode.intii.com/) 👉🏻 [🐙](https://github.com/intitni/CopilotForXcode)
     > The missing GitHub Copilot, Codeium and ChatGPT Xcode Source Editor Extension
-- [Continue](https://github.com/continuedev/continue)
-    > ⏩ the open-source coding copilot—bring the power of ChatGPT to VS Code
-- [Sweep](https://github.com/sweepai/sweep)
-    > Sweep: AI-powered Junior Developer for small features and bug fixes.
 - [Cursor](https://github.com/getcursor/cursor)
     > An AI-powered code editor based on VSCode 🤖
+- [Bytedance - MarsCode](https://www.marscode.com/) 👉🏻 [🇨🇳](https://www.marscode.cn)
+    > 豆包旗下的编程助手，提供智能补全、智能预测、智能问答等能力，节省开发时间，释放脑海中的创造力
+- [Alibaba - 通义灵码](https://tongyi.aliyun.com/lingma) 👉🏻 [🐙](https://github.com/alibaba-cloud-toolkit/cosy) 
+    > 阿里云出品的一款基于通义大模型的智能编码辅助工具。
+- [Amazon - Amazon Q](https://aws.amazon.com/cn/q/developer)
+
+------
+
+- [Alipay - CodeFuse](https://codefuse.alipay.com) 👉🏻 [🐙](https://github.com/codefuse-ai)
+- [清华智普 - CodeGeeX](https://codegeex.cn/) 👉🏻 [🐙](https://github.com/THUDM/CodeGeeX)
+    > CodeGeeX: An Open Multilingual Code Generation Model
+- [Bito AI](https://bito.ai/) 👉🏻 [🐙](https://github.com/gitbito/bitoai)
+    > Bito’s AI helps developers dramatically accelerate their impact. It’s a Swiss Army knife of capabilities that can 10x your developer productivity and save you an hour a day, using the same models as ChatGPT!
+- [Continue](https://www.continue.dev/) 👉🏻 [🐙](https://github.com/continuedev/continue)
+    > ⏩ Continue is the leading open-source AI code assistant. You can connect any models and any context to build custom autocomplete and chat experiences inside VS Code and JetBrains
+- [Sweep](https://sweep.dev/) 👉🏻 [🐙](https://github.com/sweepai/sweep)
+    > Sweep: AI-powered Junior Developer for small features and bug fixes.
