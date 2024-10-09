@@ -33,6 +33,7 @@ index: false
 - [数据结构和算法必知必会的50个代码实现](https://github.com/wangzheng0822/algo)
 - [The-Art-of-Linear-Algebra](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra) : 线性代数的艺术
     > Graphic notes on Gilbert Strang's "Linear Algebra for Everyone"
+- [MarsCode - Practice](https://www.marscode.cn/practice)
 
 ------
 
