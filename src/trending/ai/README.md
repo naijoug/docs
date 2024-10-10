@@ -114,12 +114,6 @@ index: false
 - [guidance](https://github.com/microsoft/guidance)
     > A guidance language for controlling large language models. 
 
-## low code
-
-- [Wordware](https://twitter.wordware.ai/) 👉🏻 [🐙](https://github.com/wordware-ai/twitter)
-    > AI Agent for Twitter Personality Analysis
-- [Glifs](https://glif.app)
-
 
 ## tutorial
 
