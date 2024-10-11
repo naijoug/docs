@@ -21,10 +21,9 @@ order: 2
     * `text` : 文本字符串
     * `blob` : 二进制数据（比如文件）
 
-- 注 : 实际上`SQLite`是无类型的，就算声明为`integer`类型，还是能存储字符串文本（主键除外），建表时声明啥类型或者不声明类型都可以。
+> 注 : 实际上 `SQLite` 是无类型的，就算声明为 `integer` 类型，还是能存储字符串文本（主键除外），建表时声明啥类型或者不声明类型都可以。
 
-
-## C 函数接口
+## usage
 
 ``` c
 // 打开数据库
@@ -36,23 +35,23 @@ int sqlite3_open(
 // 执行 SQL 语句
 int sqlite3_exec(
     sqlite3*,                                   // 一个打开的数据库实例
-    const char *sql,                            // 需要执行的SQL语句
-    int (*callback)(void*,int, char**, char**), // SQL语句执行完毕后的回调
-    void *,                                     // 回调函数的第1个参数
+    const char *sql,                            // 需要执行的 SQL 语句
+    int (*callback)(void*,int, char**, char**), // SQL 语句执行完毕后的回调
+    void *,                                     // 回调函数的第 1 个参数
     char **errmsg                               // 错误信息
 );
 
 // 检查 SQL 语句的合法性（查询前的准备）
 int sqlite3_prepare_v2(
     sqlite3 *db,            // 数据库实例
-    const char *zSql,       // 需要检查的SQL语句
-    int nByte,              // SQL语句的最大字节长度
-    sqlite3_stmt **ppStmt,  // sqlite3_stmt实例，用来获得数据库数据
+    const char *zSql,       // 需要检查的 SQL 语句
+    int nByte,              // SQL 语句的最大字节长度
+    sqlite3_stmt **ppStmt,  // sqlite3_stmt 实例，用来获得数据库数据
     const char **pzTail
 );
 
 // 查询一行数据
-int sqlite3_step(sqlite3_stmt*); // 如果查询到一行数据，就会返回SQLITE_ROW
+int sqlite3_step(sqlite3_stmt*); // 如果查询到一行数据，就会返回 SQLITE_ROW
 
 // 利用 stmt 获得某一字段的值（从下标 0 开始)
 int sqlite3_column_int(sqlite3_stmt*, int iCol);                    // 整型数据

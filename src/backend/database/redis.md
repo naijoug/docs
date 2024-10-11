@@ -9,7 +9,7 @@ order: 4
 
 <!-- more -->
 
-## Reference
+## reference
 
 - [redis](https://github.com/redis/redis)
     > Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.
@@ -17,16 +17,16 @@ order: 4
 - [redis7.0-chinese-annotated](https://github.com/CN-annotation-team/redis7.0-chinese-annotated)
     > Redis 7.0.5 版本——中文注释，持续更新！欢迎参与本项目！🍭🍭🍭
 
-## Usage
+## usage
 
-```shell
+``` shell
 # redis cli 连接本地 redis (host: 127.0.0.1 port: 6379)
 $ redis-cli 
 # redis cli 连接指定远程 redis
 $ redis-cli -h <host> -p <port> -a <password>
 ```
 
-```shell
+``` shell
 ## Key
 > DEL <key>         # 删除一个键值
 ## String 

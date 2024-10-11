@@ -7,12 +7,11 @@ order: 5
 
 ---
 
-<!-- more -->
-
-# MySQL
 >  是一个关系型数据库管理系统(`RDBMS`)，被`Oracle`公司收购。是最流行的关系型数据库管理系统，在`WEB`应用方面`MySQL`是最好的`RDBMS`应用软件之一
 
-## Reference
+<!-- more -->
+
+## reference
 
 - [MySQL](http://www.mysql.com/)
 - [mysql-tutorial](https://github.com/jaywcjlove/mysql-tutorial)
@@ -21,7 +20,7 @@ order: 5
     > A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
 - [菜鸟教程 - MySQL](http://www.runoob.com/mysql/mysql-tutorial.html)
 
-## Concept
+## concept
 
 - 特点：
     * 一个开放源码的小型关联式数据库管理系统
@@ -38,7 +37,7 @@ order: 5
 | `Cluster CGE` 高级集群版       | 需付费。
 | `Workbench`(`GUI TOOL`）      | 一款专为`MySQL`设计的ER/数据库建模工具。它是著名的数据库设计工具`DBDesigner4`的继任者。`MySQL Workbench`又分为两个版本，分别是社区版（`MySQL Workbench OSS`）、商用版（`MySQL Workbench SE`）。 
 
-## Usage
+## usage
 
 - Startup & Shutdown
 
