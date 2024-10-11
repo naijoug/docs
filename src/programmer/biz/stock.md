@@ -21,6 +21,7 @@ index: true
 
 - [Qbot](https://github.com/UFund-Me/Qbot)
     > [🔥updating ...] 自动量化交易机器人 Qbot is an AI-oriented quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment.
+- [30天掌握量化交易](http://30daydo.com/) 👉🏻 [🐙](https://github.com/Rockyzsu/stock)
 
 ## Concept
 

@@ -16,9 +16,11 @@ index: true
     
 ------
 
+- [Dive into Deep Learning](https://zh.d2l.ai/) 👉🏻 [🐙](https://github.com/d2l-ai/d2l-zh)
+    > 《动手学深度学习》：面向中文读者、能运行、可讨论。中英文版被70多个国家的500多所大学用于教学。
 - [《机器学习》（西瓜书）公式详解](https://datawhalechina.github.io/pumpkin-book) 👉🏻 [🐙](https://github.com/datawhalechina/pumpkin-book)
 - [蘑菇书 EasyRL](https://datawhalechina.github.io/easy-rl) 👉🏻 [🐙](https://github.com/datawhalechina/easy-rl)
-- [李宏毅深度学习教程LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
+- [李宏毅深度学习教程 LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
 - [推荐系统入门教程](https://datawhalechina.github.io/fun-rec) 👉🏻 [🐙](https://github.com/datawhalechina/fun-rec)
 - [pandas 中文教程](https://inter.joyfulpandas.datawhale.club) 👉🏻 [🐙](https://github.com/datawhalechina/joyful-pandas)
 

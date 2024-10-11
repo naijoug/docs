@@ -23,16 +23,10 @@ order: 2
 - [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
     > 🛁 Clean Code concepts adapted for JavaScript
 
-## `C/C++`
+## `Dart`
 
-| Type | Public 
-| --- | ---
-| Files                 | my_userful_class.cc
-| Classes               | MyExcitingClass / MyExcitingEnum
-| Variables             | table_name
-| Instance Variables    | table_name_ 
-| Constants             | kDaysInAWeek
-| Functions             | MyExcitingMethod()
+- [Effective Dart](https://dart.dev/effective-dart) 👉🏻 [🇨🇳](https://dart.cn/effective-dart)
+
 
 ## `Python`
 
@@ -56,3 +50,14 @@ $ pylint --generate-rcfile > .pylintrc # 生成 .pylintrc 文件
 | Method Names                  | lower_with_under()    | _lower_with_under() (protected) or __lower_with_under(private) 
 | Function/Method Parameters    | lower_with_under 
 | Local Variables               | lower_with_under
+
+## `C/C++`
+
+| Type | Public 
+| --- | ---
+| Files                 | my_userful_class.cc
+| Classes               | MyExcitingClass / MyExcitingEnum
+| Variables             | table_name
+| Instance Variables    | table_name_ 
+| Constants             | kDaysInAWeek
+| Functions             | MyExcitingMethod()

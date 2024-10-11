@@ -12,6 +12,8 @@ index: false
 
 - [Node](https://nodejs.org) 👉🏻 [🐙](https://github.com/nodejs/node)
     > Node.js JavaScript runtime ✨🐢🚀✨
+- [deno](https://deno.com/) 👉🏻 [🐙](https://github.com/denoland/deno)
+    > A modern runtime for JavaScript and TypeScript.
 
 ------
 

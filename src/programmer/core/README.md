@@ -21,10 +21,9 @@ index: false
 
 ## reference
 
-- [数据结构与算法之美](https://time.geekbang.org/column/intro/100017301)
-- [The Algorithms](https://github.com/TheAlgorithms): [website](https://the-algorithms.com)
+- [The Algorithms](https://the-algorithms.com) 👉🏻 [🐙](https://github.com/TheAlgorithms)
     > Open Source resource for learning Data Structures & Algorithms and their implementation in any Programming Language
-- [Hello 算法](https://github.com/krahets/hello-algo)
+- [Hello 算法](https://www.hello-algo.com/) 👉🏻 [🐙](https://github.com/krahets/hello-algo)
     > 《Hello 算法》：动画图解、一键运行的数据结构与算法教程，支持 Java, C++, Python, Go, JS, TS, C#, Swift, Rust, Dart, Zig 等语言。
 - [JavaScript Algorithms and Data Structures](https://github.com/trekhleb/javascript-algorithms)
 - [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)
@@ -33,6 +32,10 @@ index: false
 - [数据结构和算法必知必会的50个代码实现](https://github.com/wangzheng0822/algo)
 - [The-Art-of-Linear-Algebra](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra) : 线性代数的艺术
     > Graphic notes on Gilbert Strang's "Linear Algebra for Everyone"
+
+------
+
+- [数据结构与算法之美](https://time.geekbang.org/column/intro/100017301)
 - [MarsCode - Practice](https://www.marscode.cn/practice)
 
 ------
