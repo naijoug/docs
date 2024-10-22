@@ -28,10 +28,13 @@ index: true
 - [ComfyUI-ZHO-Chinese](https://github.com/ZHO-ZHO-ZHO/ComfyUI-ZHO-Chinese)    
     > 简体中文版 ComfyUI
 
-## Tool
+## Product
 
 - [Glifs](https://glif.app)
+- [PodML](https://podlm.ai/)
+    > Turn Any Content into AI Podcast
 - [Wordware](https://twitter.wordware.ai/) 👉🏻 [🐙](https://github.com/wordware-ai/twitter)
     > AI Agent for Twitter Personality Analysis
 - [Pagen](https://pagen.so/) 👉🏻 [🐙](https://github.com/all-in-aigc/pagen-ai-landing-page-template)
     > AI Landing Page Template created by Pagen AI
+

@@ -11,6 +11,11 @@ order: 2
 
 <!-- more -->
 
+## reference
+
+- [zed](https://zed.dev/) 👉🏻 [🐙](https://github.com/zed-industries/zed)
+    > Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+
 ## Xcode
 
 - Xcode Snippets 占位符 :  `<# summary #>`
