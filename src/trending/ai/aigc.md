@@ -37,4 +37,4 @@ index: true
     > AI Agent for Twitter Personality Analysis
 - [Pagen](https://pagen.so/) 👉🏻 [🐙](https://github.com/all-in-aigc/pagen-ai-landing-page-template)
     > AI Landing Page Template created by Pagen AI
-
+- [AI 论文标题生成器](https://researchtitle.textgen.net)
