@@ -6,6 +6,10 @@ index: true
 
 ---
 
+> `AIGC`: 
+
+<!-- more -->
+
 ## reference
 
 - [lora](https://github.com/cloneofsimo/lora)

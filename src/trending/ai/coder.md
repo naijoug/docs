@@ -31,3 +31,5 @@ index: true
     > ⏩ Continue is the leading open-source AI code assistant. You can connect any models and any context to build custom autocomplete and chat experiences inside VS Code and JetBrains
 - [Sweep](https://sweep.dev/) 👉🏻 [🐙](https://github.com/sweepai/sweep)
     > Sweep: AI-powered Junior Developer for small features and bug fixes.
+- [TabNine](https://www.tabnine.com/) 👉🏻 [🐙](https://github.com/codota/TabNine)
+    > AI Code Completions

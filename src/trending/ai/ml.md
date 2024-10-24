@@ -6,10 +6,10 @@ index: true
 
 ---
 
-> `ML` : Machine Learning
-> `DL` : Deep Learning
-
-## Reference
+> `ML`(`Machine Learning`) : 机器学习 
+> `DL`(`Deep Learning`) : 深度学习
+ 
+## reference
 
 - [MediaPipe](https://github.com/google/mediapipe)
     > Cross-platform, customizable ML solutions for live and streaming media.

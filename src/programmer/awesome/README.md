@@ -90,7 +90,7 @@ icon: gift
 
 ## Tool
 
-- [RSSHub](https://github.com/DIYgod/RSSHub)
+- [RSSHub](https://docs.rsshub.app) 👉🏻 [🐙](https://github.com/DIYgod/RSSHub)
     > 🍰 Everything is RSSible
 - [Fig](https://github.com/withfig/autocomplete) : 终端自动补全
     > Fig adds autocomplete to your terminal.
@@ -100,8 +100,7 @@ icon: gift
     > 📊 A minimalist, self-hosted WakaTime-compatible backend for coding statistics
 - [NeoVim](https://github.com/neovim/neovim)
     > Vim-fork focused on extensibility and usability
-- [TabNine](https://github.com/codota/TabNine) : AI 写代码
-    > AI Code Completions
+
 - [Copilot](https://github.com/features/copilot) : GitHub AI 程序员
     > Your AI pair programmer
 - [Talk](https://github.com/vasanthv/talk) : [Talk](https://tlk.li)
