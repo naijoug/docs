@@ -10,5 +10,5 @@ index: true
 
 ## Coffee
 
-![coffee-family](media/coffee-family.JPG)
+![coffee-family](media/coffee-family.jpeg)
 
