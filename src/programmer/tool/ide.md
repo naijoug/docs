@@ -15,6 +15,16 @@ order: 2
 
 - [zed](https://zed.dev/) 👉🏻 [🐙](https://github.com/zed-industries/zed)
     > Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+    
+## Font
+
+- [FiraCode](https://github.com/tonsky/FiraCode)
+    > Free monospaced font with programming ligatures
+
+```shell
+# install
+brew install --cask font-fira-code
+```
 
 ## Xcode
 

@@ -23,7 +23,7 @@ index: true
 - [Claude - docs](https://docs.anthropic.com/en/docs/welcome)
 - [OpenRouter - docs](https://openrouter.ai/docs/quick-start)
 
-## app
+## application
 
 - [Lobe Chat](https://lobehub.com) 👉🏻 [🐙](https://github.com/lobehub/lobe-chat)
     > 🤯 Lobe Chat - an open-source, modern-design AI chat framework. Supports Multi AI Providers( OpenAI / Claude 3 / Gemini / Ollama / Azure / DeepSeek), Knowledge Base (file upload / knowledge management / RAG ), Multi-Modals (Vision/TTS) and plugin system. One-click FREE deployment of your private ChatGPT/ Claude application.

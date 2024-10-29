@@ -11,7 +11,8 @@ index: true
 ## reference
 
 - [Open LLMs](https://github.com/eugeneyan/open-llms)
-    > 🤖 A list of open LLMs available for commercial use.   
+    > 🤖 A list of open LLMs available for commercial use. 
+- [LLM Rankings](https://openrouter.ai/rankings)  
 - [开源大模型食用指南](https://github.com/datawhalechina/self-llm)
     > 《开源大模型食用指南》基于Linux环境快速部署开源大模型，更适合中国宝宝的部署教程
 - [Z-Bench](https://github.com/zhenbench/z-bench)

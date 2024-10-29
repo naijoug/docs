@@ -8,12 +8,12 @@ index: true
 
 ## reference
 
+- [Cursor](https://www.cursor.com/) 👉🏻 [🐙](https://github.com/getcursor/cursor)
+    > An AI-powered code editor based on VSCode 🤖
 - [Github - Copilot](https://github.com/features/copilot)
     > Your AI pair programmer
 - [CopilotForXcode](https://copilotforxcode.intii.com/) 👉🏻 [🐙](https://github.com/intitni/CopilotForXcode)
     > The missing GitHub Copilot, Codeium and ChatGPT Xcode Source Editor Extension
-- [Cursor](https://github.com/getcursor/cursor)
-    > An AI-powered code editor based on VSCode 🤖
 - [Bytedance - MarsCode](https://www.marscode.com/) 👉🏻 [🇨🇳](https://www.marscode.cn)
     > 豆包旗下的编程助手，提供智能补全、智能预测、智能问答等能力，节省开发时间，释放脑海中的创造力
 - [Alibaba - 通义灵码](https://tongyi.aliyun.com/lingma) 👉🏻 [🐙](https://github.com/alibaba-cloud-toolkit/cosy) 

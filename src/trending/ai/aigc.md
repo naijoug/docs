@@ -6,7 +6,7 @@ index: true
 
 ---
 
-> `AIGC`: 
+> `AIGC`(`Artificial Intelligence Generated Content`): 人工智能生成内容
 
 <!-- more -->
 
