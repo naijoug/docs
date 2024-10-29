@@ -23,10 +23,6 @@ order: 2
 - [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
     > 🛁 Clean Code concepts adapted for JavaScript
 
-## `Dart`
-
-- [Effective Dart](https://dart.dev/effective-dart) 👉🏻 [🇨🇳](https://dart.cn/effective-dart)
-
 
 ## `Python`
 
