@@ -18,6 +18,7 @@ index: false
 
 ## reference
 
+- [Web Dev](https://web.dev)
 - [💯]()[MDN Web Technology](https://developer.mozilla.org/zh-CN/docs/Web)
 
 ------
@@ -47,3 +48,7 @@ index: false
 ## website
 
 - [Similarweb](https://www.similarweb.com/zh/)
+
+------
+
+- [从零开始SEO ：新手指南](https://www.91wink.com/index.php/%e4%bb%8e%e9%9b%b6%e5%bc%80%e5%a7%8bseo-%ef%bc%9a%e6%96%b0%e6%89%8b%e6%8c%87%e5%8d%97/)

@@ -27,6 +27,8 @@ index: false
     
 ------
     
+- [DrawDB](https://www.drawdb.app/) 👉🏻 [🐙](https://github.com/drawdb-io/drawdb)
+    > Free, simple, and intuitive online database diagram editor and SQL generator.    
 - [dbeaver](https://dbeaver.io/) 👉🏻 [🐙](https://github.com/dbeaver/dbeaver)
     > Free universal database tool and SQL client    
 - [upStash](https://upstash.com/) 👉🏻 [🐙](https://github.com/upstash)
