@@ -199,3 +199,15 @@ order: 3
 
 - [Mercurial](https://www.mercurial-scm.org/)
 - [Mercurial 中文 Wiki](https://www.mercurial-scm.org/wiki/CategoryChinese)
+
+## Error
+
+> POST git-receive-pack (chunked)
+error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+
+```sh
+# 这个错误 git 推送 HTTP 缓冲区大小不足 => 通过配置调大缓冲区
+git config --global http.postBuffer 524288000
+```

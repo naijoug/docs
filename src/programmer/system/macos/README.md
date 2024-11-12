@@ -83,6 +83,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > Swift Package Manager Tools -> SPMT -> Spearmint -> Mint! 🌱😄
 - [MWeb](http://zh.mweb.im) : Markdown 编辑器
     > Markdown writing, note taking and static blog generator App
+- [stats](https://github.com/exelban/stats) : 电脑状态监控器
+    > macOS system monitor in your menu bar
 - [VLC](https://github.com/videolan/vlc) : 视频播放器
     > VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
 - [ipatool](https://github.com/majd/ipatool) : 命令行搜索和下载 `AppStore` 中的 iOS 软件包 `ipa` 
