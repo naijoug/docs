@@ -7,11 +7,11 @@ order: 1
 
 ---
 
+> `Structured Query Language` : 结构化查询语言，是一种对关系型数据库中的数据进行定义和操作的语言。
+
 <!-- more -->
 
-> Structured Query Language : 结构化查询语言，是一种对关系型数据库中的数据进行定义和操作的语言。
-
-## Concept
+## concept
 
 - `SQL`语句的特点
     * 不区分大小写 (比如数据库认为user和UsEr是一样的)
@@ -38,9 +38,9 @@ order: 1
 | `unique`          | 规定字段的值必须唯一
 | `default`         | 指定字段的默认值
 
-## Usage
+## usage
 
-### DDL (Data Definition Language)
+### `DDL` (`Data Definition Language`)
 
 > 数据定义语句 : create | drop 
 
@@ -69,7 +69,7 @@ drop table if exists 表名;
 drop table t_student;
 ```
 
-### DML (Data Manipulation Language)
+### `DML` (`Data Manipulation Language`)
 
 > 数据操作语句 : insert | update | delete
 
@@ -96,7 +96,7 @@ delete from t_student ;
 -- 注意: 上面的示例会将t_student表中所有记录都删掉
 ```
 
-### DQL (Data Query Language)
+### `DQL` (`Data Query Language`)
 
 > 数据查询语句 : select | where | order by | group by | having
 

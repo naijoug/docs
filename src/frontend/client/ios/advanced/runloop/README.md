@@ -1,5 +1,5 @@
 ---
-title: Runloop
+title: runloop
 icon: hashtag
 
 index: false
@@ -11,15 +11,6 @@ index: false
 ## reference
 
 - [CFRunLoopRef 开源代码](http://opensource.apple.com/source/CF/CF-1151.16/)
-- [2015-05-18 深入理解RunLoop - 郭曜源](http://blog.ibireme.com/2015/05/18/runloop/)
-- [2015-03-20 CFRunLoop - 戴铭](https://github.com/ming1016/study/wiki/CFRunLoop)
-
-------
-
-- [2022-04-02 当面试官问Runloop时，想听到的答案是什么？](https://juejin.cn/post/7081932582576717831)
-- [2022-04-04 由点入面吃透RunLoop](https://juejin.cn/post/7082739417370066974)
-- [2020-07-15 秒杀面试官的RunLoop底层原理](https://juejin.cn/post/6850418117169840135)
-
 
 ## UIApplicationMain
 > `iOS` 程序启动的入口 `main` 函数中的 `UIApplicationMain` 就是启动了一个 `RunLoop`
@@ -32,7 +23,6 @@ int main(int argc, char * argv[]) {
         int result = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
         NSLog(@"end main");
         return result;
-        
     }
 }
 ```
@@ -85,10 +75,3 @@ int main(int argc, char * argv[]) {
     | `kCFRunLoopExit`              | 即将推出 Loop
     | `kCFRunLoopAllActivities`     | 
 
-
-## RunLoop & Thread
-
-- RunLoop 和线程一一对应。
-- 主线程默认会创建一个 Loop 并启动。
-- 其它线程 Loop 默认不会启动，需要我们手动启动。
-- 存储在全局字典中 (`key: 线程 ; value: Loop`)

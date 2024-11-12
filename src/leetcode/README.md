@@ -6,6 +6,8 @@ index: false
 
 ---
 
+`LCR` : LeetCode Coding Interviews
+
 <!-- more -->
 
 ## reference
@@ -15,7 +17,7 @@ index: false
 
 ------
 
-- [LeetcodeTop](https://github.com/afatcoder/LeetcodeTop)
+- [CodeTop](https://codetop.cc/home) 👉🏻 [🐙](https://github.com/afatcoder/LeetcodeTop)
     > 汇总各大互联网公司容易考察的高频leetcode题🔥
 - [labuladong 的算法笔记](https://labuladong.github.io/algo) 👉🏻 [🐙](https://github.com/labuladong/fucking-algorithm)
     > 刷算法全靠套路，认准 labuladong 就够了！English version supported! Crack LeetCode, not only how, but also why.
@@ -43,6 +45,5 @@ index: false
     > LeetCode 101：和你一起你轻松刷题（C++）
 
 ------
-
 
 - [知乎 - 你们初刷leetcode时会怀疑自己的智商吗？](https://www.zhihu.com/question/388971497)

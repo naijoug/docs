@@ -1,14 +1,26 @@
 ---
-title: 运行时
+title: runtime
 icon: hashtag
 
 index: false
 
 ---
 
-> 参考源码 [objc-876](https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime)
+> 参考源码 
+> - [objc-876](https://github.com/apple-oss-distributions/objc4/blob/objc4-876/runtime)
+> - [libmalloc-409.40.6](https://github.com/apple-oss-distributions/libmalloc/tree/libmalloc-409.40.6)
 
 <!-- more -->
+
+## reference
+
+- [objc4](https://github.com/apple-oss-distributions/objc4)
+- [A debuggable objc runtime](https://github.com/RetVal/objc-runtime)
+- [iOS-Runtime-Headers](https://github.com/nst/iOS-Runtime-Headers) : iOS 运行时头文件(包括私有 API)
+    > iOS Objective-C headers as derived from runtime introspection
+- [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide)
+- [Aspects](https://github.com/steipete/Aspects)
+    > Delightful, simple library for aspect oriented programming in Objective-C and Swift.
 
 ## `runtime` 是什么
 
@@ -30,124 +42,48 @@ index: false
 
   这也很好地解释了“为什么是 OC 是一个动态语言？”。
 
-## reference
-
-- [objc4](https://github.com/apple-oss-distributions/objc4)
-- [A debuggable objc runtime](https://github.com/RetVal/objc-runtime)
-- [iOS-Runtime-Headers](https://github.com/nst/iOS-Runtime-Headers) : iOS 运行时头文件(包括私有 API)
-    > iOS Objective-C headers as derived from runtime introspection
-- [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide)
-- [Aspects](https://github.com/steipete/Aspects)
-    > Delightful, simple library for aspect oriented programming in Objective-C and Swift.
-
-------
-
-- [2020-01-23 Aspects深度解析-iOS面向切面编程](https://juejin.cn/post/6844904052778598408)
-- [2019-08-05 Runtime原理探究](https://www.jianshu.com/p/30de582dbeb7)
-- [](✅) [2019-03-07 OC对象的本质](https://www.jianshu.com/p/1bf78e1b3594)
-    > 作者的 Slogan : 汇编是检验一切语法糖的唯一标准
-- [2018-03-16 读 objc4 源码，深入理解 Objective-C Runtime](https://shannonchenchn.github.io/2018/03/16/objc-runtime-learning-notes/)
-- [](✅) [2017-09-15 Why is MetaClass in Objective-C？](https://nemocdz.github.io/post/why-is-metaclass-in-objective-c/) 💯
-    > 作者从自己遇到的一个面试题出发，按照第一性原理进行问题推导。
-      👉🏻 首先去研究了 `OC` 中的源码，梳理了 `isa`、`MetaClass` 关系。
-      👉🏻 在搜索 `MetaClass` 的过程，发现了 `Python` 中也有这个设计。进而了解到是源于 `Smalltalk` 的设计，而 `OC` 就是借鉴的 `Smalltalk` 的设计思想。
-      👉🏻 进一步思考如果没有 `MetaClass` 是否可行。在宏观成面思考了面向对象的两种设计思想，以 `C++` (借鉴 `Simula`)为代表的*类的划分*，还有以 `OC` (借鉴 `Smalltalk`)为代表的`消息传递`。
-- [2016-06-15 Objective-C 消息发送与转发机制原理](http://yulingtianxia.com/blog/2016/06/15/Objective-C-Message-Sending-and-Forwarding/)
-- [2014-11-06 神经病院objc runtime入院考试](https://blog.sunnyxx.com/2014/11/06/runtime-nuts)
-- [2014-11-05 Objective-C Runtime](http://yulingtianxia.com/blog/2014/11/05/objective-c-runtime/)
-- [2013-11-26 Objective-C 中的消息与消息转发](https://blog.ibireme.com/2013/11/26/objective-c-messaging/)
-
-## concept
-
-- `instance -> class -> method -> SEL -> IMP -> 实现函数`
-- `objc_msgSend` : Objective-C 消息传递函数 `id objc_msgSend(id self, SEL op, ... );`
-
-- SEL & IMP
-
-| 类型 | 说明
-| --- | --- 
-| `SEL`     | 方法选择器 (方法的 ID)
-| `IMP`     | 函数指针，方法实现的指针
-
-- 反射
-
-``` objc
-/** SEL 反射 */
-//  String -> SEL
-SEL selector = NSSelectorFromString(@"setName:");
-[stu performSelector:selector withObject:@"Kobe"];
-//  SEL -> String
-NSStringFromSelector(@selector(setName:));
-
-/**  Class 反射 */
-//  String -> Class
-Class class = NSClassFromString(@"Student");
-Student *student = [[class alloc] init]; 
-//  Class -> String
-Class class = [Student class];
-NSString *className = NSStringFromClass(class);
-
-/** Protocol 反射 */
-//  String -> Protocol
-Protocol protocol = NSProtocolFromString(@"People");
-//  Protocol -> String
-NSString *protocolName = NSStringFromProtocol(protocol);
-```
-
-## OC 的动态特性
-
-- 动态类型（Dynamic typing）
-    * `isKindOfClass:` : 判断某一对象是否是某个类或其子类的实例
-    * `isMemberOfClass:` : 判断某一对象是否是某个类的实例
-
-- 动态绑定（Dynamic binding）
-    * 传统函数 : 编译时期，将函数参数和实现打包到源码
-    * OC的消息机制 : 运行时，才去动态查找与实例绑定的属性和方法
-
-- 动态加载（Dynamic loading）
-    * 根据需求动态加载资源(如 : @2x,@3x图片的加载)`
-
-## Runtime Struct
+## struct - “运行时结构体”
 
 | 结构体 | 说明
 | --- | ---
-| `objc_object`         | objc 对象 `id`，isa 指针包含指向对象的地址
-| `objc_class`          | objc 对象的类 `Class`
+| `objc_object`         | `objc` 对象 `id`，`isa` 指针包含指向对象的地址
+| `objc_class`          | `objc` 对象的类 `Class`
 | `class_data_bits_t`   | 包含 `class_rw_t` 信息 
-| `class_rw_t`          | rw : 可读可写，类在运行时才确定的方法、属性、协议 (包含指向 `class_ro_t`的指针)
-| `class_ro_t`          | ro : 只读，类在编译期间就确定的方法、属性、协议
+| `class_rw_t`          | `rw` : 可读可写，包含指向 `class_rw_ext_t` 或 `class_ro_t` 的指针
+| `class_rw_ext_t`      | 类在运行时才确定的方法、属性、协议 (包含指向 `class_ro_t`的指针)
+| `class_ro_t`          | `ro` : 只读，类在编译期间就确定的方法、属性、协议
 | `cache_t`             | 缓存已经使用过的方法
 | `bucket_t`            | 缓存使用的哈希表结构体 (`key: SEL ; value: IMP`)
 
+## function - “运行时函数”
 
-``` objc
-struct class_rw_t { // 可读可写
-    uint32_t flags;
-    uint32_t version;
-
-    const class_ro_t *ro;           // 指向只读的结构体,存放类初始信息
-    
-    method_array_t methods;         // 方法列表（类对象存放对象方法，元类对象存放类方法）
-    property_array_t properties;    // 属性列表
-    protocol_array_t protocols;     // 协议列表
-
-    Class firstSubclass;
-    Class nextSiblingClass;
-}
-struct class_ro_t { // 只读 
-    uint32_t flags;
-    uint32_t instanceStart;
-    uint32_t instanceSize;
-    uint32_t reserved;
-
-    const uint8_t * ivarLayout;
-
-    const char * name;
-    method_list_t * baseMethodList;     // 方法列表
-    protocol_list_t * baseProtocols;    // 协议列表
-    const ivar_list_t * ivars;          // 成员变量列表
-
-    const uint8_t * weakIvarLayout;
-    property_list_t *baseProperties;    // 属性列表
-};
-```
+| 函数 | 说明
+| --- | ---
+| *Class*       | 
+| `class_getName`                       | 获取类名
+| `class_getSuperclass`                 | 获取父类
+| `class_getInstanceSize`               | 获取实例尺寸
+| `class_getInstanceVariable`           | 获取实例变量的信息
+| `class_getClassVariable`              | 获取类成员变量的信息
+| `class_getVersion`                    | 获取类版本号
+| `class_setVersion`                    | 设置类版本号
+| `class_isMetaClass`                   | 是否是一个元类
+| *Ivar*        |
+| `class_addIvar`                       | 添加成员变量
+| `class_copyIvarList`                  | 获取整个成员变量列表
+| *Property*    |
+| `class_addProperty`                   | 为类添加属性
+| `class_replaceProperty`               | 替换类属性
+| `class_getProperty`                   | 获取指定的属性
+| `class_copyPropertyList`              | 获取属性列表
+| *Method*      |
+| `class_addMethod`                     | 添加方法
+| `class_replaceMethod`                 | 替换方法实现
+| `class_getInstanceMethod`             | 获取实例方法
+| `class_getClassMethod`                | 获取类方法
+| `class_copyMethodList`                | 获取所有方法的数组
+| `class_getMethodImplementation`       | 返回方法实现
+| `class_respondsToSelector`            | 类实例是否响应指定的 `selector`
+| *Protocol*    | 
+| `class_addProtocol`                   | 添加协议
+| `class_conformsToProtocol`            | 是否实现指定的协议

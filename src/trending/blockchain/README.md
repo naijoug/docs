@@ -7,8 +7,9 @@ icon: boxes-stacked
 
 <!-- more -->
 
-## Reference
+## reference
 
+- [Token Terminal](https://tokenterminal.com)
 - [awesome-blockchain-cn](https://github.com/chaozh/awesome-blockchain-cn)
 - [LearnBlockchainByCode](https://github.com/uchaindb/LearnBlockchainByCode)
     > 《区块链系统实现》开源书籍及源代码仓库。The code and book about learning blockchain by code
@@ -23,6 +24,10 @@ icon: boxes-stacked
 - [区块链技术简史](https://ethfans.org/toya/articles/224)
 - [圆方圆学院](https://my.csdn.net/yuanfangyuan_block)
 - [区块链挖矿算法清单](http://demontf.github.io/2018/02/28/miningAlgorithmList)
+
+------
+
+- [2023-04-06 最全测试网水龙头合集](https://mirror.xyz/0x1CB0166F761B7FeD170Fb00e7270Eb401dE34ee8/s6Spy14KcsssCZA-Vl4SMVjXQkWthODDJhSWBqbkFrM)
 
 ## Website
 
@@ -150,3 +155,8 @@ icon: boxes-stacked
 - [steem](https://github.com/steemit/steem)
     > The blockchain for Smart Media Tokens (SMTs) and decentralized applications.
 - [Steem Handbook](http://steemh.org)
+
+------
+
+- DeFi : 
+- NFT : 

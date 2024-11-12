@@ -13,6 +13,13 @@ index: true
 - [npmgraph](https://npmgraph.js.org) 👉🏻 [GitHub](https://github.com/npmgraph/npmgraph)
     > A tool for exploring NPM modules and dependencies
 
+<!-- tool -->
+
+- [JQuery](https://github.com/jquery/jquery)
+- [Underscore](https://github.com/jashkenas/underscore)
+
+- [json-server](https://github.com/typicode/json-server)
+
 ------
 
 ## `npm`

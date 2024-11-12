@@ -3,7 +3,6 @@ title: ROS
 icon: hashtag
 
 index: true
-order: 4
 
 ---
 
@@ -227,7 +226,7 @@ $ export ROS_MASTER_URI=http://192.168.1.176:11311
     
     ```
 
-## ros 线程
+## ROS 线程
 
 - [ROS的单线程Spinning和多线程Spinning](http://www.cnblogs.com/feixiao5566/p/5288206.html)
 
@@ -279,7 +278,7 @@ $ export ROS_MASTER_URI=http://192.168.1.176:11311
     In future this will throw an exception!
     ```
 
-## ros param
+## ROS param
 
 http://durant35.github.io/2017/07/14/ROS_%3Carg%3E$%3Cparam%3E$%3Crosparam%3E/
 http://www.rosclub.cn/post-172.html

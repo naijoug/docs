@@ -12,6 +12,8 @@ index: false
 
 - [Node](https://nodejs.org) 👉🏻 [🐙](https://github.com/nodejs/node)
     > Node.js JavaScript runtime ✨🐢🚀✨
+- [deno](https://deno.com/) 👉🏻 [🐙](https://github.com/denoland/deno)
+    > A modern runtime for JavaScript and TypeScript.
 
 ------
 
@@ -29,8 +31,10 @@ index: false
 
 ## framework
 
-- [nest](https://nestjs.com) 👉🏻 [GitHub](https://github.com/nestjs/nest) [🇨🇳](https://docs.nestjs.cn)
+- [nest](https://nestjs.com) 👉🏻 [🐙](https://github.com/nestjs/nest) [🇨🇳](https://docs.nestjs.cn)
     > A progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications with TypeScript/JavaScript 🚀
     > 一个先进的 Node.js 框架，用于使用 TypeScript/JavaScript 构建高效、可伸缩、企业级的服务器端应用 🚀
-- [Egg](https://www.eggjs.org/) 👉🏻 [GitHub](https://github.com/eggjs/egg) [🇨🇳](https://www.eggjs.org/zh-CN)
+- [Egg](https://www.eggjs.org/) 👉🏻 [🐙](https://github.com/eggjs/egg) [🇨🇳](https://www.eggjs.org/zh-CN)
     > 🥚 Born to build better enterprise frameworks and apps with Node.js & Koa
+- [Axios](https://axios-http.com/) 👉🏻 [🐙](https://github.com/axios/axios) [🇨🇳](https://axios-http.com/zh)
+    > Promise based HTTP client for the browser and node.js

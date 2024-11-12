@@ -9,7 +9,7 @@ order: 3
 
 <!-- more -->
 
-## Reference
+## reference
 
 - [MongoDB Docs](https://docs.mongodb.com) : [MongoDB 中文手册](http://www.mongoing.com/docs)
 - [菜鸟教程 - MongoDB](http://www.runoob.com/mongodb/mongodb-tutorial.html)
@@ -28,7 +28,7 @@ order: 3
 | `table joins`(表连接)   | 不支持 
 | `primary key`(主键)     | `primary key`(`MongoDB`自动将`_id`字段设置为主键) 
 
-## Startup & Shutdown
+## usage
 
 ``` shell
 # 服务端启动

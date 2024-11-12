@@ -19,8 +19,13 @@ index: true
 ## Quant
 > 量化交易
 
-- [Qbot](https://github.com/UFund-Me/Qbot)
+- [OpenBB](https://openbb.co/) 👉🏻 [🐙](https://github.com/OpenBB-finance/OpenBB)
+    > Investment Research for Everyone, Everywhere.
+- [vnpy](https://www.vnpy.com/) 👉🏻 [🐙](https://github.com/vnpy/vnpy)
+    > 基于Python的开源量化交易平台开发框架
+- [Qbot](https://ufund-me.github.io/Qbot) 👉🏻 [🐙](https://github.com/UFund-Me/Qbot)
     > [🔥updating ...] 自动量化交易机器人 Qbot is an AI-oriented quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment.
+- [30天掌握量化交易](http://30daydo.com/) 👉🏻 [🐙](https://github.com/Rockyzsu/stock)
 
 ## Concept
 

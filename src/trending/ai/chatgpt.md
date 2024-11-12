@@ -41,8 +41,6 @@ index: true
     > A cross-platform ChatGPT/Gemini UI (Web / PWA / Linux / Win / MacOS). 一键拥有你自己的跨平台 ChatGPT/Gemini 应用。
 - [Chatbot UI](https://chatbotui.com) 👉🏻 [🐙](https://github.com/mckaywrigley/chatbot-ui)
     > The open-source AI chat app for everyone.
-- [ChatALL](https://github.com/sunner/ChatALL)
-    > Concurrently chat with ChatGPT, Bing Chat, bard, Alpaca, Vincuna, Claude, ChatGLM, MOSS, iFlytek Spark, ERNIE and more, discover the best answers
 - [Open-Assistant](https://github.com/LAION-AI/Open-Assistant)
     > OpenAssistant is a chat-based assistant that understands tasks, can interact with third-party systems, and retrieve information dynamically to do so.
 - [Chat2DB](https://github.com/alibaba/Chat2DB)
@@ -53,6 +51,8 @@ index: true
     > 🤖️ 桌面端AI语言练习应用
 - [myGPTReader](https://github.com/madawei2699/myGPTReader)
     > A community-driven way to read and chat with AI bots - powered by chatGPT.
+- [GeminiProChat](https://geminiprochat.com/) 👉🏻 [🐙](https://github.com/babaohuang/GeminiProChat)
+    > Minimal web UI for GeminiPro.
 
 ## Tutorial
 

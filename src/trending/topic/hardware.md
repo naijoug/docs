@@ -3,7 +3,6 @@ title: Hardware
 icon: hashtag
 
 index: true
-order: 5
 
 ---
 

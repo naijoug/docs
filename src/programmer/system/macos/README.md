@@ -83,6 +83,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > Swift Package Manager Tools -> SPMT -> Spearmint -> Mint! 🌱😄
 - [MWeb](http://zh.mweb.im) : Markdown 编辑器
     > Markdown writing, note taking and static blog generator App
+- [stats](https://github.com/exelban/stats) : 电脑状态监控器
+    > macOS system monitor in your menu bar
 - [VLC](https://github.com/videolan/vlc) : 视频播放器
     > VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
 - [ipatool](https://github.com/majd/ipatool) : 命令行搜索和下载 `AppStore` 中的 iOS 软件包 `ipa` 
@@ -91,8 +93,6 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > Download websites to your computer.
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) : 抓包神器
     > An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
-    >
-    > MITM : Man in the middle attack (中间人攻击)
 - [Charles(青花瓷)](http://www.charlesproxy.com/) : 网络代理调试工具
     > Web debugging proxy application. 
 - [Kap](https://github.com/wulkano/Kap) : 录屏软件
@@ -108,6 +108,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > An ultra-light MacOS utility that helps hide menu bar icons
 - [Dozer](https://github.com/Mortennn/Dozer) : 菜单栏 icon 管理
     > Hide menu bar icons on macOS
+- [BetterDisplay](https://betterdisplay.pro/) 👉🏻 [🐙](https://github.com/waydabber/BetterDisplay)
+    > Unlock your displays on your Mac! Flexible HiDPI scaling, XDR/HDR extra brightness, virtual screens, DDC control, extra dimming, PIP/streaming, EDID override and lots more!
 - [xScope](https://xscopeapp.com/) : 屏幕测量工具 
     > A powerful set of tools that are ideal for measuring, inspecting & testing on-screen graphics and layouts.
 - [spectacle](https://github.com/eczarny/spectacle) : 屏幕分屏

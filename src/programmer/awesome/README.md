@@ -9,6 +9,10 @@ icon: gift
 
 ## GitHub
 
+- [OpenAlternative](https://openalternative.co/) 👉🏻 [🐙](https://github.com/piotrkulpinski/openalternative)
+    > A community driven list of open source alternatives to proprietary software and applications.
+- [grep.app](https://grep.app/)
+    > Search across a half million git repos
 - [GitHub Hosts](https://github.com/ineo6/hosts/) : [GitLab](https://gitlab.com/ineo6/hosts/)
     > GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。
 - [gh-proxy](https://github.com/hunshcn/gh-proxy)
@@ -28,6 +32,8 @@ icon: gift
 
 - [awesome](https://github.com/sindresorhus/awesome)
     > 😎 Awesome lists about all kinds of interesting topics
+- [awesome-readme-generator-tools](https://github.com/DangJin/awesome-readme-generator-tools)
+    > 收录了一些可以快速创建出精美 `readme.md` 的工具集合
 - [awesome-cn](https://github.com/icopy-site/awesome-cn)
     > 超赞列表合集
 - [free-programming-books](https://github.com/EbookFoundation/free-programming-books)
@@ -50,6 +56,7 @@ icon: gift
     > A visual introduction to probability and statistics.
 - [RoadMap](https://github.com/xx-zh/xx-zh-roadmap)
 - [书栈网](https://www.bookstack.cn/)
+- [iBook](https://github.com/fancy88/iBook)
 - [BookStash](https://bookstash.io)
     > Top books recommended by famous folk, in 3m or less.
 - [给程序员的开源、免费图书集合](https://github.com/waylau/books-collection)
@@ -83,7 +90,7 @@ icon: gift
 
 ## Tool
 
-- [RSSHub](https://github.com/DIYgod/RSSHub)
+- [RSSHub](https://docs.rsshub.app) 👉🏻 [🐙](https://github.com/DIYgod/RSSHub)
     > 🍰 Everything is RSSible
 - [Fig](https://github.com/withfig/autocomplete) : 终端自动补全
     > Fig adds autocomplete to your terminal.
@@ -93,14 +100,16 @@ icon: gift
     > 📊 A minimalist, self-hosted WakaTime-compatible backend for coding statistics
 - [NeoVim](https://github.com/neovim/neovim)
     > Vim-fork focused on extensibility and usability
-- [TabNine](https://github.com/codota/TabNine) : AI 写代码
-    > AI Code Completions
+
 - [Copilot](https://github.com/features/copilot) : GitHub AI 程序员
     > Your AI pair programmer
-- [HTTPie](https://github.com/httpie/httpie)
-    > 🥧 HTTPie for Terminal — modern, user-friendly command-line HTTP client for the API era. JSON support, colors, sessions, downloads, plugins & more.
 - [Talk](https://github.com/vasanthv/talk) : [Talk](https://tlk.li)
     > Group video call for the web.
+
+## Notion
+
+- [Tweets Raw](https://cooperative-sea-1e8.notion.site/d52db741a85748aead2235e7376f1974)
+- [📝 生活与工作手记](https://houjoe.notion.site/16f1b09dbf9443e8993a66d49c6e720e)
 
 ## Animation
 
@@ -113,6 +122,17 @@ icon: gift
     > 程序员如何优雅的挣零花钱？
 - [DevMoneySharing](https://github.com/loonggg/DevMoneySharing)
     > 独立开发者赚钱经验分享
+    
+## IPTV
+
+- [awesome-iptv](https://github.com/iptv-org/awesome-iptv)
+    > A curated list of resources related to IPTV
+- [IPTV](https://iptv-org.github.io) 👉🏻 [🐙](https://github.com/iptv-org/iptv)
+    > Collection of publicly available IPTV channels from all over the world
+- [IPTV](https://github.com/joevess/IPTV)
+- [Live](https://github.com/YueChan/Live)
+- [awesome-iptv](https://github.com/DangJin/awesome-iptv)
+- [ChinaIPTV](https://github.com/hujingguang/ChinaIPTV)
     
 ## Funny
 

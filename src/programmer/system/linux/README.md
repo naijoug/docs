@@ -18,13 +18,14 @@ index: false
 
 - [snapcraft](https://snapcraft.io/) : The app store for Linux
 - [Linux 内核](https://www.kernel.org/)
+- [跟阿铭学 Linux（第2版）](http://www.apelearn.com/study_v2/)
 - [快乐的 Linux 命令行](https://github.com/billie66/TLCL)
 - [Linux 工具快速教程](https://github.com/me115/linuxtools_rst)
-- [Linux Command](https://github.com/jaywcjlove/linux-command)
-- [跟阿铭学 Linux（第2版）](http://www.apelearn.com/study_v2/)
+- [Linux Command](https://git.io/linux) 👉🏻 [🐙](https://github.com/jaywcjlove/linux-command)
+    > Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。
 - [cmd-wrapped](https://github.com/YiNNx/cmd-wrapped)
-    > Find out what the past year looks like in command line!
-
+    > 👩‍💻 A CLI Tool for Command Line Insights
+    
 ## Linux Tools
 
 - [NetData](https://github.com/netdata/netdata)

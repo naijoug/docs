@@ -3,7 +3,6 @@ title: OpenCV
 icon: hashtag
 
 index: true
-order: 1
 
 ---
 

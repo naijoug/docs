@@ -9,14 +9,14 @@ order: 7
 
 <!-- more -->
 
-## Reference
+## reference
 
 - [Linux Oracle服务启动&停止脚本与开机自启动](http://www.cnblogs.com/mchina/archive/2012/11/27/2782993.html)
 - [oracle 启动监听提示 ：The listener supports no services](http://blog.itpub.net/24162410/viewspace-1814344/)
 
-## Usage
+## ssage
 
-``` shell 
+```shell 
 $ su - oracle           # 切换到 oracle 用户
 $ sqlplus / as sysdba   # 启动 & 作为 sysdba 用户登录
 # 或者
@@ -28,7 +28,7 @@ $ lsnrctl start         # 启用监听(启动数据库之后)
 $ lsnrctl stop          # 停止监听
 ```
 
-``` shell
+```shell
 > startup;              # 启动Oracle
 > shutdown normal;      # 正常方式关闭数据库
 > shutdown immediate;   # 立即方式关闭数据库
@@ -86,7 +86,7 @@ $ lsnrctl stop          # 停止监听
  );
 ```
 
-## Solutions
+## solutions
 
 - Oracle命令行删除键变为`^H`
 

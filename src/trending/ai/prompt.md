@@ -10,6 +10,8 @@ index: true
 
 - [🧠 Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
     > This repo includes ChatGPT prompt curation to use ChatGPT better.
+- [🧠 ChatGPT 中文调教指南](https://chat.aimakex.com) 👉🏻 [🐙](https://github.com/PlexPt/awesome-chatgpt-prompts-zh)
+    > ChatGPT 中文调教指南。各种场景使用指南。学习怎么让它听你的话。
 - [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
     > 🐙 Guides, papers, lecture, notebooks and resources for prompt engineering
 - [⚡️AI Short](https://github.com/rockbenben/ChatGPT-Shortcut)
@@ -26,18 +28,3 @@ index: true
 ------
 
 - [2023-07-18 如何写出高质量的 Prompt？](https://baoyu.io/blog/prompt-engineering/how-to-write-high-quality-prompt)
-
-## [GPT Engineer](https://github.com/AntonOsika/gpt-engineer)
-> Specify what you want it to build, the AI asks for clarification, and then builds it.
-
-```shell
-# install 
-$ pip install gpt-engineer
-
-# 新建项目文件夹
-$ mkdir project_folder
-# 创建项目 prompt 项目指令
-$ vim project_folder/prompt
-# 运行 gpt-engineer
-$ gpt-engineer project_folder/
-```

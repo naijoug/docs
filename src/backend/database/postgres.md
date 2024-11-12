@@ -9,9 +9,10 @@ order: 6
 
 <!-- more -->
 
-## Reference
+## reference
 
-- [PostgresApp](http://postgresapp.com)
+- [PostgresApp](http://postgresapp.com) 👉🏻 [🐙](https://github.com/PostgresApp/PostgresApp)
+    > The easiest way to get started with PostgreSQL on the Mac
 
 
 

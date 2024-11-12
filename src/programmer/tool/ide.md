@@ -11,6 +11,21 @@ order: 2
 
 <!-- more -->
 
+## reference
+
+- [zed](https://zed.dev/) 👉🏻 [🐙](https://github.com/zed-industries/zed)
+    > Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+    
+## Font
+
+- [FiraCode](https://github.com/tonsky/FiraCode)
+    > Free monospaced font with programming ligatures
+
+```shell
+# install
+brew install --cask font-fira-code
+```
+
 ## Xcode
 
 - Xcode Snippets 占位符 :  `<# summary #>`
@@ -31,6 +46,24 @@ order: 2
   | `Command + Option + Shift + ->`   | 全局展开代码库 
   | `Command + Ctrl + Shift + <-`     | 折叠注释块 
   | `Command + Ctrl + Shift + ->`     | 展开注释块 
+
+## AndroidStudio
+
+- 忽略对某个特定单词的拼写检查(`Typo`)
+
+  * 在项目的根目录下建立一个名为 `.idea/dictionaries` 的目录（如果不存在）
+  * 创建一个以字典的 `xml` 文件，比如 `dict.xml`
+  * 将想要忽略检测的单词的加入字典单词 `words` 中
+
+    ```xml
+    <component name="ProjectDictionaryState">
+      <dictionary name="dict">
+        <words>
+          <w>ogo</w>
+        </words>
+      </dictionary>
+    </component>
+    ```
 
 ## JetBrains - IDEA
 

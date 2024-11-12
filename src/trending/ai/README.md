@@ -19,6 +19,7 @@ index: false
 
 ## reference
 
+- [Datawhale](https://datawhale.cn)
 - [AI tools](https://dang.ai)
 - [AI Graveyard](https://dang.ai/ai-graveyard)
     > The wasteland of discontinued and dead AI projects.
@@ -26,6 +27,11 @@ index: false
 - [AI 工具集](https://ai-bot.cn/)
 - [awesome-ai-painting](https://github.com/hua1995116/awesome-ai-painting)
     > AI绘画资料合集（包含国内外可使用平台、使用教程、参数教程、部署教程、业界新闻等等） stable diffusion tutorial、disco diffusion tutorial、 AI Platform
+    
+------
+    
+- [💯 Pinokio](https://pinokio.computer) 👉🏻 [🐙](https://github.com/pinokiocomputer/pinokio)
+    > Pinokio is a browser that lets you install, run, and programmatically control ANY application, automatically.
 - [最懂程序员的新一代 AI 搜索引擎](https://devv.ai) 👉🏻 [🐙](https://github.com/devv-ai/devv)
 
 ## concept
@@ -76,8 +82,10 @@ index: false
 - `CNN` : 卷积神经网络
     > 特色 : 处理网格数据(如: 图像处理)
 
-## `Streamlit` vs `Gradio`
+## GUI
 
+- [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
+    > The most powerful and modular stable diffusion GUI, api and backend with a graph/nodes interface.
 - [Streamlit](https://github.com/streamlit/streamlit)
     > Streamlit — A faster way to build and share data apps.
 - [Gradio](https://github.com/gradio-app/gradio)
@@ -105,6 +113,7 @@ index: false
     > Integrate cutting-edge LLM technology quickly and easily into your apps
 - [guidance](https://github.com/microsoft/guidance)
     > A guidance language for controlling large language models. 
+
 
 ## tutorial
 
