@@ -18,6 +18,12 @@ index: true
     > InvokeAI is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The solution offers an industry leading WebUI, supports terminal use through a CLI, and serves as the foundation for multiple commercial products.
 - [🌈通往 AGC 之路](https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e)
 
+------
+
+- [Civitai](https://civitai.com/) : 
+- [LibLib](https://www.liblib.art/) : 中国最大的 AI 生图平台
+- [Shakker](https://www.shakker.ai/)
+
 ## video
 
 - [MimicMotion](https://tencent.github.io/MimicMotion) 👉🏻 [🐙](https://github.com/tencent/MimicMotion) 

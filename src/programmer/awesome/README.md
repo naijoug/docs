@@ -27,6 +27,8 @@ icon: gift
     > a Chinese ebook on how to build a good project on Github. Explore the users' behavior. Find some thing interest.
 - [Hacker Laws](https://github.com/dwmkerr/hacker-laws)
     > Laws, Theories, Principles and Patterns that developers will find useful.
+- [DevDocs](https://devdocs.io/) 👉🏻 [🐙](https://github.com/freeCodeCamp/devdocs)
+    > API Documentation Browser
 
 ## Awesome
 

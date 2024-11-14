@@ -8,6 +8,8 @@ index: true
 
 ## reference
 
+- [Learn Prompt](https://www.learnprompt.pro/) 👉🏻 [🐙](https://github.com/LearnPrompt/LearnPrompt)
+    > 永久免费开源的 AIGC 课程, 目前已支持Prompt Engineering, ChatGPT, Midjourney, Runway, Stable Diffusion, AI数字人，AI声音&音乐，开源大模型
 - [🧠 Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
     > This repo includes ChatGPT prompt curation to use ChatGPT better.
 - [🧠 ChatGPT 中文调教指南](https://chat.aimakex.com) 👉🏻 [🐙](https://github.com/PlexPt/awesome-chatgpt-prompts-zh)
@@ -27,4 +29,6 @@ index: true
 
 ------
 
-- [2023-07-18 如何写出高质量的 Prompt？](https://baoyu.io/blog/prompt-engineering/how-to-write-high-quality-prompt)
+- []()[2024-10-24 v0.dev prompt 结构详细解释](https://baoyu.io/blog/v0-dev-prompt-structure-explanation)
+- []()[2024-10-23 如何写好提示词？](https://baoyu.io/blog/how-to-write-good-prompt)
+- []()[2023-07-18 如何写出高质量的 Prompt？](https://baoyu.io/blog/prompt-engineering/how-to-write-high-quality-prompt)
