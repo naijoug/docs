@@ -22,5 +22,9 @@ index: true
 
 ------
 
+- [The Way To Upgrade](https://liukay.github.io/guide)
+    > 程序员练级攻略
+- [ProgrammersLevelUp](https://github.com/leesper/ProgrammersLevelUp)
+    > 用20年时间跟着皓叔刷“程序员练级攻略”
 - [逆天改命——程序员成神之路](https://github.com/harvic/FightingCoder?tab=readme-ov-file)
     > 写给程序员的电子书《逆天改命——启舰的100条程序员人生建议》

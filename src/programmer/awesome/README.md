@@ -9,6 +9,8 @@ icon: gift
 
 ## GitHub
 
+- [DevDocs](https://devdocs.io/) 👉🏻 [🐙](https://github.com/freeCodeCamp/devdocs)
+    > API Documentation Browser
 - [OpenAlternative](https://openalternative.co/) 👉🏻 [🐙](https://github.com/piotrkulpinski/openalternative)
     > A community driven list of open source alternatives to proprietary software and applications.
 - [grep.app](https://grep.app/)
@@ -27,8 +29,6 @@ icon: gift
     > a Chinese ebook on how to build a good project on Github. Explore the users' behavior. Find some thing interest.
 - [Hacker Laws](https://github.com/dwmkerr/hacker-laws)
     > Laws, Theories, Principles and Patterns that developers will find useful.
-- [DevDocs](https://devdocs.io/) 👉🏻 [🐙](https://github.com/freeCodeCamp/devdocs)
-    > API Documentation Browser
 
 ## Awesome
 
@@ -71,6 +71,8 @@ icon: gift
 
 ## Tutorials
 
+- [exercism](https://exercism.org) 👉🏻 [🐙](https://github.com/exercism/exercism)
+    > Crowd-sourced code mentorship. Practice having thoughtful conversations about code.
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
     > A complete computer science study plan to become a software engineer.
 - [Tutorials for Web Developers](https://github.com/StevenSLXie/Tutorials-for-Web-Developers)

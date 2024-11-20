@@ -30,6 +30,15 @@ order: 8
 
 - [Analysing Assets.car file in iOS](https://stackoverflow.com/questions/22630418/analysing-assets-car-file-in-ios)
 
+## 热修复
+
+- [Mango](https://github.com/YPLiang19/Mango)
+    > MangoFix is a DSL which syntax is very similar to Objective-C，MangoFix is also an iOS App hotfix SDK. You can use MangoFix method replace any Objective-C or Swift method.
+
+------ 
+
+- [2019-07-12 iOS热修复MangoFix原理分析](https://juejin.cn/post/6844903888156360712)
+
 ## Jailbreak
 > 越狱
 
@@ -48,7 +57,9 @@ order: 8
     * Taig : 太极
     * Yalu : 鸭绿江
 
-### App Store
+------
+
+<!-- App Store -->
 
 - [Cydia Impactor](http://www.cydiaimpactor.com/) 
 

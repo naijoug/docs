@@ -19,6 +19,7 @@ order: 3
 - [Git Cheat Sheet 中文版](https://github.com/flyhigher139/Git-Cheat-Sheet)
 - [Learn Git Branching](https://oschina.gitee.io/learn-git-branching/)
 - [Gerrit](https://www.gerritcodereview.com/) : A git serve for code review.
+- [First Aid Git](https://firstaidgit.io) 👉🏻 [🐙](https://github.com/magalhini/firstaidgit)
 
 ## repositority
 

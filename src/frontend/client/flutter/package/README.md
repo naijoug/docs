@@ -31,4 +31,5 @@ index: false
 
 <!-- articles -->
 
+- []()[2024-07-25 Flutter大型项目架构：私有组件包管理](https://www.nnxkcloud.com/2024/07/25/flutter%E5%A4%A7%E5%9E%8B%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%EF%BC%9A%E7%A7%81%E6%9C%89%E7%BB%84%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/)
 - []()[2024-03-01 对于 Flutter 快速开发框架的思考](https://juejin.cn/post/7340898858556964864)

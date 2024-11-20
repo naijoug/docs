@@ -8,6 +8,8 @@ index: true
 
 ## reference
 
+- [UIVERSE](https://uiverse.io/) 👉🏻 [🐙](https://github.com/uiverse-io/galaxy)
+    > The largest Open-Source UI Library! Community-made and free to use. Made with either CSS or Tailwind.
 - [ABTest Design](https://abtest.design/)
     > Curated collection of A/B test results from best-in-class apps
 - [Airbnb Lottie Files](https://lottiefiles.com/)
