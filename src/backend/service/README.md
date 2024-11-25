@@ -47,3 +47,8 @@ index: false
 
 - OAuth : 一种开放授权框架，为用户资源的授权定义了一个安全、开放及简单的标准，第三方无需知道用户的账号及密码，就可获取到用户的授权信息，并且这是安全的。
 - JWT : 一种认证协议
+
+## Microservices - "微服务"
+
+- [2024-10-29 微服务的本质不是模块的拆分，而是组织架构的拆分](https://baoyu.io/blog/microservices-organizational-structure-split)
+- [2023-01-03 You Want Modules, Not Microservices](https://blogs.newardassociates.com/blog/2023/you-want-modules-not-microservices.html)

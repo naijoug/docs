@@ -19,6 +19,8 @@ index: false
 
 ## reference
 
+- [高军 AI 日报](https://daily.gojun.me) 👉🏻 [🐙](https://github.com/Freelander/AI-Daily)
+    > 《高军 AI 日报》： 每天花 1 分钟时间，获取精选的前沿 AI 信息。内容涵盖但不限于 前沿 AI 资讯、AI 工具、AI 绘画、开源项目和学习教程 等等。
 - [Datawhale](https://datawhale.cn)
 - [AI tools](https://dang.ai)
 - [AI Graveyard](https://dang.ai/ai-graveyard)

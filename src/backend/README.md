@@ -16,6 +16,8 @@ index: false
 
 ## reference
 
+- [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+    > Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.
 - [互联网公司经典技术架构](https://github.com/davideuler/architecture.of.internet-product)
 - [深入架构原理与实践](https://github.com/isno/theByteBook)
     > 深入讲解内核网络、Kubernetes、ServiceMesh、容器等云原生相关技术，大厂人都在看的书籍。

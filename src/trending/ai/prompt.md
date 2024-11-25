@@ -29,6 +29,11 @@ index: true
 
 ------
 
+- [v0prompt](https://github.com/sharkqwy/v0prompt)
+    > full prompt of the new v0
+
+------
+
 - []()[2024-10-24 v0.dev prompt 结构详细解释](https://baoyu.io/blog/v0-dev-prompt-structure-explanation)
 - []()[2024-10-23 如何写好提示词？](https://baoyu.io/blog/how-to-write-good-prompt)
 - []()[2023-07-18 如何写出高质量的 Prompt？](https://baoyu.io/blog/prompt-engineering/how-to-write-high-quality-prompt)

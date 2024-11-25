@@ -23,6 +23,8 @@ index: false
 
 ------
 
+- [🗂 Front-End Checklist](https://frontendchecklist.io/) 👉🏻 [🐙](https://github.com/thedaviddias/Front-End-Checklist)
+    > 🗂 The perfect Front-End Checklist for modern websites and meticulous developers
 - [印记中文](https://docschina.org) 👉🏻 [🐙](https://github.com/docschina)
     > 深入挖掘国外前端新领域，为中国 Web 前端开发人员提供优质文档！
 - [Front-End-Develop-Guide](https://github.com/icepy/Front-End-Develop-Guide)

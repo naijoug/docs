@@ -34,6 +34,8 @@ icon: gift
 
 - [awesome](https://github.com/sindresorhus/awesome)
     > 😎 Awesome lists about all kinds of interesting topics
+- [Quick Reference](https://wangchujiang.com/reference/) 👉🏻 [🐙](https://github.com/jaywcjlove/reference)
+    > 为开发人员分享快速参考备忘清单(速查表)
 - [awesome-readme-generator-tools](https://github.com/DangJin/awesome-readme-generator-tools)
     > 收录了一些可以快速创建出精美 `readme.md` 的工具集合
 - [awesome-cn](https://github.com/icopy-site/awesome-cn)
@@ -61,6 +63,7 @@ icon: gift
 - [iBook](https://github.com/fancy88/iBook)
 - [BookStash](https://bookstash.io)
     > Top books recommended by famous folk, in 3m or less.
+- [books](https://github.com/programthink/books)
 - [给程序员的开源、免费图书集合](https://github.com/waylau/books-collection)
 - [免费的编程中文书籍索引](https://github.com/justjavac/free-programming-books-zh_CN)
 - [awesome-cs-books](https://github.com/imarvinle/awesome-cs-books)

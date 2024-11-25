@@ -17,6 +17,11 @@ index: false
 - [Flutter](https://flutter.dev) 👉🏻 [🇨🇳](https://flutter.cn) [🐙](https://github.com/flutter/flutter) 
     > Flutter makes it easy and fast to build beautiful apps for mobile and beyond
       Flutter 让构建漂亮的手机和其它应用程序变得简单而快速。
+- [Flock](https://getflocked.dev/) 👉🏻 [🐙](https://github.com/join-the-flock/flock)
+    > Flutter, by the community, for the community
+
+------
+
 - [Flutter Codelabs](https://codelabs.developers.google.com/?product=flutter) 👉🏻 [🐙](https://github.com/flutter/codelabs)
     > Flutter codelab examples
 - [Flutter Developer](https://roadmap.sh/flutter)

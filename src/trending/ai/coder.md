@@ -8,8 +8,6 @@ index: true
 
 ## reference
 
-- [Cursor](https://www.cursor.com/) 👉🏻 [🐙](https://github.com/getcursor/cursor)
-    > An AI-powered code editor based on VSCode 🤖
 - [Github - Copilot](https://github.com/features/copilot)
     > Your AI pair programmer
 - [CopilotForXcode](https://copilotforxcode.intii.com/) 👉🏻 [🐙](https://github.com/intitni/CopilotForXcode)
@@ -33,3 +31,12 @@ index: true
     > Sweep: AI-powered Junior Developer for small features and bug fixes.
 - [TabNine](https://www.tabnine.com/) 👉🏻 [🐙](https://github.com/codota/TabNine)
     > AI Code Completions
+    
+------
+    
+## [Cursor](https://www.cursor.com/) 👉🏻 [🐙](https://github.com/getcursor/cursor)
+    > An AI-powered code editor based on VSCode 🤖
+    
+- [cursor.directory](https://cursor.directory)
+- [Cursor Hub](https://cursorhub.co)
+- [Cursor 101](https://cursor101.com)

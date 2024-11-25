@@ -26,6 +26,8 @@ index: true
 - [Qbot](https://ufund-me.github.io/Qbot) 👉🏻 [🐙](https://github.com/UFund-Me/Qbot)
     > [🔥updating ...] 自动量化交易机器人 Qbot is an AI-oriented quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment.
 - [30天掌握量化交易](http://30daydo.com/) 👉🏻 [🐙](https://github.com/Rockyzsu/stock)
+- [Freqtrade](https://www.freqtrade.io) 👉🏻 [🐙](https://github.com/freqtrade/freqtrade)
+    > Free, open source crypto trading bot
 
 ## Concept
 

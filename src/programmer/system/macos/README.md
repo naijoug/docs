@@ -122,6 +122,9 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > Translations editor for Mac, Windows and Unix
 - [RustDesk](https://github.com/rustdesk/rustdesk)
     > An open-source remote desktop, and alternative to TeamViewer.
+- [RightMenu Master](https://wangchujiang.com/rightmenu-master/) 👉🏻 [🐙](https://github.com/jaywcjlove/rightmenu-master)
+    > An exceptional Finder right-click menu enhancement tool that makes your right-click menu more powerful.
+
 
 ## Tips
 

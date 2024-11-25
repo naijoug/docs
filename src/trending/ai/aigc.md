@@ -30,13 +30,6 @@ index: true
     > High-Quality Human Motion Video Generation with Confidence-aware Pose Guidance
 - [ComfyUI-MimicMotion](https://github.com/AIFSH/ComfyUI-MimicMotion)
     > a comfyui custom node for MimicMotion
-    
-## ComfyUI
-
-- [ComfyUI](https://www.comfy.org/) 👉🏻 [🐙](https://github.com/comfyanonymous/ComfyUI)
-    > The most powerful and modular stable diffusion GUI, api and backend with a graph/nodes interface.
-- [ComfyUI-ZHO-Chinese](https://github.com/ZHO-ZHO-ZHO/ComfyUI-ZHO-Chinese)    
-    > 简体中文版 ComfyUI
 
 ## Product
 
@@ -48,3 +41,24 @@ index: true
 - [Pagen](https://pagen.so/) 👉🏻 [🐙](https://github.com/all-in-aigc/pagen-ai-landing-page-template)
     > AI Landing Page Template created by Pagen AI
 - [AI 论文标题生成器](https://researchtitle.textgen.net)
+- [AI Logo Generator](https://www.logo-creator.io/) 👉🏻 [🐙](https://github.com/Nutlope/logocreator)
+    > A free + OSS logo generator powered by Flux on Together AI
+- [VideoCaptioner](https://github.com/WEIFENG2333/VideoCaptioner)
+    > 🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手，无需GPU一键高质量字幕视频合成！支持生成、断句、优化、翻译全流程。让视频字幕制作简单高效！
+    
+## NSFW
+> `NSFW`: `Not Safe For Work` 的缩写，意思是“不适合在工作场合查看”。这个术语通常用来标记那些包含成人内容、色情内容、暴力或其他可能在工作场所不适宜展示的内容。
+
+- [NSFW Detector](https://github.com/tmplink/nsfw_detector)
+    > Solution for checking file if contain NSFW content.
+
+## ComfyUI
+
+- [ComfyUI](https://www.comfy.org/) 👉🏻 [🐙](https://github.com/comfyanonymous/ComfyUI)
+    > The most powerful and modular stable diffusion GUI, api and backend with a graph/nodes interface.
+- [ComfyUI-ZHO-Chinese](https://github.com/ZHO-ZHO-ZHO/ComfyUI-ZHO-Chinese)    
+    > 简体中文版 ComfyUI
+- [ComfyUI EcomID](https://github.com/alimama-creative/SDXL_EcomID_ComfyUI)
+    > Native SDXL-EcomID support for ComfyUI.
+- [ComfyUI-AdvancedLivePortrait](https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait)
+    > 

@@ -21,6 +21,8 @@ order: 1
 
 - [MWeb](http://zh.mweb.im/)
 - [MarkdownPad](http://markdownpad.com)
+- [MarkText](https://www.marktext.cc/) 👉🏻 [🐙](https://github.com/marktext/marktext)
+    > 📝 A simple and elegant markdown editor, available for Linux, macOS and Windows.
 - [Milkdown](https://milkdown.dev/) 👉🏻 [🐙](https://github.com/Milkdown/milkdown)
     > 🍼 Plugin driven WYSIWYG markdown editor framework.
 - [MacDown][https://macdown.uranusjr.com/] 👉🏻 [🐙](https://github.com/MacDownApp/macdown)
