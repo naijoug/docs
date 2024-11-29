@@ -23,9 +23,12 @@ index: true
 - [Civitai](https://civitai.com/) : 
 - [LibLib](https://www.liblib.art/) : 中国最大的 AI 生图平台
 - [Shakker](https://www.shakker.ai/)
+- [OpenArt](https://openart.ai/workflows/home)
 
 ## video
 
+- [MotionGPT](https://motion-gpt.github.io/) 👉🏻 [🐙](https://github.com/OpenMotionLab/MotionGPT)
+    > [NeurIPS 2023] MotionGPT: Human Motion as a Foreign Language, a unified motion-language generation model using LLMs
 - [MimicMotion](https://tencent.github.io/MimicMotion) 👉🏻 [🐙](https://github.com/tencent/MimicMotion) 
     > High-Quality Human Motion Video Generation with Confidence-aware Pose Guidance
 - [ComfyUI-MimicMotion](https://github.com/AIFSH/ComfyUI-MimicMotion)
@@ -61,4 +64,3 @@ index: true
 - [ComfyUI EcomID](https://github.com/alimama-creative/SDXL_EcomID_ComfyUI)
     > Native SDXL-EcomID support for ComfyUI.
 - [ComfyUI-AdvancedLivePortrait](https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait)
-    > 

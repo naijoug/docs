@@ -16,6 +16,7 @@ index: false
 - [NLP](nlp.md)
 - [LLMs](llms.md)
 - [AIGC](aigc.md)
+- [Wolfram](https://www.wolfram.com)
 
 ## reference
 

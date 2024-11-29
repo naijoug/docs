@@ -14,7 +14,9 @@ index: true
 
 ## open source
 
-- [Screenshot to Code](https://screenshottocode.com/) 👉🏻 [🐙](https://github.com/abi/screenshot-to-code)
+- [AppAgent](https://appagent-official.github.io) 👉🏻 [🐙](https://github.com/mnotgod96/AppAgent)
+    > AppAgent: Multimodal Agents as Smartphone Users, an LLM-based multimodal agent framework designed to operate smartphone apps.
+- [Screenshot to Code](https://screenshottocode.com) 👉🏻 [🐙](https://github.com/abi/screenshot-to-code)
     > Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)
 
 

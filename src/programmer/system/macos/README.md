@@ -124,6 +124,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > An open-source remote desktop, and alternative to TeamViewer.
 - [RightMenu Master](https://wangchujiang.com/rightmenu-master/) 👉🏻 [🐙](https://github.com/jaywcjlove/rightmenu-master)
     > An exceptional Finder right-click menu enhancement tool that makes your right-click menu more powerful.
+- [koodo-reader](https://www.koodoreader.com) 👉🏻 [🐙](https://github.com/koodo-reader/koodo-reader)
+    > A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux and Web
 
 
 ## Tips

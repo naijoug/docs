@@ -97,6 +97,10 @@ icon: gift
 
 ## Tool
 
+- [logseq](https://logseq.com/) 👉🏻 [🐙](https://github.com/logseq/logseq)
+    > A privacy-first, open-source platform for knowledge management and collaboration. 
+- [Follow](https://follow.is/) 👉🏻 [🐙](https://github.com/RSSNext/Follow)
+    > 🧡 Follow your favorites in one inbox
 - [RSSHub](https://docs.rsshub.app) 👉🏻 [🐙](https://github.com/DIYgod/RSSHub)
     > 🍰 Everything is RSSible
 - [Fig](https://github.com/withfig/autocomplete) : 终端自动补全
@@ -107,9 +111,6 @@ icon: gift
     > 📊 A minimalist, self-hosted WakaTime-compatible backend for coding statistics
 - [NeoVim](https://github.com/neovim/neovim)
     > Vim-fork focused on extensibility and usability
-
-- [Copilot](https://github.com/features/copilot) : GitHub AI 程序员
-    > Your AI pair programmer
 - [Talk](https://github.com/vasanthv/talk) : [Talk](https://tlk.li)
     > Group video call for the web.
 
