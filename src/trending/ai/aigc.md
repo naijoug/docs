@@ -24,6 +24,7 @@ index: true
 - [LibLib](https://www.liblib.art/) : 中国最大的 AI 生图平台
 - [Shakker](https://www.shakker.ai/)
 - [OpenArt](https://openart.ai/workflows/home)
+- [Recraft](https://www.recraft.ai)
 
 ## video
 

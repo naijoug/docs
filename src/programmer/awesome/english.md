@@ -20,7 +20,12 @@ index: true
     > 中国程序员容易发音错误的单词
 - [english-note](https://github.com/hzpt-inet-club/english-note)
     > 从0开始学习英语语法
-- [Qwerty Learner](https://github.com/Kaiyiwing/qwerty-learner)
-    > 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
 - [Phraseum](https://www.phraseum.com/)
     > Memorize real English phrases and chunks of language, make your way to becoming fluent
+    
+------
+
+- [Qwerty Learner](https://qwerty.kaiyi.cool/) 👉🏻 [🐙](https://github.com/Kaiyiwing/qwerty-learner)
+    > 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
+- [句乐部](https://docs.julebu.co/o) 👉🏻 [🐙](https://github.com/cuixueshe/earthworm)
+    > Learning English through the method of constructing sentences with conjunctions

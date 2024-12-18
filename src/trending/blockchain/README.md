@@ -28,6 +28,7 @@ icon: boxes-stacked
 ------
 
 - [2023-04-06 最全测试网水龙头合集](https://mirror.xyz/0x1CB0166F761B7FeD170Fb00e7270Eb401dE34ee8/s6Spy14KcsssCZA-Vl4SMVjXQkWthODDJhSWBqbkFrM)
+- [2022-06-07 共识算法对比：PoW vs PoS vs PoH](https://zhuanlan.zhihu.com/p/525162040)
 
 ## Website
 
