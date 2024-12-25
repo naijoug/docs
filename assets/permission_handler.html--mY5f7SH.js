@@ -1,0 +1,1 @@
+import{_ as r}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c as s,b as e}from"./app-NPdVLJBN.js";const t={},a=e("h1",{id:"",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#","aria-hidden":"true"},"#")],-1),n=[a];function c(_,i){return o(),s("div",null,n)}const l=r(t,[["render",c],["__file","permission_handler.html.vue"]]);export{l as default};
