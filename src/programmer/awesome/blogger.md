@@ -61,6 +61,12 @@ index: true
 
 - [xLog](https://xlog.app)
 - [OpenWrite](https://openwrite.cn/)
+- [Hexo](https://hexo.io/)
+    > A fast, simple & powerful blog framework
+- [Hugo](https://gohugo.io/) 👉🏻 [🐙](https://gohugo.io/)
+    > The world’s fastest framework for building websites
+- [Typecho](http://typecho.org/)
+    > A PHP Blogging Platform. Simple and Powerful.
 - [NotionNext](https://www.tangly1024.com/) 👉🏻 [🐙](https://github.com/tangly1024/NotionNext)
     > 使用 NextJS + Notion API 实现的，支持多种部署方案的静态博客，无需服务器、零门槛搭建网站，为Notion和所有创作者设计。
     > A static blog built with NextJS and Notion API, supporting multiple deployment options. No server required, zero threshold to set up a website. Designed for Notion and all creators.
@@ -71,22 +77,8 @@ index: true
 - [Publish](https://github.com/johnsundell/publish)
     > A static site generator for Swift developers
     * - [用Publish创建博客](https://zhuanlan.zhihu.com/p/348232897)
-- [Hexo](https://hexo.io/)
-    > A fast, simple & powerful blog framework
-- [Hugo](https://gohugo.io/)
-    > The world’s fastest framework for building websites
-- [Typecho](http://typecho.org/)
-    > A PHP Blogging Platform. Simple and Powerful.
 - [Symphony](https://github.com/88250/symphony)
     > 🎶 一款用 Java 实现的现代化社区（论坛/问答/BBS/社交网络/博客）系统平台。A modern community (forum/Q&A/BBS/SNS/blog) system platform implemented in Java.
 - [blog](https://github.com/songquanpeng/blog)
     > 基于 Node.js 的个人博客系统. Node.js based blog system.
 
-------
-
-- [VuePress](https://vuepress.vuejs.org) 👉🏻 [GitHub](https://github.com/vuejs/vuepress)
-    > 📝 Minimalistic Vue-powered static site generator
-- [Docusaurus](https://docusaurus.io) 👉🏻 [GitHub](https://github.com/facebook/docusaurus)
-    > Easy to maintain open source documentation websites.
-- [docsifyjs](https://docsify.js.org) 👉🏻 [GitHub](https://github.com/docsifyjs/docsify)
-    > 🃏 A magical documentation site generator.
