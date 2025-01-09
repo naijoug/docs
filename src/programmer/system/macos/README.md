@@ -126,6 +126,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > An exceptional Finder right-click menu enhancement tool that makes your right-click menu more powerful.
 - [koodo-reader](https://www.koodoreader.com) 👉🏻 [🐙](https://github.com/koodo-reader/koodo-reader)
     > A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux and Web
+- [Ghostty](https://ghostty.org/) 👉🏻 [🐙](https://github.com/ghostty-org/ghostty)
+    > 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
 
 
 ## Tips
