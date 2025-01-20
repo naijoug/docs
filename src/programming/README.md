@@ -15,6 +15,7 @@ index: false
 
 ## reference
 
+- [Programming-Idioms](https://programming-idioms.org/)
 - [Learn X in Y minutes](https://learnxinyminutes.com/)
 - [📚 Go语言圣经中文版](https://github.com/golang-china/gopl-zh)
 

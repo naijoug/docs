@@ -11,6 +11,8 @@ icon: hashtag
 
 - [OpenZeppelin](https://www.openzeppelin.com)
     > Securely Code, Depoly and Operate your Smart Contracts.
+- [Amphitheatre](https://amphitheatre.app/zh/)
+    > Instantly spin up fresh, automated dev environments in the cloud and start developing within seconds.
 
 ## Smart Contract
 

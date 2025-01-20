@@ -49,7 +49,10 @@ index: false
 
 ## website
 
-- [Similarweb](https://www.similarweb.com/zh/)
+- [WebCurate](https://webcurate.co/)
+    > Like App Store, But for Websites
+- [Similarweb](https://www.similarweb.com)
+    > Effortlessly Analyze Your Competitive Landscape
 
 ------
 

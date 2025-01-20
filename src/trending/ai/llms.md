@@ -69,6 +69,7 @@ index: true
 
 ## Other
 
+- [DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3)
 - [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
     > ChatGLM-6B: An Open Bilingual Dialogue Language Model | 开源双语对话语言模型
 - [Luotuo-Chinese-LLM](https://github.com/LC1332/Luotuo-Chinese-LLM)

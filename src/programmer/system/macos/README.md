@@ -128,6 +128,10 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux and Web
 - [Ghostty](https://ghostty.org/) 👉🏻 [🐙](https://github.com/ghostty-org/ghostty)
     > 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
+- [wave](https://www.waveterm.dev/) 👉🏻 [🐙](https://github.com/wavetermdev/waveterm)
+    > An open-source, cross-platform terminal for seamless workflows
+- [Flameshot](https://flameshot.org/) 👉🏻 [🐙](https://github.com/flameshot-org/flameshot)
+    > Powerful yet simple to use screenshot software 🖥️ 📸
 
 
 ## Tips

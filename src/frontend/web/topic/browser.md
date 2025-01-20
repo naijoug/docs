@@ -27,3 +27,11 @@ index: false
     * Web 1.0
     * Web 2.0
     * Web 3.0
+
+## extensions
+
+- [Chrome Extensions](https://developer.chrome.com/docs/extensions)
+- [WXT](https://wxt.dev/) 👉🏻 [🐙](https://github.com/wxt-dev/wxt)
+    > ⚡ Next-gen Web Extension Framework
+- [Plasmo](https://www.plasmo.com/) 👉🏻 [🐙](https://github.com/PlasmoHQ/plasmo)
+    > 🧩 The Browser Extension Framework
