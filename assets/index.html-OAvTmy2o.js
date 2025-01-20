@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c as t,a as c,b as n}from"./app-4bdrJIZd.js";const r={},a=n("p",null,"真正意义上的主动读书，应该是上大学的时候将《明朝那些事》大合集读完，算是我的历史启蒙书。",-1);function s(_,l){return o(),t("div",null,[c(" more "),a])}const i=e(r,[["render",s],["__file","index.html.vue"]]);export{i as default};
