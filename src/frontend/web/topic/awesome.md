@@ -43,9 +43,6 @@ index: true
 
 ## framework
 
-- [Strapi](https://strapi.io) 👉🏻 [🐙](https://github.com/strapi/strapi)
-    > 🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript/TypeScript, fully customizable and developer-first.
-    > 🚀 Strapi 是领先的开源无头 CMS。 它是 100％ 的 JavaScript / TypeScript，完全可定制且开发者优先。
 - [Driver](https://driverjs.com/) 👉🏻 [🐙](https://github.com/kamranahmedse/driver.js)
     > A light-weight, no-dependency, vanilla JavaScript engine to drive the user's focus across the page
     > 一个轻量级、无依赖、原生 JavaScript 引擎，用于驱动用户在页面上的焦点移动

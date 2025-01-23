@@ -26,3 +26,5 @@ index: false
     > 🃏 A magical documentation site generator.
 - [Rspress](https://rspress.dev) 👉🏻 [🐙](https://github.com/web-infra-dev/rspress)
     > 🦀💨 A fast Rspack-based static site generator.
+- [Mintlify](https://mintlify.com/) 👉🏻 [🐙](https://github.com/mintlify/starter)
+    > 📖 The starter kit for your Mintlify docs

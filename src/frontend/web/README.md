@@ -53,6 +53,8 @@ index: false
     > Like App Store, But for Websites
 - [Similarweb](https://www.similarweb.com)
     > Effortlessly Analyze Your Competitive Landscape
+- [Web](https://www.webcrumbs.org) 👉🏻[🐙](https://github.com/webcrumbs-community/webcrumbs)
+    > Build, re(use) and share your own JavaScript plugins that effortlessly match your website's style. 🌟 Star to support our work!
 
 ------
 
