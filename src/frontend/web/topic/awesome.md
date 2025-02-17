@@ -43,6 +43,10 @@ index: true
 
 ## framework
 
+- [Soild](https://www.solidjs.com) 👉🏻 [🐙](https://github.com/solidjs/solid)
+    > A declarative, efficient, and flexible JavaScript library for building user interfaces.
+- [Svelte](https://svelte.dev/) 👉🏻 [🐙](https://github.com/sveltejs/svelte)
+    > web development for the rest of us
 - [Driver](https://driverjs.com/) 👉🏻 [🐙](https://github.com/kamranahmedse/driver.js)
     > A light-weight, no-dependency, vanilla JavaScript engine to drive the user's focus across the page
     > 一个轻量级、无依赖、原生 JavaScript 引擎，用于驱动用户在页面上的焦点移动
