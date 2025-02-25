@@ -64,3 +64,8 @@ index: true
 - [ComfyUI EcomID](https://github.com/alimama-creative/SDXL_EcomID_ComfyUI)
     > Native SDXL-EcomID support for ComfyUI.
 - [ComfyUI-AdvancedLivePortrait](https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait)
+
+------
+
+- [comflowy](https://www.comflowy.com/) 👉🏻 [🐙](https://github.com/6174/comflowy)
+    > Unleash endless possibilities with ComfyUI and Stable Diffusion, committed to crafting refined AI-Gen tools and cultivating a vibrant community for both developers and users.

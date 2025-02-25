@@ -8,6 +8,8 @@ index: true
 
 ## reference
 
+- [Pieces](https://pieces.app/) 👉🏻 [🐙](https://github.com/pieces-app)
+    > The fastest, smartest AI Assistant for code snippets and screenshots.
 - [Github - Copilot](https://github.com/features/copilot)
     > Your AI pair programmer
 - [CopilotForXcode](https://copilotforxcode.intii.com/) 👉🏻 [🐙](https://github.com/intitni/CopilotForXcode)
@@ -16,7 +18,6 @@ index: true
     > 豆包旗下的编程助手，提供智能补全、智能预测、智能问答等能力，节省开发时间，释放脑海中的创造力
 - [Alibaba - 通义灵码](https://tongyi.aliyun.com/lingma) 👉🏻 [🐙](https://github.com/alibaba-cloud-toolkit/cosy) 
     > 阿里云出品的一款基于通义大模型的智能编码辅助工具。
-- [Amazon - Amazon Q](https://aws.amazon.com/cn/q/developer)
 
 ------
 
