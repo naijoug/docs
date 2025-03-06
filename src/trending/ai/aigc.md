@@ -19,6 +19,8 @@ index: true
 
 ------
 
+- [AI Engineer Pack](https://www.aiengineerpack.com/)
+    > The essential AI development toolkit. Get started with the best AI tools and services.
 - [Civitai](https://civitai.com/) : 
 - [LibLib](https://www.liblib.art/) : 中国最大的 AI 生图平台
 - [Shakker](https://www.shakker.ai/)
