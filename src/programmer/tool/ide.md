@@ -15,6 +15,8 @@ order: 2
 
 - [zed](https://zed.dev/) 👉🏻 [🐙](https://github.com/zed-industries/zed)
     > Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+- [轻灵编码](https://lightly.teamcode.com/)
+    > Lightly 轻灵编码，让写代码变得更简单
     
 ## Font
 

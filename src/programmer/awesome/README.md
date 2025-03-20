@@ -109,10 +109,6 @@ icon: gift
     > Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store
 - [wakapi](https://github.com/muety/wakapi)
     > 📊 A minimalist, self-hosted WakaTime-compatible backend for coding statistics
-- [NeoVim](https://github.com/neovim/neovim)
-    > Vim-fork focused on extensibility and usability
-- [Talk](https://github.com/vasanthv/talk) : [Talk](https://tlk.li)
-    > Group video call for the web.
 
 ## Notion
 

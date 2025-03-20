@@ -12,6 +12,7 @@ index: true
 
 - [中国朝代顺序表](http://114.xixik.com/chaodai/)
 - [中国历朝代历史视频讲解](https://www.historyline.online/) 👉🏻 [🐙](https://github.com/liujuntao123/chines-history-video)
+- [图文解读战国七雄](https://zhuanlan.zhihu.com/p/512966721)
 
 ## 三皇五帝
 

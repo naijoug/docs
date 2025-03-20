@@ -97,13 +97,9 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > Web debugging proxy application. 
 - [Kap](https://github.com/wulkano/Kap) : 录屏软件
     > An open-source screen recorder built with web technology
-- [Vimac](https://github.com/dexterleng/vimac) : 键盘控制 macOS
-    > Productive macOS keyboard-driven navigation
 - [Drawio](https://github.com/jgraph/drawio-desktop) : 开源绘图软件
 - [keeweb](https://github.com/keeweb/keeweb) : 开源的跨平台密码管理工具
     > Free cross-platform password manager compatible with KeePass
-- [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal)
-    > ✨ Finder Toolbar app for macOS to open the current directory in Terminal, iTerm, Hyper or Alacritty.
 - [Hidden Bar](https://github.com/dwarvesf/hidden) : 隐藏菜单栏 icon
     > An ultra-light MacOS utility that helps hide menu bar icons
 - [Dozer](https://github.com/Mortennn/Dozer) : 菜单栏 icon 管理
@@ -116,8 +112,6 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > Spectacle allows you to organize your windows without using a mouse.
 - [Stand](https://getstandapp.com/) : 提醒站立
     > Just a simple app for your Mac that reminds you to stand up once an hour.
-- [wtf](https://github.com/wtfutil/wtf) 
-    > The personal information dashboard for your terminal
 - [Poedit](https://github.com/vslavik/poedit) : cross-platform translation editor
     > Translations editor for Mac, Windows and Unix
 - [RustDesk](https://github.com/rustdesk/rustdesk)
@@ -126,10 +120,6 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > An exceptional Finder right-click menu enhancement tool that makes your right-click menu more powerful.
 - [koodo-reader](https://www.koodoreader.com) 👉🏻 [🐙](https://github.com/koodo-reader/koodo-reader)
     > A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux and Web
-- [Ghostty](https://ghostty.org/) 👉🏻 [🐙](https://github.com/ghostty-org/ghostty)
-    > 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
-- [wave](https://www.waveterm.dev/) 👉🏻 [🐙](https://github.com/wavetermdev/waveterm)
-    > An open-source, cross-platform terminal for seamless workflows
 - [Flameshot](https://flameshot.org/) 👉🏻 [🐙](https://github.com/flameshot-org/flameshot)
     > Powerful yet simple to use screenshot software 🖥️ 📸
 

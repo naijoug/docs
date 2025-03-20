@@ -10,7 +10,7 @@ index: true
 
 ## reference
 
-- [React](https://react.dev) 👉🏻 [🐙](https://github.com/facebook/react) 
+- [React](https://react.dev) 👉🏻 [🐙](https://github.com/facebook/react)
     > A JavaScript library for building user interfaces
     > 用于构建用户界面的 JavaScript 库
 

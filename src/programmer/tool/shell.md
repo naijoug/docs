@@ -16,10 +16,29 @@ order: 6
 ## Reference
 
 - [Shell 教程](https://www.runoob.com/linux/linux-shell.html)
-- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [shell-book](https://github.com/52fhy/shell-book)
 - [Explain Shell](https://www.explainshell.com) 👉🏻 [🐙](https://github.com/idank/explainshell)
     > match command-line arguments to their help text
+
+## terminal
+
+- [Wrap](https://www.warp.dev/)
+    > The intelligent terminal.
+- [ohmyzsh](https://ohmyz.sh/) 👉🏻 [🐙](https://github.com/ohmyzsh/ohmyzsh)
+    > 🙃 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.
+- [tabby](https://tabby.sh/) 👉🏻 [🐙](https://github.com/Eugeny/tabby)
+    > A terminal for a more modern age
+- [tumx](https://github.com/tmux/tmux)
+    > tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background, then later reattached.
+- [Ghostty](https://ghostty.org/) 👉🏻 [🐙](https://github.com/ghostty-org/ghostty)
+    > 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
+- [wave](https://www.waveterm.dev/) 👉🏻 [🐙](https://github.com/wavetermdev/waveterm)
+    > An open-source, cross-platform terminal for seamless workflows
+- [wtf](https://github.com/wtfutil/wtf) 
+    > The personal information dashboard for your terminal
+- [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal)
+    > ✨ Finder Toolbar app for macOS to open the current directory in Terminal, iTerm, Hyper or Alacritty.
+
 
 ## Concept
 
