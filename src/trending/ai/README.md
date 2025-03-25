@@ -117,7 +117,8 @@ index: false
     > Integrate cutting-edge LLM technology quickly and easily into your apps
 - [guidance](https://github.com/microsoft/guidance)
     > A guidance language for controlling large language models. 
-
+- [oumi-ai](https://oumi.ai/) 👉🏻 [🐙](https://github.com/oumi-ai)
+    > Everything you need to build state-of-the-art foundation models, end-to-end. 
 
 ## tutorial
 
