@@ -19,6 +19,8 @@ order: 1
 
 ## Editor
 
+- [Obsidian](https://obsidian.md/) 👉🏻 [🐙](https://github.com/obsidianmd)
+    > Obsidian 既是一个 Markdown 编辑器，也是一个知识管理软件。
 - [MWeb](http://zh.mweb.im/)
 - [MarkdownPad](http://markdownpad.com)
 - [MarkText](https://www.marktext.cc/) 👉🏻 [🐙](https://github.com/marktext/marktext)

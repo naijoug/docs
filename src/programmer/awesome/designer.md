@@ -26,12 +26,13 @@ index: true
 
 ## assets
 
-- [svgl](https://svgl.vercel.app/) 👉🏻 [GitHub](https://github.com/pheralb/svgl)
+- [svgl](https://svgl.app/) 👉🏻 [🐙](https://github.com/pheralb/svgl)
+    > 🧩 A beautiful library with SVG logos. Built with Sveltekit & Tailwind CSS.
+- [vecto3d](https://www.vecto3d.xyz/) 👉🏻 [🐙](https://github.com/lakshaybhushan/vecto3d)
+    > A super simple tool to convert your SVG's to 3D models.
 
 ## tool
 
-- [Obsidian](https://obsidian.md/)
-    > Obsidian 既是一个 Markdown 编辑器，也是一个知识管理软件。
 - [NotionChina](https://notionchina.co/)
 - [AxureChina](https://axurechina.org/)
 - [axure-cn](https://github.com/pluwen/axure-cn)
