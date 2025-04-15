@@ -11,4 +11,4 @@ index: false
 ## catalog
 
 - [客户端](client/README.md)
-- [Web 端](web/README.md)
+- [Web 端](src/frontend/web/README.md)

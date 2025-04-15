@@ -34,6 +34,10 @@ index: true
 
 ## plugin
 
+- [cline]() 👉🏻 [🐙](https://github.com/cline/cline)
+    > Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
+- [Roo-Code](https://roocode.com/) 👉🏻 [🐙](https://github.com/RooVetGit/Roo-Code)
+    > Roo Code (prev. Roo Cline) gives you a whole dev team of AI agents in your code editor.
 - [Continue](https://www.continue.dev/) 👉🏻 [🐙](https://github.com/continuedev/continue)
     > ⏩ Continue is the leading open-source AI code assistant. You can connect any models and any context to build custom autocomplete and chat experiences inside VS Code and JetBrains
 - [Bytedance - MarsCode](https://www.marscode.com/) 👉🏻 [🇨🇳](https://www.marscode.cn)

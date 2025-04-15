@@ -12,6 +12,8 @@ index: true
 
 - [Developer roadmaps](https://roadmap.sh) 👉🏻 [GitHub](https://github.com/kamranahmedse/developer-roadmap)
     > Interactive roadmaps, guides and other educational content to help developers grow in their careers.
+- [Project Based Learning](https://github.com/practical-tutorials/project-based-learning)
+    > Curated list of project-based tutorials
 
 ## catalog
 

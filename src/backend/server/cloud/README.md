@@ -1,6 +1,6 @@
 ---
-title: 云服务器
-icon: server
+title: Cloud Service
+icon: hashtag
 
 index: false
 

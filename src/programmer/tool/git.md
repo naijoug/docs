@@ -13,13 +13,24 @@ order: 3
 
 ## reference
 
-- [Git Large File Storage](https://git-lfs.com/)
+
 - [Git Pro 2nd](https://git-scm.com/book/zh/v2)
 - [Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 - [Git Cheat Sheet 中文版](https://github.com/flyhigher139/Git-Cheat-Sheet)
 - [Learn Git Branching](https://oschina.gitee.io/learn-git-branching/)
+
+---
+
+- [Git Large File Storage](https://git-lfs.com/)
 - [Gerrit](https://www.gerritcodereview.com/) : A git serve for code review.
 - [First Aid Git](https://firstaidgit.io) 👉🏻 [🐙](https://github.com/magalhini/firstaidgit)
+    
+## tool
+    
+- [lazygit](https://github.com/jesseduffield/lazygit)
+    > simple terminal UI for git commands
+- [GitUI](https://github.com/gitui-org/gitui)
+    > Blazing 💥 fast terminal-ui for git written in rust 🦀
 
 ## repositority
 

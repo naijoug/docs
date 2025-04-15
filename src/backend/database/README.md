@@ -35,4 +35,5 @@ index: false
     > Serverless Data Platform
 - [ClickHouse](https://clickhouse.com/) 👉🏻 [🐙](https://github.com/ClickHouse)
     > ClickHouse® is a free analytics DBMS for big data
-
+- [Liam ERD](https://liambx.com/) 👉🏻 [🐙](https://github.com/liam-hq/liam)
+    > Automatically generates beautiful and easy-to-read ER diagrams from your database.

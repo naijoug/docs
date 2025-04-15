@@ -33,3 +33,5 @@ index: false
 - [Randomuser.me](https://randomuser.me/)
 - [starapi](https://docs.strapi.io/) 👉🏻 [🐙](https://github.com/strapi/strapi)
     > 🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript/TypeScript, fully customizable, and developer-first.
+- [Public APIs](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) 👉🏻 [🐙](https://github.com/public-apis/public-apis)
+    > A collective list of free APIs

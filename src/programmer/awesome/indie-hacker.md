@@ -37,3 +37,12 @@ index: true
 - [发现最好的独立开发者工具 & 技术栈](https://chuhai.tools/) 👉🏻 [🐙](https://github.com/weijunext/indie-hacker-tools) 
 - [side idea](https://sideidea.com/)
     > "独立开发者/远程工作者" 盈利案例
+- [How to make more money](https://github.com/easychen/howto-make-more-money)
+    > 程序员如何优雅的挣零花钱？
+- [DevMoneySharing](https://github.com/loonggg/DevMoneySharing)
+    > 独立开发者赚钱经验分享
+    
+## tool
+
+- [Free for Developers](https://free-for.dev/#/) 👉🏻 [🐙](https://github.com/ripienaar/free-for-dev)
+    > A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev

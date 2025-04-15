@@ -53,6 +53,8 @@ index: true
     > A community-driven way to read and chat with AI bots - powered by chatGPT.
 - [GeminiProChat](https://geminiprochat.com/) 👉🏻 [🐙](https://github.com/babaohuang/GeminiProChat)
     > Minimal web UI for GeminiPro.
+- [🍒 Cherry Studio](https://cherry-ai.com/) 👉🏻 [🐙](https://github.com/CherryHQ/cherry-studio)
+    > 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.
 
 ## Tutorial
 

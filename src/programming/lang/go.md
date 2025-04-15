@@ -43,7 +43,10 @@ index: true
     
 ## guide
 
-
+- [Go 包的组织和命名](https://github.com/danceyoung/paper-code/blob/master/package-style-guideline/packagestyleguideline.md)
+- [Standard Go Project Layout](https://github.com/golang-standards/project-layout)
+- [golang-rest-api-template](https://github.com/LAA-Software-Engineering/golang-rest-api-template)
+    > Template for REST API made with Golang using Gin framework, PostgreSQL database, JWT authentication, Redis cache and MongoDB for logging
 
 ## mod
 

@@ -10,7 +10,7 @@ index: false
 
 ## catalog
 
-- [服务器](server/README.md)
+- [服务器](src/backend/server/README.md)
 - [数据库](database/README.md)
 - [服务框架](service/README.md)
 

@@ -40,6 +40,9 @@ $ brew cask install google-chrome   # 安装
 $ brew cask uninstall google-chrome # 卸载
 $ brew cask list        # 查看Cask安装的软件
 $ brew cask info atom   # 查看特定关键信息
+
+# 清除缓存
+$ brew clean
 ```
 
 ## Usage

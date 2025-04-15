@@ -36,3 +36,10 @@ index: false
 - [Android 程序员 Flutter 学习之路](https://flutter.li-xyz.com:1443)
 - [猫哥 Flutter](https://wiki.ducafecat.tech)
 - [OldBird Flutter](https://oldbird.run/flutter)
+
+------
+
+- [moodiary](https://docs.moodiary.net/) 👉🏻 [🐙](https://github.com/ZhuJHua/moodiary)
+    > A fully open source cross-platform diary app written by flutter and rust.
+
+

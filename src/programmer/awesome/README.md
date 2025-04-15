@@ -19,8 +19,6 @@ icon: gift
     > GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。
 - [gh-proxy](https://github.com/hunshcn/gh-proxy)
     > github release、archive以及项目文件的加速项目
-- [starlist.dev](https://starlist.dev/)
-    > 🤩 Top 1000 GitHub Repositories Ranked by Stars
 - [Github1s](https://github.com/conwnet/github1s) : 通过在线 VSCode 查看 Github 仓库代码
     > One second to read GitHub code with VS Code.
 - [Awesome-GitHub-Repo](https://github.com/Wechat-ggGitHub/Awesome-GitHub-Repo)
@@ -29,6 +27,16 @@ icon: gift
     > a Chinese ebook on how to build a good project on Github. Explore the users' behavior. Find some thing interest.
 - [Hacker Laws](https://github.com/dwmkerr/hacker-laws)
     > Laws, Theories, Principles and Patterns that developers will find useful.
+
+
+------
+
+- [ossinsight](https://ossinsight.io/) 👉🏻 [🐙](https://github.com/pingcap/ossinsight)
+    > Analysis, Comparison, Trends, Rankings of Open Source Software, you can also get insight from more than 7 billion with natural language (powered by OpenAI).
+- [star-history](https://www.star-history.com/) 👉🏻 [🐙](https://github.com/star-history/star-history)
+    > The missing star history graph of GitHub repos
+- [starlist.dev](https://starlist.dev/) 👉🏻 [🐙](https://github.com/wldtyp/starlist.dev)
+    > 🤩 Top 1000 GitHub Repositories Ranked by Stars
 
 ## Awesome
 
@@ -72,6 +80,7 @@ icon: gift
 - [DevOps Guidebook](https://github.com/tsejx/devops-guidebook)
     > 📚 DevOps 知识图谱 关于Linux、服务器、数据库、部署等相关体系
 
+
 ## Tutorials
 
 - [exercism](https://exercism.org) 👉🏻 [🐙](https://github.com/exercism/exercism)
@@ -109,6 +118,8 @@ icon: gift
     > Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store
 - [wakapi](https://github.com/muety/wakapi)
     > 📊 A minimalist, self-hosted WakaTime-compatible backend for coding statistics
+- [Karakeep](https://karakeep.app/) 👉🏻 [🐙](https://github.com/karakeep-app/karakeep)
+    > A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search
 
 ## Notion
 
@@ -120,12 +131,7 @@ icon: gift
 - [cubic-bezier](http://cubic-bezier.com)
 - [Easing Functions Cheat Sheet](https://github.com/ai/easings.net)
 
-## Money
 
-- [How to make more money](https://github.com/easychen/howto-make-more-money)
-    > 程序员如何优雅的挣零花钱？
-- [DevMoneySharing](https://github.com/loonggg/DevMoneySharing)
-    > 独立开发者赚钱经验分享
     
 ## IPTV
 
