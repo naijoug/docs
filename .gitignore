@@ -3,3 +3,9 @@ node_modules/
 .cache/
 
 dist/
+
+.obsidian/
+.trash/
+.smart-env/
+.smtcmp_json_db/
+.smtcmp_vector_db.tar.gz
