@@ -35,6 +35,8 @@ index: true
     > High-Quality Human Motion Video Generation with Confidence-aware Pose Guidance
 - [ComfyUI-MimicMotion](https://github.com/AIFSH/ComfyUI-MimicMotion)
     > a comfyui custom node for MimicMotion
+- [Deep-Live-Cam](https://deeplivecam.net/) 👉🏻 [🐙](https://github.com/hacksider/Deep-Live-Cam)
+    > real time face swap and one-click video deepfake with only a single image
 
 ## Product
 

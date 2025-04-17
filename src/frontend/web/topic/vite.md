@@ -11,6 +11,7 @@ index: true
 ## reference
 
 - [Vite](https://vitejs.dev/) 👉🏻 [🐙](https://github.com/vitejs/vite)
+    > Next generation frontend tooling. It's fast!
 
 ## usage
 

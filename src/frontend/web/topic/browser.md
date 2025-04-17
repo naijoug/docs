@@ -35,3 +35,10 @@ index: false
     > ⚡ Next-gen Web Extension Framework
 - [Plasmo](https://www.plasmo.com/) 👉🏻 [🐙](https://github.com/PlasmoHQ/plasmo)
     > 🧩 The Browser Extension Framework
+
+## tools
+
+- [FilePizza](https://file.pizza/) 👉🏻 [🐙](https://github.com/kern/filepizza)
+    > 🍕 Peer-to-peer file transfers in your browser
+- [Authenticator](https://authenticator.cc/) 👉🏻 [🐙](https://github.com/Authenticator-Extension/Authenticator)
+    > Authenticator generates 2-Step Verification codes in your browser.

@@ -37,7 +37,7 @@ index: false
 - [猫哥 Flutter](https://wiki.ducafecat.tech)
 - [OldBird Flutter](https://oldbird.run/flutter)
 
-------
+## apps
 
 - [moodiary](https://docs.moodiary.net/) 👉🏻 [🐙](https://github.com/ZhuJHua/moodiary)
     > A fully open source cross-platform diary app written by flutter and rust.

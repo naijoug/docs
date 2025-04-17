@@ -21,7 +21,11 @@ index: false
     > The Magic Mask for Android
 - [Shizuku](https://shizuku.rikka.app) 👉🏻 [🐙](https://github.com/RikkaApps/Shizuku)
     > Using system APIs directly with adb/root privileges from normal apps through a Java process started with app_process.
-    
+   
+## apps
+
+- [ImageToolbox](https://github.com/T8RIN/ImageToolbox)
+    > 🖼️ Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options
 
 ## Collector
 

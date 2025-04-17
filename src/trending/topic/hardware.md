@@ -6,6 +6,11 @@ index: true
 
 ---
 
+## reference
+
+- [IFIXIT](https://zh.ifixit.com/)
+    > Explore a World of Repair
+
 ## PLC
 > PLC : Programmable Logic Controller (可编程控制器)
 

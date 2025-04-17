@@ -37,3 +37,5 @@ index: false
     > ClickHouse® is a free analytics DBMS for big data
 - [Liam ERD](https://liambx.com/) 👉🏻 [🐙](https://github.com/liam-hq/liam)
     > Automatically generates beautiful and easy-to-read ER diagrams from your database.
+- [MindsDB](https://mindsdb.com/) 👉🏻 [🐙](https://github.com/mindsdb/mindsdb)
+    > AI's query engine - Platform for building AI that can learn and answer questions over large scale federated data.

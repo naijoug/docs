@@ -31,6 +31,8 @@ order: 3
     > simple terminal UI for git commands
 - [GitUI](https://github.com/gitui-org/gitui)
     > Blazing 💥 fast terminal-ui for git written in rust 🦀
+- [GitDiagram](https://gitdiagram.com/) 👉🏻 [🐙](https://github.com/ahmedkhaleel2004/gitdiagram)
+    > Free, simple, fast interactive diagrams for any GitHub repository
 
 ## repositority
 

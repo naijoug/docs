@@ -13,6 +13,7 @@ order: 6
 
 - [PostgresApp](http://postgresapp.com) 👉🏻 [🐙](https://github.com/PostgresApp/PostgresApp)
     > The easiest way to get started with PostgreSQL on the Mac
-
+- [Postgres Language Server](https://pgtools.dev/) 👉🏻 [🐙](https://github.com/supabase-community/postgres-language-server)
+    > A Language Server for Postgres
 
 

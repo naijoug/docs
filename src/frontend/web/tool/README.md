@@ -22,9 +22,11 @@ index: false
     > Vite & Vue powered static site generator.
 - [Docusaurus](https://docusaurus.io) 👉🏻 [🐙](https://github.com/facebook/docusaurus)
     > Easy to maintain open source documentation websites.
-- [docsifyjs](https://docsify.js.org) 👉🏻 [🐙](https://github.com/docsifyjs/docsify)
-    > 🃏 A magical documentation site generator.
 - [Rspress](https://rspress.dev) 👉🏻 [🐙](https://github.com/web-infra-dev/rspress)
     > 🦀💨 A fast Rspack-based static site generator.
+- [nextra](https://nextra.site/) 👉🏻 [🐙](https://github.com/shuding/nextra) [🇨🇳](https://www.nextra.cn/)
+    > Simple, powerful and flexible site generation framework with everything you love from Next.js.
+- [docsifyjs](https://docsify.js.org) 👉🏻 [🐙](https://github.com/docsifyjs/docsify)
+    > 🃏 A magical documentation site generator.
 - [Mintlify](https://mintlify.com/) 👉🏻 [🐙](https://github.com/mintlify/starter)
     > 📖 The starter kit for your Mintlify docs

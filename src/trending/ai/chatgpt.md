@@ -55,6 +55,8 @@ index: true
     > Minimal web UI for GeminiPro.
 - [🍒 Cherry Studio](https://cherry-ai.com/) 👉🏻 [🐙](https://github.com/CherryHQ/cherry-studio)
     > 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.
+- [khoj](https://khoj.dev/) 👉🏻 [🐙](https://github.com/khoj-ai/khoj)
+    > Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free.
 
 ## Tutorial
 
