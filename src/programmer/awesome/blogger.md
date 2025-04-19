@@ -10,6 +10,7 @@ index: true
 
 ## Personal
 
+- [产品沉思录](https://www.pmthinking.com/)
 - [王垠 - 狂人](http://www.yinwang.org/)
 - [阮一峰](http://www.ruanyifeng.com/)
 - [廖雪峰](https://www.liaoxuefeng.com/)

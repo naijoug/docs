@@ -8,6 +8,7 @@ index: true
 
 ## reference
 
+- [产品沉思录](https://www.pmthinking.com/)
 - [UIVERSE](https://uiverse.io/) 👉🏻 [🐙](https://github.com/uiverse-io/galaxy)
     > The largest Open-Source UI Library! Community-made and free to use. Made with either CSS or Tailwind.
 - [ABTest Design](https://abtest.design/)

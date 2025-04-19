@@ -32,6 +32,9 @@ index: true
 - [Trae](https://www.trae.ai/) 👉🏻 [🇨🇳](https://www.trae.com.cn/)
     > `/trae/`: `The real AI engineer`
 
+- [Repo Prompt](https://repoprompt.com/)
+    > Code smarter with AI—no more messy copy-pasting.
+
 ## plugin
 
 - [cline](https://github.com/cline/cline)
