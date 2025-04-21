@@ -40,10 +40,12 @@ index: true
 - [《玩转 GO》](https://github.com/hantmac/Mastering_Go_ZH_CN)
     > 《Mastering GO》中文译本，《玩转 GO》。
 - [Go 语言中文文档](https://www.topgoer.com)
+- [Practical Go](https://dave.cheney.net/practical-go)
     
 ## guide
 
 - [Go 包的组织和命名](https://github.com/danceyoung/paper-code/blob/master/package-style-guideline/packagestyleguideline.md)
+- [Go Style Decisions](https://google.github.io/styleguide/go/decisions)
 - [Standard Go Project Layout](https://github.com/golang-standards/project-layout)
 - [golang-rest-api-template](https://github.com/LAA-Software-Engineering/golang-rest-api-template)
     > Template for REST API made with Golang using Gin framework, PostgreSQL database, JWT authentication, Redis cache and MongoDB for logging

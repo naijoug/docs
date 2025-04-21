@@ -16,12 +16,6 @@ index: true
     > 7 days golang programs from scratch (web framework Gee, distributed cache GeeCache, object relational mapping ORM framework GeeORM, rpc framework GeeRPC etc) 7天用Go动手写/从零实现系列
 - [Go Web 编程入门指南](https://github.com/kevinyan815/go_web_programming)
 
-<!-- framework -->
-
-- [Echo](https://echo.labstack.com) 👉🏻 [🐙](https://github.com/labstack/echo)
-    > High performance, extensible, minimalist Go web framework
-- [Echo 框架中文文档](https://echo.laily.net) 👉🏻 [🐙](https://github.com/hilaily/echo-intro)
-
 <!-- OpenSource on Go -->
 
 - [SeaweedFS](https://github.com/seaweedfs/seaweedfs)
@@ -30,3 +24,13 @@ index: true
     > 📂 Web File Browser
 - [Go Admin](https://www.go-admin.com)👉🏻 [🐙](https://github.com/GoAdminGroup/go-admin)
     > A golang framework helps gopher to build a data visualization and admin panel in ten minutes
+    
+## frameworks
+
+- [go-zero](https://go-zero.dev)
+- [Gorm](https://gorm.io/) 👉🏻 [🐙](https://github.com/go-gorm/gorm)
+- [Gin](https://gin-gonic.com) 👉🏻 [🐙](https://github.com/gin-gonic/gin)
+    > Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.
+- [Echo](https://echo.labstack.com) 👉🏻 [🐙](https://github.com/labstack/echo)
+    > High performance, extensible, minimalist Go web framework
+- [Echo 框架中文文档](https://echo.laily.net) 👉🏻 [🐙](https://github.com/hilaily/echo-intro)
