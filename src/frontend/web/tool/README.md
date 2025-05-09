@@ -26,7 +26,17 @@ index: false
     > 🦀💨 A fast Rspack-based static site generator.
 - [nextra](https://nextra.site/) 👉🏻 [🐙](https://github.com/shuding/nextra) [🇨🇳](https://www.nextra.cn/)
     > Simple, powerful and flexible site generation framework with everything you love from Next.js.
+- [Fumadocs](https://fumadocs.vercel.app/) 👉🏻 [🐙](https://github.com/fuma-nama/fumadocs)
+    > The beautiful docs framework with Next.js.
 - [docsifyjs](https://docsify.js.org) 👉🏻 [🐙](https://github.com/docsifyjs/docsify)
     > 🃏 A magical documentation site generator.
 - [Mintlify](https://mintlify.com/) 👉🏻 [🐙](https://github.com/mintlify/starter)
     > 📖 The starter kit for your Mintlify docs
+    
+------
+    
+- [logseq](https://logseq.com/) 👉🏻 [🐙](https://github.com/logseq/logseq)
+    > A privacy-first, open-source platform for knowledge management and collaboration.
+- [docmost](https://github.com/docmost/docmost) 👉🏻 [🐙](https://docmost.com/)
+    > Docmost is an open-source collaborative wiki and documentation software. It is an open-source alternative to Confluence and Notion.
+

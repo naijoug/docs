@@ -10,11 +10,19 @@ index: true
 
 ## reference
 
-- [Ark UI](https://ark-ui.com) 👉🏻 [🐙](https://github.com/chakra-ui/ark)
-    > A headless library for building reusable, scalable design systems that works for a wide range of JS frameworks.
+- [Ant Desgin](https://ant.design) 👉🏻 [🐙](https://github.com/ant-design/ant-design)
+    > An enterprise-class UI design language and React UI library
 - [Shadcn UI](https://ui.shadcn.com) 👉🏻 [🐙](https://github.com/shadcn-ui/ui)
     > Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source. 
-    
+- [Arco Design](https://arco.design/) 👉🏻 [🐙](https://github.com/arco-design/arco-design)
+    > A comprehensive React UI components library based on Arco Design
+- [semi-design](https://semi.design) 👉🏻 [🐙](https://github.com/DouyinFE/semi-design)
+    > 🚀A modern, comprehensive, flexible design system and React UI library. 🎨 Provide more than 3000+ Design Tokens, easy to build your design system. Make Semi Design to Any Design. 🧑🏻‍💻 Design to Code in one click
+- [Ark UI](https://ark-ui.com) 👉🏻 [🐙](https://github.com/chakra-ui/ark)
+    > A headless library for building reusable, scalable design systems that works for a wide range of JS frameworks.
+- [Primer](https://primer.style/) 👉🏻 [🐙](https://github.com/primer/react)
+    > Primer Design, build, and create with GitHub’s design system
+
 ## mobile app
 
 - [Vant](https://vant-ui.github.io/vant) 👉🏻 [🐙](https://github.com/youzan/vant)

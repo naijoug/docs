@@ -23,15 +23,6 @@ index: true
 - [WebdriverIO](https://webdriver.io) 👉🏻 [🐙](https://github.com/webdriverio/webdriverio)
     > Next-gen browser and mobile automation test framework for Node.js
 
-## UI
-
-- [Primer](https://primer.style/) 👉🏻 [🐙](https://github.com/primer/react)
-    > Primer Design, build, and create with GitHub’s design system
-- [Ant Desgin](https://ant.design) 👉🏻 [🐙](https://github.com/ant-design/ant-design)
-    > An enterprise-class UI design language and React UI library
-- [Arco Design](https://arco.design/) 👉🏻 [🐙](https://github.com/arco-design/arco-design)
-    > A comprehensive React UI components library based on Arco Design
-
 ## monorepo
 
 - [Lerna](https://lerna.js.org) 👉🏻 [🐙](https://github.com/lerna/lerna)

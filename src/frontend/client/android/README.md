@@ -24,6 +24,8 @@ index: false
    
 ## apps
 
+- [LibreTube](https://libretube.dev/) 👉🏻 [🐙](https://github.com/libre-tube/LibreTube)
+    > An alternative frontend for YouTube, for Android.
 - [ImageToolbox](https://github.com/T8RIN/ImageToolbox)
     > 🖼️ Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR, and a wide range of image processing options
 
