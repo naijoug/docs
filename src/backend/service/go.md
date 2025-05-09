@@ -27,10 +27,11 @@ index: true
     
 ## frameworks
 
-- [go-zero](https://go-zero.dev)
+- [go-zero](https://go-zero.dev) 👉🏻 [🐙]()
+    > A cloud-native Go microservices framework with cli tool for productivity.
 - [Gorm](https://gorm.io/) 👉🏻 [🐙](https://github.com/go-gorm/gorm)
+    > The fantastic ORM library for Golang, aims to be developer friendly
 - [Gin](https://gin-gonic.com) 👉🏻 [🐙](https://github.com/gin-gonic/gin)
     > Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.
-- [Echo](https://echo.labstack.com) 👉🏻 [🐙](https://github.com/labstack/echo)
+- [Echo](https://echo.labstack.com) 👉🏻 [🐙](https://github.com/labstack/echo) [🇨🇳](https://github.com/hilaily/echo-intro)
     > High performance, extensible, minimalist Go web framework
-- [Echo 框架中文文档](https://echo.laily.net) 👉🏻 [🐙](https://github.com/hilaily/echo-intro)
