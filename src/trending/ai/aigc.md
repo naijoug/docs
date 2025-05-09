@@ -26,6 +26,7 @@ index: true
 - [Shakker](https://www.shakker.ai/)
 - [OpenArt](https://openart.ai/workflows/home)
 - [Recraft](https://www.recraft.ai)
+- [Chub AI](https://chub.ai) : Create Character
 
 ## video
 
@@ -43,6 +44,8 @@ index: true
 - [Glifs](https://glif.app)
 - [PodML](https://podlm.ai/)
     > Turn Any Content into AI Podcast
+- [Podwise](https://podwise.ai/)
+- [MetaHuman](https://www.unrealengine.com/en-US/metahuman)
 - [Wordware](https://twitter.wordware.ai/) 👉🏻 [🐙](https://github.com/wordware-ai/twitter)
     > AI Agent for Twitter Personality Analysis
 - [Pagen](https://pagen.so/) 👉🏻 [🐙](https://github.com/all-in-aigc/pagen-ai-landing-page-template)
@@ -73,3 +76,15 @@ index: true
 
 - [comflowy](https://www.comflowy.com/) 👉🏻 [🐙](https://github.com/6174/comflowy)
     > Unleash endless possibilities with ComfyUI and Stable Diffusion, committed to crafting refined AI-Gen tools and cultivating a vibrant community for both developers and users.
+    
+## apps
+
+- [awesome LLM apps](https://www.theunwindai.com/) 👉🏻 [🐙](https://github.com/Shubhamsaboo/awesome-llm-apps)
+    > Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.
+
+## free
+
+- [FluxEz](https://flux.comnergy.com)
+    > `FluxEz` 是一个完全免费、基于 `Flux.1[dev]` 模型的在线文生图（`text to image`）服务网站，请在此自由地发挥你的创意！
+- [Free-QWQ](https://qwq.aigpu.cn/#api)
+    > 

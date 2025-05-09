@@ -10,8 +10,8 @@ index: true
 
 - [Learn Prompt](https://www.learnprompt.pro/) 👉🏻 [🐙](https://github.com/LearnPrompt/LearnPrompt)
     > 永久免费开源的 AIGC 课程, 目前已支持Prompt Engineering, ChatGPT, Midjourney, Runway, Stable Diffusion, AI数字人，AI声音&音乐，开源大模型
-- [🧠 Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
-    > This repo includes ChatGPT prompt curation to use ChatGPT better.
+- [prompts.chat](https://prompts.chat/) 👉🏻 [🐙](https://github.com/f/awesome-chatgpt-prompts)
+    > This repo includes ChatGPT prompt curation to use ChatGPT and other LLM tools better.
 - [🧠 ChatGPT 中文调教指南](https://chat.aimakex.com) 👉🏻 [🐙](https://github.com/PlexPt/awesome-chatgpt-prompts-zh)
     > ChatGPT 中文调教指南。各种场景使用指南。学习怎么让它听你的话。
 - [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
@@ -29,6 +29,7 @@ index: true
 
 ------
 
+- [How to prompt](https://json.visuals.zip/how-to-prompt)
 - [v0prompt](https://github.com/sharkqwy/v0prompt)
     > full prompt of the new v0
 

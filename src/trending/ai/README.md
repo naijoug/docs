@@ -31,7 +31,7 @@ index: false
 - [AI 工具集](https://ai-bot.cn/)
 - [awesome-ai-painting](https://github.com/hua1995116/awesome-ai-painting)
     > AI绘画资料合集（包含国内外可使用平台、使用教程、参数教程、部署教程、业界新闻等等） stable diffusion tutorial、disco diffusion tutorial、 AI Platform
-    
+
 ------
     
 - [💯 Pinokio](https://pinokio.computer) 👉🏻 [🐙](https://github.com/pinokiocomputer/pinokio)
@@ -121,6 +121,10 @@ index: false
     > Everything you need to build state-of-the-art foundation models, end-to-end. 
 - [ai](https://sdk.vercel.ai/) 👉🏻 [🐙](https://github.com/vercel/ai)
     > The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents
+
+## device
+
+- [算了么](https://suanleme.cn/)
 
 ## tutorial
 

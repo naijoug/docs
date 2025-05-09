@@ -32,15 +32,17 @@ index: true
 - [Trae](https://www.trae.ai/) 👉🏻 [🇨🇳](https://www.trae.com.cn/)
     > `/trae/`: `The real AI engineer`
 
-- [Repo Prompt](https://repoprompt.com/)
-    > Code smarter with AI—no more messy copy-pasting.
+- [Dyad](https://www.dyad.sh/) 👉🏻 [🐙](https://github.com/dyad-sh/dyad)
+    > Free, local, open-source AI app builder | v0 / lovable / Bolt alternative | 🌟 Star if you like it!
 
 ## plugin
 
-- [cline](https://github.com/cline/cline)
+- [cline](https://cline.bot/) 👉🏻 [🐙](https://github.com/cline/cline)
     > Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 - [Roo-Code](https://roocode.com/) 👉🏻 [🐙](https://github.com/RooVetGit/Roo-Code)
     > Roo Code (prev. Roo Cline) gives you a whole dev team of AI agents in your code editor.
+- [Gemini Coder](https://gemini-coder.netlify.app/) 👉🏻 [🐙](https://github.com/robertpiosik/gemini-coder)
+    > Copy folders and files for chatbots or initialize them hands-free! Use the free Gemini API for code completions, file refactoring and applying chat responses.
 - [Continue](https://www.continue.dev/) 👉🏻 [🐙](https://github.com/continuedev/continue)
     > ⏩ Continue is the leading open-source AI code assistant. You can connect any models and any context to build custom autocomplete and chat experiences inside VS Code and JetBrains
 - [Bytedance - MarsCode](https://www.marscode.com/) 👉🏻 [🇨🇳](https://www.marscode.cn)
@@ -63,3 +65,9 @@ index: true
     > Sweep: AI-powered Junior Developer for small features and bug fixes.
 - [~~TabNine~~](https://www.tabnine.com/) 👉🏻 [🐙](https://github.com/codota/TabNine)
     > AI Code Completions
+
+## tool
+
+- [DeepWiki](https://deepwiki.com/)
+- [Repo Prompt](https://repoprompt.com/)
+    > Code smarter with AI—no more messy copy-pasting.

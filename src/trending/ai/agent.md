@@ -20,6 +20,8 @@ index: true
     > Lightweight framework for building Agents with memory, knowledge, tools and reasoning.
 - [goose](https://block.github.io/goose/) 👉🏻 [🐙](https://github.com/block/goose)
     > an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+- [Suna](https://www.suna.so/) 👉🏻 [🐙](https://github.com/kortix-ai/suna)
+    > Suna - Open Source Generalist AI Agent
 
 ------
 
@@ -27,7 +29,7 @@ index: true
 
 ## platform
 
-- [Bytedance - ]()
+- [Bytedance - Coze](https://www.coze.com/)
 - [Alibaba - Tbox](https://tbox.alipay.com/pro-about)
 
 
