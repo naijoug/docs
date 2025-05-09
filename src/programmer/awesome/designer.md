@@ -18,7 +18,6 @@ index: true
 - [OurSketch](https://oursketch.com/)
 - [Adobe全套下载](https://www.yuque.com/qianxun-nzpyh/kb)
 - [设计师口袋心理学](https://iason.notion.site/6719c7650fd1406c92287f556520fbc3)
-- [1000 inspiring websites](https://supercreative.design/1000-inspiring-websites)
 
 ------
 
@@ -40,3 +39,10 @@ index: true
 - [lottie-web](https://github.com/airbnb/lottie-web)
     > Render After Effects animations natively on Web, Android and iOS, and React Native.
     > [AE如何安装bodymovin插件](https://uijiaohu.com/ae%e5%ae%89%e8%a3%85bodymovin%e6%8f%92%e4%bb%b6/)
+    
+## website
+
+- [Mobbin](https://mobbin.com/)
+    > Discover real-world design inspiration.
+- [1000 inspiring websites](https://supercreative.design/1000-inspiring-websites)
+- [Paywall screens](https://www.paywallscreens.com/)

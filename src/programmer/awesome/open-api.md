@@ -35,3 +35,7 @@ index: false
     > 🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript/TypeScript, fully customizable, and developer-first.
 - [Public APIs](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) 👉🏻 [🐙](https://github.com/public-apis/public-apis)
     > A collective list of free APIs
+- [Free Dictionary API](https://dictionaryapi.dev/) 👉🏻 [🐙](https://github.com/meetDeveloper/freeDictionaryAPI) 
+    > There was no free Dictionary API on the web when I wanted one for my friend, so I created one.
+- [Wiktionary](https://wiktionary.org)
+- [Photo](https://picsum.photos/)

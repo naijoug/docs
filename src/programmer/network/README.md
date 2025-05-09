@@ -31,6 +31,15 @@ index: false
     > HTTP, HTTP2, HTTPS, Websocket debugging proxy
 - [Termscp](https://termscp.veeso.dev/) 👉🏻 [🐙](https://github.com/veeso/termscp)
     > 🖥 A feature rich terminal UI file transfer and explorer with support for SCP/SFTP/FTP/S3/SMB 
+- [FOFA](https://fofa.info/)
+    > 
+
+## GitHub
+
+- [GitHub Hosts](https://github.com/ineo6/hosts/) : [GitLab](https://gitlab.com/ineo6/hosts/)
+    > GitHub最新hosts。解决 GitHub 图片无法显示，加速 GitHub 网页浏览。
+- [gh-proxy](https://github.com/hunshcn/gh-proxy)
+    > github release、archive以及项目文件的加速项目
 
 ## 内网穿透
 

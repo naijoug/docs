@@ -9,16 +9,14 @@ icon: gift
 
 ## GitHub
 
+- [HelloGitHub](https://hellogithub.com/) 👉🏻 [🐙](https://github.com/HelloGitHub-Team/geese)
+    > 有趣的开源社区——HelloGitHub。An open-source enthusiast community built with Next.js.
 - [DevDocs](https://devdocs.io/) 👉🏻 [🐙](https://github.com/freeCodeCamp/devdocs)
     > API Documentation Browser
 - [OpenAlternative](https://openalternative.co/) 👉🏻 [🐙](https://github.com/piotrkulpinski/openalternative)
     > A community driven list of open source alternatives to proprietary software and applications.
 - [grep.app](https://grep.app/)
     > Search across a half million git repos
-- [GitHub Hosts](https://github.com/ineo6/hosts/) : [GitLab](https://gitlab.com/ineo6/hosts/)
-    > GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。
-- [gh-proxy](https://github.com/hunshcn/gh-proxy)
-    > github release、archive以及项目文件的加速项目
 - [Github1s](https://github.com/conwnet/github1s) : 通过在线 VSCode 查看 Github 仓库代码
     > One second to read GitHub code with VS Code.
 - [Awesome-GitHub-Repo](https://github.com/Wechat-ggGitHub/Awesome-GitHub-Repo)
@@ -105,9 +103,7 @@ icon: gift
     > 12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all
 
 ## Tool
-
-- [logseq](https://logseq.com/) 👉🏻 [🐙](https://github.com/logseq/logseq)
-    > A privacy-first, open-source platform for knowledge management and collaboration. 
+ 
 - [Follow](https://follow.is/) 👉🏻 [🐙](https://github.com/RSSNext/Follow)
     > 🧡 Follow your favorites in one inbox
 - [RSSHub](https://docs.rsshub.app) 👉🏻 [🐙](https://github.com/DIYgod/RSSHub)
@@ -131,8 +127,6 @@ icon: gift
 - [cubic-bezier](http://cubic-bezier.com)
 - [Easing Functions Cheat Sheet](https://github.com/ai/easings.net)
 
-
-    
 ## IPTV
 
 - [awesome-iptv](https://github.com/iptv-org/awesome-iptv)
@@ -146,6 +140,7 @@ icon: gift
     
 ## Funny
 
+- [TV garden](https://tv.garden/)
 - [ASCII generator](https://github.com/uvipen/ASCII-generator)
     > ASCII generator (image to text, image to image, video to video)
 - [文言 wenyan-lang](https://github.com/wenyan-lang/wenyan)
