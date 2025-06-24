@@ -10,7 +10,7 @@ index: true
 
 ## reference
 
-- [npmgraph](https://npmgraph.js.org) 👉🏻 [GitHub](https://github.com/npmgraph/npmgraph)
+- [npmgraph](https://npmgraph.js.org) 👉🏻 [🐙](https://github.com/npmgraph/npmgraph)
     > A tool for exploring NPM modules and dependencies
 
 <!-- tool -->
@@ -24,7 +24,7 @@ index: true
 
 ## `npm`
 
-- [npm](https://www.npmjs.com) 👉🏻 [GitHub](https://github.com/npm/cli) 
+- [npm](https://www.npmjs.com) 👉🏻 [🐙](https://github.com/npm/cli) 
   > the package manager for JavaScript
   
 ```shell
@@ -37,7 +37,7 @@ $ npm config set registry https://registry.npmjs.org        # 设置为官方地
 
 ## `yarn`
 
-- [yarn](https://classic.yarnpkg.com) 👉🏻 [GitHub](https://github.com/yarnpkg/yarn) 
+- [yarn](https://classic.yarnpkg.com) 👉🏻 [🐙](https://github.com/yarnpkg/yarn) 
     > Fast, reliable, and secure dependency management.
 
 ```shell
@@ -50,7 +50,7 @@ $ yarn config set registry https://registry.yarnpkg.com     # 设置为官方地
 
 ## `pnpm`
 
-- [pnpm](https://pnpm.io) 👉🏻 [GitHub](https://github.com/pnpm/pnpm) 
+- [pnpm](https://pnpm.io) 👉🏻 [🐙](https://github.com/pnpm/pnpm) 
     > Fast, disk space efficient package manager
     
 ```shell

@@ -141,6 +141,8 @@ icon: gift
 ## Funny
 
 - [TV garden](https://tv.garden/)
+- [ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook)
+    > 所有小初高、大学PDF教材。
 - [ASCII generator](https://github.com/uvipen/ASCII-generator)
     > ASCII generator (image to text, image to image, video to video)
 - [文言 wenyan-lang](https://github.com/wenyan-lang/wenyan)

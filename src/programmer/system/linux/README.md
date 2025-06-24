@@ -25,6 +25,8 @@ index: false
     > Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。
 - [cmd-wrapped](https://github.com/YiNNx/cmd-wrapped)
     > 👩‍💻 A CLI Tool for Command Line Insights
+- [thefuck](https://github.com/nvbn/thefuck)
+    > Magnificent app which corrects your previous console command.
     
 ## Linux Tools
 

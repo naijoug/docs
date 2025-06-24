@@ -28,8 +28,27 @@ index: true
 - [Recraft](https://www.recraft.ai)
 - [Chub AI](https://chub.ai) : Create Character
 
+## avatar
+
+- [Second-Me](https://www.secondme.io/) 👉🏻 [🐙](https://github.com/mindverse/Second-Me)
+    > Train your AI self, amplify you, bridge the world
+
+## image 
+
+- [MAGI-1](https://sand.ai/) 👉🏻 [🐙](https://github.com/SandAI-org/MAGI-1)
+    > MAGI-1: Autoregressive Video Generation at Scale
+
+------
+
+- [Text generation web UI](https://github.com/oobabooga/text-generation-webui)
+    > A Gradio web UI for Large Language Models with support for multiple inference backends.
+- [Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+    > A web interface for Stable Diffusion, implemented using Gradio library.
+
 ## video
 
+- [Open Sora](https://hpcaitech.github.io/Open-Sora/) 👉🏻 [🐙](https://github.com/hpcaitech/Open-Sora)
+    > Open-Sora: Democratizing Efficient Video Production for All
 - [MotionGPT](https://motion-gpt.github.io/) 👉🏻 [🐙](https://github.com/OpenMotionLab/MotionGPT)
     > [NeurIPS 2023] MotionGPT: Human Motion as a Foreign Language, a unified motion-language generation model using LLMs
 - [MimicMotion](https://tencent.github.io/MimicMotion) 👉🏻 [🐙](https://github.com/tencent/MimicMotion) 
@@ -38,6 +57,8 @@ index: true
     > a comfyui custom node for MimicMotion
 - [Deep-Live-Cam](https://deeplivecam.net/) 👉🏻 [🐙](https://github.com/hacksider/Deep-Live-Cam)
     > real time face swap and one-click video deepfake with only a single image
+- [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)
+    > 利用 AI 大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.
 
 ## Product
 

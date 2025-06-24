@@ -32,6 +32,9 @@ index: true
 - [Trae](https://www.trae.ai/) 👉🏻 [🇨🇳](https://www.trae.com.cn/)
     > `/trae/`: `The real AI engineer`
 
+- [void](https://voideditor.com/) 👉🏻 [🐙](https://github.com/voideditor/void)
+    > Void is the open-source Cursor alternative.
+
 - [Dyad](https://www.dyad.sh/) 👉🏻 [🐙](https://github.com/dyad-sh/dyad)
     > Free, local, open-source AI app builder | v0 / lovable / Bolt alternative | 🌟 Star if you like it!
 
@@ -41,6 +44,11 @@ index: true
     > Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 - [Roo-Code](https://roocode.com/) 👉🏻 [🐙](https://github.com/RooVetGit/Roo-Code)
     > Roo Code (prev. Roo Cline) gives you a whole dev team of AI agents in your code editor.
+- [Augment Code](https://www.augmentcode.com/) 👉🏻 [🐙](https://github.com/augmentcode/augment-swebench-agent)
+    > The #1 open-source SWE-bench Verified implementation
+
+------
+
 - [Gemini Coder](https://gemini-coder.netlify.app/) 👉🏻 [🐙](https://github.com/robertpiosik/gemini-coder)
     > Copy folders and files for chatbots or initialize them hands-free! Use the free Gemini API for code completions, file refactoring and applying chat responses.
 - [Continue](https://www.continue.dev/) 👉🏻 [🐙](https://github.com/continuedev/continue)

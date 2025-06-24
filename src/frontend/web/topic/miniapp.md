@@ -52,4 +52,3 @@ index: true
 <!-- 二维码 -->
 
 - [获取小程序二维码](https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/qrcode/create-qr-code-v2)
-

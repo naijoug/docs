@@ -8,6 +8,7 @@ index: true
 
 ## 人生观
 
+- [2025-04-15 信息焦虑的解药：打造属于你的极简学习系统](https://mp.weixin.qq.com/s/ACHjI_izaAO-k0Xqd8Oa-w)
 - [2023-12-10 存在主义哲学--人生的意义](https://windliang.wang/2023/12/10/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6-%E4%BA%BA%E7%94%9F%E7%9A%84%E6%84%8F%E4%B9%89)
 - [2023-10-25 谈谈存在的价值与人生体验](https://sspai.com/post/83743)
 

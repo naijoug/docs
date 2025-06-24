@@ -126,6 +126,35 @@ padding vs margin
 - [2021-07-14 Flutter GetX深度剖析](https://juejin.cn/post/6984593635681517582)
 - [2021-09-26 Flutter 对状态管理的认知与思考](https://juejin.cn/post/7012044249386450981)
 
+## collector
+
+```dart
+/// 安全的 setState
+mixin SafeSetStateMixin<T extends StatefulWidget> on State<T> {
+  @override
+  void setState(VoidCallback fn) {
+    if (!mounted) return;
+    super.setState(fn);
+  }
+}
+
+/// auto dispose mixin
+mixin AutoDisposeMixin<T extends StatefulWidget> on State<T> {
+  Set<VoidCallback> _disposeSet = Set<VoidCallback>();
+
+  void autoDispose(VoidCallback callabck) {
+    _disposeSet.add(callabck);
+  }
+
+  @override
+  void dispose() {
+    _disposeSet.forEach((f) => f());
+    _disposeSet.removeAll();
+    super.dispose();
+  }
+}
+```
+
 ## 渲染引擎
 
 - Key

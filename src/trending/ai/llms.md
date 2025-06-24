@@ -15,11 +15,14 @@ index: true
 - [LLM Leaderboard](https://www.vellum.ai/llm-leaderboard)
 - [LM Speed](https://lmspeed.net)
     > 大模型 API 速度测试
+- [大模型基础 - 浙大](https://github.com/ZJU-LLMs/Foundations-of-LLMs)
 - [开源大模型食用指南](https://github.com/datawhalechina/self-llm)
-    > 《开源大模型食用指南》基于Linux环境快速部署开源大模型，更适合中国宝宝的部署教程
+    > 《开源大模型食用指南》针对中国宝宝量身打造的基于Linux环境快速微调（全参数/Lora）、部署国内外开源大模型（LLM）/多模态大模型（MLLM）教程
 - [llm-books](https://aitutor.liduos.com/) 👉🏻 [🐙](https://github.com/morsoli/llm-books)
     > 利用 LLM 构建应用实践笔记
 - [动手学大模型应用开发](https://datawhalechina.github.io/llm-universe/#/) 👉🏻 [🐙](https://github.com/datawhalechina/llm-universe)
+- [opik](https://www.comet.com/docs/opik/) 👉🏻 [🐙](https://github.com/comet-ml/opik)
+    > Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.
 - [Open LLMs](https://github.com/eugeneyan/open-llms)
     > 🤖 A list of open LLMs available for commercial use. 
 - [Z-Bench](https://github.com/zhenbench/z-bench)
@@ -97,19 +100,6 @@ index: true
 - [CPM-Bee](https://github.com/OpenBMB/CPM-Bee)
     > 百亿参数的中英文双语基座大模型
     
-    
-## image 
-
-- [MAGI-1](https://sand.ai/) 👉🏻 [🐙](https://github.com/SandAI-org/MAGI-1)
-    > MAGI-1: Autoregressive Video Generation at Scale
-
-------
-
-- [Text generation web UI](https://github.com/oobabooga/text-generation-webui)
-    > A Gradio web UI for Large Language Models with support for multiple inference backends.
-- [Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-    > A web interface for Stable Diffusion, implemented using Gradio library.
-    
 ## cpu
 
 - [BitNet - *microsoft*](https://github.com/microsoft/BitNet)
@@ -131,6 +121,10 @@ index: true
 - [Full Stack LLM Bootcamp](https://github.com/the-full-stack/website)
 - [基于本地知识库的 ChatGLM 等大语言模型应用实现](https://github.com/imClumsyPanda/langchain-ChatGLM)
 - [一种平价的chatgpt实现方案, 基于ChatGLM-6B + LoRA](https://github.com/mymusise/ChatGLM-Tuning)
+
+------
+
+- [2025-04-24 大模型后训练指南](https://mp.weixin.qq.com/s/1ue2v1jidXjcVIMBakKPcg)
 - [2023-05-18 GPT大语言模型Vicuna本地化部署实践（效果秒杀Alpaca）](https://zhuanlan.zhihu.com/p/630287397)
 - [2023-04-22 大模型也内卷，Vicuna训练及推理指南，效果碾压斯坦福羊驼](https://zhuanlan.zhihu.com/p/624012908)
 - [2023-01-18 通向AGI之路：大型语言模型（LLM）技术精要](https://zhuanlan.zhihu.com/p/597586623)

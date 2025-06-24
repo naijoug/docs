@@ -17,6 +17,8 @@ index: true
 
 - [Homeland](https://homeland.ruby-china.org/) 👉🏻 [🐙](https://github.com/ruby-china/homeland)
     > 🎪 An open source forum/community system based on Rails, developed based on Ruby China.
+- [Forem](https://forem.com/) 👉🏻 [🐙](https://github.com/forem/forem) [dev.to](https://dev.to)
+    > For empowering community 🌱
 
 ## command
 

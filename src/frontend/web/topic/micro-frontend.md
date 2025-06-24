@@ -10,7 +10,7 @@ index: true
 
 ## reference
 
-- [Micro Frontends](https://micro-frontends.org/) 👉🏻 [🐙](https://github.com/neuland/micro-frontends)
+- [Micro Frontends](https://micro-frontends.org/) 👉🏻 [🐙](https://github.com/neuland/micro-frontends) [🇨🇳](https://swearer23.github.io/micro-frontends/)
     > extending the microservice paradigms to web development
 - [无界 - *Tencent*](https://wujie-micro.github.io/doc/) 👉🏻 [🐙](https://github.com/Tencent/wujie)
     > 极致的微前端框架

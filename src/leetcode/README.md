@@ -29,7 +29,7 @@ index: false
     > LeetCode Solutions: A Record of My Problem Solving Journey.( leetcode题解，记录自己的leetcode解题之路。)
 - [吴师兄学算法](https://blog.algomooc.com) 👉🏻 [🐙](https://github.com/MisterBooo/LeetCodeAnimation)
     > Demonstrate all the questions on LeetCode in the form of animation.（用动画的形式呈现解LeetCode题目的思路）
-- [LeetCode 全解](https://doocs.github.io/leetcode) 👉🏻 [🐙](https://github.com/doocs/leetcode)
+- [LeetCode 全解](https://leetcode.doocs.org/) 👉🏻 [🐙](https://github.com/doocs/leetcode)
     > 🔥LeetCode solutions in any programming language | 多种编程语言实现 LeetCode、《剑指 Offer（第 2 版）》、《程序员面试金典（第 6 版）》题解
 - [LeetCode 系列题解](https://leetcode.hi-dhl.com) 👉🏻 [🐙](https://github.com/hi-dhl/Leetcode-Solutions-with-Java-And-Kotlin)
     > 剑指 offer 及大厂面试题解 LeetCode 系列题解

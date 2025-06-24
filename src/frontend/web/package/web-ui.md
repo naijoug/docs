@@ -46,3 +46,5 @@ index: true
 
 - [tldraw](https://tldraw.dev/) 👉🏻 [🐙](https://github.com/tldraw/tldraw)
     > whiteboard / infinite canvas SDK
+- [HomePage](https://simonaking.com/) 👉🏻 [🐙](https://github.com/SimonAKing/HomePage)
+    > A modern and elegant personal homepage with fluid animation background, responsive design and smooth page transitions

@@ -36,3 +36,5 @@ index: true
 
 ## UI
 
+- [uilayouts](https://www.ui-layouts.com/) 👉🏻 [🐙](https://github.com/ui-layouts/uilayouts)
+    > 🔥100+ Free beautifull interactive react/nextjs component based on tailwindcss, framer-motion, gsap etc

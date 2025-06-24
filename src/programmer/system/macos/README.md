@@ -125,7 +125,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux and Web
 - [Flameshot](https://flameshot.org/) 👉🏻 [🐙](https://github.com/flameshot-org/flameshot)
     > Powerful yet simple to use screenshot software 🖥️ 📸
-
+- [InputSourcePro](https://inputsource.pro) 👉🏻 [🐙](https://github.com/runjuu/InputSourcePro)
+    > Switch and track your input sources with ease ✨
 
 ## Tips
 

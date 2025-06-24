@@ -39,3 +39,5 @@ index: false
     > Automatically generates beautiful and easy-to-read ER diagrams from your database.
 - [MindsDB](https://mindsdb.com/) 👉🏻 [🐙](https://github.com/mindsdb/mindsdb)
     > AI's query engine - Platform for building AI that can learn and answer questions over large scale federated data.
+- [DuckDB](https://duckdb.org/) 👉🏻 [🐙](https://github.com/duckdb/duckdb)
+    > DuckDB is an analytical in-process SQL database management system

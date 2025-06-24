@@ -10,5 +10,10 @@ index: true
 
 ## reference
 
+- [Model Context Protocol](https://modelcontextprotocol.io) 👉🏻 [🐙](https://github.com/modelcontextprotocol/servers)
+    > Model Context Protocol Servers
+- [MCP Market](https://mcpmarket.cn/)
+- [MCP.so](https://mcp.so/) 👉🏻 [🐙](https://github.com/chatmcp/mcpso)
+    > directory for Awesome MCP Servers
 - [Awesome MCP Servers ](https://glama.ai/mcp/servers) 👉🏻 [🐙](https://github.com/punkpeye/awesome-mcp-servers)
     > A collection of MCP servers.

@@ -39,7 +39,11 @@ index: false
 
 ## apps
 
+- [PiliPala](https://github.com/guozhigq/pilipala)
+    > PiliPala 是使用 Flutter 开发的 BiliBili 第三方客户端。
 - [moodiary](https://docs.moodiary.net/) 👉🏻 [🐙](https://github.com/ZhuJHua/moodiary)
     > A fully open source cross-platform diary app written by flutter and rust.
-
+- [啵啵音乐](https://github.com/Redstone-1/bobomusic)
+- [crayon](https://github.com/morn-fun/crayon)
+    > Rich text editor build by flutter!
 

@@ -19,8 +19,7 @@ index: false
 - [玩 Android 开放 API](https://www.wanandroid.com/blog/show/2)
 - [Hacker News API](https://github.com/HackerNews/API)
     > Documentation and Samples for the Official HN API
-- [bilibili-API-collect](https://github.com/SocialSisterYi/bilibili-API-collect)
-    > 哔哩哔哩-API收集整理
+- [哔哩哔哩 - API 收集整理](https://socialsisteryi.github.io/bilibili-API-collect/) 👉🏻 [🐙](https://github.com/SocialSisterYi/bilibili-API-collect)
 - [免费节假日 API](https://timor.tech/api/holiday)
 - [trace.moe-api](https://github.com/soruly/trace.moe-api)
 
