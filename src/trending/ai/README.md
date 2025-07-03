@@ -21,22 +21,26 @@ index: false
 ## reference
 
 - [🌈通往 AGC 之路](https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e)
-- [高军 AI 日报](https://daily.gojun.me) 👉🏻 [🐙](https://github.com/Freelander/AI-Daily)
-    > 《高军 AI 日报》： 每天花 1 分钟时间，获取精选的前沿 AI 信息。内容涵盖但不限于 前沿 AI 资讯、AI 工具、AI 绘画、开源项目和学习教程 等等。
 - [Datawhale](https://datawhale.cn)
-- [AI tools](https://dang.ai)
-- [AI Graveyard](https://dang.ai/ai-graveyard)
+- [鱼皮的 AI 知识库](https://ai.codefather.cn/) 👉🏻 [🐙](https://github.com/liyupi/ai-guide)
+    > 程序员鱼皮的 AI 知识库，汇总热门的 AI 大模型和工具，比如 Deepseek 使用指南、提示词技巧、知识干货、应用场景、AI 变现、行业资讯、教程资源等一系列内容，帮助你快速掌握 AI 技术，走在时代前沿。涉及的大模型 ChatGPT、Claude、Gemini、Deepseek、Deepseek-r1、QWEN、GROK 等
+- [AI tools](https://dang.ai) 👉🏻 [AI Graveyard](https://dang.ai/ai-graveyard)
     > The wasteland of discontinued and dead AI projects.
-    > 失败和废弃的 AI 项目
 - [AI 工具集](https://ai-bot.cn/)
-- [awesome-ai-painting](https://github.com/hua1995116/awesome-ai-painting)
-    > AI绘画资料合集（包含国内外可使用平台、使用教程、参数教程、部署教程、业界新闻等等） stable diffusion tutorial、disco diffusion tutorial、 AI Platform
 
 ------
     
-- [💯 Pinokio](https://pinokio.computer) 👉🏻 [🐙](https://github.com/pinokiocomputer/pinokio)
-    > Pinokio is a browser that lets you install, run, and programmatically control ANY application, automatically.
-- [最懂程序员的新一代 AI 搜索引擎](https://devv.ai) 👉🏻 [🐙](https://github.com/devv-ai/devv)
+- [~~pinokio~~](https://www.pinokio.co/) 👉🏻 [🐙](https://github.com/pinokiocomputer/pinokio)
+    > AI Browser
+- [~~devv~~](https://devv.ai) 👉🏻 [🐙](https://github.com/devv-ai/devv)
+    > An AI-powered search engine for developers.
+
+------
+
+- [~~awesome-ai-painting~~](https://github.com/hua1995116/awesome-ai-painting)
+    > AI绘画资料合集（包含国内外可使用平台、使用教程、参数教程、部署教程、业界新闻等等） stable diffusion tutorial、disco diffusion tutorial、 AI Platform
+- [~~高军 AI 日报~~](https://github.com/Freelander/AI-Daily)
+    > 《高军 AI 日报》： 每天花 1 分钟时间，获取精选的前沿 AI 信息。内容涵盖但不限于 前沿 AI 资讯、AI 工具、AI 绘画、开源项目和学习教程 等等。
 
 ## concept
 

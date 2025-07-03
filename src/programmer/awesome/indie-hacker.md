@@ -33,6 +33,7 @@ index: true
 
 - [One-Person Company](https://oneperson.dev/) 👉🏻 [🐙](https://github.com/cyfyifanchen/one-person-company)
     > 一人公司 AI 工具系列，长期更新，帮助大家提升工作效率，开启一人公司! One-Person Company AI Tools Series – continuously updated to help boost productivity and empower your solo business!
+- [indiehackers-steps](https://github.com/hua1995116/indiehackers-steps)
 - [中国独立开发者项目列表](https://github.com/1c7/chinese-independent-developer)
     > 👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么
 - [中国独立开发者项目列表](https://developer.hubing.online) 👉🏻 [🐙](https://github.com/kisslove/chinese-independent-developer-site)
