@@ -27,6 +27,7 @@ index: true
 
 ## assets
 
+- [Google Fonts](https://fonts.google.com/)
 - [svgl](https://svgl.app/) 👉🏻 [🐙](https://github.com/pheralb/svgl)
     > 🧩 A beautiful library with SVG logos. Built with Sveltekit & Tailwind CSS.
 - [vecto3d](https://www.vecto3d.xyz/) 👉🏻 [🐙](https://github.com/lakshaybhushan/vecto3d)
