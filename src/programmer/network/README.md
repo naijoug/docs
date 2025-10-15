@@ -16,6 +16,8 @@ index: false
 - [TCP/IP详解 卷1：协议](http://www.52im.net/topic-tcpipvol1.html)
 - [TxThinking Talks](https://talks.txthinking.com/)
 - [网络安全学习资料](https://github.com/findneo/Newbie-Security-List)
+- [Awesome Cybersecurity List](https://github.com/0xor0ne/awesome-list)
+    > Cybersecurity oriented awesome list
 
 ------
 
@@ -34,7 +36,6 @@ index: false
 - [Termscp](https://termscp.veeso.dev/) 👉🏻 [🐙](https://github.com/veeso/termscp)
     > 🖥 A feature rich terminal UI file transfer and explorer with support for SCP/SFTP/FTP/S3/SMB 
 - [FOFA](https://fofa.info/)
-    > 
 
 ## GitHub
 
