@@ -10,6 +10,8 @@ index: true
 
 ## reference
 
+- [🌟 500+ AI Agent Projects / UseCases](https://github.com/ashishpatel26/500-AI-Agents-Projects)
+    > The 500 AI Agents Projects is a curated collection of AI agent use cases across various industries. It showcases practical applications and provides links to open-source projects for implementation, illustrating how AI agents are transforming sectors such as healthcare, finance, education, retail, and more.
 - [AppAgent](https://appagent-official.github.io) 👉🏻 [🐙](https://github.com/mnotgod96/AppAgent)
     > AppAgent: Multimodal Agents as Smartphone Users, an LLM-based multimodal agent framework designed to operate smartphone apps.
 - [Screenshot to Code](https://screenshottocode.com) 👉🏻 [🐙](https://github.com/abi/screenshot-to-code)

@@ -81,6 +81,8 @@ icon: gift
 
 ## Tutorials
 
+- [A to Z Resources for Students](https://github.com/dipakkr/A-to-Z-Resources-for-Students)
+    > ✅ Curated list of resources for college students
 - [exercism](https://exercism.org) 👉🏻 [🐙](https://github.com/exercism/exercism)
     > Crowd-sourced code mentorship. Practice having thoughtful conversations about code.
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
@@ -157,7 +159,6 @@ icon: gift
     > 骚话生成器生成器
 - [Thief](https://github.com/cteamx/Thief)
     > 一款基于 `Electron` 开发的创新跨平台摸鱼神器
-- [程序员考公指南](https://github.com/coder2gwy/coder2gwy)
 
 - [Build your own X](https://github.com/codecrafters-io/build-your-own-x)
     > 

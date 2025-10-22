@@ -23,6 +23,8 @@ index: true
 - [李宏毅深度学习教程 LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
 - [推荐系统入门教程](https://datawhalechina.github.io/fun-rec) 👉🏻 [🐙](https://github.com/datawhalechina/fun-rec)
 - [pandas 中文教程](https://inter.joyfulpandas.datawhale.club) 👉🏻 [🐙](https://github.com/datawhalechina/joyful-pandas)
+- [aie-book](https://github.com/chiphuyen/aie-book)
+    > [WIP] Resources for AI engineers. Also contains supporting materials for the book AI Engineering (Chip Huyen, 2025)
 
 ------
 
