@@ -17,3 +17,8 @@ index: true
     > directory for Awesome MCP Servers
 - [Awesome MCP Servers ](https://glama.ai/mcp/servers) 👉🏻 [🐙](https://github.com/punkpeye/awesome-mcp-servers)
     > A collection of MCP servers.
+    
+## popular
+
+- [Context 7](https://context7.com/) 👉🏻 [🐙](https://github.com/upstash/context7)
+	> Context7 MCP Server -- Up-to-date code documentation for LLMs and AI code editors

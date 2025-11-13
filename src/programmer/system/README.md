@@ -26,6 +26,8 @@ icon: microchip
 - [Paralles](https://www.parallels.com/) 
 - [VMware](https://www.vmware.com/)
 - [VirtualBox](https://www.virtualbox.org/)
+- [Ventoy](https://www.ventoy.net/en/index.html) 👉🏻 [🐙](https://github.com/ventoy/Ventoy)
+	> A new bootable USB solution.
 - [Veertu](https://veertu.com/) 
     > macOS cloud for iOS CI and Devops
 - [UTM](https://getutm.app/) 
