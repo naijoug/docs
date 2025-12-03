@@ -58,6 +58,7 @@ icon: gift
 
 ## 📚
 
+- [识典古籍](https://www.shidianguji.com)
 - [shu](https://github.com/shjwudp/shu)
     > 中文书籍收录整理
 - [中文诗歌](https://shici.store) 👉🏻 [🐙](https://github.com/chinese-poetry/chinese-poetry)

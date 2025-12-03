@@ -28,16 +28,13 @@ index: true
 - [Z-Bench](https://github.com/zhenbench/z-bench)
     > Z-Bench 1.0 by 真格基金：一个麻瓜的大语言模型中文测试集。Z-Bench is a LLM prompt dataset for non-technical users, developed by an enthusiastic AI-focused team in Zhenfund
 
-------
 
-- [anything-llm](https://anythingllm.com/) 👉🏻 [🐙](https://github.com/Mintplex-Labs/anything-llm)
-    > The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility, and more.
-- [Open WebUI](https://openwebui.com/) 👉🏻 [🐙](https://github.com/open-webui/open-webui)
-    > User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
-- [Dify](https://dify.ai) 👉🏻 [🐙](https://github.com/langgenius/dify)
-    > Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production.
-- [LiteLLM](https://litellm.ai) 👉🏻 [🐙](https://github.com/BerriAI/litellm)
-    > Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]
+## training
+
+- [Gorilla](https://gorilla.cs.berkeley.edu/) 👉🏻 [🐙](https://github.com/ShishirPatil/gorilla)
+	> Gorilla: Training and Evaluating LLMs for Function Calls (Tool Calls)
+- [MiniMind](https://jingyaogong.github.io/minimind) 👉🏻 [🐙](https://github.com/jingyaogong/minimind)
+	> 🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h!
 
 ## GPT
 

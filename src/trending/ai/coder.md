@@ -8,14 +8,31 @@ index: true
 
 ## reference
 
+- [goose](https://block.github.io/goose/) 👉🏻 [🐙](https://github.com/block/goose)
+    > an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
 - [Github - Copilot](https://github.com/features/copilot)
     > Your AI pair programmer
 - [Github - CopilotForXcode](https://github.com/github/CopilotForXcode)
     > Xcode extension for GitHub Copilot
 - [CopilotForXcode](https://copilotforxcode.intii.com/) 👉🏻 [🐙](https://github.com/intitni/CopilotForXcode)
     > The first GitHub Copilot, Codeium and ChatGPT Xcode Source Editor Extension
+
+## tool
+
+- [DeepWiki](https://deepwiki.com/)
+- [Repo Prompt](https://repoprompt.com/)
+    > Code smarter with AI—no more messy copy-pasting.
 - [Pieces](https://pieces.app/) 👉🏻 [🐙](https://github.com/pieces-app)
     > The fastest, smartest AI Assistant for code snippets and screenshots.
+- [pr-agent](https://www.qodo.ai/) 👉🏻 [🐙](https://github.com/qodo-ai/pr-agent)
+	> 🚀 PR-Agent: An AI-Powered 🤖 Tool for Automated Pull Request Analysis, Feedback, Suggestions and More! 💻🔍
+- [🌱 Spec Kit](https://github.com/github/spec-kit)
+	> 💫 Toolkit to help you get started with Spec-Driven Development
+
+## cmd
+
+- [Gemini Coder](https://gemini-coder.netlify.app/) 👉🏻 [🐙](https://github.com/robertpiosik/gemini-coder)
+    > Copy folders and files for chatbots or initialize them hands-free! Use the free Gemini API for code completions, file refactoring and applying chat responses.
 
 ## IED 
 
@@ -49,8 +66,6 @@ index: true
 
 ------
 
-- [Gemini Coder](https://gemini-coder.netlify.app/) 👉🏻 [🐙](https://github.com/robertpiosik/gemini-coder)
-    > Copy folders and files for chatbots or initialize them hands-free! Use the free Gemini API for code completions, file refactoring and applying chat responses.
 - [Continue](https://www.continue.dev/) 👉🏻 [🐙](https://github.com/continuedev/continue)
     > ⏩ Continue is the leading open-source AI code assistant. You can connect any models and any context to build custom autocomplete and chat experiences inside VS Code and JetBrains
 - [Bytedance - MarsCode](https://www.marscode.com/) 👉🏻 [🇨🇳](https://www.marscode.cn)
@@ -73,9 +88,3 @@ index: true
     > Sweep: AI-powered Junior Developer for small features and bug fixes.
 - [~~TabNine~~](https://www.tabnine.com/) 👉🏻 [🐙](https://github.com/codota/TabNine)
     > AI Code Completions
-
-## tool
-
-- [DeepWiki](https://deepwiki.com/)
-- [Repo Prompt](https://repoprompt.com/)
-    > Code smarter with AI—no more messy copy-pasting.

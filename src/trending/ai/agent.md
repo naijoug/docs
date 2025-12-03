@@ -20,8 +20,6 @@ index: true
     > Specify what you want it to build, the AI asks for clarification, and then builds it.
 - [Agno](https://github.com/agno-agi/agno) 👉🏻 [🐙](https://github.com/agno-agi/agno)
     > Lightweight framework for building Agents with memory, knowledge, tools and reasoning.
-- [goose](https://block.github.io/goose/) 👉🏻 [🐙](https://github.com/block/goose)
-    > an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
 - [Suna](https://www.suna.so/) 👉🏻 [🐙](https://github.com/kortix-ai/suna)
     > Suna - Open Source Generalist AI Agent
 
@@ -33,6 +31,16 @@ index: true
 
 - [Bytedance - Coze](https://www.coze.com/)
 - [Alibaba - Tbox](https://tbox.alipay.com/pro-about)
+
+
+## tool
+
+- [Open WebUI](https://openwebui.com/) 👉🏻 [🐙](https://github.com/open-webui/open-webui)
+    > User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
+- [Dify](https://dify.ai) 👉🏻 [🐙](https://github.com/langgenius/dify)
+    > Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production.
+- [Coze Studio](https://github.com/coze-dev/coze-studio)
+	> An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.
 
 
 ## product

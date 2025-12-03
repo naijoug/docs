@@ -60,7 +60,7 @@ index: true
 - [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)
     > 利用 AI 大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.
 
-## Product
+## tools
 
 - [Glifs](https://glif.app)
 - [PodML](https://podlm.ai/)
@@ -76,7 +76,13 @@ index: true
     > A free + OSS logo generator powered by Flux on Together AI
 - [VideoCaptioner](https://github.com/WEIFENG2333/VideoCaptioner)
     > 🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手，无需GPU一键高质量字幕视频合成！支持生成、断句、优化、翻译全流程。让视频字幕制作简单高效！
-    
+- [AiNiee](https://github.com/NEKOparapa/AiNiee)
+	> 一款专注于Ai翻译的工具，一键自动翻译RPG SLG游戏，Epub TXT小说，Srt Vtt Lrc字幕，Word MD文档等等复杂长文本。
+- [ReaDreamAI](https://github.com/NEKOparapa/ReaDreamAI)
+	> 阅你所想，绘你所梦，从一个想法到一本完整的精彩小说。ReaDreamAI为你包办写作、插图与视频。
+- []() 👉🏻 [🐙](https://github.com/sansan0/TrendRadar)
+	> 🎯 告别信息过载，AI 助你看懂新闻资讯热点，简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。监控35个平台（抖音、知乎、B站、华尔街见闻、财联社等），智能筛选+自动推送+AI对话分析（用自然语言深度挖掘新闻：趋势追踪、情感分析、相似检索等13种工具）。支持企业微信/个人微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 推送，30秒网页部署，1分钟手机通知，无需编程。支持Docker部署⭐ 让算法为你服务，用AI理解热点
+
 ## NSFW
 > `NSFW`: `Not Safe For Work` 的缩写，意思是“不适合在工作场合查看”。这个术语通常用来标记那些包含成人内容、色情内容、暴力或其他可能在工作场所不适宜展示的内容。
 

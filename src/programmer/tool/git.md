@@ -121,6 +121,15 @@ order: 3
   $ git restore --staged file   # 插销暂存文件
   $ git restore --staged .      # 撤销所有暂存文件
   $ git restore .               # 撤销工作区所有修改
+  
+  # 批量修改提交用户&邮箱
+  #   - 安装 git-filter-repo
+  pip install git-filter-repo
+  #   - 创建邮箱映射文件 mailmap.txt
+  echo "NewName <new@email.com> <old@email.com>" > mailmap.txt
+  #   - 执行替换
+  git filter-repo --mailmap mailmap.txt
+
   # git 远程操作
   $ git remote                # 查看远程仓库信息
   $ git remote add origin git@github.com:naijoug/NGKit.git    # 添加名为`origin`的仓库
