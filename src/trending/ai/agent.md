@@ -22,6 +22,7 @@ index: true
     > Lightweight framework for building Agents with memory, knowledge, tools and reasoning.
 - [Suna](https://www.suna.so/) 👉🏻 [🐙](https://github.com/kortix-ai/suna)
     > Suna - Open Source Generalist AI Agent
+- [HelloAgent](https://datawhalechina.github.io/hello-agents/#/) 👉🏻 [🐙](https://github.com/datawhalechina/Hello-Agents)
 
 ------
 
@@ -42,6 +43,13 @@ index: true
 - [Coze Studio](https://github.com/coze-dev/coze-studio)
 	> An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.
 
+
+## design
+
+- [penpot](https://penpot.app/) 👉🏻 [🐙](https://github.com/penpot/penpot)
+	> Penpot: The open-source design tool for design and code collaboration
+- [onlook](https://www.onlook.com/) 👉🏻 [🐙](https://github.com/onlook-dev/onlook) 
+	> The Cursor for Designers • An Open-Source AI-First Design tool • Visually build, style, and edit your React App with AI
 
 ## product
 
