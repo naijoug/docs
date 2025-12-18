@@ -33,6 +33,9 @@ index: true
 
 - [Gemini Coder](https://gemini-coder.netlify.app/) 👉🏻 [🐙](https://github.com/robertpiosik/gemini-coder)
     > Copy folders and files for chatbots or initialize them hands-free! Use the free Gemini API for code completions, file refactoring and applying chat responses.
+- [codebuff](https://www.codebuff.com) 👉🏻 [🐙](https://github.com/CodebuffAI/codebuff)
+	> Generate code from the terminal!
+
 
 ## IED 
 
@@ -45,6 +48,11 @@ index: true
 
 - [Windsurf](https://codeium.com/windsurf)
     > The first agentic IDE, and then some. The Windsurf Editor is where the work of developers and AI truly flow together, allowing for a coding experience that feels like literal magic.
+
+- [Kiro](https://kiro.dev/) 👉🏻 [🐙](https://github.com/kirodotdev/Kiro)
+	> Kiro is an agentic IDE that works alongside you from prototype to production.
+
+- [antigravity](https://antigravity.google/)
 
 - [Trae](https://www.trae.ai/) 👉🏻 [🇨🇳](https://www.trae.com.cn/)
     > `/trae/`: `The real AI engineer`

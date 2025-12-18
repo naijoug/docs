@@ -55,3 +55,9 @@ index: true
 
 - [Manus](https://manus.im/)
     > Manus is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.
+
+## knowledge
+
+- [NotebookLM](https://notebooklm.google/)
+- [OpenNotebook](https://www.open-notebook.ai/) 👉🏻 [🐙](https://github.com/lfnovo/open-notebook)
+	> An Open Source implementation of Notebook LM with more flexibility and features
