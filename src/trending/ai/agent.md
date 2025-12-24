@@ -61,3 +61,5 @@ index: true
 - [NotebookLM](https://notebooklm.google/)
 - [OpenNotebook](https://www.open-notebook.ai/) 👉🏻 [🐙](https://github.com/lfnovo/open-notebook)
 	> An Open Source implementation of Notebook LM with more flexibility and features
+- [SurfSense](https://www.surfsense.com/) 👉🏻 [🐙](https://github.com/MODSetter/SurfSense)
+    > Open source alternative to NotebookLM, Perplexity, and Glean. Connects to search engines, Slack, Linear, Jira, ClickUp, Notion, YouTube, GitHub, Discord, and more. 

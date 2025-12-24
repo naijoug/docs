@@ -28,6 +28,10 @@ order: 8
 
 ## Assets.car
 
+- [AssetCatalogTinkerer](https://github.com/insidegui/AssetCatalogTinkerer)
+    > An app that lets you open .car files and browse/extract their images.
+- [cartools](https://github.com/showxu/cartools)
+    > ToolKit for Compiled Asset Catalogs (.car file) written in Swift.
 - [Analysing Assets.car file in iOS](https://stackoverflow.com/questions/22630418/analysing-assets-car-file-in-ios)
 
 ## 热修复
