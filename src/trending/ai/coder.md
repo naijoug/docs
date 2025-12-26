@@ -26,6 +26,11 @@ index: true
     > The fastest, smartest AI Assistant for code snippets and screenshots.
 - [pr-agent](https://www.qodo.ai/) 👉🏻 [🐙](https://github.com/qodo-ai/pr-agent)
 	> 🚀 PR-Agent: An AI-Powered 🤖 Tool for Automated Pull Request Analysis, Feedback, Suggestions and More! 💻🔍
+
+## spec
+
+- [OpenSpec](https://openspec.dev/) 👉🏻 [🐙](https://github.com/Fission-AI/OpenSpec) [tw](https://github.com/Minidoracat/OpenSpec-tw)
+    > Spec-driven development (SDD) for AI coding assistants.
 - [🌱 Spec Kit](https://github.com/github/spec-kit)
 	> 💫 Toolkit to help you get started with Spec-Driven Development
 

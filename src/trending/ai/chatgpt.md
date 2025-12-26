@@ -34,6 +34,15 @@ index: true
 - [whisper-timestamped](https://github.com/linto-ai/whisper-timestamped)
     > Multilingual Automatic Speech Recognition with word-level timestamps and confidence
 
+## client
+
+- [Alma](https://alma.now/) 👉🏻 [🐙](https://github.com/yetone/alma-releases)
+    > Elegant AI Provider Orchestration
+- [ChatWise](https://chatwise.app/) 👉🏻 [🐙](https://github.com/egoist/chatwise-releases)
+    > The fastest AI Chatbot for any LLM
+- [🍒 Cherry Studio](https://cherry-ai.com/) 👉🏻 [🐙](https://github.com/CherryHQ/cherry-studio)
+    > 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.
+
 ## Tools
 
 - [Awesome-gptlike-shellsite](https://github.com/bleedline/Awesome-gptlike-shellsite)
@@ -52,9 +61,7 @@ index: true
 - [myGPTReader](https://github.com/madawei2699/myGPTReader)
     > A community-driven way to read and chat with AI bots - powered by chatGPT.
 - [GeminiProChat](https://geminiprochat.com/) 👉🏻 [🐙](https://github.com/babaohuang/GeminiProChat)
-    > Minimal web UI for GeminiPro.
-- [🍒 Cherry Studio](https://cherry-ai.com/) 👉🏻 [🐙](https://github.com/CherryHQ/cherry-studio)
-    > 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.
+    > Minimal web UI for GeminiPro.a
 - [khoj](https://khoj.dev/) 👉🏻 [🐙](https://github.com/khoj-ai/khoj)
     > Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free.
 - [SillyTavern](https://sillytavern.app/) 👉🏻 [🐙](https://github.com/SillyTavern/SillyTavern)
