@@ -49,6 +49,8 @@ index: false
 
 ## website
 
+- [FreeDomain](https://domain.digitalplat.org/) 👉🏻 [🐙](https://github.com/DigitalPlatDev/FreeDomain)
+    > DigitalPlat FreeDomain: Free Domain For Everyone
 - [WebCurate](https://webcurate.co/)
     > Like App Store, But for Websites
 - [Similarweb](https://www.similarweb.com)
