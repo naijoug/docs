@@ -38,10 +38,14 @@ index: true
 
 - [Alma](https://alma.now/) 👉🏻 [🐙](https://github.com/yetone/alma-releases)
     > Elegant AI Provider Orchestration
-- [ChatWise](https://chatwise.app/) 👉🏻 [🐙](https://github.com/egoist/chatwise-releases)
-    > The fastest AI Chatbot for any LLM
 - [🍒 Cherry Studio](https://cherry-ai.com/) 👉🏻 [🐙](https://github.com/CherryHQ/cherry-studio)
     > 🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.
+- [DeepChat](https://deepchat.thinkinai.xyz/) 👉🏻 [🐙](https://github.com/ThinkInAIXYZ/deepchat)
+    > 🐬DeepChat - A smart assistant that connects powerful AI to your personal world
+- [ChatWise](https://chatwise.app/) 👉🏻 [🐙](https://github.com/egoist/chatwise-releases)
+    > The fastest AI Chatbot for any LLM
+- [ChatMCP](https://daodao97.github.io/chatmcp/) 👉🏻 [🐙](https://github.com/daodao97/chatmcp)
+    > ChatMCP is an AI chat client implementing the Model Context Protocol (MCP).
 
 ## Tools
 

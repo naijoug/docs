@@ -32,7 +32,10 @@ index: true
     > 🧩 A beautiful library with SVG logos. Built with Sveltekit & Tailwind CSS.
 - [vecto3d](https://www.vecto3d.xyz/) 👉🏻 [🐙](https://github.com/lakshaybhushan/vecto3d)
     > A super simple tool to convert your SVG's to 3D models.
-
+- [Lorem Picsum](https://picsum.photos/) 👉🏻 [🐙](https://github.com/DMarby/picsum-photos)
+    > Lorem Ipsum... but for photos.
+- [placeholder](https://image-placeholder.com/)
+    
 ## tool
 
 - [NotionChina](https://notionchina.co/)

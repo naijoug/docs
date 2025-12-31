@@ -16,7 +16,3 @@ index: true
     
 ------
 
-- [TAURI](https://tauri.app/) 👉🏻 [🐙](https://github.com/tauri-apps/tauri)
-    > Build smaller, faster, and more secure desktop and mobile applications with a web frontend.
-- [Pake](https://github.com/tw93/Pake)
-    > 🤱🏻 Turn any webpage into a desktop app with Rust. 🤱🏻 利用 Rust 轻松构建轻量级多端桌面应用
