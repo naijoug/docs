@@ -14,29 +14,45 @@ index: true
 - [阮一峰](http://www.ruanyifeng.com/)
 - [廖雪峰](https://www.liaoxuefeng.com/)
 - [刘欣 (码农翻身)](https://shrtm.nu/fyRs)
-- [Bannings](https://www.codingtour.com) : `ARTS` 实践者
-- [tw93](https://tw93.fun) : Pake、MiaoYan 作者
+- [Bannings](https://www.codingtour.com) 
+    > `ARTS` 实践者
+- [tw93](https://tw93.fun) 
+    > `Mole`、`Pake`、`MiaoYan` 作者
 - [王兴彬 (棒棒彬) - 字节跳动](https://github.com/Binlogo/Knowledge-Track)
-- [林洵锋](https://fullstackaction.com/) : FSA全栈行动
-- [郭曜源 (ibireme) - 优酷](http://blog.ibireme.com) : `YYKit` 作者、iOS RunLoop
-- [孙源 (sunnyxx) - 滴滴](http://blog.sunnyxx.com) : Objective-C 深入研究
+- [林洵锋](https://fullstackaction.com/) 
+    > `FSA` 全栈行动
+- [郭曜源 (ibireme) - 优酷](http://blog.ibireme.com) 
+    > `YYKit` 作者、iOS RunLoop
+- [孙源 (sunnyxx) - 滴滴](http://blog.sunnyxx.com) 
+    > Objective-C 深入研究
 - [孙亚洲 (迈腾大队长) - TME](https://www.sunyazhou.com)
-- [李忠 (limboy) - 蘑菇街](http://limboy.me) : RAC
-- [田伟宇 (casatwy) - 得物](https://casatwy.com) : iOS 架构系列
-- [杨萧玉 (玉令天下) - 腾讯](http://yulingtianxia.com/) : iOS Runtime、消息机制
-- [张宇星 (bestswifter) - 今日头条](https://bestswifter.com/) : iOS
-- [于德志 (halfrost) - 饿了么](https://halfrost.com/) : iOS 、FE、Go、机器学习
-- [钟颖 (Cyan) - 微软](https://www.zhihu.com/people/ios_dev/posts) : `Pin` 作者
+- [李忠 (limboy) - 蘑菇街](http://limboy.me) 
+    > RAC
+- [田伟宇 (casatwy) - 得物](https://casatwy.com) 
+    >  `iOS` 架构系列
+- [杨萧玉 (玉令天下) - 腾讯](http://yulingtianxia.com/) 
+    > `iOS Runtime`、消息机制
+- [张宇星 (bestswifter) - 今日头条](https://bestswifter.com/) 
+    > iOS
+- [于德志 (halfrost) - 饿了么](https://halfrost.com/) 
+    > `iOS` 、`FE`、`Go`、机器学习
+- [钟颖 (Cyan) - 微软](https://www.zhihu.com/people/ios_dev/posts) 
+    > `Pin` 作者
 - [戴铭 (ming1016) - 快手](https://github.com/ming1016/study)
 - [翁培钧 - 滴滴](https://github.com/windstormeye/iOS-Course)
 - [邓国雄 (Airing) - 腾讯](https://blog.ursb.me)
 - [崔江涛 (kenshincui)](http://www.cnblogs.com/kenshincui)
 - [图拉鼎](https://imtx.me)
+- [唐霜，独立开发者](https://www.tangshuang.net/)
+    > 独立开发者，超级个体，AI应用创业者。
 - [SHERlocked93](https://github.com/SHERlocked93/blog)
-- [knowledge-kit](https://github.com/FantasticLBP/knowledge-kit) : iOS、Web前端、后端、数据库、计算机网络、设计模式经验总结
+- [knowledge-kit](https://github.com/FantasticLBP/knowledge-kit) 
+    > iOS、Web 前端、后端、数据库、计算机网络、设计模式经验总结
 - [zhihaozhang](https://zhihaozhang.github.io)
-- [OldBirds](https://oldbird.run/) : SwiftUI、Flutter、Vapor
-- [everettjf](https://everettjf.github.io) : Fullstack
+- [OldBirds](https://oldbird.run/) 
+    > `SwiftUI`、`Flutter`、`Vapor`
+- [everettjf](https://everettjf.github.io) 
+    > `Fullstack`
 - [ExplainThis](https://www.explainthis.io/zh-hans)
 
 ------

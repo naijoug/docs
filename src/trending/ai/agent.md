@@ -24,15 +24,15 @@ index: true
     > Suna - Open Source Generalist AI Agent
 - [HelloAgent](https://datawhalechina.github.io/hello-agents/#/) 👉🏻 [🐙](https://github.com/datawhalechina/Hello-Agents)
 
-------
+## topic
 
+- [2025-12-21 如何做 AI Agent 喜欢的基础软件](https://mp.weixin.qq.com/s/BZcRwgGZNinBK9K2L38LYg)
 - [2023-10-29 万字长文！何谓Agent，为何Agent？](https://mp.weixin.qq.com/s/jFf0fmZLehLDaNNzgqeAIQ)
 
 ## platform
 
 - [Bytedance - Coze](https://www.coze.com/)
 - [Alibaba - Tbox](https://tbox.alipay.com/pro-about)
-
 
 ## tool
 
@@ -55,6 +55,8 @@ index: true
 
 - [Manus](https://manus.im/)
     > Manus is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.
+- [AutoGLM](https://autoglm.z.ai/blog/) 👉🏻 [🐙](https://github.com/zai-org/Open-AutoGLM)
+    > An Open Phone Agent Model & Framework. Unlocking the AI Phone for Everyone
 
 ## knowledge
 

@@ -8,17 +8,14 @@ index: true
 
 ## reference
 
-- [goose](https://block.github.io/goose/) 👉🏻 [🐙](https://github.com/block/goose)
-    > an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
-- [Github - Copilot](https://github.com/features/copilot)
-    > Your AI pair programmer
-- [Github - CopilotForXcode](https://github.com/github/CopilotForXcode)
-    > Xcode extension for GitHub Copilot
-- [CopilotForXcode](https://copilotforxcode.intii.com/) 👉🏻 [🐙](https://github.com/intitni/CopilotForXcode)
-    > The first GitHub Copilot, Codeium and ChatGPT Xcode Source Editor Extension
+## tutorial
+
+- [Claude Code 中文教程](https://claudecode.tangshuang.net/)
+- [Claude Code in Action](https://anthropic.skilljar.com/claude-code-in-action) - [《Claude Code in Action》中文版](https://cholf5.com/claude-code-in-action/index.html) 👉🏻 [🐙](https://github.com/cholf5/claude-code-in-action)
 
 ## tool
 
+- [zread](https://zread.ai/)
 - [DeepWiki](https://deepwiki.com/)
 - [Repo Prompt](https://repoprompt.com/)
     > Code smarter with AI—no more messy copy-pasting.
@@ -34,19 +31,33 @@ index: true
 - [🌱 Spec Kit](https://github.com/github/spec-kit)
 	> 💫 Toolkit to help you get started with Spec-Driven Development
 
+## skills
+
+- [skills](https://agentskills.io/home) 👉🏻 [🐙](https://github.com/anthropics/skills)
+    > Public repository for Agent Skills
+
 ## cmd
 
-- [Gemini Coder](https://gemini-coder.netlify.app/) 👉🏻 [🐙](https://github.com/robertpiosik/gemini-coder)
-    > Copy folders and files for chatbots or initialize them hands-free! Use the free Gemini API for code completions, file refactoring and applying chat responses.
+- [goose](https://block.github.io/goose/) 👉🏻 [🐙](https://github.com/block/goose)
+    > an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+- []() 👉🏻 []()
+    > 
+
 - [codebuff](https://www.codebuff.com) 👉🏻 [🐙](https://github.com/CodebuffAI/codebuff)
 	> Generate code from the terminal!
 
+------
+
+- [cc-switch](https://github.com/farion1231/cc-switch)
+    > A cross-platform desktop All-in-One assistant tool for Claude Code, Codex & Gemini CLI.
+- [Antigravity Tools 🚀](https://github.com/lbjlaq/Antigravity-Manager)
+    > Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + React (Rust).专业的 Antigravity 账号管理与切换工具。为 Antigravity 提供一键无缝账号切换功能。
 
 ## IED 
 
 - [Cursor](https://www.cursor.com/) 👉🏻 [🐙](https://github.com/getcursor/cursor)
     > An AI-powered code editor based on VSCode 🤖
-    
+    * [docs](https://cursor.com/cn/docs)
     * [cursor.directory](https://cursor.directory)
     * [Cursor Hub](https://cursorhub.co)
     * [Cursor 101](https://cursor101.com)
@@ -57,9 +68,9 @@ index: true
 - [Kiro](https://kiro.dev/) 👉🏻 [🐙](https://github.com/kirodotdev/Kiro)
 	> Kiro is an agentic IDE that works alongside you from prototype to production.
 
-- [antigravity](https://antigravity.google/)
+- [antigravity - google](https://antigravity.google/)
 
-- [Trae](https://www.trae.ai/) 👉🏻 [🇨🇳](https://www.trae.com.cn/)
+- [Trae - bytedance](https://www.trae.ai/) 👉🏻 [🇨🇳](https://www.trae.com.cn/)
     > `/trae/`: `The real AI engineer`
 
 - [void](https://voideditor.com/) 👉🏻 [🐙](https://github.com/voideditor/void)
@@ -70,15 +81,24 @@ index: true
 
 ## plugin
 
+- [Github - Copilot](https://github.com/features/copilot)
+    > Your AI pair programmer
 - [cline](https://cline.bot/) 👉🏻 [🐙](https://github.com/cline/cline)
     > Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 - [Roo-Code](https://roocode.com/) 👉🏻 [🐙](https://github.com/RooVetGit/Roo-Code)
     > Roo Code (prev. Roo Cline) gives you a whole dev team of AI agents in your code editor.
+- [Kilo]
 - [Augment Code](https://www.augmentcode.com/) 👉🏻 [🐙](https://github.com/augmentcode/augment-swebench-agent)
     > The #1 open-source SWE-bench Verified implementation
 
 ------
 
+- [Github - CopilotForXcode](https://github.com/github/CopilotForXcode)
+    > Xcode extension for GitHub Copilot
+- [CopilotForXcode](https://copilotforxcode.intii.com/) 👉🏻 [🐙](https://github.com/intitni/CopilotForXcode)
+    > The first GitHub Copilot, Codeium and ChatGPT Xcode Source Editor Extension
+- [Gemini Coder](https://gemini-coder.netlify.app/) 👉🏻 [🐙](https://github.com/robertpiosik/CodeWebChat)
+    > CWC makes it easy to construct coding prompts for chatbots and integrate suggested edits.
 - [Continue](https://www.continue.dev/) 👉🏻 [🐙](https://github.com/continuedev/continue)
     > ⏩ Continue is the leading open-source AI code assistant. You can connect any models and any context to build custom autocomplete and chat experiences inside VS Code and JetBrains
 - [Bytedance - MarsCode](https://www.marscode.com/) 👉🏻 [🇨🇳](https://www.marscode.cn)
