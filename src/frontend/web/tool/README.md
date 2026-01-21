@@ -16,6 +16,8 @@ index: false
 
 ## reference
 
+- [Zola](https://www.getzola.org/) 👉🏻 [🐙](https://github.com/getzola/zola)
+    > A fast static site generator in a single binary with everything built-in.
 - [VuePress](https://vuepress.vuejs.org) 👉🏻 [🐙](https://github.com/vuejs/vuepress)
     > 📝 Minimalistic Vue-powered static site generator
 - [VitePress](https://vitepress.dev) 👉🏻 [🐙](https://github.com/vuejs/vitepress)

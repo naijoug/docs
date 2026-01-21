@@ -24,14 +24,16 @@ order: 6
 
 - [Wrap](https://www.warp.dev/)
     > The intelligent terminal.
+- [Ghostty](https://ghostty.org/) 👉🏻 [🐙](https://github.com/ghostty-org/ghostty)
+    > 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
+- [Kitty](https://sw.kovidgoyal.net/kitty/) 👉🏻 [🐙](https://github.com/kovidgoyal/kitty)
+    > If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based.
 - [ohmyzsh](https://ohmyz.sh/) 👉🏻 [🐙](https://github.com/ohmyzsh/ohmyzsh)
     > 🙃 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.
 - [tabby](https://tabby.sh/) 👉🏻 [🐙](https://github.com/Eugeny/tabby)
     > A terminal for a more modern age
 - [tumx](https://github.com/tmux/tmux)
     > tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background, then later reattached.
-- [Ghostty](https://ghostty.org/) 👉🏻 [🐙](https://github.com/ghostty-org/ghostty)
-    > 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
 - [wave](https://www.waveterm.dev/) 👉🏻 [🐙](https://github.com/wavetermdev/waveterm)
     > An open-source, cross-platform terminal for seamless workflows
 - [wtf](https://github.com/wtfutil/wtf) 

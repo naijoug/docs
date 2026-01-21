@@ -22,3 +22,4 @@ index: true
 
 - [Context 7](https://context7.com/) 👉🏻 [🐙](https://github.com/upstash/context7)
 	> Context7 MCP Server -- Up-to-date code documentation for LLMs and AI code editors
+- [Grep](https://vercel.com/blog/grep-a-million-github-repositories-via-mcp)

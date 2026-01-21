@@ -112,6 +112,8 @@ index: true
     > LM Studio CLI
 - [vLLM](https://docs.vllm.ai) 👉🏻 [🐙](https://github.com/vllm-project/vllm)
     > A high-throughput and memory-efficient inference and serving engine for LLMs
+- [OpenLLM](https://bentoml.com/) 👉🏻 [🐙](https://github.com/bentoml/OpenLLM)
+    > Run any open-source LLMs, such as DeepSeek and Llama, as OpenAI compatible API endpoint in the cloud.
     
 ## tutorial
 

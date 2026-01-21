@@ -17,14 +17,12 @@ index: false
 - [Is Apple Silicon ready?](https://isapplesiliconready.com/)
     > The complete guide for MacOS Apps Optimized for Apple Silicon Macs and the M1 Processor
 
-## [Homebrew]
+## [Homebrew](https://brew.sh/) 👉🏻 [🐙](https://github.com/Homebrew/brew)
 > 🍺 The missing package manager for macOS (or Linux)
-> 
-> macOS 缺失的软件包的管理器
 
-- [Homebrew](https://github.com/Homebrew/brew) : 用于安装缺少的命令行工具等
 - [Homebrew Cask](https://github.com/Homebrew/homebrew-cask) : brew 的扩展，用于命令行安装 macOS 应用 (GUI程序)
-- [Cakebrew](https://github.com/brunophilipe/Cakebrew) : Homebrew 图形化 macOS App
+    > 🍻 A CLI workflow for the administration of macOS applications distributed as binaries
+- [Cakebrew](http://www.cakebrew.com/) 👉🏻 [🐙](https://github.com/brunophilipe/Cakebrew) 
     > Manage your Homebrew formulas with style using Cakebrew.
 
 ```shell
@@ -92,6 +90,8 @@ $ sudo mount -t ntfs -o rw,auto,nobrowse /dev/disk3 /opt/ntfs
     > VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
 - [ipatool](https://github.com/majd/ipatool) : 命令行搜索和下载 `AppStore` 中的 iOS 软件包 `ipa` 
     > Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store
+- [iDescriptor](https://github.com/iDescriptor/iDescriptor)
+    > A free, open-source, and cross-platform iDevice management tool
 - [SiteSucker](https://ricks-apps.com/) : 扒网站
     > Download websites to your computer.
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) : 抓包神器

@@ -37,6 +37,8 @@ index: true
 
 - [MAGI-1](https://sand.ai/) 👉🏻 [🐙](https://github.com/SandAI-org/MAGI-1)
     > MAGI-1: Autoregressive Video Generation at Scale
+- [banana-slides](http://bananaslides.online/) 👉🏻 [🐙](https://github.com/Anionex/banana-slides)
+    > 一个基于nano banana pro🍌的原生AI PPT生成应用，迈向真正的＂Vibe PPT＂; 支持上传任意模板图片；上传任意素材&智能解析；一句话/大纲/页面描述自动生成PPT；口头修改指定区域、一键导出可编辑ppt - An AI-native PPT generator based on nano banana pro🍌
 
 ------
 

@@ -16,6 +16,11 @@ index: false
     > Open Source Identity and Access Management For Modern Applications and Services
 - [Upptime](https://upptime.js.org/) 👉🏻 [🐙](https://github.com/upptime/upptime)
     > ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
+- [Scalar](https://scalar.com/) 👉🏻 [🐙](https://github.com/scalar/scalar)
+    > Scalar is an open-source API platform:　　　　　　   
+    > 🌐 Modern Rest API Client　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 
+    > 📖 Beautiful API References　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+    > ✨ 1st-Class OpenAPI/Swagger Support
 
 ## Framework
 

@@ -57,6 +57,10 @@ index: true
     > Manus is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.
 - [AutoGLM](https://autoglm.z.ai/blog/) 👉🏻 [🐙](https://github.com/zai-org/Open-AutoGLM)
     > An Open Phone Agent Model & Framework. Unlocking the AI Phone for Everyone
+- [AionUi](https://www.aionui.com/) 👉🏻 [🐙](https://github.com/iOfficeAI/AionUi)
+    > Free, local, open-source Cowork for Gemini CLI, Claude Code, Codex, Opencode, Qwen Code, Goose Cli, Auggie, and more | 🌟 Star if you like it!
+- [goose](https://block.github.io/goose/) 👉🏻 [🐙](https://github.com/block/goose)
+    > an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
 
 ## knowledge
 
