@@ -27,6 +27,8 @@ order: 3
     
 ## tool
     
+- [GitButler](https://gitbutler.com/) 👉🏻 [🐙](https://github.com/gitbutlerapp/gitbutler)
+    > The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [lazygit](https://github.com/jesseduffield/lazygit)
     > simple terminal UI for git commands
 - [GitUI](https://github.com/gitui-org/gitui)

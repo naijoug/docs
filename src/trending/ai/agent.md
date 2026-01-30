@@ -55,6 +55,8 @@ index: true
 
 - [Manus](https://manus.im/)
     > Manus is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.
+- [Moltbot](https://molt.bot/) 👉🏻 [🐙](https://github.com/moltbot/moltbot)
+    > Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
 - [AutoGLM](https://autoglm.z.ai/blog/) 👉🏻 [🐙](https://github.com/zai-org/Open-AutoGLM)
     > An Open Phone Agent Model & Framework. Unlocking the AI Phone for Everyone
 - [AionUi](https://www.aionui.com/) 👉🏻 [🐙](https://github.com/iOfficeAI/AionUi)

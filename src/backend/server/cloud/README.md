@@ -22,6 +22,8 @@ index: false
     > Railway brings an unparalleled developer experience to infrastructure. Want to know if it's right for you? Let's tour the features.
 - [deno](https://dash.deno.com)
     > Deploy JavaScript Globally
+- [PinMe](https://pinme.eth.limo/) 👉🏻 [🐙](https://github.com/glitternetwork/pinme)
+    > Deploy Your Frontend in a Single Command. Claude Code Skills supported.
 
 ## concept
 
