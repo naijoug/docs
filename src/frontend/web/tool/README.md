@@ -34,9 +34,11 @@ index: false
     > 🃏 A magical documentation site generator.
 - [Mintlify](https://mintlify.com/) 👉🏻 [🐙](https://github.com/mintlify/starter)
     > 📖 The starter kit for your Mintlify docs
-    
+
 ------
     
+- [docs](https://docs.numerique.gouv.fr/) 👉🏻 [🐙](https://github.com/suitenumerique/docs)
+    > A collaborative note taking, wiki and documentation platform that scales. Built with Django and React.
 - [logseq](https://logseq.com/) 👉🏻 [🐙](https://github.com/logseq/logseq)
     > A privacy-first, open-source platform for knowledge management and collaboration.
 - [docmost](https://github.com/docmost/docmost) 👉🏻 [🐙](https://docmost.com/)

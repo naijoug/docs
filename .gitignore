@@ -9,3 +9,9 @@ dist/
 .smart-env/
 .smtcmp_json_db/
 .smtcmp_vector_db.tar.gz
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env

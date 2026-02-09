@@ -46,6 +46,8 @@ index: true
 
 ## design
 
+- [A2UI](https://a2ui.org/) 👉🏻 [🐙](https://github.com/google/A2UI)
+    > Agent-to-User Interface
 - [penpot](https://penpot.app/) 👉🏻 [🐙](https://github.com/penpot/penpot)
 	> Penpot: The open-source design tool for design and code collaboration
 - [onlook](https://www.onlook.com/) 👉🏻 [🐙](https://github.com/onlook-dev/onlook) 
@@ -55,7 +57,7 @@ index: true
 
 - [Manus](https://manus.im/)
     > Manus is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.
-- [Moltbot](https://molt.bot/) 👉🏻 [🐙](https://github.com/moltbot/moltbot)
+- [💯 OpenClaw](https://openclaw.ai/) 👉🏻 [🐙](https://github.com/openclaw/openclaw)
     > Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
 - [AutoGLM](https://autoglm.z.ai/blog/) 👉🏻 [🐙](https://github.com/zai-org/Open-AutoGLM)
     > An Open Phone Agent Model & Framework. Unlocking the AI Phone for Everyone

@@ -54,5 +54,9 @@ index: true
     
 ## tools
 
+- [Vibe Kanban](https://www.vibekanban.com/) 👉🏻 [🐙](https://github.com/BloopAI/vibe-kanban)
+	> Get 10X more out of Claude Code, Codex or any coding agent
+- [CodMate](https://umate.ai/codmate) 👉🏻 [🐙](https://github.com/loocor/CodMate)
+    > CodMate is a macOS SwiftUI app for managing CLI AI sessions: browse, search, organize, resume, and review work produced by Codex, Claude Code, and Gemini CLI. It focuses on speed, a compact three-column UI, and “ship it” workflows like Project Review (Git Changes) and one-click Resume/New.
 - [CodexMonitor](https://www.codexmonitor.app/) 👉🏻 [🐙](https://github.com/Dimillian/CodexMonitor)
     > An app to monitor the (Codex) situation
