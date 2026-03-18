@@ -30,6 +30,8 @@ order: 6
     > If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based.
 - [ohmyzsh](https://ohmyz.sh/) 👉🏻 [🐙](https://github.com/ohmyzsh/ohmyzsh)
     > 🙃 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.
+- [WezTerm](https://wezterm.org/) 👉🏻 [🐙](https://github.com/wezterm/wezterm)
+    > A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
 - [tabby](https://tabby.sh/) 👉🏻 [🐙](https://github.com/Eugeny/tabby)
     > A terminal for a more modern age
 - [tumx](https://github.com/tmux/tmux)

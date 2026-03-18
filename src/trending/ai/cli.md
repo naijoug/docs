@@ -10,17 +10,19 @@ index: true
 
 - [Claude Code](https://code.claude.com/docs/en/overview) 👉🏻 [🐙](https://github.com/anthropics/claude-code)
     > Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
-- [Gemini CLI](https://geminicli.com/) 👉🏻 [🐙](https://github.com/google-gemini/gemini-cli)
-    > An open-source AI agent that brings the power of Gemini directly into your terminal.
 - [codex](https://developers.openai.com/codex) 👉🏻 [🐙](https://github.com/openai/codex)
     > Lightweight coding agent that runs in your terminal
-    
+- [Gemini CLI](https://geminicli.com/) 👉🏻 [🐙](https://github.com/google-gemini/gemini-cli)
+    > An open-source AI agent that brings the power of Gemini directly into your terminal.
+
 ## opensource
     
 - [💯 OpenCode](https://opencode.ai/) 👉🏻 [🐙](https://github.com/anomalyco/opencode) 
     > The open source coding agent.
-    * [Oh My OpenCode](https://github.com/code-yeongyu/oh-my-opencode)
-        > The Best Agent Harness. Meet Sisyphus: The Batteries-Included Agent that codes like you.
+    * [oh-my-openagent](https://ohmyopenagent.com/) 👉🏻 [🐙](https://github.com/code-yeongyu/oh-my-openagent)
+        > omo; the best agent harness - previously oh-my-opencode
+- [OpenHands](https://openhands.dev/) 👉🏻 [🐙](https://github.com/OpenHands/OpenHands)
+    > 🙌 OpenHands: AI-Driven Development
 - [Crush](https://github.com/charmbracelet/crush)
     > Glamourous agentic coding for all 💘 
     * [~~opencode~~](https://github.com/opencode-ai/opencode)
@@ -35,7 +37,10 @@ index: true
 	> Generate code from the terminal!
 - [iflow](https://cli.iflow.cn) 👉🏻 [🐙](https://github.com/iflow-ai/iflow-cli)
     > iFlow cli is a comprehensive command-line intelligence that embeds in your terminal, analyzes your repositories, does coding tasks, interprets your needs across contexts, and boosts efficiency by performing tasks from simple file operations to complex workflow automation.
-
+- [Mistral Vibe](https://github.com/mistralai/mistral-vibe)
+    > Minimal CLI coding agent by Mistral
+- [toad](https://www.batrachian.ai/) 👉🏻 [🐙](https://github.com/batrachianai/toad)
+    > A unified interface for AI in your terminal.
 
 ## proxy
 

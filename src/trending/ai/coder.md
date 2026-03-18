@@ -12,6 +12,8 @@ index: true
 
 - [Claude Code 中文教程](https://claudecode.tangshuang.net/)
 - [Claude Code in Action](https://anthropic.skilljar.com/claude-code-in-action) - [《Claude Code in Action》中文版](https://cholf5.com/claude-code-in-action/index.html) 👉🏻 [🐙](https://github.com/cholf5/claude-code-in-action)
+- [Claude Code for Everyone](https://ccforeveryone.com/) 👉🏻 [🐙](https://github.com/carlvellotti/claude-code-everyone-course)
+    > Claude Code for Everyone - Learn Claude Code in Claude Code
 
 ## spec
 
@@ -121,3 +123,5 @@ index: true
     > The fastest, smartest AI Assistant for code snippets and screenshots.
 - [pr-agent](https://www.qodo.ai/) 👉🏻 [🐙](https://github.com/qodo-ai/pr-agent)
 	> 🚀 PR-Agent: An AI-Powered 🤖 Tool for Automated Pull Request Analysis, Feedback, Suggestions and More! 💻🔍
+- [OpenAI - Symphony](https://github.com/openai/symphony)
+    > Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.

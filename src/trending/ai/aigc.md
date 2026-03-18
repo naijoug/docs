@@ -69,6 +69,8 @@ index: true
     > Turn Any Content into AI Podcast
 - [Podwise](https://podwise.ai/)
 - [MetaHuman](https://www.unrealengine.com/en-US/metahuman)
+- [🐸 Read Frog](https://readfrog.app/) 👉🏻 [🐙](https://github.com/mengxi-ream/read-frog)
+    > 🐸 Read Frog - Open Source Immersive Translate | 🐸 陪读蛙 - 开源沉浸式翻译
 - [Wordware](https://twitter.wordware.ai/) 👉🏻 [🐙](https://github.com/wordware-ai/twitter)
     > AI Agent for Twitter Personality Analysis
 - [Pagen](https://pagen.so/) 👉🏻 [🐙](https://github.com/all-in-aigc/pagen-ai-landing-page-template)
