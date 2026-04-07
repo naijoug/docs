@@ -20,6 +20,8 @@ index: false
 
 ## reference
 
+- [Trendshift](https://trendshift.io/)
+    > Discover trends that matter
 - [🌈通往 AGC 之路](https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e)
 - [Datawhale](https://datawhale.cn)
 - [鱼皮的 AI 知识库](https://ai.codefather.cn/) 👉🏻 [🐙](https://github.com/liyupi/ai-guide)
@@ -129,6 +131,11 @@ index: false
 ## device
 
 - [算了么](https://suanleme.cn/)
+
+## hardware
+
+- [π RuView](https://cognitum.one/) 👉🏻 [🐙](https://github.com/ruvnet/RuView)
+    > π RuView: WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video.
 
 ## tutorial
 

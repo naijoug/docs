@@ -1,5 +1,5 @@
 ---
-title: AI Coder
+title: Coding
 icon: hashtag
 
 index: true
@@ -8,12 +8,9 @@ index: true
 
 ## reference
 
-## tutorial
-
-- [Claude Code 中文教程](https://claudecode.tangshuang.net/)
-- [Claude Code in Action](https://anthropic.skilljar.com/claude-code-in-action) - [《Claude Code in Action》中文版](https://cholf5.com/claude-code-in-action/index.html) 👉🏻 [🐙](https://github.com/cholf5/claude-code-in-action)
-- [Claude Code for Everyone](https://ccforeveryone.com/) 👉🏻 [🐙](https://github.com/carlvellotti/claude-code-everyone-course)
-    > Claude Code for Everyone - Learn Claude Code in Claude Code
+- [SOUL.MD](https://soul.md/)
+- [AGENTS.md](https://agents.md/) 👉🏻 [🐙](https://github.com/agentsmd/agents.md)
+    > AGENTS.md — a simple, open format for guiding coding agents
 
 ## spec
 
@@ -27,17 +24,10 @@ index: true
 
 ## rules
 
-- [AGENTS.md](https://agents.md/) 👉🏻 [🐙](https://github.com/agentsmd/agents.md)
-    > AGENTS.md — a simple, open format for guiding coding agents
 - [Awesome Cursor Rules](https://github.com/PatrickJS/awesome-cursorrules)
     > 📄 Configuration files that enhance Cursor AI editor experience with custom rules and behaviors
 - [SwiftAgents](https://github.com/twostraws/SwiftAgents)
     > An AGENTS.md file for Swift and SwiftUI projects.
-
-## ACP
-
-- [ACP](https://agentclientprotocol.com/overview/introduction) 👉🏻 [🐙](https://github.com/agentclientprotocol/agent-client-protocol)
-    > A protocol for connecting any editor to any agent
 
 ## IED 
 
@@ -113,6 +103,8 @@ index: true
 
 - [grep.app](https://grep.app/)
     > Code Search made fast
+- [zdoc](https://www.zdoc.app)
+    > A free tool to translate GitHub READMEs into multiple languages and keep them up to date.
 - [zread](https://zread.ai/)
     > 
 - [DeepWiki](https://deepwiki.com/)

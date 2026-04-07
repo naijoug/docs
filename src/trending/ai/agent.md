@@ -26,52 +26,60 @@ index: true
 - [Suna](https://www.suna.so/) 👉🏻 [🐙](https://github.com/kortix-ai/suna)
     > Suna - Open Source Generalist AI Agent
 
-## claw
-
-- [💯 OpenClaw](https://openclaw.ai/) 👉🏻 [🐙](https://github.com/openclaw/openclaw)
-    > Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
-- [nanobot]() 👉🏻 [🐙](https://github.com/HKUDS/nanobot)
-    > "🐈 nanobot: The Ultra-Lightweight OpenClaw"
-- [ZeroClaw 🦀](https://www.zeroclawlabs.ai/) 👉🏻 [🐙](https://github.com/zeroclaw-labs/zeroclaw)
-    > Fast, small, and fully autonomous AI assistant infrastructure — deploy anywhere, swap anything 🦀
-- [NanoClaw](https://nanoclaw.dev/) 👉🏻 [🐙](https://github.com/qwibitai/nanoclaw)
-    > A lightweight alternative to OpenClaw that runs in containers for security. Connects to WhatsApp, Telegram, Slack, Discord, Gmail and other messaging apps,, has memory, scheduled jobs, and runs directly on Anthropic's Agents SDK
-- [CoPaw](http://copaw.agentscope.io/) 👉🏻 [🐙](https://github.com/agentscope-ai/CoPaw)
-    > Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.
-- [IronClaw](https://www.ironclaw.com/) 👉🏻 [🐙](https://github.com/nearai/ironclaw)
-    > IronClaw is OpenClaw inspired implementation in Rust focused on privacy and security
-- [nullclaw](https://nullclaw.io/) 👉🏻 [🐙](https://github.com/nullclaw/nullclaw)
-    > Fastest, smallest, and fully autonomous AI assistant infrastructure written in Zig
-- [TinyClaw](https://office.tinyagicompany.com/) 👉🏻 [🐙](https://github.com/TinyAGI/tinyclaw)
-    > TinyClaw is a team of personal agents that collaborate with each other
-
 ## sdk
 
 - [💯 AI SDK](https://ai-sdk.dev/) 👉🏻 [🐙](https://github.com/vercel/ai)
     > The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents
+- [Mastra AI](https://mastra.ai/) 👉🏻 [🐙](https://github.com/mastra-ai/mastra)
+    > From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.
 - [pi](https://pi.dev/) 👉🏻 [🐙](https://github.com/badlogic/pi-mono)
     > AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods
 - [VoltAgent](https://voltagent.dev/) 👉🏻 [🐙](https://github.com/VoltAgent/voltagent)
     > AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework
+- [deepagents](https://github.com/langchain-ai/deepagentsjs)
+    > Deep Agents in JS
+
+------
+
+- [Kode-Agent](https://github.com/shareAI-lab/Kode-Agent)
+    > Kode Agent — Design for post-human workflows. One unit agent for every human & computer task.
 
 ## context
 
-- [SOUL.MD](https://soul.md/)
 - [OpenViking](https://openviking.ai/) 👉🏻 [🐙](https://github.com/volcengine/OpenViking)
     > OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.
+
+## browser
+
+- [browser](https://github.com/lightpanda-io/browser) 
 
 ## design
 
 - [stitch](https://stitch.withgoogle.com/)
     > 
-- [pencil](https://pencil.dev/) 👉🏻 [🐙]() 
+- [pencil](https://pencil.dev/)
     >  
-- [A2UI](https://a2ui.org/) 👉🏻 [🐙](https://github.com/google/A2UI)
-    > Agent-to-User Interface
 - [penpot](https://penpot.app/) 👉🏻 [🐙](https://github.com/penpot/penpot)
 	> Penpot: The open-source design tool for design and code collaboration
 - [onlook](https://www.onlook.com/) 👉🏻 [🐙](https://github.com/onlook-dev/onlook) 
 	> The Cursor for Designers • An Open-Source AI-First Design tool • Visually build, style, and edit your React App with AI
+
+## frontend
+
+- [A2UI](https://a2ui.org/) 👉🏻 [🐙](https://github.com/google/A2UI)
+    > Agent-to-User Interface
+- [CopilotKit](https://docs.copilotkit.ai/) 👉🏻 [🐙](https://github.com/copilotkit/copilotkit)
+    > The Frontend Stack for Agents & Generative UI. React + Angular. Makers of the AG-UI Protocol
+
+
+## backend
+
+- [InsForge](https://insforge.dev/) 👉🏻 [🐙](https://github.com/InsForge/InsForge)
+    > Give agents everything they need to ship fullstack apps. The backend built for agentic development.
+- [bknd](https://bknd.io/) 👉🏻 [🐙](https://github.com/bknd-io/bknd)
+    > Lightweight Firebase/Supabase alternative built to run anywhere — incl. Next.js, React Router, Astro, Cloudflare, Bun, Node, AWS Lambda & more.
+- [unbody](https://unbody.io/) 👉🏻 [unbody](https://github.com/unbody-io/unbody)
+    > The Supabase of AI era. A modular, open-source backend for building AI-native software — designed for knowledge, not static data.
 
 ## product
 
@@ -83,6 +91,10 @@ index: true
     > Free, local, open-source Cowork for Gemini CLI, Claude Code, Codex, Opencode, Qwen Code, Goose Cli, Auggie, and more | 🌟 Star if you like it!
 - [goose](https://block.github.io/goose/) 👉🏻 [🐙](https://github.com/block/goose)
     > an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+- [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)
+    > Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
+- [T3 Code](https://t3.codes/) 👉🏻 [🐙](https://github.com/pingdotgg/t3code)
+    > T3 Code is the best way to code with AI.
 
 ## knowledge
 
@@ -103,7 +115,8 @@ index: true
 - [Bytedance - Coze](https://www.coze.com/)
 - [Alibaba - Tbox](https://tbox.alipay.com/pro-about)
     
-## topic
+## tutorial
 
+- [Zhipu - Coding Agent 工作原理](https://docs.bigmodel.cn/cn/coding-plan/learning-resources/how-coding-agent-works)
 - [2025-12-21 如何做 AI Agent 喜欢的基础软件](https://mp.weixin.qq.com/s/BZcRwgGZNinBK9K2L38LYg)
 - [2023-10-29 万字长文！何谓Agent，为何Agent？](https://mp.weixin.qq.com/s/jFf0fmZLehLDaNNzgqeAIQ)

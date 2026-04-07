@@ -115,6 +115,13 @@ index: true
 - [OpenLLM](https://bentoml.com/) 👉🏻 [🐙](https://github.com/bentoml/OpenLLM)
     > Run any open-source LLMs, such as DeepSeek and Llama, as OpenAI compatible API endpoint in the cloud.
     
+## api
+
+- [One API](https://openai.justsong.cn/) 👉🏻 [🐙](https://github.com/songquanpeng/one-api)
+    > LLM API 管理 & 分发系统，支持 OpenAI、Azure、Anthropic Claude、Google Gemini、DeepSeek、字节豆包、ChatGLM、文心一言、讯飞星火、通义千问、360 智脑、腾讯混元等主流模型，统一 API 适配，可用于 key 管理与二次分发。单可执行文件，提供 Docker 镜像，一键部署，开箱即用。LLM API management & key redistribution system, unifying multiple providers under a single API. Single binary, Docker-ready, with an English UI.
+- [New API](https://www.newapi.ai) 👉🏻 [🐙](https://github.com/QuantumNous/new-api)
+    > A unified AI model hub for aggregation & distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for personal and enterprise model management. 🍥
+    
 ## tutorial
 
 - [Full Stack LLM Bootcamp](https://github.com/the-full-stack/website)

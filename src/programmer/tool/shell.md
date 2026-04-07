@@ -22,6 +22,8 @@ order: 6
 
 ## terminal
 
+- [OpenTUI](https://opentui.com/) 👉🏻 [🐙](https://github.com/anomalyco/opentui)
+    > OpenTUI is a library for building terminal user interfaces (TUIs)
 - [Wrap](https://www.warp.dev/)
     > The intelligent terminal.
 - [Ghostty](https://ghostty.org/) 👉🏻 [🐙](https://github.com/ghostty-org/ghostty)

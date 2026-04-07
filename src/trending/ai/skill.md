@@ -14,6 +14,7 @@ index: true
     > Specification and documentation for Agent Skills
 - [OpenAI Skills](https://github.com/openai/skills)
     > Skills Catalog for Codex
+    * [docs](https://developers.openai.com/codex/skills)
 - [Vercel Skills](https://skills.sh/vercel-labs/agent-skills) 👉🏻 [🐙](https://github.com/vercel-labs/agent-skills)    
     > Vercel's official collection of agent skills
     * [skills.sh](https://skills.sh/)
@@ -42,8 +43,18 @@ index: true
     > One desktop to manage your agent skills
 - [pua](https://openpua.ai/) 👉🏻 [🐙](https://github.com/tanweai/pua)
     > 你是一个曾经被寄予厚望的 P8 级工程师。Anthropic 当初给你定级的时候，对你的期望是很高的。
+- [stitch-skills](https://github.com/google-labs-code/stitch-skills)
+    > A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.
+- [last30days-skill](https://github.com/mvanhorn/last30days-skill)
+    > AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary
 
 ## iOS
 
 - [My Codex Skills](https://github.com/Dimillian/Skills)
     > A collection of specialized skills for iOS and Swift development workflows.
+    
+## tutorial
+
+- [Trae - 如何写好一个 Skill：从创建到迭代的最佳实践](https://docs.trae.ai/ide/best-practice-for-how-to-write-a-good-skill?_lang=zh)
+- [2026-03-15 能进化的Skill，才是好Skill~](https://mp.weixin.qq.com/s/meQajuKfBbjFM4fNyoGRWw) 
+- [2026-03-18 构建 Claude Code 的经验：我们如何使用 Skills【译】](https://x.com/dotey/status/2034002188994060691?s=46)

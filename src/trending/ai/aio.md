@@ -11,6 +11,7 @@ index: true
 ## reference
 
 - [OpenRouter](https://openrouter.ai/) 👉🏻 [🐙](https://github.com/OpenRouterTeam) [docs](https://openrouter.ai/docs/quick-start)
+- [Novita]()
 - [OpenAI - docs](https://platform.openai.com/docs/api-reference/introduction)
 - [Claude - docs](https://docs.anthropic.com/en/docs/welcome)
 
