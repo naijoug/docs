@@ -4,14 +4,18 @@ node_modules/
 
 dist/
 
+# obsidian
 .obsidian/
 .trash/
 .smart-env/
 .smtcmp_json_db/
 .smtcmp_vector_db.tar.gz
+copilot-custom-prompts/
 
+# Craft Agent - local/session data
+sessions/
+events.jsonl
 
-
-
-# Ignore Smart Environment folder
-.smart-env
+# claude
+.claude/
+.claude-plugin/
