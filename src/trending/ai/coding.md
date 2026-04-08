@@ -8,9 +8,8 @@ index: true
 
 ## reference
 
-- [SOUL.MD](https://soul.md/)
-- [AGENTS.md](https://agents.md/) 👉🏻 [🐙](https://github.com/agentsmd/agents.md)
-    > AGENTS.md — a simple, open format for guiding coding agents
+- [Zhipu - Coding Agent 工作原理](https://docs.bigmodel.cn/cn/coding-plan/learning-resources/how-coding-agent-works)
+- [2025-06-15 Coding Agents 101: The Art of Actually Getting Things Done](https://devin.ai/agents101#introduction)
 
 ## spec
 
@@ -31,7 +30,10 @@ index: true
 
 ## IED 
 
-- [💯 Cursor](https://www.cursor.com/) 👉🏻 [🐙](https://github.com/getcursor/cursor)
+- [devin](https://docs.devin.ai/zh/get-started)
+    > 
+    
+- [Cursor](https://www.cursor.com/) 👉🏻 [🐙](https://github.com/getcursor/cursor)
     > An AI-powered code editor based on VSCode 🤖
     * [docs](https://cursor.com/cn/docs)
     * [cursor.directory](https://cursor.directory)

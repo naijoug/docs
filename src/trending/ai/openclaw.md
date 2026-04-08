@@ -13,6 +13,8 @@ index: true
     
 ------    
 
+- [hermes-agent](https://hermes-agent.nousresearch.com/) 👉🏻 [🐙](https://github.com/NousResearch/hermes-agent)
+    > The agent that grows with you
 - [nanobot](https://github.com/HKUDS/nanobot)
     > "🐈 nanobot: The Ultra-Lightweight OpenClaw"
 - [ZeroClaw 🦀](https://www.zeroclawlabs.ai/) 👉🏻 [🐙](https://github.com/zeroclaw-labs/zeroclaw)

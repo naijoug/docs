@@ -28,6 +28,13 @@ index: true
 - [Recraft](https://www.recraft.ai)
 - [Chub AI](https://chub.ai) : Create Character
 
+## money
+
+- [MoneyPrinterV2](https://github.com/FujiwaraChoki/MoneyPrinterV2)
+    > Automate the process of making money online.
+- [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)
+    > 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.
+
 ## avatar
 
 - [Second-Me](https://www.secondme.io/) 👉🏻 [🐙](https://github.com/mindverse/Second-Me)

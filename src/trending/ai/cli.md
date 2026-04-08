@@ -28,7 +28,17 @@ index: true
 
 ------
 
-- [claude-code](https://github.com/instructkr/claude-code)
+- [claude-code](https://github.com/ultraworkers/claw-code)
+    > The repo is finally unlocked. enjoy the party! The fastest repo in history to surpass 100K stars ⭐.
+- [](https://ccb.agent-aura.top/) 👉🏻 [🐙]()
+    > 
+- [claurst](https://github.com/Kuberwastaken/claurst)
+    > our favorite Terminal Coding Agent, now in Rust & a Breakdown of the Claude Code leak & discoveries
+
+## codex
+
+- [Oh My codeX](https://yeachan-heo.github.io/oh-my-codex-website/index.html) 👉🏻 [🐙](https://github.com/Yeachan-Heo/oh-my-codex)
+    > OmX - Oh My codeX: Your codex is not alone. Add hooks, agent teams, HUDs, and so much more.
 
 ## opensource
     

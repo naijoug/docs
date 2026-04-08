@@ -10,6 +10,12 @@ index: true
 
 ## reference
 
+- [SOUL.MD](https://soul.md/)
+- [AGENTS.md](https://agents.md/) 👉🏻 [🐙](https://github.com/agentsmd/agents.md)
+    > AGENTS.md — a simple, open format for guiding coding agents
+
+------
+
 - [HelloAgent](https://datawhalechina.github.io/hello-agents/#/) 👉🏻 [🐙](https://github.com/datawhalechina/Hello-Agents)
 - [agents-radar](https://duanyytop.github.io/agents-radar) 👉🏻 [🐙](https://github.com/duanyytop/agents-radar)
     > Tracks Claude Code, Codex, Gemini CLI, OpenClaw ecosystem, GitHub AI trending, and Anthropic/OpenAI updates. Daily Chinese digests via GitHub Actions.
@@ -38,16 +44,13 @@ index: true
     > AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework
 - [deepagents](https://github.com/langchain-ai/deepagentsjs)
     > Deep Agents in JS
+- [agent-zero](https://agent-zero.ai/) 👉🏻 [🐙](https://github.com/agent0ai/agent-zero)
+    > Agent Zero AI framework
 
 ------
 
 - [Kode-Agent](https://github.com/shareAI-lab/Kode-Agent)
     > Kode Agent — Design for post-human workflows. One unit agent for every human & computer task.
-
-## context
-
-- [OpenViking](https://openviking.ai/) 👉🏻 [🐙](https://github.com/volcengine/OpenViking)
-    > OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.
 
 ## browser
 
@@ -70,7 +73,6 @@ index: true
     > Agent-to-User Interface
 - [CopilotKit](https://docs.copilotkit.ai/) 👉🏻 [🐙](https://github.com/copilotkit/copilotkit)
     > The Frontend Stack for Agents & Generative UI. React + Angular. Makers of the AG-UI Protocol
-
 
 ## backend
 
@@ -95,6 +97,8 @@ index: true
     > Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
 - [T3 Code](https://t3.codes/) 👉🏻 [🐙](https://github.com/pingdotgg/t3code)
     > T3 Code is the best way to code with AI.
+- [Collaborator](https://www.collaborator.bot/) 👉🏻 [🐙](https://github.com/collaborator-ai/collab-public)
+    > Collaborator is a place to create with agents.
 
 ## knowledge
 
@@ -117,6 +121,5 @@ index: true
     
 ## tutorial
 
-- [Zhipu - Coding Agent 工作原理](https://docs.bigmodel.cn/cn/coding-plan/learning-resources/how-coding-agent-works)
 - [2025-12-21 如何做 AI Agent 喜欢的基础软件](https://mp.weixin.qq.com/s/BZcRwgGZNinBK9K2L38LYg)
 - [2023-10-29 万字长文！何谓Agent，为何Agent？](https://mp.weixin.qq.com/s/jFf0fmZLehLDaNNzgqeAIQ)
