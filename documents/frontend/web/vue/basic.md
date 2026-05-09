@@ -110,5 +110,5 @@ const awesome = ref(true)
 - `beforeUmount` :
 - `unmounted` : 
 
-![vue-lifecycle](media/vue-lifecycle.png)
+![vue-lifecycle](./media/vue-lifecycle.png)
 

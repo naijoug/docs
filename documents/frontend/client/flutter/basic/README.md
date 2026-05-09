@@ -10,4 +10,4 @@ index: false
 
 ## Flutter 架构图
 
-![flutter-arch-diagram](media/flutter-arch-diagram.png)
+![flutter-arch-diagram](./media/flutter-arch-diagram.png)

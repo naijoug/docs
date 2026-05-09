@@ -1,4 +1,4 @@
-import { getDirname, path } from "@vuepress/utils";
+import { getDirname, path } from "vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar/sidebar.js";
@@ -189,4 +189,6 @@ export default hopeTheme({
     //   },
     // },
   },
+}, {
+  checkVuePress: false,
 });
