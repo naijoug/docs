@@ -17,6 +17,9 @@ index: false
 - [LLMs](llms.md)
 - [AIGC](aigc.md)
 - [Agent 工作流设计](agent-workflow.md)
+- [2026 Agentic Coding 实战最佳实践](agentic-coding-2026.md)
+- [AI 编程上下文工程实战指南](context-engineering-for-ai-coding.md)
+- [2026 AI Agent 开发入门指南](agent-development-2026.md)
 - [Wolfram](https://www.wolfram.com)
 
 ## reference

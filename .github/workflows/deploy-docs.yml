@@ -21,7 +21,7 @@ jobs:
       - name: install pnpm
         uses: pnpm/action-setup@v2
         with:
-          run_install: true
+          run_install: false
           version: 8
 
       - name: setup Node.js
@@ -29,16 +29,21 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
+          cache-dependency-path: web/vuepress/pnpm-lock.yaml
+
+      - name: install dependencies
+        run: pnpm install --dir web/vuepress --frozen-lockfile
 
       - name: build
+        working-directory: web/vuepress
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
           pnpm run docs:build
-          > src/.vuepress/dist/.nojekyll
+          > .vuepress/dist/.nojekyll
 
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: src/.vuepress/dist
+          folder: web/vuepress/.vuepress/dist

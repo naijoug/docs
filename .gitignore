@@ -3,6 +3,9 @@ node_modules/
 .cache/
 
 dist/
+web/vuepress/.vuepress/.temp/
+web/vuepress/.vuepress/.cache/
+web/vuepress/.vuepress/dist/
 
 # obsidian
 .obsidian/

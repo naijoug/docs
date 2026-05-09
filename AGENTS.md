@@ -12,40 +12,46 @@ This is a personal programmer's knowledge base built with VuePress using the `vu
 
 ```bash
 # Development
-pnpm run docs:dev          # Start development server
-pnpm run docs:clean-dev    # Start dev server with clean cache
+cd web/vuepress
+npx -y pnpm@8.15.9 run docs:dev          # Start development server
+npx -y pnpm@8.15.9 run docs:clean-dev    # Start dev server with clean cache
 
 # Building
-pnpm run docs:build        # Build for production
+cd web/vuepress
+npx -y pnpm@8.15.9 run docs:build        # Build for production
 
 # Maintenance
-pnpm run docs:update-package  # Update VuePress packages
+cd web/vuepress
+npx -y pnpm@8.15.9 run docs:update-package  # Update VuePress packages
 
 # Node.js environment
 Node version: 20
 pnpm version: 8
 ```
 
+If the local default `pnpm` is already version 8, `pnpm run ...` is fine. Otherwise prefer the pinned `npx -y pnpm@8.15.9 ...` form above.
+
 ## Code Organization
 
 ### Root Structure
 ```
 docs/
-├── package.json                  # Project config and scripts
+├── README.md                     # Repository usage and boundary guide
+├── documents/                    # Canonical markdown/media content source
+├── web/vuepress/                 # VuePress renderer project
+│   ├── package.json              # VuePress project config and scripts
+│   ├── pnpm-lock.yaml            # VuePress lockfile
+│   ├── README.md                 # Renderer-local usage notes
+│   └── .vuepress/                # VuePress configuration
 ├── .github/workflows/            # CI/CD configs
-└── src/                          # Main documentation source
+├── plans/                        # Implementation plans
+└── summaries/                    # Draft/generated summaries not published by default
 ```
 
-### Source Directory Structure (`src/`)
+### Content Directory Structure (`documents/`)
 ```
-src/
-├── .vuepress/                    # VuePress configuration
-│   ├── config.ts                 # Main VuePress config
-│   ├── theme/                    # Theme customization
-│   │   ├── navbar.ts             # Navigation bar
-│   │   ├── sidebar/              # Sidebar configurations
-│   │   ├── styles/               # Custom SCSS
-│   │   └── public/               # Static assets
+documents/
+├── .vuepress/styles -> ../../web/vuepress/.vuepress/styles
 ├── programmer/                   # Programmer essential skills
 │   ├── core/                     # Data structures & algorithms
 │   ├── network/                  # Networking knowledge
@@ -76,18 +82,20 @@ src/
 
 ### VuePress Configuration
 
-**Main Config** (`src/.vuepress/config.ts`):
+**Main Config** (`web/vuepress/.vuepress/config.ts`):
 - Language: `zh-CN` (Chinese)
 - Base path: `/docs/`
 - Hostname: `https://naijoug.github.io/docs`
+- Public assets: `web/vuepress/.vuepress/public`
 
-**Theme Config** (`src/.vuepress/theme/theme.ts`):
+**Theme Config** (`web/vuepress/.vuepress/theme/theme.ts`):
 - Theme: `vuepress-theme-hope` (v2.0.0-rc.0)
 - Icons: FontAwesome
 - Comment system: Giscus (enabled)
 - Sidebar sorting: `readme` → `order` → `filename` → `title`
+- Edit links use `docsDir: "documents"`
 
-**Sidebar Configs** (`src/.vuepress/theme/sidebar/`):
+**Sidebar Configs** (`web/vuepress/.vuepress/theme/sidebar/`):
 - `sidebar.ts` - Main sidebar entry point
 - `programmer.ts` - Programmer skills sidebar
 - `programming.ts` - Programming knowledge sidebar
@@ -163,7 +171,7 @@ Include external markdown sections using path aliases:
 <!-- @include: @leetcode/problems/0x0100.md#0125 -->
 ```
 
-**Path Alias**: `@leetcode` → `src/leetcode/`
+**Path Alias**: `@leetcode` → `documents/leetcode/`
 
 ### Collapsible Details
 Use `::: details` for collapsible content:
@@ -271,12 +279,12 @@ Builder.page("Page Title", "page/")
 ## Testing and Building
 
 ### Before Changes
-1. Run `pnpm run docs:dev` to start local server
+1. Run `cd web/vuepress && npx -y pnpm@8.15.9 run docs:dev` to start local server
 2. Verify navigation and sidebar structure
 3. Check that new pages appear in correct order
 
 ### After Changes
-1. Check build process: `pnpm run docs:build`
+1. Check build process: `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build`
 2. Validate no build errors
 3. Test production output if possible
 
@@ -288,9 +296,10 @@ Builder.page("Page Title", "page/")
 ## Important Gotchas
 
 ### VuePress Specific
-- All content must be in `src/` directory
-- VuePress config files are in `src/.vuepress/`, not root
-- Static assets go in `src/.vuepress/public/` (not `public/`)
+- All canonical content must be in `documents/`
+- VuePress config files are in `web/vuepress/.vuepress/`, not root
+- Static renderer assets go in `web/vuepress/.vuepress/public/` (not `public/`)
+- Theme Hope reads SCSS from `sourceDir/.vuepress/styles`; keep `documents/.vuepress/styles` as the minimal compatibility symlink to `web/vuepress/.vuepress/styles`
 - Base path is `/docs/` - internal links should account for this
 
 ### Markdown Processing
@@ -310,9 +319,9 @@ Builder.page("Page Title", "page/")
 - `.gitkeep` files are ignored by sidebar generation
 
 ### Build Considerations
-- Clean cache if experiencing issues: `pnpm run docs:clean-dev`
-- Build output goes to `src/.vuepress/dist/`
-- `.nojekyll` file is created automatically for GitHub Pages
+- Clean cache if experiencing issues: `cd web/vuepress && npx -y pnpm@8.15.9 run docs:clean-dev`
+- Build output goes to `web/vuepress/.vuepress/dist/`
+- The GitHub Actions deploy workflow creates `web/vuepress/.vuepress/dist/.nojekyll`
 
 ## Adding New Content
 
@@ -323,10 +332,10 @@ Builder.page("Page Title", "page/")
 4. Update sidebar config if using manual configuration
 
 ### New Section
-1. Create directory under appropriate parent (e.g., `src/programmer/new-section/`)
+1. Create directory under appropriate parent (e.g., `documents/programmer/new-section/`)
 2. Add `README.md` with `index: false` as section index
-3. Add section to main sidebar config (`src/.vuepress/theme/sidebar/sidebar.ts`)
-4. Consider adding to navigation bar (`src/.vuepress/theme/navbar.ts`)
+3. Add section to main sidebar config (`web/vuepress/.vuepress/theme/sidebar/sidebar.ts`)
+4. Consider adding to navigation bar (`web/vuepress/.vuepress/theme/navbar.ts`)
 
 ### LeetCode Problems
 1. Add to appropriate range file (e.g., `0x0300.md` for problems 0300-0399)

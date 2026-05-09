@@ -68,7 +68,7 @@ highlights:
       - title: 设计模式
         icon: hashtag
         details: 
-        link: /programmming/topic/design-pattern.md
+        link: /programming/topic/design-pattern.md
 
       - title: 内存管理
         icon: hashtag
@@ -137,7 +137,7 @@ highlights:
       - title: 数据库
         icon: database
         details: 程序的核心资源
-        link: /backend/databse/
+        link: /backend/database/
       
       - title: 服务框架
         icon: box-open
