@@ -16,6 +16,7 @@ index: false
 - [NLP](nlp.md)
 - [LLMs](llms.md)
 - [AIGC](aigc.md)
+- [Agent 工作流设计](agent-workflow.md)
 - [Wolfram](https://www.wolfram.com)
 
 ## reference

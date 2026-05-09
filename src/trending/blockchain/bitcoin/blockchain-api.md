@@ -17,13 +17,13 @@ order: 5
 
 > 让任何网站可以轻而易举的接收比特币。此项服务是完全免费和安全的，是商业或个人使用的完美之选。
 
-- `/v2/receive` : 生成接收地址 [GET] {为您的客户提供唯一的，未使用的比特币地址}
+- `/v2/receive`：生成接收地址 [GET]（为客户提供唯一、未使用的比特币地址）
     * xpub : xPub（您希望付款的位置）
     * callback_url : 收到付款时要通知的回调URL。
     * key : 请求API密钥
     * gap_limit - 可选。在出错之前允许多少个未使用的地址。
 
-- `/v2/receive/balance_update` : 余额更新 [POST] {监控已付款和已付款的地址}
+- `/v2/receive/balance_update`：余额更新 [POST]（监控已付款和已付款的地址）
     * addr : 您要监控的地址
     * callback : 收到付款时要通知的回调URL。
     * key : API密钥。
@@ -42,7 +42,7 @@ order: 5
      * xpub : xPub 值
      * key : API密钥
 
-- `/v2/receive/callback_log` : 回调日志 [GET] {调试未付款}
+- `/v2/receive/callback_log`：回调日志 [GET]（调试未付款）
 
 ## Blockchain Wallet Service (Blockchain 钱包服务)
 
