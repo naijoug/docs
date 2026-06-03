@@ -15,3 +15,5 @@ index: false
 - [<HopeIcon icon="display" /> 前端](frontend/README.md)
 - [<HopeIcon icon="cube" /> 后端](backend/README.md)
 - [<HopeIcon icon="fire" /> 热门技术](trending/README.md)
+- [<HopeIcon icon="gift" /> Awesome](awesome/README.md)
+- [<HopeIcon icon="newspaper" /> Digest](digest/README.md)

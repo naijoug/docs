@@ -5,7 +5,11 @@
 - `documents/`：唯一的 Markdown / media 内容源。
 - `web/vuepress/`：当前 VuePress + Theme Hope 网站工程。
 - `plans/`：迁移、重构和功能实施计划。
-- `summaries/`：草稿或生成摘要，不默认发布。
+
+内容源中的主要发布分区：
+
+- `documents/awesome/`：引用资源、工具清单、项目清单等 awesome 类型内容。
+- `documents/digest/`：每日热点、每周总结、每月总结等周期性摘要和简报。
 
 ## Local Development
 
@@ -31,6 +35,7 @@ npx -y pnpm@8.15.9 run docs:build
 ## Editing Rules
 
 - 新增或修改文章时编辑 `documents/`。
+- awesome 类型内容放入 `documents/awesome/`，周期性摘要放入 `documents/digest/`。
 - 修改导航、侧边栏、主题、构建脚本或公共静态资源时编辑 `web/vuepress/`。
 - 不要重新创建根目录 `package.json` 作为 VuePress 入口；当前唯一 Node 工程在 `web/vuepress/`。
 - `documents/.vuepress/styles` 是兼容 Theme Hope 样式加载的最小 symlink，不是第二份 VuePress 配置。

@@ -25,8 +25,4 @@ export const programmer = arraySidebar([
     text: "实用工具", icon: "screwdriver-wrench", link: "tool/", prefix: "tool/",
     collapsible: true, children: "structure",
   },
-  {
-    text: "Awesome", icon: "gift", link: "awesome/", prefix: "awesome/",
-    collapsible: true, children: "structure",
-  },
 ])

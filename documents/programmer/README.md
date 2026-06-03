@@ -22,5 +22,3 @@ index: true
 - [操作系统](system/README.md)
 - [业务知识](biz/README.md)
 - [实用工具](tool/README.md)
-- [Awesome](awesome/README.md)
-

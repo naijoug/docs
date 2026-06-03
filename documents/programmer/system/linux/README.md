@@ -12,7 +12,7 @@ index: false
 
 ## catalog
 
-- [Linux 命令](command.md)
+- [Linux 命令](0x01.command.md)
 
 ## reference
 

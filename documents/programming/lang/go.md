@@ -12,11 +12,11 @@ index: true
 
 - [Go](https://go.dev) 👉🏻 [🐙](https://github.com/golang/go)
     > The Go programming language
-- [💯]()[Go 语言圣经](https://gopl-zh.github.io/) 👉🏻 [🐙](https://github.com/golang-china/gopl-zh)
+- [💯 Go 语言圣经](https://gopl-zh.github.io/) 👉🏻 [🐙](https://github.com/golang-china/gopl-zh)
     > 📚 Go语言圣经中文版 🇨🇳
-- [⭐️]()[Go 语言设计与实现](https://draveness.me/golang)
+- [⭐️ Go 语言设计与实现](https://draveness.me/golang)
 
-<!-- Awsome -->
+<!-- Awesome -->
 
 - [Awesome Go](https://github.com/yinggaozhen/awesome-go-cn)
     > 一个很棒的Go框架、库和软件的中文收录大全。

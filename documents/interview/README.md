@@ -11,7 +11,7 @@ index: false
 ## reference
 
 - [Interview Cake](https://www.interviewcake.com)
-- [面试鸭](www.mianshiya.com) 👉🏻 [🐙](https://github.com/liyupi/mianshiya)
+- [面试鸭](https://www.mianshiya.com) 👉🏻 [🐙](https://github.com/liyupi/mianshiya)
     > 干净免费的面试刷题网站，帮助大家拿到满意的 offer！💎 React 前端 + Node 后端 + 云开发全栈项目 by 程序员鱼皮
 - [反向面试](https://github.com/yifeikong/reverse-interview-zh)
     > 技术面试最后反问面试官的话

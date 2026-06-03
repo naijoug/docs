@@ -95,7 +95,7 @@ highlights:
       - title: iOS
         icon: hashtag
         details: 
-        link: /frontend/client/iOS/
+        link: /frontend/client/ios/
 
       - title: Android
         icon: hashtag
@@ -120,7 +120,7 @@ highlights:
       - title: React
         icon: hashtag
         details: 
-        link: /frontend/web/react.md
+        link: /frontend/web/react/
 
 # -------------------------------------------------
 
@@ -166,5 +166,23 @@ highlights:
         icon: eye
         details: 
         link: /trending/topic/
+
+# -------------------------------------------------
+
+  - header: 资源与简报
+    description: 引用资源清单与周期性摘要。
+    image: /assets/image/blog.svg
+    bgImage: https://theme-hope-assets.vuejs.press/bg/2-light.svg
+    bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
+    highlights:
+      - title: Awesome
+        icon: gift
+        details: 资源、工具、项目与资料清单
+        link: /awesome/
+
+      - title: Digest
+        icon: newspaper
+        details: 每日热点、每周总结与每月总结
+        link: /digest/
 
 ---

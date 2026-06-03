@@ -16,7 +16,7 @@ npx -y pnpm@8.15.9 run docs:clean-dev
 ## Layout
 
 - `.vuepress/config.ts`：VuePress 主配置，显式设置 `public` 到本目录。
-- `.vuepress/theme/`：Theme Hope 导航、侧边栏、插件配置。
+- `.vuepress/theme/`：Theme Hope 导航、侧边栏、插件配置；顶层内容包括 knowledge sections、`awesome/` 和 `digest/`。
 - `.vuepress/public/`：网站公共静态资源。
 - `.vuepress/styles/`：Theme Hope 样式配置，被 `documents/.vuepress/styles` symlink 引用。
 - `.vuepress/dist/`、`.vuepress/.temp/`、`.vuepress/.cache/`：生成目录，已被忽略。

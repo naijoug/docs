@@ -54,7 +54,7 @@ $ rosnode -h                # 命令帮助信息
 $ rosnode list              # 列出活跃的节点
 $ rosnode info xxx          # 指定节点的信息
 $ rosnode kill xxx          # 杀死某个活跃的节点
-$ rosrun [package] [node]   # 启动摸个节点
+$ rosrun [package] [node]   # 启动某个节点
 ```
 
 - `Topic` : 话题，节点可以发布消息到话题, 也可以订阅话题以接收消息 (节点之间通过话题通信)
@@ -122,7 +122,7 @@ $ roswtf
 
 ``` shell
 $ rosrun tf view_frames     # 生成TF树的pdf文件
-$ evince frames.pdf         # 产看pdf文件
+$ evince frames.pdf         # 查看 PDF 文件
 ```
 
 ### [URDF](http://wiki.ros.org/urdf)
@@ -164,7 +164,7 @@ $ export ROS_MASTER_URI=http://192.168.1.176:11311
 
 - [How to solve 'Parameter '~moveit_controller_manager' not specified'?](https://answers.ros.org/question/167501/how-to-solve-parameter-moveit_controller_manager-not-specified/)
 
-### [Gazebo]((http://gazebosim.org/))
+### [Gazebo](http://gazebosim.org/)
 
 - [在虚拟机下运行gazebo，关于vmw_ioctl_command error Invalid argument错误](http://blog.csdn.net/coolwaterld/article/details/72467942)
 
@@ -192,7 +192,7 @@ $ export ROS_MASTER_URI=http://192.168.1.176:11311
 ### [ABB](http://wiki.ros.org/abb)
 
 - [open_abb](https://github.com/robotics/open_abb)
-- [Seting up multitasking in RPID programs](https://forums.robotstudio.com/discussion/3992/seting-up-multitasking-in-rpid-programs)
+- [Setting up multitasking in RPID programs](https://forums.robotstudio.com/discussion/3992/seting-up-multitasking-in-rpid-programs)
 - [ROS连接ABB机械臂调试详细教程-ROS(indigo)和ABB RobotStudio 6.03.02-](http://blog.csdn.net/zhangrelay/article/details/52687545)
 
 ### [UR](http://wiki.ros.org/universal_robot)
@@ -328,5 +328,4 @@ Joint 'wrist_3_joint' from the starting state is outside bounds by a significant
 [ WARN] [1513772723.316842716]: Controller  failed with error code INVALID_GOAL
 [ WARN] [1513772723.317141392]: Controller handle  reports status FAILED
 ```
-
 
