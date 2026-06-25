@@ -36,7 +36,6 @@ index: true
 - [DeepSWE](https://deepswe.datacurve.ai/) 👉 [🐙](https://github.com/datacurve-ai/deep-swe)
     > Measuring frontier coding agents on original, long-horizon engineering tasks
 
-
 ## training
 
 - [Gorilla](https://gorilla.cs.berkeley.edu/) 👉🏻 [🐙](https://github.com/ShishirPatil/gorilla)
