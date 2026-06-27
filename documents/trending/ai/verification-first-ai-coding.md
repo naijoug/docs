@@ -91,6 +91,32 @@ AI 编程真正拉开差距的不是“提示词写得更长”，而是能否�
 
 这份记录可以写进 commit message、PR 描述、项目 notebook 或工作总结。它的价值在于下一次接力者能立刻知道“哪些已经被证明过，哪些还没证明”。
 
+### 6. 收尾报告字段
+
+真实项目里的 AI 编程通常不是 clean room：工作区可能已有别人改动，验证可能只覆盖本轮切片，甚至某些命令会失败。为了不让下一轮被误导，收尾报告要固定写这六类字段：
+
+```text
+本轮选择：为什么选这个小任务，为什么没有接管其他脏文件
+实际推进：改了哪些文件，完成了什么可复核资产
+验证证据：真实命令和结果；失败或未覆盖项也写清
+状态证据：启动/收尾 git status 摘要，说明未接管边界
+提交读回：项目提交和 notebook/PR 记录分别读回 hash 与标题
+下一步：下一轮第一条动作，而不是泛泛“继续优化”
+```
+
+关键原则是“证据先于结论”。如果只运行了 `git diff --check` 和局部单测，就只能说这些范围已验证；如果全量构建没有跑，要把原因和风险留下。提交后再用 `git log -1 --oneline` 读回，不要从计划、commit 命令输出或记忆里复制 hash。
+
+一个简短例子：
+
+```text
+验证证据：`git -C docs diff --check -- documents/trending/ai/verification-first-ai-coding.md` 通过；人工检查 README catalog 已包含该页。
+状态证据：启动时 `loom` 有非本轮改动，未接管；收尾时 `docs` clean，`loom` 仍未 stage。
+项目提交：docs 1a2b3c4 docs(ai): add verification-first coding workflow doc（提交后读回）
+未验证：未运行完整 VuePress build；本轮只改单页 markdown，下一步如改 sidebar 再跑 build。
+```
+
+这能把 AI 编程从“我感觉做完了”改成“我知道哪些结论有证据，哪些需要交接”。
+
 ## 提示词模板
 
 把验证前置到提示词中，可以显著减少 AI 的无效发挥：
