@@ -15,6 +15,7 @@ index: false
 - [Agent 工作流设计](agent-workflow.md)
 - [AI 编程验证优先工作流](verification-first-ai-coding.md)
 - [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)
+- [AI 编程审查服务交付指南](ai-coding-audit-service.md)
 - [2026 Agentic Coding 实战最佳实践](agentic-coding-2026.md)
 - [AI 编程上下文工程实战指南](context-engineering-for-ai-coding.md)
 - [2026 AI Agent 开发入门指南](agent-development-2026.md)
