@@ -264,7 +264,7 @@ $ gralde check      # 编译和测试代码
 
 ### `build.gradle`
 
-```gradle build.gradle
+```groovy
 task hello {
     doFrist {
         println 'Hello'

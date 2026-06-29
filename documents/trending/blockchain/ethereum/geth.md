@@ -43,7 +43,7 @@ $ geth --dev --datadir localnet console 2>> localnet/localnet.log
 #   > 在当前 localnet 目录启动本地测试链，开启 cosole 模式，并输出日志到 localnet.log 文件
 ```
 
-``` genesis.json
+```json
 {
   "config": {
         "chainId": 10, 

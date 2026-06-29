@@ -62,7 +62,7 @@ $ netstat -tl | grep mysql      # 查看mysql是否在监听端口
 
 - MySQL Commands
 
-``` mysql
+```sql
 > show databases;       --- 显示mysql中的数据库
 > status;               --- 查看mysql状态
 > select version();     --- 查看mysql版本

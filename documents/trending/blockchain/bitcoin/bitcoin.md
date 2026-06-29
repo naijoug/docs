@@ -142,7 +142,7 @@ $ bitcoind -conf PATH/TO/bitcoin.conf -datadir=PATH/TO/Datas # 配置文件启�
 #   ubuntu : 
 ```
 
-``` bitcoin.conf
+```ini
 # testnet : 使用测试网路
 # regtest : 使用回归测试网路(本地)
 # daemon : 守护进程，后台运行

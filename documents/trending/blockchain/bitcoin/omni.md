@@ -52,7 +52,7 @@ $ omnicored -conf=PATH/TO/bitcon.conf -datadir=/PATH/TO/DATADIR & # 配置文件
 #       -txindex : 是否全交易索引(默认: 0, 1: 全交易索引)
 ```
 
-``` bitcoin.conf
+```ini
 server=1
 rpcuser=omnicorerpc
 rpcpassword=5hMTZI9iBGFqKxsWfOUF
