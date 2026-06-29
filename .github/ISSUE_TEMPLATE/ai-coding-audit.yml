@@ -1,0 +1,95 @@
+name: AI coding audit sample
+
+description: Share a small, read-only agent workflow sample for an AI coding audit.
+title: "[AI Coding Audit] "
+labels: ["ai-coding-audit", "workflow"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when you want a lightweight review of one AI-assisted coding workflow.
+
+        Scope guard: share only material that can be reviewed safely. Do not paste secrets, production credentials, private customer data, or unreleased business details.
+  - type: input
+    id: repo_or_area
+    attributes:
+      label: Repo / area
+      description: Which repository, package, documentation area, or workflow should be reviewed?
+      placeholder: "Example: docs site PR, internal CLI change, Vue component refactor"
+    validations:
+      required: true
+  - type: textarea
+    id: agent_change
+    attributes:
+      label: Agent change or PR summary
+      description: What did the coding agent try to change? Link a PR, paste a short diff summary, or describe the run.
+      placeholder: |
+        The agent changed...
+        PR / log / commit link...
+    validations:
+      required: true
+  - type: textarea
+    id: failure_or_risk
+    attributes:
+      label: Failure mode or concern
+      description: What makes this workflow hard to trust or merge?
+      placeholder: |
+        Examples:
+        - Dirty workspace was not recorded before edits.
+        - The final report says tests passed but does not name commands.
+        - Generated files or lockfiles appeared unexpectedly.
+        - The next reviewer does not know what to run.
+    validations:
+      required: true
+  - type: textarea
+    id: current_evidence
+    attributes:
+      label: Current evidence
+      description: Paste safe, relevant evidence. Prefer command output summaries and relative paths.
+      placeholder: |
+        git status --short:
+        Commands already run:
+        Files changed:
+        Skipped checks:
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Review boundaries
+      description: What should the audit include or exclude?
+      placeholder: |
+        Include:
+        Exclude:
+        Do not touch:
+        Read-only constraints:
+    validations:
+      required: true
+  - type: textarea
+    id: command_ladder
+    attributes:
+      label: Known validation commands
+      description: List commands the reviewer may recommend or reason about. Mark unknowns explicitly.
+      placeholder: |
+        Minimal:
+        - npm run typecheck
+        - npm test -- --runInBand
+
+        Upgrade:
+        - npm run build
+        - smoke test steps
+    validations:
+      required: false
+  - type: textarea
+    id: desired_output
+    attributes:
+      label: Desired audit output
+      description: What would make the audit useful enough to act on?
+      value: |
+        - 1 page risk report
+        - Top 5 risks with evidence
+        - Next safe command ladder
+        - Handoff template for the next agent / reviewer
+        - Continue / Narrow / Stop recommendation
+    validations:
+      required: true

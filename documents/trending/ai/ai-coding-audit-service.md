@@ -172,6 +172,8 @@ git log -1 --pretty='%h %s'
 | 开发者社群 | 能接触真实团队样本 | 强调只读审查、不接生产权限、输出 1 页 | “可匿名给一段 PR/agent 记录，我帮你指出下一条安全命令。” |
 | GitHub README / issue template | 靠近实际 repo 工作流 | 改成 checklist 或 PR 模板 | “复制这张表到下一次 agent PR。” |
 
+如果想直接靠近真实 repo，可以复制或改造仓库里的 `.github/ISSUE_TEMPLATE/ai-coding-audit.yml`：它把样本征集拆成 repo/area、agent 改动、失败模式、当前证据、审查边界、验证命令梯和期望输出，适合把“回复一个场景”升级为结构化样本输入。
+
 ### 可直接复制的短帖
 
 如果暂时不做完整 landing page，先发布一条短帖验证痛点。短帖只做一件事：让读者愿意回复一个真实 agent 失控场景或提供一段可匿名审查的 PR / log。
