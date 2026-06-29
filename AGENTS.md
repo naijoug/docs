@@ -276,6 +276,27 @@ Builder.page("Page Title", "page/")
 - `collapsible: true/false` - Control expandability
 - `prefix` - Link prefix for child pages
 
+## AI-assisted Change Workflow
+
+Use this section when an AI agent creates, edits, or reviews a change in this repository.
+
+1. **Start with ownership.** Capture the initial `git status --short` summary, name the paths you will touch, and explicitly list dirty paths you will not take over.
+2. **Use the repo entry points.** For AI-generated PRs, fill `.github/pull_request_template.md`; for sample collection or audit requests, use `.github/ISSUE_TEMPLATE/ai-coding-audit.yml` before turning the request into code or documentation work.
+3. **Keep the verification ladder small and reproducible.** Record the first safe command, the stronger command, and any command that was intentionally not run. Link the evidence in the PR body instead of replacing it with “tested”.
+4. **End with `Continue / Narrow / Stop`.** Continue only when scope and verification are clear; narrow when the request is useful but too broad; stop when the change would require taking over unknown dirty work or making an unverified claim.
+5. **Use the documentation chain when explaining the workflow.** Public explanation: `documents/trending/ai/ai-generated-pr-review-entry.md`; service-style audit: `documents/trending/ai/ai-coding-audit-service.md`; sample report: `documents/trending/ai/ai-coding-audit-mock-report.md`.
+
+Minimum handoff block for agent-authored PRs:
+
+```markdown
+- Starting `git status --short` summary:
+- Owned paths:
+- Avoided dirty paths:
+- Verification run:
+- Not verified:
+- Continue / Narrow / Stop:
+```
+
 ## Testing and Building
 
 ### Before Changes
