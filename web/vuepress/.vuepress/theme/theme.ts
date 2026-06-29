@@ -13,9 +13,6 @@ export default hopeTheme({
     url: "https://github.com/naijoug",
   },
 
-  iconAssets: "fontawesome",
-  // iconPrefix: "fas fa-", // 设置图标前缀
-
   logo: "/logo.svg",
 
   repo: "naijoug/docs",
@@ -40,7 +37,91 @@ export default hopeTheme({
   //   editLink: "在 GitHub 上编辑此页",
   // },
 
+  // All features are enabled for demo, only preserve features you need here
+  markdown: {
+    align: true,
+    attrs: true,
+
+    // install chart.js before enabling it
+    // chartjs: true,
+
+    codeTabs: true, // 添加代码块分组支持
+
+    // insert component easily
+    // component: true,
+
+    demo: true,
+
+    // install echarts before enabling it
+    // echarts: true,
+
+    figure: true,
+
+    // install flowchart.ts before enabling it
+    // flowchart: true,
+
+    // gfm requires mathjax-full to provide tex support
+    // gfm: true,
+
+    imgLazyload: true,
+    imgSize: true,
+
+    // include: true, // 启用导入文件功能
+    include: {
+      resolvePath: (file) => {
+        // 添加别名
+        if (file.startsWith("@leetcode"))
+          return file.replace("@leetcode", path.resolve(__dirname, "../../../../documents/leetcode"));
+
+        return file;
+      },
+    },
+
+    // install katex or mathjax-full before enabling it
+    // math: true,
+
+    mark: true,
+
+    // install mermaid before enabling it
+    // mermaid: true,
+
+    playground: {
+      presets: ["ts", "vue"],
+    },
+
+    // install @vuepress/plugin-revealjs before enabling it
+    // revealjs: {
+    //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+    // },
+
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    sub: true,
+    sup: true,
+    tabs: true, // 添加选项卡支持
+    vPre: true,
+
+    // install @vue/repl before enabling it
+    // vuePlayground: true,
+  },
+
   plugins: {
+    icon: {
+      assets: "fontawesome",
+      // prefix: "fas fa-", // 设置图标前缀
+    },
+
     // Giscus 评论系统
     comment: {
       provider: "Giscus",
@@ -48,88 +129,6 @@ export default hopeTheme({
       repoId: "R_kgDOKwe0uw",
       category: "Announcements",
       categoryId: "DIC_kwDOKwe0u84CbJIL",
-    },
-
-    // All features are enabled for demo, only preserve features you need here
-    mdEnhance: {
-      align: true,
-      attrs: true,
-
-      // install chart.js before enabling it
-      // chart: true,
-
-      codetabs: true, // 添加代码块分组支持
-
-      // insert component easily
-      // component: true,
-
-      demo: true,
-
-      // install echarts before enabling it
-      // echarts: true,
-
-      figure: true,
-
-      // install flowchart.ts before enabling it
-      // flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      // gfm: true,
-
-      imgLazyload: true,
-      imgSize: true,
-      
-      // include: true, // 启用导入文件功能
-      include: {
-        resolvePath: (file) => {
-          // 添加别名
-          if (file.startsWith("@leetcode")) 
-            return file.replace("@leetcode", path.resolve(__dirname, "../../../../documents/leetcode"));
-          
-          return file;
-        },
-      },
-
-      // install katex before enabling it
-      // katex: true,
-
-      // install mathjax-full before enabling it
-      // mathjax: true,
-
-      mark: true,
-
-      // install mermaid before enabling it
-      // mermaid: true,
-
-      playground: {
-        presets: ["ts", "vue"],
-      },
-
-      // install reveal.js before enabling it
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
-
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true, // 添加选项卡支持
-      vPre: true,
-
-      // install @vue/repl before enabling it
-      // vuePlayground: true,
     },
 
     // uncomment these if you want a pwa
