@@ -174,6 +174,8 @@ git log -1 --pretty='%h %s'
 
 如果想直接靠近真实 repo，可以复制或改造仓库里的 `.github/ISSUE_TEMPLATE/ai-coding-audit.yml`：它把样本征集拆成 repo/area、agent 改动、失败模式、当前证据、审查边界、验证命令梯和期望输出，适合把“回复一个场景”升级为结构化样本输入。
 
+如果样本已经进入 PR，则把 `.github/pull_request_template.md` 当作下一步入口：它要求提交者写清 agent 改动快照、启动前 dirty 状态、验证命令梯、未验证项和 `Continue / Narrow / Stop` 建议，避免 issue 里收集到的失败场景在 PR 里重新变成一句“已测试”。
+
 ### 可直接复制的短帖
 
 如果暂时不做完整 landing page，先发布一条短帖验证痛点。短帖只做一件事：让读者愿意回复一个真实 agent 失控场景或提供一段可匿名审查的 PR / log。
