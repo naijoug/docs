@@ -67,6 +67,17 @@ AI 能生成大量初稿，但它很难替你承担“这个结果是否可靠�
 
 这类能力适合沉淀到 `docs/documents/trending/ai/verification-first-ai-coding.md`、`books/tech-cards-handbook/chapters/ai-agent/` 或 `skills/skills/` 中，逐步形成个人方法论和可交付样板。
 
+### 4. 把单点资产接回阅读路径
+
+单篇文章、模板或服务说明如果只停在一个文件里，很快会变成“写过但没人复用”的孤岛。每次新增资产后，至少检查一次它能否回到一条可解释的路径：
+
+1. **入口页**：在 `docs/documents/trending/ai/README.md` 里给读者一个顺序，例如从 Agent 工作流、验证优先、AI 生成 PR 审查入口，再走到服务样板和资产飞轮。
+2. **方法页**：在 `docs/documents/trending/ai/verification-first-ai-coding.md` 或 `docs/documents/trending/ai/agent-workflow.md` 中沉淀可复用原则，避免案例只剩结论。
+3. **交付页**：用 `docs/documents/trending/ai/ai-coding-audit-service.md` 和 `docs/documents/trending/ai/ai-coding-audit-mock-report.md` 展示别人能购买、试用或照着复现的交付物。
+4. **复利页**：回到本文，记录这次资产下一轮如何继续产品化、分发或验证。
+
+一个简单标准：读者从目录页进入后，能在 3 分钟内回答“我先读什么、照着做什么、做完能交付什么、下一步如何变成资产”。如果回答不了，优先补入口和路径，而不是继续新增孤立文章。
+
 ## 收入机会地图
 
 AI 程序员的收入机会可以按“交付深度”和“复用程度”分层：
