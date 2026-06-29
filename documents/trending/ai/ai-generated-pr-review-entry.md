@@ -94,6 +94,25 @@ AI-assisted PR 通常有三类额外风险：
 
 这样一来，内容资产、issue 输入、PR 审查和服务交付会形成同一条证据链，而不是四份互不相干的文档。
 
+## README / AGENTS 入口
+
+模板和文章写完以后，还要把它们放到下一轮 agent 真的会看到的位置。否则规则会停留在“存在过”，而不是“默认执行”。
+
+最小入口可以分成两层：
+
+| 入口 | 负责什么 | 不负责什么 |
+| --- | --- | --- |
+| `docs/README.md` | 给人和 reviewer 一个短 checklist：什么时候使用 AI-assisted PR template、issue template 和 audit 文档 | 不承载完整操作细节 |
+| `docs/AGENTS.md` | 给下一轮 agent 可执行规则：启动状态、接管边界、验证梯、handoff block、失败降级 | 不写成对外教程 |
+
+建议新增任何 AI-assisted workflow 资产后，都反问三句：
+
+1. `README.md` 是否用 5 行以内说明了入口和链接？
+2. `AGENTS.md` 是否把同一组字段变成 agent 的默认动作？
+3. PR / issue template、文章、样板报告里的字段名称是否一致？
+
+如果答案是否定的，优先补入口，而不是继续写下一篇文章。没有 README / AGENTS 入口的模板，很快会变成下一轮 agent 需要翻历史 summary 才能发现的沉没资产。
+
 ## 可复制检查清单
 
 - [ ] PR 说明里有启动前 `git status --short` 摘要。
