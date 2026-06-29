@@ -27,4 +27,4 @@ order: 2
 - [ONNX](onnx.md)
 - [OpenClaw](openclaw.md)
 - [Prompt](prompt.md)
-- [Skill](skill.md)
+- [Skills](skills.md)
