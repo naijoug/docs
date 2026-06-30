@@ -108,9 +108,18 @@ git log -1 --pretty='%h %s'
 | --- | --- | --- | --- |
 
 ## Next Safe Command Ladder
-1.
-2.
-3.
+当前最高风险：
+
+| Step | Command / Check | Why this first | Pass means | Fail means | Next action |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `git status --short` | 先确认是否有未归属改动 | 可区分本轮范围与既有脏状态 | 需要先标注 excluded / owned paths | Narrow 到所有权边界 |
+| 2 | `[最小相关命令]` | 只验证本次改动最可能破坏的路径 | 可以继续审查下一层风险 | 先修复或要求补证据，不升级到大范围 build | Narrow 到失败模块 |
+| 3 | `[升级命令]` | 当最小命令通过后再验证集成面 | 本轮证据足够支持合并 / 交付建议 | 记录为 known issue 或阻塞项 | Continue / Stop |
+
+Stop Conditions：
+- 启动状态无法区分本轮改动与他人改动；
+- 最小相关命令不可运行，且没有等价证据；
+- 发现生产权限、密钥、数据安全或合规边界问题。
 
 ## Handoff Template
 - Changed/observed files:
