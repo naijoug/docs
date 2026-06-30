@@ -122,6 +122,18 @@ order: 32
 
 写作时只把 `Public-safe summary` 带进正文；`Required proof` 用来内部自查，避免公开文档泄露私有路径、绝对路径、密钥或用户数据。
 
+## 复用到 agent skill
+
+公开案例写作前，可以先用 `skills/skills/manual/review/audit-evidence-boundary/` 做一次内部证据边界审查：
+
+1. 把每条想写进案例的 claim 标成 `Fact`、`Inference`、`Unverified`、`Private` 或 `Stop`；
+2. 只把 `Fact` 和已标明依据的 `Inference` 带进公开版本；
+3. 把 `Unverified` 改写为 `Next evidence needed`，不要包装成结果；
+4. 把 `Private` 留在内部台账，公开版只保留脱敏后的证据形状；
+5. 只要出现 `Stop`，先停止发布，回到授权、范围或脱敏边界。
+
+这一步的目标不是让案例更像成功故事，而是让读者能分清：哪些是已经发生的事实，哪些是基于证据的判断，哪些只是下一步需要补的证据。
+
 ## 发布前检查
 
 发布匿名案例前，用下面 7 个问题做最后防线：
