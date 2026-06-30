@@ -39,6 +39,17 @@ index: false
 5. 交付前用 [AI 编程审查样板报告](ai-coding-audit-mock-report.md) 压缩成客户可读的公开报告；内部执行时把同一条命令梯复用到 `skills/skills/manual/review/next-safe-command-ladder/`，避免 agent 只产出测试清单。
 6. 发布后再用 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 做脱敏复盘，最后回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次审查结果应该沉淀成文章、模板、技能还是书稿卡片。
 
+## evidence boundary checkpoint
+
+把一次 AI 编程审查写成公开内容前，先做证据边界检查，避免把审查记录包装成未经验证的结论：
+
+- **先分层 claim**：把每条想公开的结论标成 `Fact`、`Inference`、`Unverified`、`Private` 或 `Stop`；没有证据的内容只能进入 `Next evidence needed`。
+- **只公开证据形状**：命令、exit code、失败类型和脱敏后的路径可以保留；客户名、私有仓库、绝对路径、密钥、用户数据和未经授权截图要删除。
+- **把停止条件写出来**：授权不清、脱敏后无法支撑结论、或验证链断裂时，不发布“真实案例”，改写成方法样板或征集样本的说明。
+- **复用内部技能**：内部执行可先用 `skills/skills/manual/review/audit-evidence-boundary/` 做 claim 分层，再进入匿名案例写作。
+
+这个 checkpoint 与 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 是同一条路径的发布前闸门：前者判断“能不能说”，后者组织“怎么安全地说”。
+
 ## concept
 
 | abbr | full | description
