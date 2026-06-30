@@ -41,10 +41,20 @@ order: 31
 
 ## Next Safe Command Ladder
 
-1. 最小结构检查：确认本报告有 frontmatter、`<!-- more -->`、Scope、Top Risks、命令梯、handoff、`Continue / Narrow / Stop`。
-2. 链接检查：确认 `docs/documents/trending/ai/README.md` 已新增本报告入口，服务指南能指向样板报告。
-3. Markdown 空白检查：运行 `git -C docs diff --check -- documents/trending/ai/README.md documents/trending/ai/ai-coding-audit-service.md documents/trending/ai/ai-coding-audit-mock-report.md`。
-4. 站点级验证：运行 `cd docs/web/vuepress && npx -y pnpm@8.15.9 run docs:build`；若仅出现已知 warning，需要在交付记录中写明。
+这份样板报告不把“跑 build”放在第一步。下一条安全命令梯要先回答：当前最高风险是什么、哪条最小命令能证明它、失败后应该缩小到哪里。
+
+| Step | Command / check | Why this first | Pass means | Fail means |
+| --- | --- | --- | --- | --- |
+| 1 | 人工结构检查：确认本报告有 frontmatter、`<!-- more -->`、Scope、Top Risks、命令梯、handoff、`Continue / Narrow / Stop` | 这是报告交付物，最先要证明读者能在 1 页内看懂范围、风险、证据和下一步 | 报告形状完整，可以继续检查入口和命令 | 先补报告结构，不要用站点 build 掩盖交付物读不懂 |
+| 2 | 链接检查：确认 `README.md` 已新增本报告入口，服务指南能指向样板报告 | 样板报告的主要风险是“写了但读者找不到” | catalog、服务指南和样板报告形成最小阅读路径 | Narrow 到入口文案或相对链接，不扩大到全站重构 |
+| 3 | `git -C docs diff --check -- documents/trending/ai/README.md documents/trending/ai/ai-coding-audit-service.md documents/trending/ai/ai-coding-audit-mock-report.md` | 只检查本轮相关 Markdown，避免把旧 warning 当成本轮问题 | 本轮 patch 没有空白、冲突标记或格式损伤 | 修本轮 touched files；不要接管无关 dirty path |
+| 4 | `cd docs/web/vuepress && npx -y pnpm@8.15.9 run docs:build` | 只有在局部结构和链接都清楚后，才用站点 build 做确认 | 站点能生成，本轮没有新增 broken link 或高亮错误 | 记录首个新增错误；若只剩既有 warning，写入 skipped / known issues |
+
+### Stop Conditions
+
+- `git status --short` 显示本轮以外的 dirty path，需要先标注归属，不能混入审查结论。
+- 步骤 1 或 2 已经失败，说明报告入口或交付形状不成立，先 Narrow 到内容结构，不继续跑更贵验证。
+- 站点 build 失败来自既有配置或外部依赖时，只记录证据和下一步 owner action，不把它包装成“样板报告已验证”。
 
 ## Handoff Template
 
