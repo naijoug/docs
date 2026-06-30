@@ -18,6 +18,7 @@ index: false
 - [AI 编程审查服务交付指南](ai-coding-audit-service.md)
 - [下一条安全命令梯](next-safe-command-ladder.md)
 - [AI 编程审查样板报告](ai-coding-audit-mock-report.md)
+- [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md)
 - [AI 生成 PR 的最小审查入口](ai-generated-pr-review-entry.md)
 - [2026 Agentic Coding 实战最佳实践](agentic-coding-2026.md)
 - [AI 编程上下文工程实战指南](context-engineering-for-ai-coding.md)
@@ -35,7 +36,7 @@ index: false
 2. 再读 [AI 编程验证优先工作流](verification-first-ai-coding.md)，把验证失败、未验证项和下一条安全命令写成可接手记录。
 3. 进入 [AI 生成 PR 的最小审查入口](ai-generated-pr-review-entry.md)，把 `git status --short`、接管文件、避开的 dirty path、验证梯和 `Continue / Narrow / Stop` 固定到 PR 审查入口。
 4. 如果要把它产品化，继续读 [AI 编程审查服务交付指南](ai-coding-audit-service.md)，再用 [下一条安全命令梯](next-safe-command-ladder.md) 把“下一步先跑什么”写成可复核交付物。
-5. 最后读 [AI 编程审查样板报告](ai-coding-audit-mock-report.md) 并回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次审查结果应该沉淀成文章、模板、技能还是书稿卡片。
+5. 最后读 [AI 编程审查样板报告](ai-coding-audit-mock-report.md) 和 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md)，再回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次审查结果应该沉淀成文章、模板、技能还是书稿卡片。
 
 ## concept
 

@@ -27,7 +27,7 @@ order: 31
 
 这条内容链路已经具备一个可测试 offer 的雏形：从内部 skill、样例报告、公开指南到书稿卡片，边界越来越清晰。当前最大风险不是“内容不够多”，而是还没有把样例审查报告展示给读者，导致读者看完服务指南后，仍然不知道付费交付长什么样。
 
-建议下一步不要继续扩写理论，而是围绕一个小 repo 或一次 PR 形成可公开/可匿名的审查案例，并用 48 小时观察表记录真实反馈。
+建议下一步不要继续扩写理论，而是围绕一个小 repo 或一次 PR 形成可公开/可匿名的审查案例。公开前先用 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 检查 Scope、脱敏规则和证据形状，再用 48 小时观察表记录真实反馈。
 
 ## Top Risks
 
@@ -93,7 +93,7 @@ Next owner action:
 
 ## Continue / Narrow / Stop
 
-- `Continue`：有人看完样板报告后愿意提供一次 PR、agent log、失败构建记录或 repo 片段；下一轮做匿名真实案例。
+- `Continue`：有人看完样板报告后愿意提供一次 PR、agent log、失败构建记录或 repo 片段；下一轮按 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 做匿名真实案例。
 - `Narrow`：反馈只集中在“命令梯”“dirty workspace”“handoff 模板”之一；下一篇只写这个单点，不扩张成完整服务。
 - `Stop`：只有泛泛点赞，没有任何样本、问题或复盘请求；回到 hook，重写痛点表达，而不是继续扩写长文。
 

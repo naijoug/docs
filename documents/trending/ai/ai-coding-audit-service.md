@@ -133,7 +133,7 @@ Stop Conditions：
 
 ## 报价前的自检
 
-在真正对外发布前，先用自己的项目做一次样板交付（可参考 [AI 编程审查样板报告](ai-coding-audit-mock-report.md)）：
+在真正对外发布前，先用自己的项目做一次样板交付（可参考 [AI 编程审查样板报告](ai-coding-audit-mock-report.md)；如果要公开复盘，先套一遍 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md)）：
 
 1. 选一个最近被 agent 修改过的小 repo；
 2. 只审查，不改代码；
