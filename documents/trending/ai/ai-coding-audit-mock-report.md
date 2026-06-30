@@ -56,6 +56,16 @@ order: 31
 - 步骤 1 或 2 已经失败，说明报告入口或交付形状不成立，先 Narrow 到内容结构，不继续跑更贵验证。
 - 站点 build 失败来自既有配置或外部依赖时，只记录证据和下一步 owner action，不把它包装成“样板报告已验证”。
 
+## 复用到 agent skill
+
+如果这份样板报告要交给另一个 agent 继续用，不要只复制表格。应把它当作 `skills/skills/manual/review/next-safe-command-ladder/` 的公开案例：
+
+1. 先用 `SKILL.md` 的 `Command Selection Patterns` 判断变更类型和最高风险；
+2. 再用 `references/ai-coding-audit-example.md` 对齐输出粒度，确认每一级都有 `Why this first`、`Pass means`、`Fail means`；
+3. 最后回到本报告，把 skill 输出压缩成客户能读懂的 Scope、Top Risks、命令梯和 handoff。
+
+这样可以避免两个常见偏差：对外报告写得像内部 prompt，或者内部 skill 只剩“跑 lint / test / build”的机械清单。
+
 ## Handoff Template
 
 ```text
