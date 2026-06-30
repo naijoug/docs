@@ -107,6 +107,21 @@ order: 32
 
 这样写出来的案例才像交付物，而不是服务介绍页的重复版本。
 
+## 发布前证据清单
+
+在开始写公开版本前，先把证据放进一张小表。表格允许出现空项；空项不是失败，而是提醒你把结论降级为 `Unverified`，不要为了故事完整补数字、补客户反馈或补根因。
+
+| Evidence item | Required proof | Public-safe summary | If missing |
+| --- | --- | --- | --- |
+| Case source | PR 链接、issue、agent log、build 记录或授权说明 | `来自一次已授权脱敏的 AI 生成 PR 审查` | 降级为方法样板，不写“真实案例” |
+| Scope boundary | `Included` / `Excluded` 文件、命令和时间范围 | `只审查状态管理重构，不覆盖生产数据` | Narrow 到范围说明，先不写风险结论 |
+| Top risk | diff、失败命令、日志片段或 reviewer 原话 | `error state 可能被 loading state 覆盖` | 把该风险放入 `Next evidence needed` |
+| Command result | 命令、exit code、关键输出摘要 | `focused reducer test failed at error branch` | 不写 `Pass means` / `Fail means` 的确定结论 |
+| Handoff | 下一条安全命令、owner、停止条件 | `先补 reducer 分支测试，再做 UI smoke` | 只发布观察，不包装成交付复盘 |
+| Authorization | 可公开范围、脱敏规则、敏感字段删除记录 | `仓库名、路径、用户数据已替换或删除` | Stop，不发布案例 |
+
+写作时只把 `Public-safe summary` 带进正文；`Required proof` 用来内部自查，避免公开文档泄露私有路径、绝对路径、密钥或用户数据。
+
 ## 发布前检查
 
 发布匿名案例前，用下面 7 个问题做最后防线：
