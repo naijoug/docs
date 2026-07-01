@@ -60,6 +60,21 @@ order: 29
 
 内部执行时可以复用 `skills/skills/manual/review/audit-evidence-boundary/`；公开写作前再套 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md)。
 
+## 真实样本回填占位表
+
+每次发布样本征集、收到私信或完成一份只读报告后，都把结果回填到这里。不要用“感觉有人感兴趣”代替证据；如果缺少授权或证据，只写 `Unverified` 和 `Next evidence needed`。
+
+| 日期 | 来源 | 证据形状 | 公开边界 | 当前判断 | Next evidence needed | 可沉淀资产 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 待填 | 待填：短帖、社群、Issue、PR 或私信 | 待填：PR、失败命令、agent log、final report、review comment 或口头描述 | 待填：可匿名 / 不可公开 / 只能写方法样板 | `Continue / Narrow / Stop / Unverified` | 待填：下一条必须补的材料 | 待填：文章、模板、skill、书稿卡片或服务 offer |
+
+回填规则：
+
+- `Continue`：证据足够进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
+- `Narrow`：只够收束到 [下一条安全命令梯](next-safe-command-ladder.md) 或一个单点模板。
+- `Stop`：授权不清、涉及敏感数据、或脱敏后无法支撑结论；只沉淀方法，不写真实案例。
+- `Unverified`：有反馈但证据链未闭合；必须先补 `Next evidence needed`，不能进入公开复盘。
+
 ## 收入实验判断
 
 这条路线是否值得继续，不看内容写了多少，而看真实信号：
