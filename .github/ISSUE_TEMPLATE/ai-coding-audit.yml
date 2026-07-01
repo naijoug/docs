@@ -10,6 +10,7 @@ body:
         Use this when you want a lightweight review of one AI-assisted coding workflow.
 
         Scope guard: share only material that can be reviewed safely. Do not paste secrets, production credentials, private customer data, or unreleased business details.
+        A good sample should make the first report possible without granting write access: goal, uncertainty, evidence, boundaries, and public sharing permission.
   - type: input
     id: repo_or_area
     attributes:
@@ -42,6 +43,18 @@ body:
     validations:
       required: true
   - type: textarea
+    id: current_uncertainty
+    attributes:
+      label: Current uncertainty
+      description: What is the one question this audit should answer first?
+      placeholder: |
+        Examples:
+        - Did the agent mix unrelated dirty workspace changes into the PR?
+        - Which skipped check makes the final report untrustworthy?
+        - What is the cheapest command a reviewer should run next?
+    validations:
+      required: true
+  - type: textarea
     id: current_evidence
     attributes:
       label: Current evidence
@@ -51,6 +64,18 @@ body:
         Commands already run:
         Files changed:
         Skipped checks:
+    validations:
+      required: true
+  - type: dropdown
+    id: public_boundary
+    attributes:
+      label: Public boundary
+      description: May the audit result be reused as an anonymized public method recap?
+      options:
+        - Public source; anonymized recap is OK
+        - Private source; internal report only
+        - Not sure yet; ask before quoting or publishing
+        - No public recap
     validations:
       required: true
   - type: textarea
@@ -65,6 +90,18 @@ body:
         Read-only constraints:
     validations:
       required: true
+  - type: checkboxes
+    id: safety_confirmation
+    attributes:
+      label: Safety confirmation
+      description: The audit should stop if any of these cannot be confirmed.
+      options:
+        - label: I removed secrets, production credentials, user data, private customer details, and unapproved screenshots.
+          required: true
+        - label: I used relative paths or summaries instead of absolute private paths where possible.
+          required: true
+        - label: I understand unsupported claims may be labeled Unverified / Next evidence needed instead of reported as conclusions.
+          required: true
   - type: textarea
     id: command_ladder
     attributes:
