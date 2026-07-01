@@ -181,7 +181,7 @@ Stop Conditions：
 | 开发者社群 | 能接触真实团队样本 | 强调只读审查、不接生产权限、输出 1 页 | “可匿名给一段 PR/agent 记录，我帮你指出下一条安全命令。” |
 | GitHub README / issue template | 靠近实际 repo 工作流 | 改成 checklist 或 PR 模板 | “复制这张表到下一次 agent PR。” |
 
-如果想直接靠近真实 repo，可以复制或改造仓库里的 `.github/ISSUE_TEMPLATE/ai-coding-audit.yml`：它把样本征集拆成 repo/area、agent 改动、失败模式、当前不确定点、当前证据、公开边界、审查边界、安全确认、验证命令梯和期望输出，适合把“回复一个场景”升级为结构化样本输入。拿到结构化输入后，先按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 做 30-60 分钟只读报告，不要直接承诺完整咨询或公开案例。
+如果想直接靠近真实 repo，可以复制或改造仓库里的 `.github/ISSUE_TEMPLATE/ai-coding-audit.yml`：它把样本征集拆成 repo/area、agent 改动、失败模式、当前不确定点、当前证据、公开边界、审查边界、安全确认、验证命令梯和期望输出，适合把“回复一个场景”升级为结构化样本输入。对方只给出简短回复时，先用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 补齐目标、范围、证据、公开边界和期望输出；拿到结构化输入后，再按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 做 30-60 分钟只读报告，不要直接承诺完整咨询或公开案例。
 
 如果样本已经进入 PR，则把 `.github/pull_request_template.md` 当作下一步入口，并按 [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md) 把 issue 字段映射到 PR snapshot、ownership boundary、verification ladder、未验证项和 `Continue / Narrow / Stop` 建议，避免 issue 里收集到的失败场景在 PR 里重新变成一句“已测试”。
 

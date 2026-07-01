@@ -104,7 +104,7 @@ order: 33
 - `Next Safe Command Ladder` 从当前最高风险开始，而不是机械列 lint / test / build；
 - `Public version notes` 写明删除、泛化和保留的证据形状。
 
-发布前再回到 [AI 编程审查服务交付指南](ai-coding-audit-service.md) 与 [AI 编程审查样板报告](ai-coding-audit-mock-report.md)，确认它既能作为可信内容，也能复用为服务交付物。
+如果对方只是回复了一个模糊场景，先用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 补齐目标、范围、证据、公开边界和期望输出，再进入案例写作。发布前再回到 [AI 编程审查服务交付指南](ai-coding-audit-service.md) 与 [AI 编程审查样板报告](ai-coding-audit-mock-report.md)，确认它既能作为可信内容，也能复用为服务交付物。
 
 ## Continue / Narrow / Stop
 
