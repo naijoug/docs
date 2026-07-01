@@ -55,6 +55,20 @@ Decision: Continue
 Next evidence needed: 下一次优先在包含新增跨目录相对链接或删除/重命名目标文件的改动中观察 checker 是否能发现断链；若发现失败，再补最小回归测试。
 ```
 
+## 2026-07-02 07:30
+
+```text
+Date: 2026-07-02 07:30
+Change target: documents/trending/ai/ai-doc-change-proof-checker.md + cross-directory link to scripts/check-markdown-proof.py
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md documents/trending/ai/README.md
+Result before edit: markdown proof ok: checked 3 file(s)
+What changed: 在 checker 说明页新增从 documents/trending/ai/ 到 scripts/check-markdown-proof.py 的跨目录相对链接，并补充“跨目录链接也要进入 checker 覆盖范围”的维护规则。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md documents/trending/ai/README.md
+Signal: checker 能覆盖新增的跨目录相对链接，并确认该链接解析到真实脚本文件；本轮仍没有断链失败样例，不扩规则。
+Decision: Continue
+Next evidence needed: 下一次优先观察删除、重命名或移动链接目标时 checker 是否能先于 VuePress build 给出失败；若出现失败，再把最小样例写入 scripts/test-check-markdown-proof.py。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

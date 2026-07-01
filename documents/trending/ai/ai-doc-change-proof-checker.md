@@ -29,7 +29,7 @@ AI 协作写文档时，最容易把“写完了”误判成“可交付”：�
 
 ## 使用方式
 
-在 `docs/` 仓库内运行：
+脚本源码放在 [scripts/check-markdown-proof.py](../../../scripts/check-markdown-proof.py)。在 `docs/` 仓库内运行：
 
 ```bash
 python3 scripts/check-markdown-proof.py
@@ -68,6 +68,8 @@ markdown proof failed: 1 target(s) not found
 ```bash
 python3 scripts/test-check-markdown-proof.py
 ```
+
+跨目录链接本身也应该进入 checker 覆盖范围：如果本页链接到脚本源码或回归测试，命令必须能从 `documents/trending/ai/` 解析到 `scripts/` 下的真实文件；链接路径一旦写错，应先修链接或补最小回归样例，而不是直接跳到 VuePress build。
 
 ## 何时还需要 VuePress build
 
