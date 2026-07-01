@@ -54,6 +54,21 @@ def iter_markdown_files(target: Path) -> Iterable[Path]:
         yield path
 
 
+def collect_markdown_files(target_args: Iterable[str], root: Path) -> tuple[list[Path], list[Path]]:
+    files: list[Path] = []
+    missing: list[Path] = []
+    for target_arg in target_args:
+        target = Path(target_arg)
+        if not target.is_absolute():
+            target = root / target
+        resolved = target.resolve()
+        if not resolved.exists():
+            missing.append(target)
+            continue
+        files.extend(iter_markdown_files(resolved))
+    return sorted(set(files)), missing
+
+
 def strip_code_fences(text: str) -> str:
     return re.sub(r"```.*?```", "", text, flags=re.DOTALL)
 
@@ -138,14 +153,21 @@ def main() -> int:
     args = parser.parse_args()
 
     root = args.root.resolve()
-    files: list[Path] = []
-    for target_arg in args.targets:
-        target = Path(target_arg)
-        if not target.is_absolute():
-            target = root / target
-        files.extend(iter_markdown_files(target.resolve()))
+    unique_files, missing_targets = collect_markdown_files(args.targets, root)
+    if missing_targets:
+        print(f"markdown proof failed: {len(missing_targets)} target(s) not found")
+        for target in missing_targets:
+            try:
+                rel = target.relative_to(root)
+            except ValueError:
+                rel = target
+            print(f"- {rel}: target not found")
+        return 2
 
-    unique_files = sorted(set(files))
+    if not unique_files:
+        print("markdown proof failed: no markdown files matched the requested target(s)")
+        return 2
+
     issues: list[Issue] = []
     for file_path in unique_files:
         issues.extend(check_file(file_path, root))

@@ -25,6 +25,7 @@ AI 协作写文档时，最容易把“写完了”误判成“可交付”：�
 2. frontmatter 是否包含 `title`；
 3. 正文中的本地 markdown 链接是否能解析到文件、目录 `README.md` 或同名 `.md`；
 4. 内容中是否误写本机用户目录绝对路径。
+5. 指定的检查目标是否真实存在，避免 typo 造成 `checked 0 file(s)` 的假绿灯。
 
 ## 使用方式
 
@@ -55,6 +56,19 @@ markdown proof ok: checked 25 file(s)
 
 失败时会列出相对路径和具体问题，适合直接贴进 PR、agent final report 或 Hermes notebook。
 
+如果目标路径拼错或目录里没有 markdown，命令会以非 0 状态退出：
+
+```text
+markdown proof failed: 1 target(s) not found
+- documents/trending/ai/missing.md: target not found
+```
+
+维护 checker 本身时，先跑回归测试：
+
+```bash
+python3 scripts/test-check-markdown-proof.py
+```
+
 ## 何时还需要 VuePress build
 
 这个 checker 只适合 30-120 分钟的小改动 proof。下面情况仍然要跑完整构建：
@@ -62,6 +76,7 @@ markdown proof ok: checked 25 file(s)
 | 改动类型 | 最小 proof | 追加验证 |
 | --- | --- | --- |
 | 只改 AI 目录内一两篇文档 | `python3 scripts/check-markdown-proof.py documents/trending/ai/changed.md` | 人工检查渲染预期 |
+| 改 checker 规则或 CLI 行为 | `python3 scripts/test-check-markdown-proof.py` + checker 覆盖目标文档 | 必要时补一个最小 fixture，再跑 docs build |
 | 新增目录入口、sidebar、主题配置 | checker 覆盖改动文档 | `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build` |
 | 改代码块、组件、VuePress 插件 | checker 只做路径兜底 | docs build + 页面预览 |
 | 公开案例或客户样本 | checker 只查绝对路径 | 另走 evidence boundary 和脱敏检查 |
