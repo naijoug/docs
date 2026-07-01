@@ -70,6 +70,18 @@ order: 29
 
 最小可收费形态不是“AI 顾问包”，而是一次固定范围、只读、可复核的 AI 编程审查：交付 1 页风险报告、下一条安全命令梯和一个可复制的 handoff 模板。
 
+## 关联书稿卡片
+
+如果这条路线要沉淀成长期写作资产，不要只复制操作清单。先把每次审查复盘压缩成一条原则卡片，再决定是否公开完整案例：
+
+| 路线节点 | 可沉淀原则 | 书稿路径 |
+| --- | --- | --- |
+| 没有真实样本时 | 先征集和收束输入，不编造案例 | `books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md` |
+| 收到可审查材料时 | 先交付首份报告，不先卖咨询 | `books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md` |
+| 想做 landing page 或工具时 | 先跑 30 分钟路线，不要先产品化 | `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md` |
+
+写书稿时仍沿用同一条证据边界：公开叙述只写 `Fact`、`Inference`、`Unverified`、`Private` 和 `Stop` 的分层结果；没有授权或证据链断裂时，只沉淀方法卡片，不写“真实案例”。
+
 ## 下一步清单
 
 - 先读 [AI 编程审查服务交付指南](ai-coding-audit-service.md)，确认 offer 边界和交付物。
