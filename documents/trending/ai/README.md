@@ -19,6 +19,7 @@ index: false
 - [下一条安全命令梯](next-safe-command-ladder.md)
 - [AI 编程审查样板报告](ai-coding-audit-mock-report.md)
 - [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)
+- [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md)
 - [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md)
 - [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md)
 - [AI 生成 PR 的最小审查入口](ai-generated-pr-review-entry.md)
@@ -39,7 +40,7 @@ index: false
 3. 进入 [AI 生成 PR 的最小审查入口](ai-generated-pr-review-entry.md)，把 `git status --short`、接管文件、避开的 dirty path、验证梯和 `Continue / Narrow / Stop` 固定到 PR 审查入口。
 4. 如果要把它产品化，继续读 [AI 编程审查服务交付指南](ai-coding-audit-service.md)，再用 [下一条安全命令梯](next-safe-command-ladder.md) 把“下一步先跑什么”写成可复核交付物。
 5. 交付前用 [AI 编程审查样板报告](ai-coding-audit-mock-report.md) 压缩成客户可读的公开报告；内部执行时把同一条命令梯复用到 `skills/skills/manual/review/next-safe-command-ladder/`，避免 agent 只产出测试清单。
-6. 如果还没有真实授权样本，先用 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md) 获取范围、证据和公开边界；拿到样本后，用 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 把输入压缩成 30-60 分钟的只读报告，再用 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 做脱敏复盘，最后回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次审查结果应该沉淀成文章、模板、技能还是书稿卡片。
+6. 如果还没有真实授权样本，先用 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md) 获取范围、证据和公开边界；拿到样本后，用 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 把输入压缩成 30-60 分钟的只读报告。如果样本进入 PR，再用 [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md) 把 Issue 字段映射到 PR snapshot、ownership boundary、verification ladder 和 `Continue / Narrow / Stop`。最后用 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 做脱敏复盘，并回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次审查结果应该沉淀成文章、模板、技能还是书稿卡片。
 
 ## evidence boundary checkpoint
 
