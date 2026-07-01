@@ -105,3 +105,4 @@ order: 29
 - 有回复后用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 收束输入。
 - 有结构化材料后进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
 - 要公开前，必须通过证据边界和匿名案例闸门。
+- 如果连续多轮没有真实发布渠道、授权样本或反馈证据，先用 [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md) 判断 `Continue / Narrow / Stop / Switch`，不要继续靠新增文档制造进展感。

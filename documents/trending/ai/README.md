@@ -16,6 +16,7 @@ index: false
 - [AI 编程验证优先工作流](verification-first-ai-coding.md)
 - [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)
+- [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)
 - [AI 编程审查服务交付指南](ai-coding-audit-service.md)
 - [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md)
 - [下一条安全命令梯](next-safe-command-ladder.md)
@@ -46,6 +47,8 @@ index: false
 6. **沉淀资产**：如果同类问题重复出现，再回到 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 和 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断是否升级为文章、模板、技能、书稿卡片或服务 offer。
 
 这条入口的判断标准是“是否拿到真实可复核证据并交付下一步”，不是点赞、收藏或路线图完整度。
+
+如果连续多轮都没有发布渠道、真实样本或反馈证据，先走 [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)：能拿到证据就 `Continue`，只能验证单点就 `Narrow`，否则把当前资产封存并 `Switch` 到另一个可验证的小实验，避免继续堆文档。
 
 如果要把这轮实验写进书稿，优先参考 `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md`、`books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md`、`books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md` 和 `books/tech-cards-handbook/chapters/ai-agent/publish-feedback-needs-evidence-shape.md`：先抽象原则和反馈证据形状，再决定是否公开案例。
 
