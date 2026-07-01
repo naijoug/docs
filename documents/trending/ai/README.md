@@ -16,6 +16,7 @@ index: false
 - [AI 编程验证优先工作流](verification-first-ai-coding.md)
 - [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
+- [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)
 - [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)
 - [AI 编程审查服务交付指南](ai-coding-audit-service.md)
