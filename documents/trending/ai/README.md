@@ -55,6 +55,16 @@ index: false
 
 切换到新实验时，不要只换一个更大的想法。先用 [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md) 写清本周约束、候选实验、最小交付物、验证方式和停止条件，优先选择能在本地运行、能提交、能被别人复核的小闭环。
 
+## AI document change preflight
+
+修改本目录的 AI 工作流、收入实验、审查样板或跨目录链接时，先把改动当作一次小实验处理：
+
+1. **改前跑轻量检查**：对准备修改的入口页、长文或跨目录链接目标执行 `python3 scripts/check-markdown-proof.py documents/trending/ai/README.md ...`，确认当前文件没有已知断链、frontmatter 或绝对路径问题。
+2. **只记录可复查结果**：如果 checker 通过，把命令和输出追加到 [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)；如果失败，先修最小问题，再考虑是否需要补回归测试。
+3. **不要让 checker 变万能 linter**：它负责快速兜底 markdown proof；涉及 sidebar、VuePress 插件或页面渲染时，仍然追加 `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build`。
+
+这条 preflight 的目标不是替代完整构建，而是在 agent 频繁改文档时，给“这次改动没有基础破损”留下可重复证据。
+
 如果要把这轮实验写进书稿，优先参考 `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md`、`books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md`、`books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md` 和 `books/tech-cards-handbook/chapters/ai-agent/publish-feedback-needs-evidence-shape.md`：先抽象原则和反馈证据形状，再决定是否公开案例。
 
 ## AI-assisted PR review path

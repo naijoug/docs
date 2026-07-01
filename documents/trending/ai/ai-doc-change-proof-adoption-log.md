@@ -41,6 +41,20 @@ Decision: Continue
 Next evidence needed: 下一次不要只验证新增页面本身；优先在修改已有长文、目录入口或跨目录链接时记录 checker 是否发现人工容易漏掉的问题。
 ```
 
+## 2026-07-02 07:15
+
+```text
+Date: 2026-07-02 07:15
+Change target: documents/trending/ai/README.md + documents/trending/ai/ai-programmer-weekly-experiment-planner.md
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-weekly-experiment-planner.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Result before edit: markdown proof ok: checked 3 file(s)
+What changed: 在 AI 目录入口新增 `AI document change preflight`，把 checker 的改前/改后使用方式、采纳记录和 VuePress build 边界写成默认路径；在每周收入实验规划器中把 AI 文档改动 proof checker 固定为目录入口、长文和跨目录链接改动的默认 preflight。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-weekly-experiment-planner.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: checker 第二次用于已有入口页与长文的小改动，仍能在改前和改后快速给出可复查通过结果；目前没有失败样例，不扩规则。
+Decision: Continue
+Next evidence needed: 下一次优先在包含新增跨目录相对链接或删除/重命名目标文件的改动中观察 checker 是否能发现断链；若发现失败，再补最小回归测试。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
