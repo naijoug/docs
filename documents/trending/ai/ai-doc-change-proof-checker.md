@@ -102,4 +102,5 @@ Decision: Continue / Narrow / Stop / Switch
 - 它解决自己真实重复场景：AI 写文档后需要快速证明改动没有基础破损；
 - 它能本地运行，不依赖外部账号或客户材料；
 - 它留下可复用命令，未来可以扩成更通用的 docs QA 模板包；
-- 如果连续几次没有复用价值，就按 [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md) 的停止条件切换，不继续堆检查规则。
+- 如果连续几次没有复用价值，就按 [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md) 的停止条件切换，不继续堆检查规则；
+- 每次实际复用时，写入 [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)，用通过/失败样例决定继续维护、缩小范围还是停止扩展。
