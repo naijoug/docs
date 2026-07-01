@@ -47,7 +47,7 @@ index: false
 
 这条入口的判断标准是“是否拿到真实可复核证据并交付下一步”，不是点赞、收藏或路线图完整度。
 
-如果要把这轮实验写进书稿，优先参考 `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md`、`books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md` 和 `books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md`：先抽象原则，再决定是否公开案例。
+如果要把这轮实验写进书稿，优先参考 `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md`、`books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md`、`books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md` 和 `books/tech-cards-handbook/chapters/ai-agent/publish-feedback-needs-evidence-shape.md`：先抽象原则和反馈证据形状，再决定是否公开案例。
 
 ## AI-assisted PR review path
 

@@ -94,6 +94,7 @@ order: 29
 | 没有真实样本时 | 先征集和收束输入，不编造案例 | `books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md` |
 | 收到可审查材料时 | 先交付首份报告，不先卖咨询 | `books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md` |
 | 想做 landing page 或工具时 | 先跑 30 分钟路线，不要先产品化 | `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md` |
+| 发布后观察反馈时 | 先看证据形状，不看互动量 | `books/tech-cards-handbook/chapters/ai-agent/publish-feedback-needs-evidence-shape.md` |
 
 写书稿时仍沿用同一条证据边界：公开叙述只写 `Fact`、`Inference`、`Unverified`、`Private` 和 `Stop` 的分层结果；没有授权或证据链断裂时，只沉淀方法卡片，不写“真实案例”。
 
