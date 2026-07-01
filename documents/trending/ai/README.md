@@ -15,6 +15,7 @@ index: false
 - [Agent 工作流设计](agent-workflow.md)
 - [AI 编程验证优先工作流](verification-first-ai-coding.md)
 - [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)
+- [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)
 - [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)
 - [AI 编程审查服务交付指南](ai-coding-audit-service.md)
@@ -49,6 +50,8 @@ index: false
 这条入口的判断标准是“是否拿到真实可复核证据并交付下一步”，不是点赞、收藏或路线图完整度。
 
 如果连续多轮都没有发布渠道、真实样本或反馈证据，先走 [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)：能拿到证据就 `Continue`，只能验证单点就 `Narrow`，否则把当前资产封存并 `Switch` 到另一个可验证的小实验，避免继续堆文档。
+
+切换到新实验时，不要只换一个更大的想法。先用 [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md) 写清本周约束、候选实验、最小交付物、验证方式和停止条件，优先选择能在本地运行、能提交、能被别人复核的小闭环。
 
 如果要把这轮实验写进书稿，优先参考 `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md`、`books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md`、`books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md` 和 `books/tech-cards-handbook/chapters/ai-agent/publish-feedback-needs-evidence-shape.md`：先抽象原则和反馈证据形状，再决定是否公开案例。
 
