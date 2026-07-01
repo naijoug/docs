@@ -69,7 +69,7 @@ markdown proof failed: 1 target(s) not found
 python3 scripts/test-check-markdown-proof.py
 ```
 
-跨目录链接本身也应该进入 checker 覆盖范围：如果本页链接到脚本源码或回归测试，命令必须能从 `documents/trending/ai/` 解析到 `scripts/` 下的真实文件；链接路径一旦写错，应先修链接或补最小回归样例，而不是直接跳到 VuePress build。
+跨目录链接本身也应该进入 checker 覆盖范围：如果本页链接到脚本源码或回归测试，命令必须能从 `documents/trending/ai/` 解析到 `scripts/` 下的真实文件；链接路径一旦写错，应先修链接或补最小回归样例，而不是直接跳到 VuePress build。当前回归测试已覆盖“跨目录链接目标存在时通过、目标重命名后失败”的最小场景。
 
 ## 何时还需要 VuePress build
 

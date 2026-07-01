@@ -75,6 +75,28 @@ This links to [missing](missing.md) and mentions /Users/example/project.
     assert any(message.startswith("contains absolute user path") for message in messages)
 
 
+def test_cross_directory_link_fails_after_target_rename(checker, root: Path) -> None:
+    source = root / "documents/trending/ai/checker.md"
+    target = root / "scripts/check-markdown-proof.py"
+    write(target, "#!/usr/bin/env python3\n")
+    write(
+        source,
+        """---
+title: Checker
+
+---
+
+Script source: [scripts/check-markdown-proof.py](../../../scripts/check-markdown-proof.py).
+""",
+    )
+
+    assert checker.check_file(source, root) == []
+
+    target.rename(root / "scripts/check-markdown-proof-renamed.py")
+    messages = [issue.message for issue in checker.check_file(source, root)]
+    assert "broken local link `../../../scripts/check-markdown-proof.py`" in messages
+
+
 def test_cli_fails_for_missing_target(root: Path) -> None:
     result = subprocess.run(
         [sys.executable, str(SCRIPT), "--root", str(root), "documents/trending/ai/missing.md"],
@@ -105,6 +127,7 @@ def main() -> int:
     tests = [
         test_valid_page_and_relative_link,
         test_reports_broken_link_and_absolute_user_path,
+        test_cross_directory_link_fails_after_target_rename,
         test_cli_fails_for_missing_target,
         test_cli_fails_when_no_markdown_matched,
     ]

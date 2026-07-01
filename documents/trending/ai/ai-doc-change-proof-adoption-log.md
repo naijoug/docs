@@ -69,6 +69,20 @@ Decision: Continue
 Next evidence needed: 下一次优先观察删除、重命名或移动链接目标时 checker 是否能先于 VuePress build 给出失败；若出现失败，再把最小样例写入 scripts/test-check-markdown-proof.py。
 ```
 
+## 2026-07-02 07:45
+
+```text
+Date: 2026-07-02 07:45
+Change target: scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Result before edit: markdown proof ok: checked 2 file(s)
+What changed: 按 07:30 的接力点，把“跨目录链接目标被重命名后应失败”补进 stdlib-only 回归测试；checker 说明页记录该最小场景已经覆盖。
+Verification after edit: python3 scripts/test-check-markdown-proof.py + python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: checker 的断链捕获价值从人工说明变成可重复测试：目标存在时通过，目标重命名后同一链接失败；这是一个有失败样例驱动的扩展，而不是无差别加规则。
+Decision: Continue
+Next evidence needed: 下一次优先观察锚点、带 title 的 markdown link、目录 README 省略后缀等链接形态；只有真实样例失败时再补最小测试。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
