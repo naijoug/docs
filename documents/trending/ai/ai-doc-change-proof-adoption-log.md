@@ -97,6 +97,20 @@ Decision: Continue
 Next evidence needed: 下一次优先观察锚点链接或 VuePress alias/include 这类 checker 暂不处理的形态；只有真实误报/漏报时再补最小测试。
 ```
 
+## 2026-07-02 08:15
+
+```text
+Date: 2026-07-02 08:15
+Change target: scripts/check-markdown-proof.py + scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/test-check-markdown-proof.py
+Result before edit: markdown proof ok: checked 2 file(s); regression tests ok: 6 test(s)
+What changed: 按 08:00 的接力点观察 VuePress include/alias：真实仓库中算法页大量使用 `<!-- @include: @leetcode/problems/...md#anchor -->`，普通 markdown link checker 不会覆盖。新增 include 解析、`@leetcode` 别名映射和最小回归测试，验证目标文件存在时通过、目标文件重命名后报告 `broken include`；验证文档时又暴露 inline code 示例会被误识别，因此同步新增“inline code 里的 `[label](path)` 与 include 示例不检查”的回归测试。锚点仍不检查，避免把轻量 preflight 做成 VuePress build。
+Verification after edit: python3 scripts/test-check-markdown-proof.py + python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md documents/programmer/core/algorithm/0x01.sort.md
+Signal: checker 能覆盖一类 VuePress build 才容易发现的文件目标错误，但仍保持在“文件是否存在”的轻量范围内；这是一条由真实仓库写法驱动的扩展。
+Decision: Continue
+Next evidence needed: 下一次若继续维护 checker，优先只观察真实失败样例；锚点存在性、sidebar 和插件行为交给 VuePress build，不要继续把 checker 扩成万能 linter。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

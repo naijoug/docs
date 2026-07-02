@@ -16,9 +16,13 @@ from pathlib import Path
 from typing import Iterable
 
 LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)")
+INCLUDE_RE = re.compile(r"<!--\s*@include:\s+([^\s]+)")
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 TITLE_RE = re.compile(r"^title:\s*\S+", re.MULTILINE)
 FORBIDDEN_ABSOLUTE_RE = re.compile(r"/(Users|home)/[^\s)`]+")
+PATH_ALIASES = {
+    "@leetcode": Path("documents/leetcode"),
+}
 EXTERNAL_SCHEMES = (
     "http://",
     "https://",
@@ -70,7 +74,8 @@ def collect_markdown_files(target_args: Iterable[str], root: Path) -> tuple[list
 
 
 def strip_code_fences(text: str) -> str:
-    return re.sub(r"```.*?```", "", text, flags=re.DOTALL)
+    without_fences = re.sub(r"```.*?```", "", text, flags=re.DOTALL)
+    return re.sub(r"`[^`\n]+`", "", without_fences)
 
 
 def normalize_link(raw: str) -> str:
@@ -110,6 +115,20 @@ def local_link_exists(source: Path, link: str, root: Path) -> bool:
     return any(path.is_file() for path in candidates)
 
 
+def resolve_include_path(raw: str, source: Path, root: Path) -> Path:
+    include = raw.strip().split("#", 1)[0]
+    for alias, replacement in PATH_ALIASES.items():
+        if include == alias:
+            return root / replacement
+        if include.startswith(f"{alias}/"):
+            return root / replacement / include[len(alias) + 1 :]
+
+    include_path = Path(include)
+    if include_path.is_absolute():
+        return include_path
+    return source.parent / include_path
+
+
 def check_file(path: Path, root: Path) -> list[Issue]:
     text = path.read_text(encoding="utf-8")
     issues: list[Issue] = []
@@ -130,6 +149,11 @@ def check_file(path: Path, root: Path) -> list[Issue]:
             continue
         if not local_link_exists(path, link, root):
             issues.append(Issue(path, f"broken local link `{raw}`"))
+
+    for raw in INCLUDE_RE.findall(body):
+        include_path = resolve_include_path(raw, path, root)
+        if not include_path.is_file():
+            issues.append(Issue(path, f"broken include `{raw}`"))
 
     return issues
 

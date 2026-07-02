@@ -119,6 +119,44 @@ Use the [playbook](playbook "AI playbook") before publishing.
     assert "broken local link `playbook \"AI playbook\"`" in messages
 
 
+def test_vuepress_include_alias_reports_missing_target(checker, root: Path) -> None:
+    source = root / "documents/programmer/core/algorithm/0x01.sort.md"
+    target = root / "documents/leetcode/problems/0x0000.md"
+    write(target, valid_page("LeetCode 0000"))
+    write(
+        source,
+        """---
+title: Sort
+
+---
+
+<!-- @include: @leetcode/problems/0x0000.md#0088 -->
+""",
+    )
+
+    assert checker.check_file(source, root) == []
+
+    target.rename(root / "documents/leetcode/problems/0x0000-renamed.md")
+    messages = [issue.message for issue in checker.check_file(source, root)]
+    assert "broken include `@leetcode/problems/0x0000.md#0088`" in messages
+
+
+def test_inline_code_examples_are_not_links_or_includes(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/checker.md"
+    write(
+        page,
+        """---
+title: Checker
+
+---
+
+Document the syntax `Use [label](path)` and `<!-- @include: ... -->` without checking examples.
+""",
+    )
+
+    assert checker.check_file(page, root) == []
+
+
 def test_cli_fails_for_missing_target(root: Path) -> None:
     result = subprocess.run(
         [sys.executable, str(SCRIPT), "--root", str(root), "documents/trending/ai/missing.md"],
@@ -151,6 +189,8 @@ def main() -> int:
         test_reports_broken_link_and_absolute_user_path,
         test_cross_directory_link_fails_after_target_rename,
         test_directory_readme_link_without_suffix_and_markdown_title,
+        test_vuepress_include_alias_reports_missing_target,
+        test_inline_code_examples_are_not_links_or_includes,
         test_cli_fails_for_missing_target,
         test_cli_fails_when_no_markdown_matched,
     ]
