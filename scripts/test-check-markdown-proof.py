@@ -97,6 +97,28 @@ Script source: [scripts/check-markdown-proof.py](../../../scripts/check-markdown
     assert "broken local link `../../../scripts/check-markdown-proof.py`" in messages
 
 
+def test_directory_readme_link_without_suffix_and_markdown_title(checker, root: Path) -> None:
+    source = root / "documents/trending/ai/checker.md"
+    readme = root / "documents/trending/ai/playbook/README.md"
+    write(readme, valid_page("Playbook"))
+    write(
+        source,
+        """---
+title: Checker
+
+---
+
+Use the [playbook](playbook "AI playbook") before publishing.
+""",
+    )
+
+    assert checker.check_file(source, root) == []
+
+    readme.rename(root / "documents/trending/ai/playbook/HOME.md")
+    messages = [issue.message for issue in checker.check_file(source, root)]
+    assert "broken local link `playbook \"AI playbook\"`" in messages
+
+
 def test_cli_fails_for_missing_target(root: Path) -> None:
     result = subprocess.run(
         [sys.executable, str(SCRIPT), "--root", str(root), "documents/trending/ai/missing.md"],
@@ -128,6 +150,7 @@ def main() -> int:
         test_valid_page_and_relative_link,
         test_reports_broken_link_and_absolute_user_path,
         test_cross_directory_link_fails_after_target_rename,
+        test_directory_readme_link_without_suffix_and_markdown_title,
         test_cli_fails_for_missing_target,
         test_cli_fails_when_no_markdown_matched,
     ]

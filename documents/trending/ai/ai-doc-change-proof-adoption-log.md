@@ -83,6 +83,20 @@ Decision: Continue
 Next evidence needed: 下一次优先观察锚点、带 title 的 markdown link、目录 README 省略后缀等链接形态；只有真实样例失败时再补最小测试。
 ```
 
+## 2026-07-02 08:00
+
+```text
+Date: 2026-07-02 08:00
+Change target: scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/test-check-markdown-proof.py
+Result before edit: markdown proof ok: checked 2 file(s); regression tests ok: 5 test(s)
+What changed: 按 07:45 的接力点，把“目录链接省略 README.md 后缀且带 markdown title”补成回归测试；fixture 先验证 `[playbook](playbook "AI playbook")` 能解析到 `playbook/README.md`，再移动 README 并断言同一链接失败。测试暴露出 checker 原先会把仅存在的目录当作通过，因此同步把本地链接候选从 `exists()` 收紧为 `is_file()`。
+Verification after edit: python3 scripts/test-check-markdown-proof.py + python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: README 省略后缀与 markdown title 这类常见写法已被最小 fixture 固化，并修掉“目录存在但 README 缺失仍假绿灯”的漏报。
+Decision: Continue
+Next evidence needed: 下一次优先观察锚点链接或 VuePress alias/include 这类 checker 暂不处理的形态；只有真实误报/漏报时再补最小测试。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

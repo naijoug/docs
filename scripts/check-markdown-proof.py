@@ -107,7 +107,7 @@ def local_link_exists(source: Path, link: str, root: Path) -> bool:
             candidate / "README.md",
             candidate / "index.md",
         ])
-    return any(path.exists() for path in candidates)
+    return any(path.is_file() for path in candidates)
 
 
 def check_file(path: Path, root: Path) -> list[Issue]:

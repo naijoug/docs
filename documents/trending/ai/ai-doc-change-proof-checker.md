@@ -23,7 +23,7 @@ AI 协作写文档时，最容易把“写完了”误判成“可交付”：�
 
 1. 每个 markdown 是否有 YAML frontmatter；
 2. frontmatter 是否包含 `title`；
-3. 正文中的本地 markdown 链接是否能解析到文件、目录 `README.md` 或同名 `.md`；
+3. 正文中的本地 markdown 链接是否能解析到真实文件、目录 `README.md` 或同名 `.md`；不会把只有目录存在但缺少 README 的链接误判为通过；
 4. 内容中是否误写本机用户目录绝对路径。
 5. 指定的检查目标是否真实存在，避免 typo 造成 `checked 0 file(s)` 的假绿灯。
 
@@ -69,7 +69,7 @@ markdown proof failed: 1 target(s) not found
 python3 scripts/test-check-markdown-proof.py
 ```
 
-跨目录链接本身也应该进入 checker 覆盖范围：如果本页链接到脚本源码或回归测试，命令必须能从 `documents/trending/ai/` 解析到 `scripts/` 下的真实文件；链接路径一旦写错，应先修链接或补最小回归样例，而不是直接跳到 VuePress build。当前回归测试已覆盖“跨目录链接目标存在时通过、目标重命名后失败”的最小场景。
+跨目录链接本身也应该进入 checker 覆盖范围：如果本页链接到脚本源码或回归测试，命令必须能从 `documents/trending/ai/` 解析到 `scripts/` 下的真实文件；链接路径一旦写错，应先修链接或补最小回归样例，而不是直接跳到 VuePress build。当前回归测试已覆盖“跨目录链接目标存在时通过、目标重命名后失败”的最小场景，也覆盖目录链接省略 `README.md` 后缀并携带 markdown title 时仍能解析、目标 README 被移动后应失败的场景。
 
 ## 何时还需要 VuePress build
 
