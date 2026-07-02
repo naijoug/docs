@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -71,6 +72,30 @@ def collect_markdown_files(target_args: Iterable[str], root: Path) -> tuple[list
             continue
         files.extend(iter_markdown_files(resolved))
     return sorted(set(files)), missing
+
+
+def collect_changed_markdown_files(base_ref: str, root: Path) -> tuple[list[Path], str | None]:
+    """Return markdown files changed since a git ref, or a git error string."""
+    result = subprocess.run(
+        ["git", "-C", str(root), "diff", "--name-only", "--diff-filter=ACMRT", base_ref, "--"],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = result.stderr.strip() or result.stdout.strip() or f"git diff exited {result.returncode}"
+        return [], detail
+
+    files: list[Path] = []
+    for line in result.stdout.splitlines():
+        rel = line.strip()
+        if not rel or Path(rel).suffix.lower() != ".md":
+            continue
+        path = (root / rel).resolve()
+        if path.is_file():
+            files.append(path)
+    return sorted(set(files)), None
 
 
 def strip_code_fences(text: str) -> str:
@@ -174,10 +199,23 @@ def main() -> int:
         type=Path,
         help="Docs repository root. Defaults to the parent of scripts/.",
     )
+    parser.add_argument(
+        "--changed-from",
+        metavar="GIT_REF",
+        help="Check markdown files changed since GIT_REF instead of explicit targets.",
+    )
     args = parser.parse_args()
 
     root = args.root.resolve()
-    unique_files, missing_targets = collect_markdown_files(args.targets, root)
+    if args.changed_from:
+        unique_files, git_error = collect_changed_markdown_files(args.changed_from, root)
+        missing_targets = []
+        if git_error:
+            print(f"markdown proof failed: cannot collect changed files from {args.changed_from}")
+            print(f"- {git_error}")
+            return 2
+    else:
+        unique_files, missing_targets = collect_markdown_files(args.targets, root)
     if missing_targets:
         print(f"markdown proof failed: {len(missing_targets)} target(s) not found")
         for target in missing_targets:
@@ -189,7 +227,10 @@ def main() -> int:
         return 2
 
     if not unique_files:
-        print("markdown proof failed: no markdown files matched the requested target(s)")
+        if args.changed_from:
+            print(f"markdown proof failed: no markdown files changed since {args.changed_from}")
+        else:
+            print("markdown proof failed: no markdown files matched the requested target(s)")
         return 2
 
     issues: list[Issue] = []

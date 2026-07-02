@@ -25,8 +25,9 @@ AI 协作写文档时，最容易把“写完了”误判成“可交付”：�
 2. frontmatter 是否包含 `title`；
 3. 正文中的本地 markdown 链接是否能解析到真实文件、目录 `README.md` 或同名 `.md`；不会把只有目录存在但缺少 README 的链接误判为通过；
 4. VuePress `<!-- @include: ... -->` 引用是否能解析到真实文件；当前只内置 `@leetcode` 别名，锚点部分只用于定位章节，不检查锚点是否存在；
-5. 内容中是否误写本机用户目录绝对路径。
-6. 指定的检查目标是否真实存在，避免 typo 造成 `checked 0 file(s)` 的假绿灯。
+5. 内容中是否误写本机用户目录绝对路径；
+6. 指定的检查目标是否真实存在，避免 typo 造成 `checked 0 file(s)` 的假绿灯；
+7. 使用 `--changed-from` 时，只检查某个 git ref 之后变更过的 markdown 文件。
 
 ## 使用方式
 
@@ -42,6 +43,14 @@ python3 scripts/check-markdown-proof.py
 python3 scripts/check-markdown-proof.py documents/trending/ai/README.md
 python3 scripts/check-markdown-proof.py documents/trending/ai docs/other/path
 ```
+
+只想检查当前分支相对某个 git ref 的 markdown 改动时，使用 `--changed-from`：
+
+```bash
+python3 scripts/check-markdown-proof.py --changed-from HEAD
+```
+
+这个模式会忽略非 markdown 改动，并在没有 markdown 文件变更时以 exit 2 失败，避免“本轮其实没检查任何文档”的假绿灯。
 
 如果需要从其他目录调用，显式传入仓库根目录：
 
@@ -81,6 +90,7 @@ VuePress include 是另一类容易被 markdown 链接检查漏掉的引用：�
 | 改动类型 | 最小 proof | 追加验证 |
 | --- | --- | --- |
 | 只改 AI 目录内一两篇文档 | `python3 scripts/check-markdown-proof.py documents/trending/ai/changed.md` | 人工检查渲染预期 |
+| 已经有明确 git 基线，只想检查本轮文档改动 | `python3 scripts/check-markdown-proof.py --changed-from HEAD` | 确认输出列出的文件就是本轮要交付的 markdown |
 | 改 checker 规则或 CLI 行为 | `python3 scripts/test-check-markdown-proof.py` + checker 覆盖目标文档 | 必要时补一个最小 fixture，再跑 docs build |
 | 新增目录入口、sidebar、主题配置 | checker 覆盖改动文档 | `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build` |
 | 改代码块、组件、VuePress 插件 | checker 只做路径兜底 | docs build + 页面预览 |

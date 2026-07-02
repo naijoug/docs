@@ -111,6 +111,20 @@ Decision: Continue
 Next evidence needed: 下一次若继续维护 checker，优先只观察真实失败样例；锚点存在性、sidebar 和插件行为交给 VuePress build，不要继续把 checker 扩成万能 linter。
 ```
 
+## 2026-07-02 18:00
+
+```text
+Date: 2026-07-02 18:00
+Change target: scripts/check-markdown-proof.py + scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/test-check-markdown-proof.py
+Result before edit: markdown proof ok: checked 2 file(s); regression tests ok: 8 test(s)
+What changed: 按本地可验证 proof artifact 清单选择 P0/P1 交付，新增 `--changed-from GIT_REF` 模式，让 checker 能从 git diff 自动收集本轮变更过的 markdown 文件；同时补最小回归测试，验证它只检查变更 markdown、忽略非 markdown，并能对变更文档里的断链失败。
+Verification after edit: python3 scripts/test-check-markdown-proof.py + python3 scripts/check-markdown-proof.py --changed-from HEAD + python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: checker 从“手动列文件”进化为“按 git 基线自动收束范围”，更适合 cron/agent 小改动的固定 preflight；这是有 CLI 行为测试覆盖的扩展。
+Decision: Continue
+Next evidence needed: 下一次真实 docs 改动优先用 `python3 scripts/check-markdown-proof.py --changed-from HEAD` 作为改后 proof，并确认它列出的 markdown 范围没有漏掉本轮交付文件。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

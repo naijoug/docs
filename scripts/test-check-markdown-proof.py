@@ -182,6 +182,43 @@ def test_cli_fails_when_no_markdown_matched(root: Path) -> None:
     assert "no markdown files matched" in result.stdout
 
 
+def test_cli_changed_from_checks_only_changed_markdown(root: Path) -> None:
+    subprocess.run(["git", "init"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    subprocess.run(["git", "config", "user.name", "tester"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.email", "tester@example.com"], cwd=root, check=True)
+
+    changed = root / "documents/trending/ai/changed.md"
+    unchanged = root / "documents/trending/ai/unchanged.md"
+    write(changed, valid_page("Changed"))
+    write(unchanged, valid_page("Unchanged"))
+    subprocess.run(["git", "add", "documents"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "baseline"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+
+    write(
+        changed,
+        """---
+title: Changed
+
+---
+
+Broken after edit: [missing](missing.md).
+""",
+    )
+    write(root / "notes.txt", "not markdown\n")
+
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), "--root", str(root), "--changed-from", "HEAD"],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    assert result.returncode == 1, result
+    assert "markdown proof failed: 1 issue(s) in 1 file(s)" in result.stdout
+    assert "documents/trending/ai/changed.md" in result.stdout
+    assert "documents/trending/ai/unchanged.md" not in result.stdout
+
+
 def main() -> int:
     checker = load_checker()
     tests = [
@@ -193,6 +230,7 @@ def main() -> int:
         test_inline_code_examples_are_not_links_or_includes,
         test_cli_fails_for_missing_target,
         test_cli_fails_when_no_markdown_matched,
+        test_cli_changed_from_checks_only_changed_markdown,
     ]
 
     for test in tests:
