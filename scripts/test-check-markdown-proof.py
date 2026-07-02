@@ -219,6 +219,40 @@ Broken after edit: [missing](missing.md).
     assert "documents/trending/ai/unchanged.md" not in result.stdout
 
 
+def test_cli_changed_from_includes_untracked_markdown(root: Path) -> None:
+    subprocess.run(["git", "init"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    subprocess.run(["git", "config", "user.name", "tester"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.email", "tester@example.com"], cwd=root, check=True)
+
+    baseline = root / "documents/trending/ai/README.md"
+    write(baseline, valid_page("AI Index"))
+    subprocess.run(["git", "add", "documents"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "baseline"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+
+    untracked = root / "documents/trending/ai/new-page.md"
+    write(
+        untracked,
+        """---
+title: New Page
+
+---
+
+New untracked doc with [missing](missing.md).
+""",
+    )
+
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), "--root", str(root), "--changed-from", "HEAD"],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    assert result.returncode == 1, result
+    assert "documents/trending/ai/new-page.md" in result.stdout
+    assert "broken local link `missing.md`" in result.stdout
+
+
 def main() -> int:
     checker = load_checker()
     tests = [
@@ -231,6 +265,7 @@ def main() -> int:
         test_cli_fails_for_missing_target,
         test_cli_fails_when_no_markdown_matched,
         test_cli_changed_from_checks_only_changed_markdown,
+        test_cli_changed_from_includes_untracked_markdown,
     ]
 
     for test in tests:

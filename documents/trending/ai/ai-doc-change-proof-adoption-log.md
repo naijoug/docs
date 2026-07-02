@@ -125,6 +125,20 @@ Decision: Continue
 Next evidence needed: 下一次真实 docs 改动优先用 `python3 scripts/check-markdown-proof.py --changed-from HEAD` 作为改后 proof，并确认它列出的 markdown 范围没有漏掉本轮交付文件。
 ```
 
+## 2026-07-02 19:00
+
+```text
+Date: 2026-07-02 19:00
+Change target: scripts/check-markdown-proof.py + scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/test-check-markdown-proof.py
+Result before edit: markdown proof ok: checked 2 file(s); regression tests ok: 9 test(s)
+What changed: 复查 18:00 新增的 `--changed-from HEAD` 后，发现它只读取 `git diff --name-only`，会漏掉尚未 `git add` 的新 markdown；本轮补 `git ls-files --others --exclude-standard` 收集 untracked markdown，并新增最小回归测试，验证新文件中的断链也会失败。
+Verification after edit: python3 scripts/test-check-markdown-proof.py + python3 scripts/check-markdown-proof.py --changed-from HEAD + python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: checker 的自动范围收束现在覆盖 agent 最常见的“新增文档还未暂存”场景，降低新页面漏检风险；仍只检查 markdown 文件，不扩展到生成产物或 VuePress 配置。
+Decision: Continue
+Next evidence needed: 下一次真实 docs 新增页面后继续用 `--changed-from HEAD`，确认输出中同时包含新建 markdown 与已修改入口页；若遇到删除文件或 rename 边界，再补最小 fixture。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

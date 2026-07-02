@@ -75,20 +75,39 @@ def collect_markdown_files(target_args: Iterable[str], root: Path) -> tuple[list
 
 
 def collect_changed_markdown_files(base_ref: str, root: Path) -> tuple[list[Path], str | None]:
-    """Return markdown files changed since a git ref, or a git error string."""
-    result = subprocess.run(
+    """Return tracked and untracked markdown files changed since a git ref."""
+    changed_result = subprocess.run(
         ["git", "-C", str(root), "diff", "--name-only", "--diff-filter=ACMRT", base_ref, "--"],
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         check=False,
     )
-    if result.returncode != 0:
-        detail = result.stderr.strip() or result.stdout.strip() or f"git diff exited {result.returncode}"
+    if changed_result.returncode != 0:
+        detail = (
+            changed_result.stderr.strip()
+            or changed_result.stdout.strip()
+            or f"git diff exited {changed_result.returncode}"
+        )
+        return [], detail
+
+    untracked_result = subprocess.run(
+        ["git", "-C", str(root), "ls-files", "--others", "--exclude-standard"],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if untracked_result.returncode != 0:
+        detail = (
+            untracked_result.stderr.strip()
+            or untracked_result.stdout.strip()
+            or f"git ls-files exited {untracked_result.returncode}"
+        )
         return [], detail
 
     files: list[Path] = []
-    for line in result.stdout.splitlines():
+    for line in [*changed_result.stdout.splitlines(), *untracked_result.stdout.splitlines()]:
         rel = line.strip()
         if not rel or Path(rel).suffix.lower() != ".md":
             continue
