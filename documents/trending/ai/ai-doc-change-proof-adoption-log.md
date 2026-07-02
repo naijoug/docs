@@ -139,6 +139,20 @@ Decision: Continue
 Next evidence needed: 下一次真实 docs 新增页面后继续用 `--changed-from HEAD`，确认输出中同时包含新建 markdown 与已修改入口页；若遇到删除文件或 rename 边界，再补最小 fixture。
 ```
 
+## 2026-07-02 20:01
+
+```text
+Date: 2026-07-02 20:01
+Change target: documents/trending/ai/changed-from-head-docs-preflight.md + README/catalog + checker page + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-doc-change-proof-adoption-log.md documents/trending/ai/ai-doc-change-proof-checker.md && python3 scripts/test-check-markdown-proof.py
+Result before edit: markdown proof ok: checked 3 file(s); regression tests ok: 10 test(s)
+What changed: 新增 `changed-from HEAD 文档改动 Preflight`，把新增 markdown + 修改 README/catalog + 采纳记录的自动范围检查写成固定执行顺序；README catalog 和 checker 说明页链接到该页。
+Verification after edit: python3 scripts/check-markdown-proof.py --changed-from HEAD
+Signal: `--changed-from HEAD` 在真实新增页面场景中自动覆盖本轮新增页、修改过的 README、checker 说明页和采纳记录，减少手动列文件漏检风险。
+Decision: Continue
+Next evidence needed: 下一次如果发生删除、重命名或跨目录移动 markdown，再观察 `--changed-from HEAD` 是否需要补最小 fixture；没有失败样例时不继续扩 checker。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

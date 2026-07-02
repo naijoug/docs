@@ -18,6 +18,7 @@ index: false
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
+- [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)
 - [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)

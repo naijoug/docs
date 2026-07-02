@@ -50,7 +50,7 @@ python3 scripts/check-markdown-proof.py documents/trending/ai docs/other/path
 python3 scripts/check-markdown-proof.py --changed-from HEAD
 ```
 
-这个模式会忽略非 markdown 改动，覆盖已跟踪文件的新增、修改和重命名，也会通过 `git ls-files --others --exclude-standard` 补上未暂存的新 markdown；在没有 markdown 文件变更时以 exit 2 失败，避免“本轮其实没检查任何文档”的假绿灯。
+这个模式会忽略非 markdown 改动，覆盖已跟踪文件的新增、修改和重命名，也会通过 `git ls-files --others --exclude-standard` 补上未暂存的新 markdown；在没有 markdown 文件变更时以 exit 2 失败，避免“本轮其实没检查任何文档”的假绿灯。新增页面 + 修改目录入口的固定用法见 [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)。
 
 如果需要从其他目录调用，显式传入仓库根目录：
 
