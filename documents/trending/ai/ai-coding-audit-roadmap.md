@@ -39,9 +39,9 @@ order: 29
 
 ## 30 分钟执行版
 
-当你只有半小时，不要从所有文档开始读。按下面最小动作推进：
+当你只有半小时，不要从所有文档开始读。先打开 [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)，用它限制本轮只验证“是否能拿到真实样本并给出下一条安全命令”。如果只需要路线图里的最小动作，按下面推进：
 
-1. 复制 [样本征集模板](ai-coding-audit-sample-request.md) 里的短帖，发到一个有真实开发者的渠道。
+1. 复制 [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md) 或 [样本征集模板](ai-coding-audit-sample-request.md) 里的短帖，发到一个有真实开发者的渠道。
 2. 收到回复后，不直接审查，先用 [首次回复模板](ai-coding-audit-first-reply-template.md) 补齐目标、范围、证据和公开边界。
 3. 如果材料足够，按 [样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 写 1 页报告；如果不足，只输出 `Next evidence needed`。
 4. 报告末尾必须给出一个收口：`Continue` 到 PR/持续审查、`Narrow` 到一个更小问题，或 `Stop`。
@@ -101,6 +101,7 @@ order: 29
 ## 下一步清单
 
 - 先读 [AI 编程审查服务交付指南](ai-coding-audit-service.md)，确认 offer 边界和交付物。
+- 如果本轮只有 30 分钟，先跑 [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)，不要直接扩服务页。
 - 再读 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md)，拿到第一个真实样本。
 - 有回复后用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 收束输入。
 - 有结构化材料后进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。

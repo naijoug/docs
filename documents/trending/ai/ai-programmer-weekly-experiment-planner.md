@@ -37,6 +37,8 @@ order: 39
 | 模板包 | prompt、清单、报告样板和示例输入 | 用一个脱敏 fixture 生成可读输出 | 有人复制、改写或请求定制 | 已有多个相似文档资产 |
 | 服务 offer | 固定范围说明、接收表、样板报告 | 用只读样本演练一次交付链 | 对方愿意提供真实材料或预算 | 已有可信案例和触达渠道 |
 
+如果本周选择“服务 offer”但还没有真实渠道或预算信号，先不要写完整服务页；把实验收窄成 [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)：只发一条样本征集 CTA，只收 PR、失败命令、agent log、final report 或 review comment，并用 `Continue / Narrow / Stop` 判断是否值得升级。
+
 ## 选择规则
 
 按下面顺序过滤，不要同时开多个实验：
@@ -74,6 +76,12 @@ Decision: Continue / Narrow / Stop / Switch
 ```
 
 填写时只写可验证事实：例如“`docs` 构建通过”“某个 PR 评论要求补测试”“脚本在 fixture 上输出 3 个缺失链接”。不要写“市场应该需要”“大家可能会喜欢”。
+
+如果实验是 AI 编程审查收入实验，在卡片下面追加一行结果表，方便回填到 [AI 编程审查路线图](ai-coding-audit-roadmap.md)：
+
+```text
+Audit result: channel / input evidence / public boundary / deliverable / decision / next evidence needed
+```
 
 ## 和资产飞轮衔接
 
