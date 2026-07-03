@@ -167,6 +167,20 @@ Decision: Continue
 Next evidence needed: 下一次拿到真实样本后，用记录表填一条私有单轮记录；如果要公开，只发布脱敏摘要并先过匿名案例骨架。
 ```
 
+## 2026-07-03 15:00
+
+```text
+Date: 2026-07-03 15:00
+Change target: documents/trending/ai/ai-coding-audit-experiment-switch.md + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-coding-audit-experiment-switch.md documents/trending/ai/ai-coding-audit-roadmap.md documents/trending/ai/ai-coding-audit-result-log-template.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Result before edit: markdown proof ok: checked 4 file(s)
+What changed: 把实验切换清单的复盘入口改成先写 Audit Result 私有记录，再把可公开摘要回填路线图；Continue 动作中也先记录渠道、输入证据、公开边界和决策，Stop / Switch 时先写事实依据再封存。
+Verification after edit: python3 scripts/check-markdown-proof.py --changed-from HEAD
+Signal: `--changed-from HEAD` 能自动覆盖本轮修改过的切换清单与采纳记录，适合作为小范围既有文档改动的 proof；本轮没有发现断链或 frontmatter 问题，不扩 checker。
+Decision: Continue
+Next evidence needed: 下一次不要再扩 AI coding audit 文档，除非有真实样本或 checker 发现具体失败；否则按实验切换清单切到另一个本地可验证小任务。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

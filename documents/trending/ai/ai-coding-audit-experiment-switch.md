@@ -15,7 +15,7 @@ order: 38
 
 ## 先确认实验状态
 
-每次复盘时先把当前状态写进 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 的真实样本回填占位表，而不是凭感觉决定继续写文档。
+每次复盘时先用 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 写一条私有记录，再把可公开、可脱敏摘要回填到 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 的真实样本回填占位表，而不是凭感觉决定继续写文档。
 
 | 问题 | `Continue` | `Narrow` | `Stop / Switch` |
 | --- | --- | --- | --- |
@@ -32,8 +32,9 @@ order: 38
 
 1. 用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 确认目标、范围、证据和公开边界；
 2. 按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 交付只读报告；
-3. 用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 回填痛点原话、证据形状和 `Next evidence needed`；
-4. 若要公开，先走 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 和 evidence boundary checkpoint。
+3. 先用 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 记录渠道、输入证据、公开边界、交付物和 `Continue / Narrow / Stop`；
+4. 再用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 回填痛点原话、证据形状和 `Next evidence needed`；
+5. 若要公开，先走 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 和 evidence boundary checkpoint。
 
 ### 2. Narrow：缩小到单点 offer
 
@@ -60,7 +61,7 @@ order: 38
 
 封存时只做三件事：
 
-1. 在路线图回填表中写 `Unverified` 和 `Next evidence needed`；
+1. 在 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 中写清 `Stop / Switch` 的事实依据，再在路线图回填表中只保留可公开的 `Unverified` 和 `Next evidence needed`；
 2. 确认已有入口、样本模板、首份报告和观察清单足够支撑下一次真实执行；
 3. 把下一段任务切换到另一个可验证资产，例如开发者工具小项目、已有 repo 的测试修复、或另一条内容 / 服务 offer。
 
