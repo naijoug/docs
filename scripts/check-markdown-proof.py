@@ -23,7 +23,7 @@ REF_DEF_RE = re.compile(r"^\[([^\]\n]+)\]:\s+(\S+)", re.MULTILINE)
 INCLUDE_RE = re.compile(r"<!--\s*@include:\s+([^\s]+)")
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 TITLE_RE = re.compile(r"^title:\s*\S+", re.MULTILINE)
-FORBIDDEN_ABSOLUTE_RE = re.compile(r"/(Users|home)/[^\s)`]+")
+FORBIDDEN_ABSOLUTE_RE = re.compile(r"(?<![A-Za-z0-9.:_-])/(Users|home)/[^\s)`]+")
 PATH_ALIASES = {
     "@leetcode": Path("documents/leetcode"),
 }

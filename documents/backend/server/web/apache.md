@@ -14,7 +14,7 @@ order: 3
 - macOS
     * 系统级根目录 : `/Library/WebServer/Documents`
         + 配置文件 : `/etc/apache2/httpd.conf`
-    * 用户级别根目录 : `/Users/${user}/Sites`
+    * 用户级别根目录 : `$HOME/Sites`（对应当前用户的 `Sites` 目录）
         + 配置文件 : `/etc/apache2/users/${user}.conf`
     * apache 日志目录 : `/var/log/apache2`
     
@@ -56,7 +56,7 @@ UserDir Sites
 Include /private/etc/apache2/users/*.conf
 
 # 2> /etc/apache2/users/${user}.conf : 编辑用户目录配置文件
-<Directory "/Users/${user}/Sites/">
+<Directory "$HOME/Sites/">
     Options Indexes MultiViews FollowSymLinks
     AllowOverride All
     Order allow,deny

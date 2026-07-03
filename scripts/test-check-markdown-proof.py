@@ -75,6 +75,27 @@ This links to [missing](missing.md) and mentions /Users/example/project.
     assert any(message.startswith("contains absolute user path") for message in messages)
 
 
+def test_external_url_path_is_not_treated_as_absolute_user_path(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/external-url.md"
+    write(
+        page,
+        """---
+title: External URL
+
+---
+
+External links may contain URL path segments like [guide](https://example.com/home/wx),
+but local machine paths such as /home/example/project should still be reported.
+""",
+    )
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    absolute_path_messages = [
+        message for message in messages if message.startswith("contains absolute user path")
+    ]
+    assert absolute_path_messages == ["contains absolute user path `/home/example/project`"]
+
+
 def test_reports_broken_local_image_without_treating_it_as_link(checker, root: Path) -> None:
     page = root / "documents/trending/ai/images.md"
     write(
@@ -328,6 +349,7 @@ def main() -> int:
     tests = [
         test_valid_page_and_relative_link,
         test_reports_broken_link_and_absolute_user_path,
+        test_external_url_path_is_not_treated_as_absolute_user_path,
         test_reports_broken_local_image_without_treating_it_as_link,
         test_reference_style_links_check_missing_defs_and_local_targets,
         test_reference_style_links_report_duplicate_definitions,
