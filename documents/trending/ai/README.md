@@ -21,6 +21,7 @@ index: false
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)
+- [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)
 - [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)
 - [AI 编程审查服务交付指南](ai-coding-audit-service.md)
 - [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md)
@@ -42,7 +43,7 @@ index: false
 
 ## 30-minute AI coding audit entry
 
-如果只是想马上验证一次 AI 编程审查机会，不要先读完整资料库。按这条最短路径跑一轮：
+如果只是想马上验证一次 AI 编程审查机会，不要先读完整资料库。先按 [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md) 发出一次只收样本的 CTA，再用下面这条最短路径跑一轮：
 
 1. **找样本**：复制 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md)，只要求对方提供一个 PR、一次失败命令、一段 agent log 或一份脱敏 final report。
 2. **收束回复**：用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 把“我们也遇到过”收束成目标、范围、证据、公开边界和期望输出。
