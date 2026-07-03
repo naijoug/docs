@@ -95,6 +95,34 @@ title: Images
     assert not any(message.startswith("broken local link") for message in messages)
 
 
+def test_reference_style_links_check_missing_defs_and_local_targets(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/references.md"
+    write(root / "documents/trending/ai/target.md", valid_page("Target"))
+    write(
+        page,
+        """---
+title: References
+
+---
+
+Use [good local][Good Local], [missing def][missing-def], [broken local][broken], and [external][ext].
+Also use a shortcut [Target][].
+
+[good local]: target.md
+[broken]: missing.md "Missing target"
+[ext]: https://example.com/reference
+[target]: target.md
+""",
+    )
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "missing reference link definition `[missing-def]`" in messages
+    assert "broken reference link `[broken]`: `missing.md`" in messages
+    assert not any("[Good Local]" in message for message in messages)
+    assert not any("[ext]" in message for message in messages)
+    assert not any("[Target]" in message for message in messages)
+
+
 def test_cross_directory_link_fails_after_target_rename(checker, root: Path) -> None:
     source = root / "documents/trending/ai/checker.md"
     target = root / "scripts/check-markdown-proof.py"
@@ -279,6 +307,7 @@ def main() -> int:
         test_valid_page_and_relative_link,
         test_reports_broken_link_and_absolute_user_path,
         test_reports_broken_local_image_without_treating_it_as_link,
+        test_reference_style_links_check_missing_defs_and_local_targets,
         test_cross_directory_link_fails_after_target_rename,
         test_directory_readme_link_without_suffix_and_markdown_title,
         test_vuepress_include_alias_reports_missing_target,

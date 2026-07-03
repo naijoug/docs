@@ -18,6 +18,8 @@ from typing import Iterable
 
 LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)")
 IMAGE_RE = re.compile(r"!\[[^\]\n]*\]\(([^)\n]+)\)")
+REF_LINK_RE = re.compile(r"(?<!!)\[([^\]\n]+)\]\[([^\]\n]*)\]")
+REF_DEF_RE = re.compile(r"^\[([^\]\n]+)\]:\s+(\S+)", re.MULTILINE)
 INCLUDE_RE = re.compile(r"<!--\s*@include:\s+([^\s]+)")
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 TITLE_RE = re.compile(r"^title:\s*\S+", re.MULTILINE)
@@ -133,6 +135,11 @@ def normalize_link(raw: str) -> str:
     return link.split("#", 1)[0]
 
 
+def normalize_ref_label(raw: str) -> str:
+    """Normalize markdown reference labels for case-insensitive matching."""
+    return " ".join(raw.strip().lower().split())
+
+
 def should_skip_link(link: str) -> bool:
     return (
         not link
@@ -201,6 +208,22 @@ def check_file(path: Path, root: Path) -> list[Issue]:
             continue
         if not local_link_exists(path, link, root):
             issues.append(Issue(path, f"broken local image `{raw}`"))
+
+    ref_defs = {
+        normalize_ref_label(label): target
+        for label, target in REF_DEF_RE.findall(body)
+    }
+    for label, explicit_ref in REF_LINK_RE.findall(body):
+        ref_label = normalize_ref_label(explicit_ref or label)
+        raw_ref = explicit_ref or label
+        if ref_label not in ref_defs:
+            issues.append(Issue(path, f"missing reference link definition `[{raw_ref}]`"))
+            continue
+        link = normalize_link(ref_defs[ref_label])
+        if should_skip_link(link):
+            continue
+        if not local_link_exists(path, link, root):
+            issues.append(Issue(path, f"broken reference link `[{raw_ref}]`: `{ref_defs[ref_label]}`"))
 
     for raw in INCLUDE_RE.findall(body):
         include_path = resolve_include_path(raw, path, root)
