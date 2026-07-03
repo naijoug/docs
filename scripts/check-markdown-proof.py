@@ -209,10 +209,20 @@ def check_file(path: Path, root: Path) -> list[Issue]:
         if not local_link_exists(path, link, root):
             issues.append(Issue(path, f"broken local image `{raw}`"))
 
-    ref_defs = {
-        normalize_ref_label(label): target
-        for label, target in REF_DEF_RE.findall(body)
-    }
+    ref_defs: dict[str, str] = {}
+    ref_def_sources: dict[str, str] = {}
+    for label, target in REF_DEF_RE.findall(body):
+        ref_label = normalize_ref_label(label)
+        if ref_label in ref_defs:
+            issues.append(
+                Issue(
+                    path,
+                    f"duplicate reference link definition `[{label}]` also defined as `[{ref_def_sources[ref_label]}]`",
+                )
+            )
+            continue
+        ref_defs[ref_label] = target
+        ref_def_sources[ref_label] = label
     for label, explicit_ref in REF_LINK_RE.findall(body):
         ref_label = normalize_ref_label(explicit_ref or label)
         raw_ref = explicit_ref or label

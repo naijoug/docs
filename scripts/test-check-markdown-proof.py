@@ -123,6 +123,28 @@ Also use a shortcut [Target][].
     assert not any("[Target]" in message for message in messages)
 
 
+def test_reference_style_links_report_duplicate_definitions(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/duplicate-references.md"
+    write(root / "documents/trending/ai/target.md", valid_page("Target"))
+    write(
+        page,
+        """---
+title: Duplicate References
+
+---
+
+Use [target][Duplicate Ref].
+
+[duplicate ref]: target.md
+[Duplicate   Ref]: missing.md
+""",
+    )
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "duplicate reference link definition `[Duplicate   Ref]` also defined as `[duplicate ref]`" in messages
+    assert not any(message.startswith("broken reference link") for message in messages)
+
+
 def test_cross_directory_link_fails_after_target_rename(checker, root: Path) -> None:
     source = root / "documents/trending/ai/checker.md"
     target = root / "scripts/check-markdown-proof.py"
@@ -308,6 +330,7 @@ def main() -> int:
         test_reports_broken_link_and_absolute_user_path,
         test_reports_broken_local_image_without_treating_it_as_link,
         test_reference_style_links_check_missing_defs_and_local_targets,
+        test_reference_style_links_report_duplicate_definitions,
         test_cross_directory_link_fails_after_target_rename,
         test_directory_readme_link_without_suffix_and_markdown_title,
         test_vuepress_include_alias_reports_missing_target,
