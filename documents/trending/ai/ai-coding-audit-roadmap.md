@@ -62,11 +62,11 @@ order: 29
 
 ## 真实样本回填占位表
 
-每次发布样本征集、收到私信或完成一份只读报告后，都把结果回填到这里。不要用“感觉有人感兴趣”代替证据；如果缺少授权或证据，只写 `Unverified` 和 `Next evidence needed`。
+每次发布样本征集、收到私信或完成一份只读报告后，先复制 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 做一条私有记录，再把可公开、可脱敏的摘要回填到这里。不要用“感觉有人感兴趣”代替证据；如果缺少授权或证据，只写 `Unverified` 和 `Next evidence needed`。
 
-| 日期 | 来源 | 证据形状 | 公开边界 | 当前判断 | Next evidence needed | 可沉淀资产 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 待填 | 待填：短帖、社群、Issue、PR 或私信 | 待填：PR、失败命令、agent log、final report、review comment 或口头描述 | 待填：可匿名 / 不可公开 / 只能写方法样板 | `Continue / Narrow / Stop / Unverified` | 待填：下一条必须补的材料 | 待填：文章、模板、skill、书稿卡片或服务 offer |
+| 日期 | 来源 | 证据形状 | 公开边界 | 当前判断 | Next evidence needed | 私有记录 | 可沉淀资产 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 待填 | 待填：短帖、社群、Issue、PR 或私信 | 待填：PR、失败命令、agent log、final report、review comment 或口头描述 | 待填：可匿名 / 不可公开 / 只能写方法样板 | `Continue / Narrow / Stop / Unverified` | 待填：下一条必须补的材料 | 待填：私有记录路径或编号；公开前先脱敏 | 待填：文章、模板、skill、书稿卡片或服务 offer |
 
 回填规则：
 
