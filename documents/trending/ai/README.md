@@ -20,7 +20,7 @@ index: false
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)
-- [AI 编程审查路线图](ai-coding-audit-roadmap.md)
+- [AI 编程审查路线图](ai-coding-audit-roadmap.md)（没有真实样本前先跑下面的 30 分钟实验，不要直接扩服务页）
 - [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)
 - [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)
 - [AI 编程审查服务交付指南](ai-coding-audit-service.md)
