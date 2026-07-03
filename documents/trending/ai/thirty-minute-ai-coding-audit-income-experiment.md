@@ -158,7 +158,7 @@ order: 34
 | 结果 | `Continue / Narrow / Stop` |
 | 下一步 | 要补什么证据，或是否进入 1 页报告 |
 
-可以把结果回填到 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 的“真实样本回填占位表”，也可以先放在自己的私有笔记里。关键是：没有证据就不要把它包装成“市场反馈”。
+可以先用 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 存放私有记录，再把可公开的摘要回填到 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 的“真实样本回填占位表”。关键是：没有证据就不要把它包装成“市场反馈”。
 
 ## 停止条件
 

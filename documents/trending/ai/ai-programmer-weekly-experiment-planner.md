@@ -83,6 +83,8 @@ Decision: Continue / Narrow / Stop / Switch
 Audit result: channel / input evidence / public boundary / deliverable / decision / next evidence needed
 ```
 
+如果这行开始积累真实回复，用 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 存放私有单轮记录：先保留渠道、输入证据、公开边界、交付物和 `Continue / Narrow / Stop`，再决定是否进入首份报告、匿名案例或停止。
+
 ## 和资产飞轮衔接
 
 完成一周实验后，把结果接回 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)：

@@ -153,6 +153,20 @@ Decision: Continue
 Next evidence needed: 下一次如果发生删除、重命名或跨目录移动 markdown，再观察 `--changed-from HEAD` 是否需要补最小 fixture；没有失败样例时不继续扩 checker。
 ```
 
+## 2026-07-03 13:00
+
+```text
+Date: 2026-07-03 13:00
+Change target: documents/trending/ai/ai-coding-audit-result-log-template.md + README/catalog + weekly planner + 30-minute experiment
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-weekly-experiment-planner.md documents/trending/ai/thirty-minute-ai-coding-audit-income-experiment.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Result before edit: markdown proof ok: checked 4 file(s)
+What changed: 新增 AI 编程审查 Audit Result 私有记录表模板，承接 30 分钟收入实验里的 channel / input evidence / public boundary / deliverable / decision / next evidence needed 字段；README、30 分钟实验和每周规划器都链接到该模板，避免把真实回复散落成不可复查笔记。
+Verification after edit: python3 scripts/check-markdown-proof.py --changed-from HEAD
+Signal: `--changed-from HEAD` 覆盖本轮新增模板和修改过的入口页，适合作为新增 AI 文档后的自动范围 proof；本轮没有发现断链或 frontmatter 问题，不扩 checker 规则。
+Decision: Continue
+Next evidence needed: 下一次拿到真实样本后，用记录表填一条私有单轮记录；如果要公开，只发布脱敏摘要并先过匿名案例骨架。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

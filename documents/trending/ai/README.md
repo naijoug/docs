@@ -22,6 +22,7 @@ index: false
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)（没有真实样本前先跑下面的 30 分钟实验，不要直接扩服务页）
 - [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)
+- [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md)
 - [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md)
 - [AI 编程审查服务交付指南](ai-coding-audit-service.md)
 - [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md)
@@ -49,7 +50,7 @@ index: false
 2. **收束回复**：用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 把“我们也遇到过”收束成目标、范围、证据、公开边界和期望输出。
 3. **交付首份报告**：按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 做 30-60 分钟只读审查；证据不足时只交付 `Next evidence needed`，证据足够时交付 1 页报告。
 4. **判断下一步**：用 `Continue / Narrow / Stop` 记录是否进入 PR 审查、缩小样本范围或停止；公开前先走本页的 evidence boundary checkpoint。
-5. **观察信号**：发布后用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 记录痛点原话、证据形状、公开边界和 `Next evidence needed`，不要只看点赞数。
+5. **观察信号**：先用 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 记录单轮渠道、输入证据、公开边界、交付物和 `Continue / Narrow / Stop`，发布后再用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 记录痛点原话、证据形状、公开边界和 `Next evidence needed`，不要只看点赞数。
 6. **沉淀资产**：如果同类问题重复出现，再回到 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 和 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断是否升级为文章、模板、技能、书稿卡片或服务 offer。
 
 这条入口的判断标准是“是否拿到真实可复核证据并交付下一步”，不是点赞、收藏或路线图完整度。
