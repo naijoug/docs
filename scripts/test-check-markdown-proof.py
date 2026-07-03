@@ -75,6 +75,26 @@ This links to [missing](missing.md) and mentions /Users/example/project.
     assert any(message.startswith("contains absolute user path") for message in messages)
 
 
+def test_reports_broken_local_image_without_treating_it_as_link(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/images.md"
+    write(
+        page,
+        """---
+title: Images
+
+---
+
+![Existing diagram](media/diagram.png)
+![Missing diagram](media/missing.png "diagram")
+""",
+    )
+    write(root / "documents/trending/ai/media/diagram.png", "fake image\n")
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "broken local image `media/missing.png \"diagram\"`" in messages
+    assert not any(message.startswith("broken local link") for message in messages)
+
+
 def test_cross_directory_link_fails_after_target_rename(checker, root: Path) -> None:
     source = root / "documents/trending/ai/checker.md"
     target = root / "scripts/check-markdown-proof.py"
@@ -258,6 +278,7 @@ def main() -> int:
     tests = [
         test_valid_page_and_relative_link,
         test_reports_broken_link_and_absolute_user_path,
+        test_reports_broken_local_image_without_treating_it_as_link,
         test_cross_directory_link_fails_after_target_rename,
         test_directory_readme_link_without_suffix_and_markdown_title,
         test_vuepress_include_alias_reports_missing_target,

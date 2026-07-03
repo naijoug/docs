@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Iterable
 
 LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)")
+IMAGE_RE = re.compile(r"!\[[^\]\n]*\]\(([^)\n]+)\)")
 INCLUDE_RE = re.compile(r"<!--\s*@include:\s+([^\s]+)")
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 TITLE_RE = re.compile(r"^title:\s*\S+", re.MULTILINE)
@@ -193,6 +194,13 @@ def check_file(path: Path, root: Path) -> list[Issue]:
             continue
         if not local_link_exists(path, link, root):
             issues.append(Issue(path, f"broken local link `{raw}`"))
+
+    for raw in IMAGE_RE.findall(body):
+        link = normalize_link(raw)
+        if should_skip_link(link):
+            continue
+        if not local_link_exists(path, link, root):
+            issues.append(Issue(path, f"broken local image `{raw}`"))
 
     for raw in INCLUDE_RE.findall(body):
         include_path = resolve_include_path(raw, path, root)
