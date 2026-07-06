@@ -85,6 +85,7 @@ order: 36
 
 - 样本还没出现时，先用 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md) 找到愿意提供真实场景的人。
 - 对方回复后，用本文把材料收束成可审查输入。
+- 如果回复只有痛点原话、截图或一句 agent claim，先发 [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md)，只追命令、状态、失败摘要、agent 结论和改动范围。
 - 材料足够后，进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
 - 如果样本进入 PR，再用 [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md) 映射字段。
 - 如果要公开，发布前套 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 和证据边界检查。

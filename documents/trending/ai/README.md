@@ -31,6 +31,7 @@ index: false
 - [AI 编程审查观察到执行技能清单](ai-coding-audit-observation-to-skill-checklist.md)
 - [AI 编程审查技能复用演示](ai-coding-audit-skill-reuse-demo.md)
 - [AI 编程审查一页纸填写样例](ai-coding-audit-one-pager-filled-example.md)
+- [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md)
 - [下一条安全命令梯](next-safe-command-ladder.md)
 - [AI 编程审查样板报告](ai-coding-audit-mock-report.md)
 - [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)
@@ -52,7 +53,7 @@ index: false
 如果只是想马上验证一次 AI 编程审查机会，不要先读完整资料库。先按 [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md) 发出一次只收样本的 CTA，再用下面这条最短路径跑一轮：
 
 1. **找样本**：复制 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md)，只要求对方提供一个 PR、一次失败命令、一段 agent log 或一份脱敏 final report。
-2. **收束回复**：用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 把“我们也遇到过”收束成目标、范围、证据、公开边界和期望输出。
+2. **收束回复**：用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 把“我们也遇到过”收束成目标、范围、证据、公开边界和期望输出；如果对方只给痛点原话或截图，先发 [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md)，只追 5 个最小证据。
 3. **交付首份报告**：按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 做 30-60 分钟只读审查；证据不足时只交付 `Next evidence needed`，证据足够时交付 1 页报告。
 4. **判断下一步**：用 `Continue / Narrow / Stop` 记录是否进入 PR 审查、缩小样本范围或停止；公开前先走本页的 evidence boundary checkpoint。
 5. **观察信号**：先用 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 记录单轮渠道、输入证据、公开边界、交付物和 `Continue / Narrow / Stop`，发布后再用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 记录痛点原话、证据形状、公开边界和 `Next evidence needed`；不知道如何写第一条时，照着 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md) 先判断 `Narrow`，不要只看点赞数。

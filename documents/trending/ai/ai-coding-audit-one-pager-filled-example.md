@@ -76,9 +76,12 @@ Decision:
 下一轮不要新建技能。先用这份一页纸向样本提供者索取 5 个最小证据；补齐后再决定是否进入首份 30-60 分钟只读审查报告。
 ```
 
+可直接发送的证据收集话术见 [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md)。
+
 ## 关联文档
 
 - [AI 编程审查技能复用演示](ai-coding-audit-skill-reuse-demo.md)
+- [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md)
 - [AI 编程审查观察到执行技能清单](ai-coding-audit-observation-to-skill-checklist.md)
 - [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md)
 - 模板来源：`books/tech-cards-handbook/samples/ai-agent-skill-reuse-before-new-skill-one-pager.md`
