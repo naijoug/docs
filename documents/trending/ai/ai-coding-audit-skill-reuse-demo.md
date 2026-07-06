@@ -95,6 +95,10 @@ Decision:
 - Asset destination:
 ```
 
+## 配套填写样例
+
+如果要把这条演示交给下一轮 agent 或样本提供者，先填一份 [AI 编程审查一页纸填写样例](ai-coding-audit-one-pager-filled-example.md)：它把观察快照、复用路径、技能化门槛和 `Next evidence needed` 压成一页，避免下一轮又重新讨论是否该新建技能。
+
 ## 使用边界
 
 - 这份演示不是新技能；它是先复用既有技能的样板。

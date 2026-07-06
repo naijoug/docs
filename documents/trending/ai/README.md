@@ -30,6 +30,7 @@ index: false
 - [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md)
 - [AI 编程审查观察到执行技能清单](ai-coding-audit-observation-to-skill-checklist.md)
 - [AI 编程审查技能复用演示](ai-coding-audit-skill-reuse-demo.md)
+- [AI 编程审查一页纸填写样例](ai-coding-audit-one-pager-filled-example.md)
 - [下一条安全命令梯](next-safe-command-ladder.md)
 - [AI 编程审查样板报告](ai-coding-audit-mock-report.md)
 - [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)
