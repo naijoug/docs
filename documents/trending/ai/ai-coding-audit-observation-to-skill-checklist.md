@@ -67,6 +67,18 @@ Output:
 - **Narrow**：只有一次真实观察，或输入证据类型还在变化；先继续补记录，不创建技能。
 - **Stop**：问题依赖私有上下文、生产权限或无法脱敏；不要技能化，保留为内部记录或停止。
 
+## 先复用已有技能
+
+创建新技能前，先检查问题是否已经落在下面两个稳定动作里：
+
+| 观察到的重复问题 | 优先复用的技能 | 复用方式 |
+| --- | --- | --- |
+| 报告里写了“建议测试”，但没有说明下一条最小安全命令 | `skills/skills/manual/review/next-safe-command-ladder/` | 把观察记录里的 `Evidence shape` 改写成 `Change type`、`Main risk` 和 2-3 步命令梯 |
+| 想把私有审查写成公开样例，但证据、授权和脱敏边界不清 | `skills/skills/manual/review/audit-evidence-boundary/` | 先把每条 claim 分成 `Fact / Inference / Unverified / Private / Stop`，再决定是否只发布方法样板 |
+| 同时缺命令梯和发布边界 | 先用 `next-safe-command-ladder`，再用 `audit-evidence-boundary` | 先证明“下一步怎么验证”，再判断“哪些内容能公开说” |
+
+只有当这两个技能都不能覆盖重复动作，才新增更窄的技能。例如：多个样本都要求从 agent final report 自动抽取 `Next evidence needed`，且输入字段已经稳定，才考虑单独写一个 final-report-to-evidence-gap 技能。
+
 ## 最小可验证技能标准
 
 真正写入 `skills/skills/` 前，至少要能回答：
