@@ -25,6 +25,20 @@ order: 31
 | 发布后 24 小时 | 具体痛点回复、是否有人愿意给样本、需要补问的问题 | 不因为单个模糊回复就扩成完整咨询 |
 | 发布后 48 小时 | 样本质量、授权边界、下一步是否能进入首份报告 | 不把没有证据的互动写成真实案例 |
 
+## 发布后 24 小时最小记录包
+
+到 24 小时时，不需要写长复盘，只需要补齐一条能决定下一步的记录。每条候选回复按下面 5 行写，缺项就标 `Missing`，不要用主观热度替代证据。
+
+```text
+Pain quote: 对方的原话；没有具体问题就写 Missing
+Evidence shape: PR / diff / failed command / agent log / final report / review comment / oral-only
+Boundary: 可公开、需匿名、不能公开、未确认
+Next evidence needed: 下一条要补的命令、日志、文件范围或授权确认
+Decision: Continue / Narrow / Stop + 一句话理由
+```
+
+判断顺序固定为：先看 `Pain quote` 是否具体，再看 `Evidence shape` 是否可复核，再看 `Boundary` 是否允许继续。只有三项都过关，才进入 `Continue`；只有痛点具体但证据不足，进入 `Narrow`；三项都缺或只剩点赞收藏，进入 `Stop`。
+
 ## 观察表
 
 | 字段 | 填写要求 | 示例 |
