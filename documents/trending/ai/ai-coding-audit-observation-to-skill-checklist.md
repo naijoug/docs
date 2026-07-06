@@ -77,6 +77,8 @@ Output:
 | 想把私有审查写成公开样例，但证据、授权和脱敏边界不清 | `skills/skills/manual/review/audit-evidence-boundary/` | 先把每条 claim 分成 `Fact / Inference / Unverified / Private / Stop`，再决定是否只发布方法样板 |
 | 同时缺命令梯和发布边界 | 先用 `next-safe-command-ladder`，再用 `audit-evidence-boundary` | 先证明“下一步怎么验证”，再判断“哪些内容能公开说” |
 
+如果需要看一条观察如何依次复用这两个技能，先参考 [AI 编程审查技能复用演示](ai-coding-audit-skill-reuse-demo.md)：它展示如何先产出下一条安全命令，再做证据公开边界分层，最后保持 `Narrow`。
+
 只有当这两个技能都不能覆盖重复动作，才新增更窄的技能。例如：多个样本都要求从 agent final report 自动抽取 `Next evidence needed`，且输入字段已经稳定，才考虑单独写一个 final-report-to-evidence-gap 技能。
 
 ## 最小可验证技能标准
