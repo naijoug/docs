@@ -81,3 +81,5 @@ Decision:
 - [AI 编程审查技能复用演示](ai-coding-audit-skill-reuse-demo.md)
 - [AI 编程审查观察到执行技能清单](ai-coding-audit-observation-to-skill-checklist.md)
 - [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md)
+- 模板来源：`books/tech-cards-handbook/samples/ai-agent-skill-reuse-before-new-skill-one-pager.md`
+- 对应书稿卡片：`books/tech-cards-handbook/chapters/ai-agent/reuse-existing-skill-before-new-skill.md`
