@@ -39,6 +39,8 @@ Decision: Continue / Narrow / Stop + 一句话理由
 
 判断顺序固定为：先看 `Pain quote` 是否具体，再看 `Evidence shape` 是否可复核，再看 `Boundary` 是否允许继续。只有三项都过关，才进入 `Continue`；只有痛点具体但证据不足，进入 `Narrow`；三项都缺或只剩点赞收藏，进入 `Stop`。
 
+如果第一条真实回复介于“有痛点”和“证据不足”之间，先照 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md) 写成 `Narrow`：不要急着交付完整报告，只回复下一条安全命令和 `Next evidence needed`。
+
 ## 观察表
 
 | 字段 | 填写要求 | 示例 |
@@ -89,6 +91,7 @@ Decision: Continue / Narrow / Stop + 一句话理由
 
 - 能 `Continue`：进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
 - 只能 `Narrow`：先用 [下一条安全命令梯](next-safe-command-ladder.md) 做单点交付。
+- 不会写第一条观察：复制 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md)，把痛点原话、证据形状、公开边界和 `Next evidence needed` 替换成真实信息。
 - 要公开复盘：先过 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 和 evidence boundary checkpoint。
 - 要沉淀资产：回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次反馈适合写文章、模板、skill、书稿卡片还是服务 offer。
 
