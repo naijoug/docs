@@ -27,7 +27,8 @@ AI 协作写文档时，最容易把“写完了”误判成“可交付”：�
 4. VuePress `<!-- @include: ... -->` 引用是否能解析到真实文件；当前只内置 `@leetcode` 别名，锚点部分只用于定位章节，不检查锚点是否存在；
 5. 内容中是否误写本机用户目录绝对路径；
 6. 指定的检查目标是否真实存在，避免 typo 造成 `checked 0 file(s)` 的假绿灯；
-7. 使用 `--changed-from` 时，只检查某个 git ref 之后变更过的 markdown 文件，并补上尚未 `git add` 的 untracked markdown。
+7. 使用 `--changed-from` 时，只检查某个 git ref 之后变更过的 markdown 文件，并补上尚未 `git add` 的 untracked markdown；
+8. 使用 `--exclude` 时，从检查集合中剔除匹配的 root-relative glob，避免把明确不属于本轮的脏工作区文件混入 proof。
 
 ## 使用方式
 
@@ -51,6 +52,13 @@ python3 scripts/check-markdown-proof.py --changed-from HEAD
 ```
 
 这个模式会忽略非 markdown 改动，覆盖已跟踪文件的新增、修改和重命名，也会通过 `git ls-files --others --exclude-standard` 补上未暂存的新 markdown；在没有 markdown 文件变更时以 exit 2 失败，避免“本轮其实没检查任何文档”的假绿灯。新增页面 + 修改目录入口的固定用法见 [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)。
+
+如果仓库里有明确不属于本轮、但暂时不能接管的脏 markdown，可以追加一个或多个 `--exclude`。排除规则按仓库根目录相对 POSIX path 和文件名做 glob 匹配；它只适合“已确认不是本轮交付”的文件，不能用来隐藏本轮改坏的文档：
+
+```bash
+python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md
+python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude 'summaries/**' --exclude 'drafts/*.md'
+```
 
 如果需要从其他目录调用，显式传入仓库根目录：
 
@@ -90,7 +98,7 @@ VuePress include 是另一类容易被 markdown 链接检查漏掉的引用：�
 | 改动类型 | 最小 proof | 追加验证 |
 | --- | --- | --- |
 | 只改 AI 目录内一两篇文档 | `python3 scripts/check-markdown-proof.py documents/trending/ai/changed.md` | 人工检查渲染预期 |
-| 已经有明确 git 基线，只想检查本轮文档改动 | `python3 scripts/check-markdown-proof.py --changed-from HEAD` | 确认输出列出的 tracked 与 untracked markdown 就是本轮要交付的文件 |
+| 已经有明确 git 基线，只想检查本轮文档改动 | `python3 scripts/check-markdown-proof.py --changed-from HEAD` | 确认输出列出的 tracked 与 untracked markdown 就是本轮要交付的文件；若存在已确认不接管的脏 markdown，可追加 `--exclude AGENTS.md` 这类显式排除 |
 | 改 checker 规则或 CLI 行为 | `python3 scripts/test-check-markdown-proof.py` + checker 覆盖目标文档 | 必要时补一个最小 fixture，再跑 docs build |
 | 新增目录入口、sidebar、主题配置 | checker 覆盖改动文档 | `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build` |
 | 改代码块、组件、VuePress 插件 | checker 只做路径兜底 | docs build + 页面预览 |

@@ -390,6 +390,52 @@ New untracked doc with [missing](missing.md).
     assert "broken local link `missing.md`" in result.stdout
 
 
+def test_cli_exclude_omits_matching_changed_markdown(root: Path) -> None:
+    subprocess.run(["git", "init"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    subprocess.run(["git", "config", "user.name", "tester"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.email", "tester@example.com"], cwd=root, check=True)
+
+    changed = root / "documents/trending/ai/changed.md"
+    ignored = root / "AGENTS.md"
+    write(root / "documents/trending/ai/README.md", valid_page("AI Index"))
+    write(changed, valid_page("Changed"))
+    write(ignored, valid_page("Agents"))
+    subprocess.run(["git", "add", "documents", "AGENTS.md"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "baseline"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+
+    write(changed, valid_page("Changed Again"))
+    write(
+        ignored,
+        """---
+title: Agents
+
+---
+
+Ignored dirty handoff link: [missing](missing.md).
+""",
+    )
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--root",
+            str(root),
+            "--changed-from",
+            "HEAD",
+            "--exclude",
+            "AGENTS.md",
+        ],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    assert result.returncode == 0, result
+    assert "markdown proof ok: checked 1 file(s)" in result.stdout
+    assert "AGENTS.md" not in result.stdout
+
+
 def main() -> int:
     checker = load_checker()
     tests = [
@@ -409,6 +455,7 @@ def main() -> int:
         test_cli_fails_when_no_markdown_matched,
         test_cli_changed_from_checks_only_changed_markdown,
         test_cli_changed_from_includes_untracked_markdown,
+        test_cli_exclude_omits_matching_changed_markdown,
     ]
 
     for test in tests:

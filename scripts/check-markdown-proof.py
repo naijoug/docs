@@ -9,6 +9,7 @@ accidental absolute user paths.
 from __future__ import annotations
 
 import argparse
+import fnmatch
 import re
 import subprocess
 import sys
@@ -129,6 +130,31 @@ def collect_changed_markdown_files(base_ref: str, root: Path) -> tuple[list[Path
         if path.is_file():
             files.append(path)
     return sorted(set(files)), None
+
+
+def relative_posix(path: Path, root: Path) -> str:
+    """Return a root-relative POSIX path when possible for stable matching."""
+    try:
+        rel = path.relative_to(root)
+    except ValueError:
+        rel = path
+    return rel.as_posix()
+
+
+def matches_exclude(path: Path, root: Path, patterns: Iterable[str]) -> bool:
+    rel = relative_posix(path, root)
+    name = path.name
+    for pattern in patterns:
+        normalized = pattern.strip().replace("\\", "/")
+        if not normalized:
+            continue
+        if fnmatch.fnmatch(rel, normalized) or fnmatch.fnmatch(name, normalized):
+            return True
+    return False
+
+
+def apply_excludes(files: Iterable[Path], root: Path, patterns: Iterable[str]) -> list[Path]:
+    return [path for path in files if not matches_exclude(path, root, patterns)]
 
 
 def mask_match_preserving_lines(match: re.Match[str]) -> str:
@@ -287,6 +313,13 @@ def main() -> int:
         metavar="GIT_REF",
         help="Check markdown files changed since GIT_REF instead of explicit targets.",
     )
+    parser.add_argument(
+        "--exclude",
+        action="append",
+        default=[],
+        metavar="GLOB",
+        help="Exclude root-relative markdown paths matching GLOB. May be repeated.",
+    )
     args = parser.parse_args()
 
     root = args.root.resolve()
@@ -299,6 +332,7 @@ def main() -> int:
             return 2
     else:
         unique_files, missing_targets = collect_markdown_files(args.targets, root)
+    unique_files = apply_excludes(unique_files, root, args.exclude)
     if missing_targets:
         print(f"markdown proof failed: {len(missing_targets)} target(s) not found")
         for target in missing_targets:

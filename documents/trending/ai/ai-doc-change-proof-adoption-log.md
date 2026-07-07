@@ -293,6 +293,20 @@ Decision: Continue
 Next evidence needed: 下一次若 checker 在真实长文里发现断链，观察行号是否能减少定位成本；若遇到代码块 masking 误差，再补最小 fixture，不扩成通用 markdown parser。
 ```
 
+## 2026-07-08 02:00
+
+```text
+Date: 2026-07-08 02:00
+Change target: scripts/check-markdown-proof.py + scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md + adoption log
+Preflight command: python3 scripts/test-check-markdown-proof.py && python3 scripts/test-check-ai-catalog.py && python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md --exclude AGENTS.md && python3 scripts/check-ai-catalog.py
+Result before edit: planned from dirty-worktree constraint: docs/AGENTS.md is an existing unrelated markdown modification, so a changed-from proof needs a scoped exclusion instead of silently checking or editing that file.
+What changed: 为 checker 增加可重复 `--exclude GLOB`，按仓库 root-relative POSIX path 或文件名排除已确认不属于本轮的 markdown；新增 CLI 回归测试，验证 `--changed-from HEAD --exclude AGENTS.md` 会跳过脏 `AGENTS.md`，但仍检查本轮 changed markdown；说明页补上使用边界，强调不能用 exclusion 隐藏本轮改坏的文档。
+Verification after edit: python3 scripts/test-check-markdown-proof.py && python3 scripts/test-check-ai-catalog.py && python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md && git diff --check -- scripts/check-markdown-proof.py scripts/test-check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 这个扩展直接服务当前 cron 常见场景：仓库存在明确不接管的脏 markdown 时，仍能对本轮文件做 changed-from proof，且 exclusion 本身有 fixture 防回归。
+Decision: Continue
+Next evidence needed: 下一次若使用 `--exclude`，必须在 notebook 里写明被排除文件为什么不属于本轮；如果经常需要排除同一类文件，改为更明确的 pathspec/owned-file workflow，而不是扩大默认忽略。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
