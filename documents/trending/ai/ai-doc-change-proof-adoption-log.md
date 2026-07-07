@@ -251,6 +251,20 @@ Decision: Continue
 Next evidence needed: 下一次优先在真实跨 agent 接力或 PR review 场景中试填这张回执；如果只是在总结里重复描述，说明模板需要 `Narrow` 成更短的交接卡。
 ```
 
+## 2026-07-08 01:15
+
+```text
+Date: 2026-07-08 01:15
+Change target: documents/trending/ai/income-experiment-switch-without-channel.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-weekly-experiment-planner.md documents/trending/ai/local-verifiable-proof-artifact.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `渠道未授权时的收入实验切换卡`，把“已有 offer 资产但缺少首发渠道、账号或联系方式授权”的状态写成 Waiting / Do-not-do / Switch / Return condition；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/income-experiment-switch-without-channel.md documents/trending/ai/ai-doc-change-proof-adoption-log.md + python3 scripts/check-ai-catalog.py
+Signal: 本轮没有继续给待授权 OpenClaw offer 加功能，而是把“缺授权则切换”的决策沉淀为可复用卡片；新增同级 AI 文档后继续用 catalog proof 防漏链。
+Decision: Switch
+Next evidence needed: 如果用户确认首发渠道和联系方式，再回到对应 offer 的 publish preflight；否则下一轮选择另一个本地可验证、可提交的小资产。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
