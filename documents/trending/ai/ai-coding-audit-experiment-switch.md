@@ -49,6 +49,18 @@ order: 38
 
 `Narrow` 的目标是更快拿到一个真实完成样本，而不是把完整服务文案写得更漂亮。
 
+#### 只有一条 `Narrow` 记录时
+
+像 [AI 编程审查 Audit Result 填写样例](ai-coding-audit-result-log-filled-example.md) 这样的脱敏样例，只能证明记录格式可用，不能证明市场需求成立。复盘时按下面三行处理：
+
+```text
+当前证据：1 条脱敏 `Narrow` 记录，交付物只是 `Next evidence needed`
+禁止动作：继续新增路线图、服务页、模板或书稿卡片
+允许动作：用这条记录去索取真实失败命令、exit code、PR / Issue 链接或发布渠道；拿不到就 `Stop / Switch`
+```
+
+如果下一轮仍没有新增外部证据，默认从 `Narrow` 降级为 `Stop / Switch`，不要再把同一条样例改写成更多资产。
+
 ### 3. Stop / Switch：封存实验，切到新资产
 
 如果连续多轮都满足下面任意两条，就停止扩写 AI coding audit 文档，切到其他 AI 程序员资产或收入实验：
