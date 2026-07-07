@@ -420,6 +420,20 @@ Decision: Continue
 Next evidence needed: 下一次如果用户给出渠道、账号、联系路径和观察窗口，按本页 preflight 发布一个渠道并把 URL 写入 `makemoney/runs/`；若仍无授权，切换到新的本地 proof 或真实代码边界。
 ```
 
+## 2026-07-08 07:00
+
+```text
+Date: 2026-07-08 07:00
+Change target: documents/trending/ai/real-boundary-task-radar.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-deliberate-practice-loop.md documents/trending/ai/next-safe-command-ladder.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `AI 程序员真实边界任务雷达`，把连续模板/教程/授权材料循环时的下一步选择压成 6 维候选评分：真实边界、可证伪假设、验证方式、所有权、可沉淀资产和停止规则；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/real-boundary-task-radar.md documents/trending/ai/next-safe-command-ladder.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮不继续围绕外部发布授权扩材料，而是补一个选择机制，要求下一轮先命中失败输出、静默成功、dirty path、授权、成本或用户反馈等真实边界，再投入执行。
+Decision: Switch
+Next evidence needed: 下一次先给 3 个候选任务按本页打分；如果最高分仍缺真实边界或需要接管未知 dirty path，停止扩写并换一个本地可验证小任务。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
