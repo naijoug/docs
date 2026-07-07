@@ -406,6 +406,20 @@ Decision: Continue
 Next evidence needed: 下一次优先寻找真实项目里的非临时边界条件；如果失败输出已经足够定位，不再扩工具，直接做最小修复或资产化复盘。
 ```
 
+## 2026-07-08 06:15
+
+```text
+Date: 2026-07-08 06:15
+Change target: documents/trending/ai/single-channel-offer-publish-preflight.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/income-experiment-switch-without-channel.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `单渠道 Offer 发布 Preflight`，把 `makemoney/docs/offer-authorization-request-brief.md` 和书稿里的外部发布授权原则转成 docs 层可执行清单：发布前必须填渠道、账号/身份、联系路径、观察窗口、公开文案来源和停止条件；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/single-channel-offer-publish-preflight.md documents/trending/ai/income-experiment-switch-without-channel.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 在没有外发授权的情况下，本轮继续选择本地可验证资产，把“若获授权如何只发一个渠道”写清楚，而不是继续扩待授权 offer 或跨渠道发布。
+Decision: Continue
+Next evidence needed: 下一次如果用户给出渠道、账号、联系路径和观察窗口，按本页 preflight 发布一个渠道并把 URL 写入 `makemoney/runs/`；若仍无授权，切换到新的本地 proof 或真实代码边界。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

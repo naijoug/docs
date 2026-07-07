@@ -24,6 +24,7 @@ index: false
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)
 - [渠道未授权时的收入实验切换卡](income-experiment-switch-without-channel.md)
+- [单渠道 Offer 发布 Preflight](single-channel-offer-publish-preflight.md)
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md)
 - [Agent Cron 交付预算卡](agent-cron-delivery-budget-card.md)
