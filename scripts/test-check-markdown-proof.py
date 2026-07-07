@@ -166,6 +166,28 @@ Use [target][Duplicate Ref].
     assert not any(message.startswith("broken reference link") for message in messages)
 
 
+def test_indented_reference_definitions_are_checked(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/indented-references.md"
+    write(root / "documents/trending/ai/target.md", valid_page("Target"))
+    write(
+        page,
+        """---
+title: Indented References
+
+---
+
+Use [good][good] and [broken][broken].
+
+   [good]: target.md
+   [broken]: missing.md
+""",
+    )
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "missing reference link definition `[good]`" not in messages
+    assert "broken reference link `[broken]`: `missing.md`" in messages
+
+
 def test_cross_directory_link_fails_after_target_rename(checker, root: Path) -> None:
     source = root / "documents/trending/ai/checker.md"
     target = root / "scripts/check-markdown-proof.py"
@@ -353,6 +375,7 @@ def main() -> int:
         test_reports_broken_local_image_without_treating_it_as_link,
         test_reference_style_links_check_missing_defs_and_local_targets,
         test_reference_style_links_report_duplicate_definitions,
+        test_indented_reference_definitions_are_checked,
         test_cross_directory_link_fails_after_target_rename,
         test_directory_readme_link_without_suffix_and_markdown_title,
         test_vuepress_include_alias_reports_missing_target,

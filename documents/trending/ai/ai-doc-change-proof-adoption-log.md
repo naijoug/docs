@@ -181,6 +181,20 @@ Decision: Continue
 Next evidence needed: 下一次不要再扩 AI coding audit 文档，除非有真实样本或 checker 发现具体失败；否则按实验切换清单切到另一个本地可验证小任务。
 ```
 
+## 2026-07-07 15:00
+
+```text
+Date: 2026-07-07 15:00
+Change target: scripts/check-markdown-proof.py + scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md documents/trending/ai/local-verifiable-proof-artifact.md && python3 scripts/test-check-markdown-proof.py
+Result before edit: markdown proof ok: checked 3 file(s); check-markdown-proof regression tests ok: 14 test(s)
+What changed: 按“本地可验证 proof artifact”路线，给引用式链接定义补一个真实 markdown 兼容边界：最多 3 个前导空格的 `[label]: target` 现在会被识别，并新增最小回归测试确认缩进定义不会被误报为缺失定义，同时仍能报告缩进定义指向的断链。
+Verification after edit: python3 scripts/test-check-markdown-proof.py + python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md; `python3 scripts/check-markdown-proof.py --changed-from HEAD` 因既有 `docs/AGENTS.md` 缺少 frontmatter 失败，未把该既有 dirty path 纳入本轮修复。
+Signal: checker 继续作为小型本地 proof 工具维护；本轮只扩一个 markdown 语法兼容点，并有失败/通过 fixture 支撑，不把它扩成完整 linter。`--changed-from HEAD` 的失败也提醒：在仓库已有非本轮 dirty markdown 时，交付 proof 应显式列出本轮文件，避免接管他人改动。
+Decision: Continue
+Next evidence needed: 下一次只在真实文档写法或 checker 误报/漏报暴露新边界时再补规则；没有新失败样例时，优先用现有 explicit-target checker 或在干净工作区使用 `--changed-from HEAD` 做交付 proof。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

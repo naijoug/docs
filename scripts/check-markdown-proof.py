@@ -19,7 +19,7 @@ from typing import Iterable
 LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)")
 IMAGE_RE = re.compile(r"!\[[^\]\n]*\]\(([^)\n]+)\)")
 REF_LINK_RE = re.compile(r"(?<!!)\[([^\]\n]+)\]\[([^\]\n]*)\]")
-REF_DEF_RE = re.compile(r"^\[([^\]\n]+)\]:\s+(\S+)", re.MULTILINE)
+REF_DEF_RE = re.compile(r"^ {0,3}\[([^\]\n]+)\]:\s+(\S+)", re.MULTILINE)
 INCLUDE_RE = re.compile(r"<!--\s*@include:\s+([^\s]+)")
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 TITLE_RE = re.compile(r"^title:\s*\S+", re.MULTILINE)
