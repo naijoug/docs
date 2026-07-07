@@ -321,6 +321,20 @@ Decision: Continue
 Next evidence needed: 下一次真实 docs 改动优先使用 `--changed-from HEAD --exclude AGENTS.md --list-files`，并在 notebook 中核对列出的文件是否完全对应本轮交付。
 ```
 
+## 2026-07-08 02:30
+
+```text
+Date: 2026-07-08 02:30
+Change target: documents/trending/ai/changed-from-head-docs-preflight.md + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/changed-from-head-docs-preflight.md documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages; changed-from proof exited 2 with `markdown proof failed: no markdown files changed since HEAD` after excluding existing unrelated `AGENTS.md`, confirming there was no docs-owned changed markdown yet.
+What changed: 更新 `changed-from HEAD 文档改动 Preflight`，把默认改后命令收紧为 `--changed-from HEAD --list-files`，补充 dirty worktree 中使用 `--exclude AGENTS.md --list-files` 的审计边界，并明确排除后没有 changed markdown 不能当作通过。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/changed-from-head-docs-preflight.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files && git diff --check -- documents/trending/ai/changed-from-head-docs-preflight.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 本轮没有继续扩 checker 代码，而是把上一轮 `--list-files` 和 dirty-path exclusion 的真实使用方式回填到 preflight 文档；changed-from proof 会列出本轮两篇文档，便于交接核对。
+Decision: Continue
+Next evidence needed: 下一次新增 AI 文档时直接使用 `--changed-from HEAD --exclude AGENTS.md --list-files`，先核对文件列表，再决定是否需要 catalog proof 或 VuePress build。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
