@@ -237,6 +237,20 @@ Decision: Continue
 Next evidence needed: 下一次若继续处理 cron 节拍任务，优先用这张边界卡决定是否可以在脏工作区中推进；如果必须接管未知 dirty path，则停止并等待明确授权。
 ```
 
+## 2026-07-07 19:00
+
+```text
+Date: 2026-07-07 19:00
+Change target: documents/trending/ai/agent-handoff-receipt-template.md + README/catalog + local proof artifact note + adoption log
+Preflight command: not run before edit; this was a low-risk new page plus catalog update chosen after the repo status snapshot
+Result before edit: not captured; use the post-edit explicit file proof below for this round
+What changed: 新增 `Agent 交接回执模板`，把一次 agent / cron / reviewer 交接压缩成 owned changes、avoided dirty paths、verified facts、commands run、open risks、next safe command 和 `Continue / Narrow / Stop / Switch`；README catalog 与本地 proof artifact 清单都接入该模板。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/local-verifiable-proof-artifact.md documents/trending/ai/agent-handoff-receipt-template.md documents/trending/ai/ai-doc-change-proof-adoption-log.md + python3 scripts/check-ai-catalog.py
+Signal: 本轮继续把 18:00 的脏工作区边界推进成可复用交接模板，并用 catalog proof 验证新增同级 AI 文档没有漏接入口；没有扩 checker 规则。
+Decision: Continue
+Next evidence needed: 下一次优先在真实跨 agent 接力或 PR review 场景中试填这张回执；如果只是在总结里重复描述，说明模板需要 `Narrow` 成更短的交接卡。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

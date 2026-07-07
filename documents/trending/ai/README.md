@@ -20,6 +20,7 @@ index: false
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md)
+- [Agent 交接回执模板](agent-handoff-receipt-template.md)
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)

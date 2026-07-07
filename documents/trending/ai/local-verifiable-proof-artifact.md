@@ -67,6 +67,7 @@ Decision: Continue / Narrow / Stop / Switch
 
 - 每周选题先走 [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)，再用本页把候选任务缩成一个可验证 artifact。
 - 如果本轮启动时已经存在未知 dirty path，先用 [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md) 划清 owned / avoided path，再选择 artifact；不要让验证脚本或提交范围吞进他人改动。
+- 完成一个可复用 artifact 后，用 [Agent 交接回执模板](agent-handoff-receipt-template.md) 留下 owned changes、avoided dirty paths、verified facts 和 next safe command，让下一轮能直接接手。
 - 文档改动优先复用 [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)，不要把完整 VuePress build 当作唯一反馈。
 - 如果 artifact 来自 AI 编程审查机会，先确认 [AI 编程审查实验切换清单](ai-coding-audit-experiment-switch.md) 里的真实样本和发布证据是否存在；不存在就只做本地 proof，不声明市场验证。
 
