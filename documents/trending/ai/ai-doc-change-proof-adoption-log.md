@@ -223,6 +223,20 @@ Decision: Continue
 Next evidence needed: 下一次新增或删除 `documents/trending/ai/*.md` 时，优先观察 `check-ai-catalog.py` 是否能在提交前发现 README catalog 漏更新；如果未来目录页分组变化，再补最小 fixture，而不是把脚本扩成全站导航生成器。
 ```
 
+## 2026-07-07 18:00
+
+```text
+Date: 2026-07-07 18:00
+Change target: documents/trending/ai/agent-cron-dirty-worktree-boundary.md + README/catalog + local proof artifact note + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-weekly-experiment-planner.md documents/trending/ai/local-verifiable-proof-artifact.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `Agent Cron 的脏工作区边界`，把 cron agent 在多 repo、已有 dirty path 场景下的 Snapshot / Ownership / Selection / Commit 护栏写成一张可执行卡；README catalog 和本地 proof artifact 清单都接入该页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/local-verifiable-proof-artifact.md documents/trending/ai/agent-cron-dirty-worktree-boundary.md documents/trending/ai/ai-doc-change-proof-adoption-log.md + python3 scripts/check-ai-catalog.py
+Signal: 这是对 17:00 catalog proof 的真实新增页面试用：新增同级 AI 文档后必须同步 README catalog，否则 catalog proof 会失败；本轮没有扩 checker 规则。
+Decision: Continue
+Next evidence needed: 下一次若继续处理 cron 节拍任务，优先用这张边界卡决定是否可以在脏工作区中推进；如果必须接管未知 dirty path，则停止并等待明确授权。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
