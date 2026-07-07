@@ -75,7 +75,8 @@ index: false
 
 1. **改前跑轻量检查**：对准备修改的入口页、长文或跨目录链接目标执行 `python3 scripts/check-markdown-proof.py documents/trending/ai/README.md ...`，确认当前文件没有已知断链、frontmatter 或绝对路径问题。
 2. **只记录可复查结果**：如果 checker 通过，把命令和输出追加到 [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)；如果失败，先修最小问题，再考虑是否需要补回归测试。
-3. **不要让 checker 变万能 linter**：它负责快速兜底 markdown proof；涉及 sidebar、VuePress 插件或页面渲染时，仍然追加 `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build`。
+3. **目录入口另跑覆盖 proof**：如果改了本页 `catalog` 或新增 AI 目录同级页面，追加 `python3 scripts/check-ai-catalog.py`，确认入口没有漏链、重复链接或指向缺失页面。
+4. **不要让 checker 变万能 linter**：它负责快速兜底 markdown proof；涉及 sidebar、VuePress 插件或页面渲染时，仍然追加 `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build`。
 
 这条 preflight 的目标不是替代完整构建，而是在 agent 频繁改文档时，给“这次改动没有基础破损”留下可重复证据。
 

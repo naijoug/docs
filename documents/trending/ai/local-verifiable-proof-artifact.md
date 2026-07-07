@@ -33,6 +33,15 @@ order: 12
 
 如果只能写说明文档，先问：是否已经有一个脚本、测试、模板或样例可引用？没有的话，优先做 P0-P2。
 
+入口索引也可以有自己的 proof artifact。维护 `documents/trending/ai/README.md` 这类目录页时，先跑 markdown proof 兜底链接，再跑目录覆盖检查，确认 catalog 没有漏掉同目录页面：
+
+```bash
+python3 scripts/check-markdown-proof.py documents/trending/ai/README.md
+python3 scripts/check-ai-catalog.py
+```
+
+`check-ai-catalog.py` 只检查 `## catalog` 是否覆盖 `documents/trending/ai/` 下的同级 markdown 页面、是否有重复链接、是否指向缺失同级页面；跨目录链接、frontmatter 和绝对路径仍交给 [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)。
+
 ## 30 分钟执行板
 
 1. **写风险句**：本轮最可能破的是什么？例如“跨目录链接目标被移动后不会被发现”。

@@ -209,6 +209,20 @@ Decision: Continue
 Next evidence needed: 下一次优先用这张实验卡片指导另一个本地可验证交付物；只有真实断链、误报或漏报出现时才扩 checker 规则。
 ```
 
+## 2026-07-07 17:00
+
+```text
+Date: 2026-07-07 17:00
+Change target: scripts/check-ai-catalog.py + scripts/test-check-ai-catalog.py + README/catalog + local proof artifact note + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai
+Result before edit: markdown proof ok: checked 39 file(s)
+What changed: 新增 AI catalog 覆盖检查脚本和 stdlib 回归测试，把 `documents/trending/ai/README.md` 的 `## catalog` 从人工维护提升为可运行 proof：同级 markdown 页面必须被 catalog 覆盖，重复链接和缺失目标会失败；README preflight 与本地 proof artifact 清单都接入该命令。
+Verification after edit: python3 scripts/test-check-ai-catalog.py + python3 scripts/check-ai-catalog.py + python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/local-verifiable-proof-artifact.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 本轮没有继续扩通用 markdown checker，而是为入口索引做一个边界更窄的 proof artifact；测试覆盖正例、漏链、重复链接、缺失目标和 CLI 成功路径。
+Decision: Continue
+Next evidence needed: 下一次新增或删除 `documents/trending/ai/*.md` 时，优先观察 `check-ai-catalog.py` 是否能在提交前发现 README catalog 漏更新；如果未来目录页分组变化，再补最小 fixture，而不是把脚本扩成全站导航生成器。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
