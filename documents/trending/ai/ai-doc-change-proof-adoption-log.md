@@ -335,6 +335,20 @@ Decision: Continue
 Next evidence needed: 下一次新增 AI 文档时直接使用 `--changed-from HEAD --exclude AGENTS.md --list-files`，先核对文件列表，再决定是否需要 catalog proof 或 VuePress build。
 ```
 
+## 2026-07-08 03:00
+
+```text
+Date: 2026-07-08 03:00
+Change target: documents/trending/ai/ai-programmer-deliberate-practice-loop.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-asset-flywheel.md documents/trending/ai/agent-cron-delivery-budget-card.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `AI 程序员刻意练习闭环`，把 AI 时代程序员的能力提升拆成选能力、造小题、人先判断、agent 辅助、验证沉淀五步；README catalog 接入新页面，避免继续只围绕 checker 或 cron 模板自循环。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-deliberate-practice-loop.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮把“AI 时代程序员如何提升自己”落成可执行练习卡，而不是继续扩工具；新增同级 AI 文档继续用 catalog proof 和 changed-from list-files 证明检查集合。
+Decision: Continue
+Next evidence needed: 下一次优先试填一次练习卡，选一个 30-60 分钟小样本，并记录 `Human hypothesis before agent` 与真实验证结果。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
