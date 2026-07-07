@@ -307,6 +307,20 @@ Decision: Continue
 Next evidence needed: 下一次若使用 `--exclude`，必须在 notebook 里写明被排除文件为什么不属于本轮；如果经常需要排除同一类文件，改为更明确的 pathspec/owned-file workflow，而不是扩大默认忽略。
 ```
 
+## 2026-07-08 02:15
+
+```text
+Date: 2026-07-08 02:15
+Change target: scripts/check-markdown-proof.py + scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md + adoption log
+Preflight command: python3 scripts/test-check-markdown-proof.py && python3 scripts/test-check-ai-catalog.py && python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: check-markdown-proof regression tests ok: 17 test(s); check-ai-catalog regression tests ok: 4 test(s); markdown proof ok: checked 2 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 在 `--changed-from` 和 `--exclude` 之后补 `--list-files`，让 proof 输出可审计的实际检查集合，而不是只有 `checked N file(s)`；新增 CLI 回归测试验证 list 输出包含本轮 changed markdown、不会列出被 `--exclude` 排除的 dirty path；说明页把 changed-from 的最小 proof 更新为 `--list-files` 版本。
+Verification after edit: python3 scripts/test-check-markdown-proof.py && python3 scripts/test-check-ai-catalog.py && python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files && git diff --check -- scripts/check-markdown-proof.py scripts/test-check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: `--exclude` 解决了“不接管旧脏文件”的范围问题，`--list-files` 补上“证明检查集合”的审计问题；这是服务 dirty-worktree cron 的小闭环，不扩展 checker 规则本身。
+Decision: Continue
+Next evidence needed: 下一次真实 docs 改动优先使用 `--changed-from HEAD --exclude AGENTS.md --list-files`，并在 notebook 中核对列出的文件是否完全对应本轮交付。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

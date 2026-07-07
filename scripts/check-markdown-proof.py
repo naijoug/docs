@@ -157,6 +157,11 @@ def apply_excludes(files: Iterable[Path], root: Path, patterns: Iterable[str]) -
     return [path for path in files if not matches_exclude(path, root, patterns)]
 
 
+def render_file_list(files: Iterable[Path], root: Path) -> list[str]:
+    """Return stable root-relative POSIX paths for human-readable proof output."""
+    return [relative_posix(path, root) for path in sorted(files)]
+
+
 def mask_match_preserving_lines(match: re.Match[str]) -> str:
     """Mask ignored markdown spans while preserving offsets and line numbers."""
     return "".join("\n" if char == "\n" else " " for char in match.group(0))
@@ -320,6 +325,11 @@ def main() -> int:
         metavar="GLOB",
         help="Exclude root-relative markdown paths matching GLOB. May be repeated.",
     )
+    parser.add_argument(
+        "--list-files",
+        action="store_true",
+        help="Print the checked markdown file list before reporting issues or success.",
+    )
     args = parser.parse_args()
 
     root = args.root.resolve()
@@ -353,6 +363,11 @@ def main() -> int:
     issues: list[Issue] = []
     for file_path in unique_files:
         issues.extend(check_file(file_path, root))
+
+    if args.list_files:
+        print("markdown proof files:")
+        for rel_path in render_file_list(unique_files, root):
+            print(f"- {rel_path}")
 
     if issues:
         print(f"markdown proof failed: {len(issues)} issue(s) in {len(unique_files)} file(s)")

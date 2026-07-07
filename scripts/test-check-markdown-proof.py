@@ -436,6 +436,46 @@ Ignored dirty handoff link: [missing](missing.md).
     assert "AGENTS.md" not in result.stdout
 
 
+def test_cli_list_files_prints_checked_files_without_excluded_paths(root: Path) -> None:
+    subprocess.run(["git", "init"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    subprocess.run(["git", "config", "user.name", "tester"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.email", "tester@example.com"], cwd=root, check=True)
+
+    changed = root / "documents/trending/ai/changed.md"
+    ignored = root / "drafts/ignored.md"
+    write(root / "documents/trending/ai/README.md", valid_page("AI Index"))
+    write(changed, valid_page("Changed"))
+    write(ignored, valid_page("Ignored"))
+    subprocess.run(["git", "add", "documents", "drafts"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "baseline"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+
+    write(changed, valid_page("Changed Again"))
+    write(ignored, valid_page("Ignored Again"))
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--root",
+            str(root),
+            "--changed-from",
+            "HEAD",
+            "--exclude",
+            "drafts/**",
+            "--list-files",
+        ],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    assert result.returncode == 0, result
+    assert "markdown proof files:" in result.stdout
+    assert "- documents/trending/ai/changed.md" in result.stdout
+    assert "drafts/ignored.md" not in result.stdout
+    assert "markdown proof ok: checked 1 file(s)" in result.stdout
+
+
 def main() -> int:
     checker = load_checker()
     tests = [
@@ -456,6 +496,7 @@ def main() -> int:
         test_cli_changed_from_checks_only_changed_markdown,
         test_cli_changed_from_includes_untracked_markdown,
         test_cli_exclude_omits_matching_changed_markdown,
+        test_cli_list_files_prints_checked_files_without_excluded_paths,
     ]
 
     for test in tests:

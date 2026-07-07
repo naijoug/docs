@@ -60,6 +60,14 @@ python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md
 python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude 'summaries/**' --exclude 'drafts/*.md'
 ```
 
+如果 final report 或 notebook 需要证明“这次到底检查了哪些文件”，追加 `--list-files`，让输出先列出实际检查集合，再给出通过/失败结果：
+
+```bash
+python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+```
+
+这对 dirty worktree 尤其有用：`checked 2 file(s)` 只能证明数量，`--list-files` 能证明被排除的旧脏文件没有混进本轮 proof，也能发现本轮新增页面是否真的进入了检查集合。
+
 如果需要从其他目录调用，显式传入仓库根目录：
 
 ```bash
@@ -98,7 +106,7 @@ VuePress include 是另一类容易被 markdown 链接检查漏掉的引用：�
 | 改动类型 | 最小 proof | 追加验证 |
 | --- | --- | --- |
 | 只改 AI 目录内一两篇文档 | `python3 scripts/check-markdown-proof.py documents/trending/ai/changed.md` | 人工检查渲染预期 |
-| 已经有明确 git 基线，只想检查本轮文档改动 | `python3 scripts/check-markdown-proof.py --changed-from HEAD` | 确认输出列出的 tracked 与 untracked markdown 就是本轮要交付的文件；若存在已确认不接管的脏 markdown，可追加 `--exclude AGENTS.md` 这类显式排除 |
+| 已经有明确 git 基线，只想检查本轮文档改动 | `python3 scripts/check-markdown-proof.py --changed-from HEAD --list-files` | 确认输出列出的 tracked 与 untracked markdown 就是本轮要交付的文件；若存在已确认不接管的脏 markdown，可追加 `--exclude AGENTS.md` 这类显式排除 |
 | 改 checker 规则或 CLI 行为 | `python3 scripts/test-check-markdown-proof.py` + checker 覆盖目标文档 | 必要时补一个最小 fixture，再跑 docs build |
 | 新增目录入口、sidebar、主题配置 | checker 覆盖改动文档 | `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build` |
 | 改代码块、组件、VuePress 插件 | checker 只做路径兜底 | docs build + 页面预览 |
