@@ -16,6 +16,7 @@ index: false
 - [AI 编程验证优先工作流](verification-first-ai-coding.md)
 - [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)
 - [AI 程序员刻意练习闭环](ai-programmer-deliberate-practice-loop.md)
+- [AI 程序员刻意练习卡片填写样例](ai-programmer-deliberate-practice-card-example.md)
 - [把 Agent 心跳沉淀成付费 Offer](heartbeat-to-paid-offer.md)
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)

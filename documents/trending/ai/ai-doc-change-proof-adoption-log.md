@@ -349,6 +349,20 @@ Decision: Continue
 Next evidence needed: 下一次优先试填一次练习卡，选一个 30-60 分钟小样本，并记录 `Human hypothesis before agent` 与真实验证结果。
 ```
 
+## 2026-07-08 03:15
+
+```text
+Date: 2026-07-08 03:15
+Change target: documents/trending/ai/ai-programmer-deliberate-practice-card-example.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-deliberate-practice-loop.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 真实试填 `AI 程序员刻意练习闭环`，新增一张 30 分钟练习卡片填写样例，明确 `Human hypothesis before agent`、验证命令、范围 proof 和下一次代码/脚本练习候选；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-deliberate-practice-loop.md documents/trending/ai/ai-programmer-deliberate-practice-card-example.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮不是继续扩 checker，而是用上一轮练习模板生成可复制样例；changed-from list-files 可证明新增页面、目录入口和采纳记录都在检查集合里。
+Decision: Continue
+Next evidence needed: 下一次优先换成代码或脚本样本，先写 human hypothesis，再用失败输出或回归测试验证 agent 提案是否真的改变方案。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
