@@ -363,6 +363,20 @@ Decision: Continue
 Next evidence needed: 下一次优先换成代码或脚本样本，先写 human hypothesis，再用失败输出或回归测试验证 agent 提案是否真的改变方案。
 ```
 
+## 2026-07-08 03:30
+
+```text
+Date: 2026-07-08 03:30
+Change target: documents/trending/ai/ai-programmer-script-change-drill-example.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-deliberate-practice-loop.md documents/trending/ai/ai-programmer-deliberate-practice-card-example.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 把本轮 `books/scripts/verify_tech_cards.py` 的真实脚本改动写成 `AI 程序员脚本改动练习样例`，记录 human hypothesis、agent proposal、验证命令、dirty path 边界和下一次 drill；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-script-change-drill-example.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮练习从文档模板推进到真实脚本改动，并把验证结果反哺为可复制样例；changed-from list-files 可证明新增页面、目录入口和采纳记录都在检查集合里。
+Decision: Continue
+Next evidence needed: 下一次如果继续练习，优先找一个失败输出或边界条件驱动的代码小题；不要为了练习而给已清晰的 wrapper 继续加功能。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
