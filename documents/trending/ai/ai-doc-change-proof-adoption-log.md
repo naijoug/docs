@@ -265,6 +265,20 @@ Decision: Switch
 Next evidence needed: 如果用户确认首发渠道和联系方式，再回到对应 offer 的 publish preflight；否则下一轮选择另一个本地可验证、可提交的小资产。
 ```
 
+## 2026-07-08 01:30
+
+```text
+Date: 2026-07-08 01:30
+Change target: documents/trending/ai/agent-cron-delivery-budget-card.md + README/catalog + local proof artifact note + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/local-verifiable-proof-artifact.md documents/trending/ai/agent-cron-dirty-worktree-boundary.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `Agent Cron 交付预算卡`，把无人值守节拍的 15-45 分钟预算、候选任务评分、交付卡片模板、验证标准和停止条件写成可复用模板；README catalog 与本地 proof artifact 清单接入该页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/local-verifiable-proof-artifact.md documents/trending/ai/agent-cron-delivery-budget-card.md documents/trending/ai/ai-doc-change-proof-adoption-log.md + python3 scripts/check-ai-catalog.py
+Signal: 本轮把“不要只写 notebook”进一步落实到可执行预算卡，下一次 cron 可以先评分候选任务，再选择一个可验证小交付；新增同级 AI 文档继续用 catalog proof 防漏链。
+Decision: Continue
+Next evidence needed: 下一轮优先试用这张预算卡真实评分 2-3 个候选任务；若仍只是写总结，说明预算卡需要收窄到更硬的执行闸门。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
