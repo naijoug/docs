@@ -64,7 +64,7 @@ python3 scripts/check-markdown-proof.py --root docs documents/trending/ai
 markdown proof ok: checked 25 file(s)
 ```
 
-失败时会列出相对路径和具体问题，适合直接贴进 PR、agent final report 或 Hermes notebook。
+失败时会列出相对路径、行号和具体问题，适合直接贴进 PR、agent final report 或 Hermes notebook；行号会避开 fenced code / inline code 示例中的伪链接，降低“知道有问题但还要手动搜索”的接手成本。
 
 如果目标路径拼错或目录里没有 markdown，命令会以非 0 状态退出：
 
@@ -79,7 +79,7 @@ markdown proof failed: 1 target(s) not found
 python3 scripts/test-check-markdown-proof.py
 ```
 
-跨目录链接本身也应该进入 checker 覆盖范围：如果本页链接到脚本源码或回归测试，命令必须能从 `documents/trending/ai/` 解析到 `scripts/` 下的真实文件；链接路径一旦写错，应先修链接或补最小回归样例，而不是直接跳到 VuePress build。当前回归测试已覆盖“跨目录链接目标存在时通过、目标重命名后失败”的最小场景，也覆盖目录链接省略 `README.md` 后缀并携带 markdown title 时仍能解析、目标 README 被移动后应失败的场景。
+跨目录链接本身也应该进入 checker 覆盖范围：如果本页链接到脚本源码或回归测试，命令必须能从 `documents/trending/ai/` 解析到 `scripts/` 下的真实文件；链接路径一旦写错，应先修链接或补最小回归样例，而不是直接跳到 VuePress build。当前回归测试已覆盖“跨目录链接目标存在时通过、目标重命名后失败”的最小场景，也覆盖目录链接省略 `README.md` 后缀并携带 markdown title 时仍能解析、目标 README 被移动后应失败的场景；失败输出还会带行号，便于在长文或 agent 日志中快速定位。
 
 VuePress include 是另一类容易被 markdown 链接检查漏掉的引用：例如算法页里的 `<!-- @include: @leetcode/problems/0x0000.md#0088 -->` 不会出现在普通 `[text](path)` 里。本 checker 现在会解析 include 文件目标和 `@leetcode` 别名；锚点仍交给 VuePress build 或人工检查，只把“目标文件不存在”作为轻量 preflight 的失败条件。
 

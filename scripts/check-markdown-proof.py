@@ -40,13 +40,24 @@ EXTERNAL_SCHEMES = (
 class Issue:
     path: Path
     message: str
+    line: int | None = None
 
     def render(self, root: Path) -> str:
         try:
             rel = self.path.relative_to(root)
         except ValueError:
             rel = self.path
-        return f"{rel}: {self.message}"
+        location = f"{rel}:{self.line}" if self.line is not None else str(rel)
+        return f"{location}: {self.message}"
+
+
+def line_number_at(text: str, offset: int) -> int:
+    """Return the 1-based line number for a character offset."""
+    return text.count("\n", 0, offset) + 1
+
+
+def issue_at(path: Path, text: str, offset: int, message: str) -> Issue:
+    return Issue(path, message, line_number_at(text, offset))
 
 
 def iter_markdown_files(target: Path) -> Iterable[Path]:
@@ -120,9 +131,14 @@ def collect_changed_markdown_files(base_ref: str, root: Path) -> tuple[list[Path
     return sorted(set(files)), None
 
 
+def mask_match_preserving_lines(match: re.Match[str]) -> str:
+    """Mask ignored markdown spans while preserving offsets and line numbers."""
+    return "".join("\n" if char == "\n" else " " for char in match.group(0))
+
+
 def strip_code_fences(text: str) -> str:
-    without_fences = re.sub(r"```.*?```", "", text, flags=re.DOTALL)
-    return re.sub(r"`[^`\n]+`", "", without_fences)
+    without_fences = re.sub(r"```.*?```", mask_match_preserving_lines, text, flags=re.DOTALL)
+    return re.sub(r"`[^`\n]+`", mask_match_preserving_lines, without_fences)
 
 
 def normalize_link(raw: str) -> str:
@@ -192,53 +208,60 @@ def check_file(path: Path, root: Path) -> list[Issue]:
         issues.append(Issue(path, "frontmatter missing title"))
 
     for match in FORBIDDEN_ABSOLUTE_RE.finditer(text):
-        issues.append(Issue(path, f"contains absolute user path `{match.group(0)}`"))
+        issues.append(issue_at(path, text, match.start(), f"contains absolute user path `{match.group(0)}`"))
 
     body = strip_code_fences(text)
-    for raw in LINK_RE.findall(body):
+    for match in LINK_RE.finditer(body):
+        raw = match.group(1)
         link = normalize_link(raw)
         if should_skip_link(link):
             continue
         if not local_link_exists(path, link, root):
-            issues.append(Issue(path, f"broken local link `{raw}`"))
+            issues.append(issue_at(path, text, match.start(1), f"broken local link `{raw}`"))
 
-    for raw in IMAGE_RE.findall(body):
+    for match in IMAGE_RE.finditer(body):
+        raw = match.group(1)
         link = normalize_link(raw)
         if should_skip_link(link):
             continue
         if not local_link_exists(path, link, root):
-            issues.append(Issue(path, f"broken local image `{raw}`"))
+            issues.append(issue_at(path, text, match.start(1), f"broken local image `{raw}`"))
 
     ref_defs: dict[str, str] = {}
     ref_def_sources: dict[str, str] = {}
-    for label, target in REF_DEF_RE.findall(body):
+    for match in REF_DEF_RE.finditer(body):
+        label, target = match.groups()
         ref_label = normalize_ref_label(label)
         if ref_label in ref_defs:
             issues.append(
-                Issue(
+                issue_at(
                     path,
+                    text,
+                    match.start(1),
                     f"duplicate reference link definition `[{label}]` also defined as `[{ref_def_sources[ref_label]}]`",
                 )
             )
             continue
         ref_defs[ref_label] = target
         ref_def_sources[ref_label] = label
-    for label, explicit_ref in REF_LINK_RE.findall(body):
+    for match in REF_LINK_RE.finditer(body):
+        label, explicit_ref = match.groups()
         ref_label = normalize_ref_label(explicit_ref or label)
         raw_ref = explicit_ref or label
         if ref_label not in ref_defs:
-            issues.append(Issue(path, f"missing reference link definition `[{raw_ref}]`"))
+            issues.append(issue_at(path, text, match.start(), f"missing reference link definition `[{raw_ref}]`"))
             continue
         link = normalize_link(ref_defs[ref_label])
         if should_skip_link(link):
             continue
         if not local_link_exists(path, link, root):
-            issues.append(Issue(path, f"broken reference link `[{raw_ref}]`: `{ref_defs[ref_label]}`"))
+            issues.append(issue_at(path, text, match.start(), f"broken reference link `[{raw_ref}]`: `{ref_defs[ref_label]}`"))
 
-    for raw in INCLUDE_RE.findall(body):
+    for match in INCLUDE_RE.finditer(body):
+        raw = match.group(1)
         include_path = resolve_include_path(raw, path, root)
         if not include_path.is_file():
-            issues.append(Issue(path, f"broken include `{raw}`"))
+            issues.append(issue_at(path, text, match.start(1), f"broken include `{raw}`"))
 
     return issues
 

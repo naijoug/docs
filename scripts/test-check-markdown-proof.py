@@ -75,6 +75,30 @@ This links to [missing](missing.md) and mentions /Users/example/project.
     assert any(message.startswith("contains absolute user path") for message in messages)
 
 
+def test_rendered_issues_include_line_numbers(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/line-numbers.md"
+    write(
+        page,
+        """---
+title: Line Numbers
+
+---
+
+```text
+[ignored](missing-in-code.md)
+```
+
+Valid prose first.
+Broken prose link: [missing](missing.md).
+""",
+    )
+
+    rendered = [issue.render(root) for issue in checker.check_file(page, root)]
+    assert rendered == [
+        "documents/trending/ai/line-numbers.md:11: broken local link `missing.md`"
+    ]
+
+
 def test_external_url_path_is_not_treated_as_absolute_user_path(checker, root: Path) -> None:
     page = root / "documents/trending/ai/external-url.md"
     write(
@@ -371,6 +395,7 @@ def main() -> int:
     tests = [
         test_valid_page_and_relative_link,
         test_reports_broken_link_and_absolute_user_path,
+        test_rendered_issues_include_line_numbers,
         test_external_url_path_is_not_treated_as_absolute_user_path,
         test_reports_broken_local_image_without_treating_it_as_link,
         test_reference_style_links_check_missing_defs_and_local_targets,

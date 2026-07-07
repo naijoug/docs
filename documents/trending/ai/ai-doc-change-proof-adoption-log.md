@@ -279,6 +279,20 @@ Decision: Continue
 Next evidence needed: 下一轮优先试用这张预算卡真实评分 2-3 个候选任务；若仍只是写总结，说明预算卡需要收窄到更硬的执行闸门。
 ```
 
+## 2026-07-08 01:45
+
+```text
+Date: 2026-07-08 01:45
+Change target: scripts/check-markdown-proof.py + scripts/test-check-markdown-proof.py + documents/trending/ai/ai-doc-change-proof-checker.md + adoption log
+Preflight command: python3 scripts/test-check-markdown-proof.py && python3 scripts/test-check-ai-catalog.py && python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/local-verifiable-proof-artifact.md && python3 scripts/check-ai-catalog.py
+Result before edit: check-markdown-proof regression tests ok: 15 test(s); check-ai-catalog regression tests ok: 4 test(s); markdown proof ok: checked 2 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 按 01:30 的预算卡真实评分后，选择一个 P0/P1 小交付：checker 失败输出现在带 1-based 行号，并用保持换行/offset 的 masking 跳过 fenced code 与 inline code；新增回归测试验证代码块里的伪链接不报错、正文断链输出 `path:line`。
+Verification after edit: python3 scripts/test-check-markdown-proof.py && python3 scripts/test-check-ai-catalog.py && python3 scripts/check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/local-verifiable-proof-artifact.md && python3 scripts/check-ai-catalog.py && git diff --check -- scripts/check-markdown-proof.py scripts/test-check-markdown-proof.py documents/trending/ai/ai-doc-change-proof-checker.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 这是对 checker 的可验证小修：失败报告从“知道哪个文件坏了”变成“能直接跳到哪一行”，有最小 fixture 支撑；没有扩大到锚点、sidebar 或 VuePress 渲染检查。
+Decision: Continue
+Next evidence needed: 下一次若 checker 在真实长文里发现断链，观察行号是否能减少定位成本；若遇到代码块 masking 误差，再补最小 fixture，不扩成通用 markdown parser。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
