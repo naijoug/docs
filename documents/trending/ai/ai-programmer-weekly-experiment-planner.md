@@ -75,7 +75,7 @@ Next evidence needed:
 Decision: Continue / Narrow / Stop / Switch
 ```
 
-填写时只写可验证事实：例如“`docs` 构建通过”“某个 PR 评论要求补测试”“脚本在 fixture 上输出 3 个缺失链接”。不要写“市场应该需要”“大家可能会喜欢”。
+填写时只写可验证事实：例如“`docs` 构建通过”“某个 PR 评论要求补测试”“脚本在 fixture 上输出 3 个缺失链接”。不要写“市场应该需要”“大家可能会喜欢”。如果不知道粒度，可以先参考 [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)：它演示了没有外部渠道时，如何把一次本地 proof 文档改动写成 `Continue`，同时保留停止条件。
 
 如果实验是 AI 编程审查收入实验，在卡片下面追加一行结果表，方便回填到 [AI 编程审查路线图](ai-coding-audit-roadmap.md)：
 

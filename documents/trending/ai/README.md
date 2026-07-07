@@ -17,6 +17,7 @@ index: false
 - [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)
 - [把 Agent 心跳沉淀成付费 Offer](heartbeat-to-paid-offer.md)
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
+- [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)

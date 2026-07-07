@@ -195,6 +195,20 @@ Decision: Continue
 Next evidence needed: 下一次只在真实文档写法或 checker 误报/漏报暴露新边界时再补规则；没有新失败样例时，优先用现有 explicit-target checker 或在干净工作区使用 `--changed-from HEAD` 做交付 proof。
 ```
 
+## 2026-07-07 16:00
+
+```text
+Date: 2026-07-07 16:00
+Change target: documents/trending/ai/ai-programmer-weekly-experiment-card-proof-artifact-example.md + README/catalog + weekly planner + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-weekly-experiment-planner.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Result before edit: markdown proof ok: checked 3 file(s)
+What changed: 新增每周实验卡片填写样例，把“没有外部渠道时如何选择本地可验证 proof artifact”写成一张完整 `Continue` 卡片；README catalog 和 weekly planner 都接入该样例。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-weekly-experiment-planner.md documents/trending/ai/ai-programmer-weekly-experiment-card-proof-artifact-example.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: checker 在真实新增页面 + 修改入口页场景中继续作为显式目标 proof 使用；本轮没有新增 checker 规则，也没有依赖受既有 dirty `AGENTS.md` 干扰的 `--changed-from HEAD`。
+Decision: Continue
+Next evidence needed: 下一次优先用这张实验卡片指导另一个本地可验证交付物；只有真实断链、误报或漏报出现时才扩 checker 规则。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
