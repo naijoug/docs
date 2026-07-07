@@ -19,6 +19,7 @@ index: false
 - [AI 程序员刻意练习卡片填写样例](ai-programmer-deliberate-practice-card-example.md)
 - [AI 程序员脚本改动练习样例](ai-programmer-script-change-drill-example.md)
 - [AI 编程中的假设-验证教程](human-hypothesis-validation-ai-coding.md)
+- [失败输出驱动的 AI 编程练习样例](failure-output-driven-ai-coding-drill.md)
 - [把 Agent 心跳沉淀成付费 Offer](heartbeat-to-paid-offer.md)
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)

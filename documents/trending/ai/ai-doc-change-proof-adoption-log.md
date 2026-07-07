@@ -391,6 +391,21 @@ Decision: Continue
 Next evidence needed: 下一次优先用教程模板处理一个新的真实失败输出或边界条件；如果没有代码小题，则把教程提炼成可复用 skill，但必须先确认 `skills/` dirty path 归属。
 ```
 
+## 2026-07-08 04:16
+
+```text
+Date: 2026-07-08 04:16
+Change target: documents/trending/ai/failure-output-driven-ai-coding-drill.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/human-hypothesis-validation-ai-coding.md documents/trending/ai/ai-programmer-script-change-drill-example.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+Failure sample: 临时文件 `_scratch-failure-output-drill.md` 触发 `markdown proof failed: 1 issue(s) in 1 file(s)`，并定位到 `documents/trending/ai/_scratch-failure-output-drill.md:13: broken local link `missing-proof-target.md``；样本随后删除，不进入提交。
+What changed: 新增 `失败输出驱动的 AI 编程练习样例`，把 04:00 教程中的 next drill 变成一次真实失败输出练习：先写 human hypothesis，再用断链失败证明 checker 已足够定位，最后选择沉淀样例而不是继续扩工具；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/failure-output-driven-ai-coding-drill.md documents/trending/ai/human-hypothesis-validation-ai-coding.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮让失败输出直接改变计划：因为已有 `path:line`，所以不改 checker，只沉淀可复制练习；changed-from list-files 需要证明临时失败样本未混入本轮真实检查集合。
+Decision: Continue
+Next evidence needed: 下一次优先寻找真实项目里的非临时边界条件；如果失败输出已经足够定位，不再扩工具，直接做最小修复或资产化复盘。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
