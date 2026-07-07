@@ -377,6 +377,20 @@ Decision: Continue
 Next evidence needed: 下一次如果继续练习，优先找一个失败输出或边界条件驱动的代码小题；不要为了练习而给已清晰的 wrapper 继续加功能。
 ```
 
+## 2026-07-08 04:00
+
+```text
+Date: 2026-07-08 04:00
+Change target: documents/trending/ai/human-hypothesis-validation-ai-coding.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-programmer-deliberate-practice-loop.md documents/trending/ai/ai-programmer-script-change-drill-example.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `AI 编程中的假设-验证教程`，把 03:30 脚本练习与 03:45 书稿卡片抽成面向 AI 程序员的三段式教程：先写 human hypothesis，再让 agent 做最小可验证改变，最后用 Continue / Narrow / Stop / Switch 更新判断；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/human-hypothesis-validation-ai-coding.md documents/trending/ai/ai-programmer-script-change-drill-example.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮把真实练习和书稿抽象转成可执行教程，不再继续扩 checker 或 wrapper；changed-from list-files 可证明新增页面、目录入口和采纳记录都在检查集合里。
+Decision: Continue
+Next evidence needed: 下一次优先用教程模板处理一个新的真实失败输出或边界条件；如果没有代码小题，则把教程提炼成可复用 skill，但必须先确认 `skills/` dirty path 归属。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
