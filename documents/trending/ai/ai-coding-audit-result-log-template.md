@@ -42,7 +42,7 @@ Follow-up action:
 Asset destination:
 ```
 
-如果还没有真实首份报告，只收到一条“有痛点但证据不足”的回复，先参考 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md) 填成 `Narrow`，不要把它写成已验证案例。
+如果还没有真实首份报告，只收到一条“有痛点但证据不足”的回复，先参考 [AI 编程审查 Audit Result 填写样例](ai-coding-audit-result-log-filled-example.md) 或 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md) 填成 `Narrow`，不要把它写成已验证案例。
 
 字段写法：
 

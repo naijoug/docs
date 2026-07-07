@@ -31,7 +31,7 @@ order: 41
 | 2. 收束回复 | 把热情回复变成目标、范围、证据和公开边界 | [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) | 能写出目标、范围、证据、边界、期望输出 | 对方只要求“帮我看看整个项目” |
 | 3. 补最小证据 | 拿到 5 项可复核材料 | [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md) | 有命令、状态、失败摘要、agent 结论、改动范围 | 只能提供截图、私有日志或二手转述 |
 | 4. 交付首份报告 | 做 30-60 分钟只读审查，不承诺修复 | [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) | 能给出事实、推断、未验证项和下一条安全命令 | 证据不足，只能交付 `Next evidence needed` |
-| 5. 写入结果 | 判断是否继续、收窄或停止 | [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) | 决策能被输入证据支撑 | 决策只由热度或主观感觉支撑 |
+| 5. 写入结果 | 判断是否继续、收窄或停止 | [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md)；证据不足时参考 [AI 编程审查 Audit Result 填写样例](ai-coding-audit-result-log-filled-example.md) | 决策能被输入证据支撑 | 决策只由热度或主观感觉支撑 |
 | 6. 发布后观察 | 记录痛点原话、证据形状、边界和下一条证据 | [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) | 有可复查观察记录 | 只有浏览量、点赞或收藏 |
 | 7. 沉淀资产 | 决定是否写文章、模板、技能、书稿或服务 offer | [AI 编程审查观察到执行技能清单](ai-coding-audit-observation-to-skill-checklist.md) | 同类问题重复出现，且输入输出稳定 | 只有一条脱敏样例或一次兴趣反馈 |
 
@@ -90,4 +90,4 @@ Pass means：下一次心跳能从这张表直接判断该发样本征集、证�
 
 Fail means：仍然需要在多篇文档之间搜索入口，或者在证据不足时继续写新文档。
 
-Next evidence needed：至少一条真实或脱敏样本，把第 3 步到第 5 步跑完并写入结果表。
+Next evidence needed：至少一条真实或脱敏样本，把第 3 步到第 5 步跑完并写入结果表；没有足够证据时，先用 `ai-coding-audit-result-log-filled-example.md` 记录 `Narrow`，不要继续扩路线图。
