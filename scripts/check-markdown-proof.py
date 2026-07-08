@@ -162,6 +162,15 @@ def render_file_list(files: Iterable[Path], root: Path) -> list[str]:
     return [relative_posix(path, root) for path in sorted(files)]
 
 
+def is_inside_root(path: Path, root: Path) -> bool:
+    """Return whether path resolves inside the docs repository root."""
+    try:
+        path.resolve().relative_to(root.resolve())
+    except ValueError:
+        return False
+    return True
+
+
 def mask_match_preserving_lines(match: re.Match[str]) -> str:
     """Mask ignored markdown spans while preserving offsets and line numbers."""
     return "".join("\n" if char == "\n" else " " for char in match.group(0))
@@ -211,7 +220,7 @@ def local_link_exists(source: Path, link: str, root: Path) -> bool:
             candidate / "README.md",
             candidate / "index.md",
         ])
-    return any(path.is_file() for path in candidates)
+    return any(is_inside_root(path, root) and path.is_file() for path in candidates)
 
 
 def resolve_include_path(raw: str, source: Path, root: Path) -> Path:
@@ -291,7 +300,7 @@ def check_file(path: Path, root: Path) -> list[Issue]:
     for match in INCLUDE_RE.finditer(body):
         raw = match.group(1)
         include_path = resolve_include_path(raw, path, root)
-        if not include_path.is_file():
+        if not is_inside_root(include_path, root) or not include_path.is_file():
             issues.append(issue_at(path, text, match.start(1), f"broken include `{raw}`"))
 
     return issues

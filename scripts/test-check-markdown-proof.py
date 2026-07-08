@@ -294,6 +294,44 @@ Document the syntax `Use [label](path)` and `<!-- @include: ... -->` without che
     assert checker.check_file(page, root) == []
 
 
+def test_local_links_must_not_escape_repo_root(checker, root: Path) -> None:
+    external = root.parent / "outside-target.md"
+    write(external, valid_page("Outside"))
+    page = root / "documents/trending/ai/escape-link.md"
+    write(
+        page,
+        """---
+title: Escape Link
+
+---
+
+This must not pass just because [outside](../../../../outside-target.md) exists.
+""",
+    )
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "broken local link `../../../../outside-target.md`" in messages
+
+
+def test_includes_must_not_escape_repo_root(checker, root: Path) -> None:
+    external = root.parent / "outside-include.md"
+    write(external, valid_page("Outside Include"))
+    page = root / "documents/trending/ai/escape-include.md"
+    write(
+        page,
+        """---
+title: Escape Include
+
+---
+
+<!-- @include: ../../../../outside-include.md -->
+""",
+    )
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "broken include `../../../../outside-include.md`" in messages
+
+
 def test_cli_fails_for_missing_target(root: Path) -> None:
     result = subprocess.run(
         [sys.executable, str(SCRIPT), "--root", str(root), "documents/trending/ai/missing.md"],
@@ -491,6 +529,8 @@ def main() -> int:
         test_directory_readme_link_without_suffix_and_markdown_title,
         test_vuepress_include_alias_reports_missing_target,
         test_inline_code_examples_are_not_links_or_includes,
+        test_local_links_must_not_escape_repo_root,
+        test_includes_must_not_escape_repo_root,
         test_cli_fails_for_missing_target,
         test_cli_fails_when_no_markdown_matched,
         test_cli_changed_from_checks_only_changed_markdown,
