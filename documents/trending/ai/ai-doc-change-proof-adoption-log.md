@@ -448,6 +448,20 @@ Decision: Continue
 Next evidence needed: 下一次新增 AI 文档时观察 catalog proof 的行号是否足够定位；若足够，不再扩 checker，改选新的 repo/命令真实边界或本地 proof。
 ```
 
+## 2026-07-08 13:00
+
+```text
+Date: 2026-07-08 13:00
+Change target: documents/trending/ai/monorepo-test-entrypoint-drift.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/real-boundary-task-radar.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `Monorepo 测试入口漂移检查`，把 11:02-12:00 暴露的 workspace-level Vitest alias / stale dist 边界沉淀成 5 分钟雷达、执行顺序、练习卡片和跨包 Vitest 示例；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/monorepo-test-entrypoint-drift.md documents/trending/ai/real-boundary-task-radar.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮没有继续扩 manifest search，而是把真实失败入口抽象为可复用检查，要求 future agent 同时记录 cwd、source-vs-dist 判断和同一失败入口的红绿变化。
+Decision: Continue
+Next evidence needed: 下一次若遇到跨包测试、package script 与 workspace command 不一致，先填本页练习卡；若没有真实失败输出或风险入口，不继续扩测试配置。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

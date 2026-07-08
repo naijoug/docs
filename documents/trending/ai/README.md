@@ -21,6 +21,7 @@ index: false
 - [AI 编程中的假设-验证教程](human-hypothesis-validation-ai-coding.md)
 - [失败输出驱动的 AI 编程练习样例](failure-output-driven-ai-coding-drill.md)
 - [AI 程序员真实边界任务雷达](real-boundary-task-radar.md)
+- [Monorepo 测试入口漂移检查](monorepo-test-entrypoint-drift.md)
 - [把 Agent 心跳沉淀成付费 Offer](heartbeat-to-paid-offer.md)
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)
