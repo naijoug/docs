@@ -434,6 +434,20 @@ Decision: Switch
 Next evidence needed: 下一次先给 3 个候选任务按本页打分；如果最高分仍缺真实边界或需要接管未知 dirty path，停止扩写并换一个本地可验证小任务。
 ```
 
+## 2026-07-08 08:30
+
+```text
+Date: 2026-07-08 08:30
+Change target: scripts/check-ai-catalog.py + scripts/test-check-ai-catalog.py + local proof artifact note + adoption log
+Preflight command: python3 scripts/test-check-ai-catalog.py && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Result before edit: check-ai-catalog regression tests ok: 4 test(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages; changed-from proof exited 2 with `markdown proof failed: no markdown files changed since HEAD` after excluding existing unrelated `AGENTS.md`.
+What changed: 给 `check-ai-catalog.py` 的 duplicate/missing target 失败输出补 `documents/trending/ai/README.md:line` 定位；新增 CLI 失败回归测试，证明重复目录链接和缺失同级页面都会指向 README 的具体行；更新本地 proof artifact 说明。
+Verification after edit: python3 scripts/test-check-ai-catalog.py && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py documents/trending/ai/local-verifiable-proof-artifact.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files && git diff --check -- scripts/check-ai-catalog.py scripts/test-check-ai-catalog.py documents/trending/ai/local-verifiable-proof-artifact.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 本轮只修一个真实定位边界：目录 proof 已能发现问题，但缺少 README 行号会增加人工查找成本；没有扩成全站导航检查器。
+Decision: Continue
+Next evidence needed: 下一次新增 AI 文档时观察 catalog proof 的行号是否足够定位；若足够，不再扩 checker，改选新的 repo/命令真实边界或本地 proof。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

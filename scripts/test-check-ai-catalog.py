@@ -80,8 +80,28 @@ def test_missing_target_and_duplicate_catalog_link_are_reported(checker, root: P
     write(ai_dir / "one.md", page("One"))
 
     messages = [issue.message for issue in checker.check_ai_catalog(root)]
-    assert "duplicate catalog link `one.md`" in messages
+    assert "duplicate catalog link `one.md` (also on line 10)" in messages
     assert "catalog link points to missing page `missing.md`" in messages
+
+
+def test_cli_failure_reports_readme_line_numbers(root: Path) -> None:
+    ai_dir = root / "documents/trending/ai"
+    write(
+        ai_dir / "README.md",
+        readme("- [One](one.md)\n- [Again](one.md)\n- [Missing](missing.md)"),
+    )
+    write(ai_dir / "one.md", page("One"))
+
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), "--root", str(root)],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    assert result.returncode == 1, result
+    assert "documents/trending/ai/README.md:11: duplicate catalog link `one.md`" in result.stdout
+    assert "documents/trending/ai/README.md:12: catalog link points to missing page `missing.md`" in result.stdout
 
 
 def test_cli_success(root: Path) -> None:
@@ -106,6 +126,7 @@ def main() -> int:
         test_valid_catalog_covers_sibling_pages,
         test_missing_catalog_entry_is_reported,
         test_missing_target_and_duplicate_catalog_link_are_reported,
+        test_cli_failure_reports_readme_line_numbers,
         test_cli_success,
     ]
 

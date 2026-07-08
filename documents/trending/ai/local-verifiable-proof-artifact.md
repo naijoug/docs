@@ -40,7 +40,7 @@ python3 scripts/check-markdown-proof.py documents/trending/ai/README.md
 python3 scripts/check-ai-catalog.py
 ```
 
-`check-ai-catalog.py` 只检查 `## catalog` 是否覆盖 `documents/trending/ai/` 下的同级 markdown 页面、是否有重复链接、是否指向缺失同级页面；跨目录链接、frontmatter 和绝对路径仍交给 [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)。
+`check-ai-catalog.py` 只检查 `## catalog` 是否覆盖 `documents/trending/ai/` 下的同级 markdown 页面、是否有重复链接、是否指向缺失同级页面；重复链接和缺失目标会输出 `documents/trending/ai/README.md:line`，便于直接定位目录入口。跨目录链接、frontmatter 和绝对路径仍交给 [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)。
 
 ## 30 分钟执行板
 

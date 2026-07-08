@@ -23,6 +23,13 @@ LOCAL_MD_LINK_RE = re.compile(r"\[[^\]\n]+\]\(([^)\n]+\.md)(?:#[^)\n]+)?\)")
 @dataclass(frozen=True)
 class CatalogIssue:
     message: str
+    line: int | None = None
+
+
+@dataclass(frozen=True)
+class CatalogLink:
+    target: str
+    line: int
 
 
 def normalize_catalog_link(raw: str) -> str:
@@ -43,15 +50,35 @@ def extract_catalog_section(text: str) -> str | None:
     return text[start_match.end() : end]
 
 
-def collect_catalog_links(readme: Path) -> tuple[list[str], list[CatalogIssue]]:
-    text = readme.read_text(encoding="utf-8")
-    section = extract_catalog_section(text)
-    if section is None:
-        return [], [CatalogIssue("README.md missing `## catalog` section")]
+def line_number_at(text: str, offset: int) -> int:
+    return text.count("\n", 0, offset) + 1
 
-    links = [normalize_catalog_link(match) for match in LOCAL_MD_LINK_RE.findall(section)]
-    duplicates = sorted({link for link in links if links.count(link) > 1})
-    issues = [CatalogIssue(f"duplicate catalog link `{link}`") for link in duplicates]
+
+def collect_catalog_links(readme: Path) -> tuple[list[CatalogLink], list[CatalogIssue]]:
+    text = readme.read_text(encoding="utf-8")
+    start_match = CATALOG_HEADING_RE.search(text)
+    if start_match is None:
+        return [], [CatalogIssue("README.md missing `## catalog` section")]
+    next_match = NEXT_H2_RE.search(text, start_match.end())
+    end = next_match.start() if next_match is not None else len(text)
+    section = text[start_match.end() : end]
+
+    links = [
+        CatalogLink(
+            normalize_catalog_link(match.group(1)),
+            line_number_at(text, start_match.end() + match.start(1)),
+        )
+        for match in LOCAL_MD_LINK_RE.finditer(section)
+    ]
+    counts = {link.target: [item.line for item in links if item.target == link.target] for link in links}
+    duplicates = sorted(target for target, lines in counts.items() if len(lines) > 1)
+    issues = [
+        CatalogIssue(
+            f"duplicate catalog link `{target}` (also on line {counts[target][0]})",
+            counts[target][1],
+        )
+        for target in duplicates
+    ]
     return links, issues
 
 
@@ -62,7 +89,8 @@ def check_ai_catalog(root: Path) -> list[CatalogIssue]:
         return [CatalogIssue("documents/trending/ai/README.md not found")]
 
     links, issues = collect_catalog_links(readme)
-    linked = set(links)
+    linked = {link.target for link in links}
+    first_line_by_link = {link.target: link.line for link in links}
     expected = sorted(path.name for path in ai_dir.glob("*.md") if path.name != "README.md")
 
     for name in expected:
@@ -75,7 +103,12 @@ def check_ai_catalog(root: Path) -> list[CatalogIssue]:
         if "/" in link:
             continue
         if not (ai_dir / link).is_file():
-            issues.append(CatalogIssue(f"catalog link points to missing page `{link}`"))
+            issues.append(
+                CatalogIssue(
+                    f"catalog link points to missing page `{link}`",
+                    first_line_by_link.get(link),
+                )
+            )
 
     return issues
 
@@ -97,7 +130,8 @@ def main() -> int:
     if issues:
         print(f"AI catalog proof failed: {len(issues)} issue(s)")
         for issue in issues:
-            print(f"- {issue.message}")
+            prefix = f"documents/trending/ai/README.md:{issue.line}: " if issue.line else ""
+            print(f"- {prefix}{issue.message}")
         return 1
 
     print("AI catalog proof ok: README catalog covers all sibling AI markdown pages")
