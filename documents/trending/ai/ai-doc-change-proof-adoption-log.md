@@ -462,6 +462,20 @@ Decision: Continue
 Next evidence needed: 下一次若遇到跨包测试、package script 与 workspace command 不一致，先填本页练习卡；若没有真实失败输出或风险入口，不继续扩测试配置。
 ```
 
+## 2026-07-08 20:00
+
+```text
+Date: 2026-07-08 20:00
+Change target: documents/trending/ai/ai-coding-agent-tool-intake-scorecard.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/real-boundary-task-radar.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers all sibling AI markdown pages
+What changed: 新增 `AI 编程 Agent 工具引入评分卡`，把外部 AI coding agent 榜单/发布信息转成 15 分钟 intake、10 分评分表、sandbox 对照实验模板和停止条件；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-coding-agent-tool-intake-scorecard.md documents/trending/ai/real-boundary-task-radar.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
+Signal: 本轮没有追逐具体工具榜单，而是把信息扫描转成可复跑的本地对照实验；只有命中真实痛点、可复跑样本和验证指标时才试用新工具。
+Decision: Continue
+Next evidence needed: 下一次若看到具体 coding agent 工具变化，先用本页评分；低于 5 分只记录，不迁移默认工具。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

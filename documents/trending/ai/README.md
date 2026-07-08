@@ -61,6 +61,7 @@ index: false
 - [2026 提示词工程高级技巧](advanced-prompt-engineering-2026.md)
 - [2026 本地大模型部署实战](local-llm-deployment-2026.md)
 - [2026 AI 工具全景图](ai-tools-landscape-2026.md)
+- [AI 编程 Agent 工具引入评分卡](ai-coding-agent-tool-intake-scorecard.md)
 - [2026 AI Agent 个人效率系统实战指南](ai-agent-productivity-system-2026.md)
 
 ## 30-minute AI coding audit entry
