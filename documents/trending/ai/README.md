@@ -26,6 +26,7 @@ index: false
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)
 - [渠道未授权时的收入实验切换卡](income-experiment-switch-without-channel.md)
+- [无链接先验证：没有支付入口时的产品首发动作](no-link-validation-before-launch.md)
 - [单渠道 Offer 发布 Preflight](single-channel-offer-publish-preflight.md)
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md)
@@ -34,6 +35,7 @@ index: false
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)
+- [先确认 Green Baseline，再切换资产任务](green-baseline-before-asset-switch.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)（没有真实样本前先跑下面的 30 分钟实验，不要直接扩服务页）
 - [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)
 - [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md)
