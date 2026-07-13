@@ -281,6 +281,32 @@ title: Sort
     assert "broken include `@leetcode/problems/0x0000.md#0088`" in messages
 
 
+def test_vuepress_include_line_ranges_use_existing_file_target(checker, root: Path) -> None:
+    source = root / "documents/frontend/web/tool/vuepress-theme-hope.md"
+    target = root / "documents/frontend/web/tool/snippet.md"
+    write(target, valid_page("Snippet"))
+    write(
+        source,
+        """---
+title: VuePress Theme Hope
+
+---
+
+<!-- @include: ./snippet.md{2-4} -->
+<!-- @include: ./snippet.md{-4} -->
+<!-- @include: ./snippet.md{2-} -->
+""",
+    )
+
+    assert checker.check_file(source, root) == []
+
+    target.rename(root / "documents/frontend/web/tool/snippet-renamed.md")
+    messages = [issue.message for issue in checker.check_file(source, root)]
+    assert "broken include `./snippet.md{2-4}`" in messages
+    assert "broken include `./snippet.md{-4}`" in messages
+    assert "broken include `./snippet.md{2-}`" in messages
+
+
 def test_inline_code_examples_are_not_links_or_includes(checker, root: Path) -> None:
     page = root / "documents/trending/ai/checker.md"
     write(
@@ -555,6 +581,7 @@ def main() -> int:
         test_cross_directory_link_fails_after_target_rename,
         test_directory_readme_link_without_suffix_and_markdown_title,
         test_vuepress_include_alias_reports_missing_target,
+        test_vuepress_include_line_ranges_use_existing_file_target,
         test_inline_code_examples_are_not_links_or_includes,
         test_local_links_must_not_escape_repo_root,
         test_includes_must_not_escape_repo_root,

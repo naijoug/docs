@@ -224,8 +224,16 @@ def local_link_exists(source: Path, link: str, root: Path) -> bool:
     return any(is_inside_root(path, root) and path.is_file() for path in candidates)
 
 
-def resolve_include_path(raw: str, source: Path, root: Path) -> Path:
+def normalize_include_target(raw: str) -> str:
+    """Return the filesystem target for a VuePress @include directive."""
     include = raw.strip().split("#", 1)[0]
+    # VuePress supports line-range suffixes such as `./snippet.md{2-4}`.
+    # The suffix selects lines from an existing file; it is not part of the path.
+    return re.sub(r"\{\d*-?\d*\}\Z", "", include)
+
+
+def resolve_include_path(raw: str, source: Path, root: Path) -> Path:
+    include = normalize_include_target(raw)
     for alias, replacement in PATH_ALIASES.items():
         if include == alias:
             return root / replacement
