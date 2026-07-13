@@ -113,6 +113,12 @@ def check_ai_catalog(root: Path) -> list[CatalogIssue]:
     return issues
 
 
+def count_sibling_ai_pages(root: Path) -> int:
+    """Return the number of sibling AI markdown pages expected in the catalog."""
+    ai_dir = root / "documents/trending/ai"
+    return sum(1 for path in ai_dir.glob("*.md") if path.name != "README.md")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Check documents/trending/ai/README.md catalog coverage.",
@@ -134,7 +140,11 @@ def main() -> int:
             print(f"- {prefix}{issue.message}")
         return 1
 
-    print("AI catalog proof ok: README catalog covers all sibling AI markdown pages")
+    page_count = count_sibling_ai_pages(root)
+    print(
+        "AI catalog proof ok: "
+        f"README catalog covers {page_count} sibling AI markdown page(s)"
+    )
     return 0
 
 

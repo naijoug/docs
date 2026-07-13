@@ -117,7 +117,7 @@ def test_cli_success(root: Path) -> None:
         check=False,
     )
     assert result.returncode == 0, result
-    assert "AI catalog proof ok" in result.stdout
+    assert "AI catalog proof ok: README catalog covers 1 sibling AI markdown page(s)" in result.stdout
 
 
 def main() -> int:
