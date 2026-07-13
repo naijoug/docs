@@ -165,10 +165,33 @@ Also use a shortcut [Target][].
 
     messages = [issue.message for issue in checker.check_file(page, root)]
     assert "missing reference link definition `[missing-def]`" in messages
-    assert "broken reference link `[broken]`: `missing.md`" in messages
+    assert "broken reference link `[broken]`: `missing.md \"Missing target\"`" in messages
     assert not any("[Good Local]" in message for message in messages)
     assert not any("[ext]" in message for message in messages)
     assert not any("[Target]" in message for message in messages)
+
+
+def test_reference_style_links_allow_angle_destinations_with_spaces(checker, root: Path) -> None:
+    page = root / "documents/trending/ai/angle-references.md"
+    target = root / "documents/trending/ai/reference notes.md"
+    write(target, valid_page("Reference Notes"))
+    write(
+        page,
+        """---
+title: Angle References
+
+---
+
+Use [notes][notes] and [broken][broken].
+
+[notes]: <reference notes.md> "Reference notes"
+[broken]: <missing notes.md> "Missing notes"
+""",
+    )
+
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "broken reference link `[broken]`: `<missing notes.md> \"Missing notes\"`" in messages
+    assert not any("[notes]" in message for message in messages)
 
 
 def test_reference_style_links_report_duplicate_definitions(checker, root: Path) -> None:
@@ -576,6 +599,7 @@ def main() -> int:
         test_external_url_path_is_not_treated_as_absolute_user_path,
         test_reports_broken_local_image_without_treating_it_as_link,
         test_reference_style_links_check_missing_defs_and_local_targets,
+        test_reference_style_links_allow_angle_destinations_with_spaces,
         test_reference_style_links_report_duplicate_definitions,
         test_indented_reference_definitions_are_checked,
         test_cross_directory_link_fails_after_target_rename,

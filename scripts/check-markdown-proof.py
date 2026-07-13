@@ -20,7 +20,7 @@ from typing import Iterable
 LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)")
 IMAGE_RE = re.compile(r"!\[[^\]\n]*\]\(([^)\n]+)\)")
 REF_LINK_RE = re.compile(r"(?<!!)\[([^\]\n]+)\]\[([^\]\n]*)\]")
-REF_DEF_RE = re.compile(r"^ {0,3}\[([^\]\n]+)\]:\s+(\S+)", re.MULTILINE)
+REF_DEF_RE = re.compile(r"^ {0,3}\[([^\]\n]+)\]:\s+(.+)$", re.MULTILINE)
 INCLUDE_RE = re.compile(r"<!--\s*@include:\s+([^\s]+)")
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 TITLE_RE = re.compile(r"^title:\s*\S+", re.MULTILINE)
@@ -183,11 +183,15 @@ def strip_code_fences(text: str) -> str:
 
 def normalize_link(raw: str) -> str:
     link = raw.strip()
-    if " " in link and not link.startswith("<"):
-        # Drop optional markdown title: [x](path "title")
-        link = link.split(" ", 1)[0]
     if link.startswith("<") and link.endswith(">"):
         link = link[1:-1]
+    elif link.startswith("<") and ">" in link:
+        # Markdown reference definitions may use an angle-bracketed destination
+        # followed by an optional title: [label]: <path with spaces.md> "title".
+        link = link[1 : link.index(">")]
+    elif " " in link:
+        # Drop optional markdown title: [x](path "title")
+        link = link.split(" ", 1)[0]
     return link.split("#", 1)[0]
 
 
