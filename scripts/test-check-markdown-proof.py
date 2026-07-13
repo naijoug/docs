@@ -357,6 +357,30 @@ def test_cli_fails_when_no_markdown_matched(root: Path) -> None:
     assert "no markdown files matched" in result.stdout
 
 
+def test_cli_failure_summary_counts_only_files_with_issues(root: Path) -> None:
+    write(root / "documents/trending/ai/README.md", valid_page("AI Index"))
+    write(
+        root / "documents/trending/ai/broken.md",
+        """---
+title: Broken
+
+---
+
+Broken prose link: [missing](missing.md).
+""",
+    )
+
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), "--root", str(root), "documents/trending/ai"],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    assert result.returncode == 1, result
+    assert "markdown proof failed: 1 issue(s) in 1 file(s); checked 2 file(s)" in result.stdout
+
+
 def test_cli_changed_from_checks_only_changed_markdown(root: Path) -> None:
     subprocess.run(["git", "init"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
     subprocess.run(["git", "config", "user.name", "tester"], cwd=root, check=True)
@@ -389,7 +413,7 @@ Broken after edit: [missing](missing.md).
         check=False,
     )
     assert result.returncode == 1, result
-    assert "markdown proof failed: 1 issue(s) in 1 file(s)" in result.stdout
+    assert "markdown proof failed: 1 issue(s) in 1 file(s); checked 1 file(s)" in result.stdout
     assert "documents/trending/ai/changed.md" in result.stdout
     assert "documents/trending/ai/unchanged.md" not in result.stdout
 
@@ -533,6 +557,7 @@ def main() -> int:
         test_includes_must_not_escape_repo_root,
         test_cli_fails_for_missing_target,
         test_cli_fails_when_no_markdown_matched,
+        test_cli_failure_summary_counts_only_files_with_issues,
         test_cli_changed_from_checks_only_changed_markdown,
         test_cli_changed_from_includes_untracked_markdown,
         test_cli_exclude_omits_matching_changed_markdown,

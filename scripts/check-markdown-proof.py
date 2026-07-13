@@ -379,7 +379,12 @@ def main() -> int:
             print(f"- {rel_path}")
 
     if issues:
-        print(f"markdown proof failed: {len(issues)} issue(s) in {len(unique_files)} file(s)")
+        issue_file_count = len({issue.path for issue in issues})
+        print(
+            "markdown proof failed: "
+            f"{len(issues)} issue(s) in {issue_file_count} file(s); "
+            f"checked {len(unique_files)} file(s)"
+        )
         for issue in issues:
             print(f"- {issue.render(root)}")
         return 1
