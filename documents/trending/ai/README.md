@@ -31,6 +31,7 @@ index: false
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md)
 - [Agent Cron 交付预算卡](agent-cron-delivery-budget-card.md)
+- [Agent Cron 工作日志资产提取器](agent-cron-worklog-asset-extractor.md)
 - [Agent 交接回执模板](agent-handoff-receipt-template.md)
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
