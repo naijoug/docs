@@ -109,7 +109,10 @@ title: External URL
 ---
 
 External links may contain URL path segments like [guide](https://example.com/home/wx),
-but local machine paths such as /home/example/project should still be reported.
+and URL schemes are case-insensitive like [caps](HTTPS://example.com/Users/wx).
+Inline data and JavaScript schemes are also case-insensitive: [data](DATA:text/plain,hello)
+and [js](JavaScript:void(0)). Local machine paths such as /home/example/project
+should still be reported.
 """,
     )
 

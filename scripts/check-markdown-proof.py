@@ -197,13 +197,14 @@ def normalize_ref_label(raw: str) -> str:
 
 
 def should_skip_link(link: str) -> bool:
+    normalized = link.lower()
     return (
         not link
         or link.startswith("#")
-        or link.startswith(EXTERNAL_SCHEMES)
+        or normalized.startswith(EXTERNAL_SCHEMES)
         or link.startswith("@")
-        or link.startswith("data:")
-        or link.startswith("javascript:")
+        or normalized.startswith("data:")
+        or normalized.startswith("javascript:")
     )
 
 
