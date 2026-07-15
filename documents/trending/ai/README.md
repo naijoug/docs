@@ -67,6 +67,7 @@ index: false
 - [AI 编程 Agent 工具引入评分卡](ai-coding-agent-tool-intake-scorecard.md)
 - [2026 AI Agent 个人效率系统实战指南](ai-agent-productivity-system-2026.md)
 - [Agent 上线前 90 分钟审查模板](agent-release-90-minute-review-template.md)
+- [Agent 发布证据字段映射表](agent-release-evidence-field-map.md)
 
 ## 30-minute AI coding audit entry
 
