@@ -112,6 +112,8 @@ release_evidence_map:
 
 如果 reviewer 不确定 `warn` 应该写到什么粒度，先对照脱敏样例 `skills/skills/manual/review/agent-release-gate/references/filled-example.md`：它展示了如何把未解决失败样本、只读灰度、禁用写工具和 re-entry condition 放进同一份门禁报告。
 
+发布会现场需要快速口头对齐时，先打开 `skills/skills/manual/review/agent-release-gate/references/quick-reference.md`：它把可复现发布对象、证据字段、硬门禁和 `warn` 范式压缩成一页检查表，适合在填本页之前确认哪些缺失会直接 `block`，哪些缺失只能降级为受限 `warn`。
+
 ## 复核清单
 
 - [ ] 每个发布报告字段都能追溯到评估侧产物或安全侧门禁。

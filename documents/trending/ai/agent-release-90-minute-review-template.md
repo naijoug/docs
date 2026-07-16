@@ -198,4 +198,6 @@ release_report:
 
 技能不是替代审查证据的捷径；如果本模板里的版本字段、失败样本或脱敏 trace 缺失，技能应默认收窄范围或阻断上线。
 
+发布会现场需要快速对齐门禁口径时，先看 `skills/skills/manual/review/agent-release-gate/references/quick-reference.md`：用它逐项确认发布对象是否可复现、每个已开放能力是否有证据 ID、硬门禁是否为 0，以及 `warn` 是否写清 allowed scope、disabled scope 和 re-entry condition。
+
 需要一个可复制的填报形态时，对照 `skills/skills/manual/review/agent-release-gate/references/filled-example.md`：先模仿它写出 release object、evidence map、allowed/disabled scope、re-entry condition，再把真实证据替换为脱敏相对路径或审计 ID。
