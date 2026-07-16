@@ -197,3 +197,5 @@ release_report:
 3. 最后让执行技能产出 `pass` / `warn` / `block`、允许范围、禁用范围、复审条件和下一条安全检查。
 
 技能不是替代审查证据的捷径；如果本模板里的版本字段、失败样本或脱敏 trace 缺失，技能应默认收窄范围或阻断上线。
+
+需要一个可复制的填报形态时，对照 `skills/skills/manual/review/agent-release-gate/references/filled-example.md`：先模仿它写出 release object、evidence map、allowed/disabled scope、re-entry condition，再把真实证据替换为脱敏相对路径或审计 ID。

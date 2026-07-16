@@ -110,6 +110,8 @@ release_evidence_map:
 - 技能再决定缺失证据应该降级为 `warn`，还是直接阻断为 `block`。
 - 输出必须写清允许范围、禁用范围、复审条件和下一条安全检查，不能只写“建议通过”。
 
+如果 reviewer 不确定 `warn` 应该写到什么粒度，先对照脱敏样例 `skills/skills/manual/review/agent-release-gate/references/filled-example.md`：它展示了如何把未解决失败样本、只读灰度、禁用写工具和 re-entry condition 放进同一份门禁报告。
+
 ## 复核清单
 
 - [ ] 每个发布报告字段都能追溯到评估侧产物或安全侧门禁。
