@@ -46,7 +46,8 @@ npx -y pnpm@8.15.9 run docs:build
 
 1. 在 PR 描述中使用 `.github/pull_request_template.md`，记录启动前 `git status --short` 摘要、接管文件、避开的既有 dirty path、验证命令和未验证项。
 2. 如果改动来自样本征集或审查请求，先用 `.github/ISSUE_TEMPLATE/ai-coding-audit.yml` 收集失败场景、当前证据、边界和期望输出。
-3. Reviewer 先判断 `Continue / Narrow / Stop`：范围清晰且验证足够才继续；范围有价值但过大就要求缩小；接管未知 dirty path 或无法复现结论就暂停。
-4. 需要公开说明时，参考 `documents/trending/ai/ai-generated-pr-review-entry.md`；需要服务化交付时，参考 `documents/trending/ai/ai-coding-audit-service.md` 与 `documents/trending/ai/ai-coding-audit-mock-report.md`。
+3. 如果改动来自 cron 心跳或无人值守 agent，先套用 `documents/trending/ai/agent-cron-planning-execution-verification-loop.md`：写清上一段/当前状态、候选工作、选择理由、下一段计划，再执行一个可验证小块。
+4. Reviewer 先判断 `Continue / Narrow / Stop`：范围清晰且验证足够才继续；范围有价值但过大就要求缩小；接管未知 dirty path 或无法复现结论就暂停。
+5. 需要公开说明时，参考 `documents/trending/ai/ai-generated-pr-review-entry.md`；需要服务化交付时，参考 `documents/trending/ai/ai-coding-audit-service.md` 与 `documents/trending/ai/ai-coding-audit-mock-report.md`。
 
 最小目标：下一位 reviewer 或 agent 能从 PR 说明复现第一条验证命令，并明确知道哪些结论还没有被验证。
