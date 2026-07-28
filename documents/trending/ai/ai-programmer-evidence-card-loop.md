@@ -158,6 +158,39 @@ AI 被允许和禁止做什么？
 
 写完卡片后，决策可以是 `Continue`，但理由必须具体：本地 proof 只能证明文档没有基础破损；如果下一步要证明它真的有用，应找一次真实任务，把填写过程和卡片结果一起保存。
 
+## 场景模板：PR 审查证据卡
+
+代码审查是最适合训练证据卡循环的场景之一，因为它天然有 diff、测试、人工判断和回退点。不要只让 AI 说“这段代码有没有问题”，而是先把审查边界写清楚，再让它围绕风险假设寻找证据。
+
+```markdown
+## Evidence Card: PR Review
+
+### Task
+- Real task: 审查 `<branch / PR / diff>` 中的一个最小改动面。
+- Intended user / workflow: 维护者需要判断这次改动是否可以合并、需要补测试，还是应该退回重做。
+- Success standard: 至少留下 1 条确认过的风险判断、1 条测试或人工检查证据、1 个可复用审查提示或 checklist 项。
+
+### Inputs and boundary
+- Input materials: `git diff -- <paths>`、相关测试文件、需求说明或 issue 链接。
+- Redacted / excluded materials: 不复制密钥、客户数据、内部账号、生产日志原文。
+- Allowed AI actions: 总结 diff、列风险假设、建议测试点、指出需要人工确认的行为变化。
+- Disallowed AI actions: 不直接改代码、不运行破坏性命令、不替维护者做合并决定、不把未验证风险写成事实。
+- Human approval points: 是否接受某条风险判断、是否追加测试、是否合并或退回。
+- Failure rollback: 如果 AI 审查噪音过多，缩小到一个文件、一个函数或一条失败测试。
+
+### Verification evidence
+- Command / checklist / review method: `git diff --check -- <paths>`、相关测试命令、人工复读需求、逐条标记风险为 confirmed / dismissed / unknown。
+- Result: 只记录真实命令输出或人工确认结论。
+- Remaining uncertainty: 没有覆盖的集成场景、数据规模、权限组合或浏览器/平台差异。
+
+### Asset created
+- Reusable prompt / checklist / script / SOP / card / portfolio fragment: 一条新的 PR 审查 checklist，或一段可复用的风险假设 prompt。
+- Where it lives: `docs/...`、`skills/skills/...`、项目 PR 模板或团队审查 SOP。
+- Next smaller experiment: 下次只审查一个高风险文件，并比较 AI 审查前后的人工 review 时间与漏报项。
+```
+
+这张模板的关键不是“让 AI 替你 review”，而是把 review 变成可复盘的工程判断：哪些风险被证明存在，哪些被排除，哪些还不能确定。
+
 ## 每周复盘 rubric
 
 | 问题 | 好证据 | 如果缺失，下周缩小到 |
