@@ -116,6 +116,48 @@ AI 被允许和禁止做什么？
 
 这个示例刻意把“没有修改 README”也写进边界：在多人或多 agent 工作区里，保护已有未归属改动本身就是工程能力的一部分。
 
+## 填写样例：给教程补一个完整样例
+
+下面是一张更完整的填写样例。它不是为了展示“AI 很厉害”，而是为了让下一位接手者能判断：这次改动为什么做、碰了哪些边界、怎样验证、下一步应该继续还是缩小。
+
+```markdown
+## Evidence Card
+
+### Task
+- Real task: 给 `docs/documents/trending/ai/ai-programmer-evidence-card-loop.md` 补一个完整填写样例。
+- Intended user / workflow: 想把 AI 辅助写作、代码改动或 agent cron 工作沉淀成资产的程序员。
+- Success standard: 页面里出现一张可复制的完整卡片，字段覆盖任务、输入、边界、AI 参与、人工判断、验证证据、资产和下一步决策。
+
+### Inputs and boundary
+- Input materials: 已有教程正文、`skills/skills/manual/growth/evidence-card-loop/SKILL.md`、`docs/documents/trending/ai/README.md` 的目录风格。
+- Redacted / excluded materials: 不使用用户私密材料；不写绝对路径。
+- Allowed AI actions: 修改这一页 markdown；补充样例；运行 markdown proof 和 diff check。
+- Disallowed AI actions: 不接管 `docs/` 中已有的其他 dirty 文件；不伪造外部读者反馈；不改 VuePress 配置。
+- Human approval points: 选择样例范围、判断是否值得提交、确认下一步决策。
+- Failure rollback: 若 proof 失败，先回滚本节新增内容或缩小为表格样例。
+
+### AI participation
+- What AI generated, changed, searched, summarized, reviewed, or executed: 生成完整卡片草稿，补充边界和验证字段，执行本地检查命令。
+- What AI assumed that remains unverified: 还没有真实外部读者确认这张样例是否足够清楚。
+
+### Human judgment
+- What I accepted: 保留“完整填写样例”作为教程增强，而不是再新增一篇页面。
+- What I rejected or rewrote: 不把它包装成已验证的公开反馈案例；不把未提交 README dirty diff 混入提交。
+- Final decision I own: 这轮只证明页面自洽和本地检查通过，不证明市场需求。
+
+### Verification evidence
+- Command / checklist / review method: `python3 scripts/check-markdown-proof.py documents/trending/ai/ai-programmer-evidence-card-loop.md`；`git diff --check -- documents/trending/ai/ai-programmer-evidence-card-loop.md`。
+- Result: 需要提交前记录真实命令输出。
+- Remaining uncertainty: 读者是否会照着填写，需要后续真实使用或反馈验证。
+
+### Asset created
+- Reusable prompt / checklist / script / SOP / card / portfolio fragment: 这张完整证据卡样例。
+- Where it lives: `docs/documents/trending/ai/ai-programmer-evidence-card-loop.md`。
+- Next smaller experiment: 用同一模板记录一次真实 PR 审查、书稿审校或收入实验。
+```
+
+写完卡片后，决策可以是 `Continue`，但理由必须具体：本地 proof 只能证明文档没有基础破损；如果下一步要证明它真的有用，应找一次真实任务，把填写过程和卡片结果一起保存。
+
 ## 每周复盘 rubric
 
 | 问题 | 好证据 | 如果缺失，下周缩小到 |
