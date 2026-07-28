@@ -16,6 +16,7 @@ index: false
 - [AI 编程验证优先工作流](verification-first-ai-coding.md)
 - [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)
 - [AI 程序员刻意练习闭环](ai-programmer-deliberate-practice-loop.md)
+- [AI 程序员证据卡循环](ai-programmer-evidence-card-loop.md)
 - [AI 程序员刻意练习卡片填写样例](ai-programmer-deliberate-practice-card-example.md)
 - [AI 程序员脚本改动练习样例](ai-programmer-script-change-drill-example.md)
 - [AI 编程中的假设-验证教程](human-hypothesis-validation-ai-coding.md)
