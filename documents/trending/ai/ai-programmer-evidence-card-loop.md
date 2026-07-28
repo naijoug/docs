@@ -191,6 +191,42 @@ AI 被允许和禁止做什么？
 
 这张模板的关键不是“让 AI 替你 review”，而是把 review 变成可复盘的工程判断：哪些风险被证明存在，哪些被排除，哪些还不能确定。
 
+## 干跑样例：只审查目录入口 diff
+
+下面是一次不接管代码、不修改被审查文件的 dry-run。目标不是替维护者决定是否合并，而是验证 PR Review Prompt 能否把一个很小的 diff 转成可复核风险表。
+
+```markdown
+## Evidence Card: PR Review Dry-run
+
+### Task
+- Real task: 审查 `docs/documents/trending/ai/README.md` 中新增目录入口的单行 diff。
+- Intended user / workflow: 维护者想判断新增页面入口是否与未跟踪页面文件匹配，且不会把其他 dirty 文件混入提交。
+- Success standard: 至少给出 1 条已确认风险、1 条已排除风险、1 条仍未知风险，并说明最小下一步检查。
+
+### Inputs and boundary
+- Input materials: `git diff -- documents/trending/ai/README.md`；只读查看 `docs/documents/trending/ai/delivery-package-output-cleanliness.md`。
+- Redacted / excluded materials: 不读取私密材料；不改 `README.md`、不改未跟踪页面、不处理 `docs/` 中其他 dirty 文件。
+- Allowed AI actions: 总结 diff、检查新增链接目标是否存在、提出最小验证命令。
+- Disallowed AI actions: 不直接编辑被审查 diff、不把目录入口加入提交、不替维护者决定合并。
+- Human approval points: 是否接管这组 README + 新页面改动；是否运行完整 VuePress build。
+- Failure rollback: 若风险无法判断，停止在 read-only review，不自动修复。
+
+### Verification evidence
+- Command / checklist / review method: `git diff --check -- documents/trending/ai/README.md`；人工核对新增入口 `delivery-package-output-cleanliness.md` 与未跟踪页面文件名一致。
+- Result:
+  - confirmed: `README.md` 依赖一个未跟踪的新页面；若只提交 README，会产生目录链接指向不存在文件的风险。
+  - dismissed: 单行 diff 本身无空白错误；链接目标文件名与新增入口一致。
+  - unknown: 未运行 VuePress build，无法确认 sidebar、frontmatter order 或全站链接检查是否完全通过。
+- Remaining uncertainty: 这组改动归属不明，不能在本轮替原作者提交或重排目录。
+
+### Asset created
+- Reusable prompt / checklist / script / SOP / card / portfolio fragment: “目录入口 diff 审查时，必须同时确认目标页面是否存在、是否 tracked、是否一起归属提交”。
+- Where it lives: `docs/documents/trending/ai/ai-programmer-evidence-card-loop.md`。
+- Next smaller experiment: 对一个 clean branch 的目录入口 PR 运行同一 checklist，并比较是否减少断链或漏提交。
+```
+
+这类 dry-run 的价值在于保护边界：即使发现了真实风险，也不等于可以顺手接管未知 dirty diff。对多 agent workspace 来说，“只审查并留下证据”经常比“顺手修掉”更安全。
+
 ## 每周复盘 rubric
 
 | 问题 | 好证据 | 如果缺失，下周缩小到 |
