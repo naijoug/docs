@@ -104,6 +104,13 @@ Owner next action:
 - Evidence:
 - Why it matters:
 
+## Red Flag Triage
+| Priority | Finding | Evidence | Next safe action |
+| --- | --- | --- | --- |
+| P0 Stop |  |  |  |
+| P1 Verify |  |  |  |
+| P2 Improve |  |  |  |
+
 ## Next Safe Command Ladder
 | Step | Command / Check | Why this first | Pass means | Fail means | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -122,6 +129,8 @@ Owner next action:
 - Unverified items:
 - Continue / Narrow / Stop:
 ```
+
+如果发现超过三条，先用 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 把它们压成 P0 / P1 / P2；首份报告只突出最高优先级，不把 P2 改进建议伪装成发布阻断项。
 
 这份报告可以发给样本提供者，但不自动变成公开案例。公开前必须再过匿名案例骨架和证据边界检查。
 

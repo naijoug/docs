@@ -73,6 +73,8 @@ AI-assisted PR 通常有三类额外风险：
 
 只要前两项不成立，就先不要进入代码风格讨论。AI PR 的首要问题不是写法，而是证据链是否可信。
 
+如果 reviewer 一次发现多条问题，先不要把它们全部写成同等强度的评论。用 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 分成 `P0 Stop`、`P1 Verify`、`P2 Improve`：P0 保护合并和发布边界，P1 要求补证据，P2 才进入后续优化。这样可以避免真正的阻断风险被风格建议淹没。
+
 ## 三种结论
 
 | 结论 | 使用条件 | 下一步 |
@@ -89,8 +91,9 @@ AI-assisted PR 通常有三类额外风险：
 
 1. 用 `docs/.github/ISSUE_TEMPLATE/ai-coding-audit.yml` 收集失败场景和期望输出。
 2. 用 `docs/.github/pull_request_template.md` 要求实现 PR 交代边界、验证和 handoff。
-3. 用 `docs/documents/trending/ai/ai-coding-audit-mock-report.md` 的 1 页报告格式复盘风险。
-4. 再回到 `docs/documents/trending/ai/ai-coding-audit-service.md` 的 `48 小时观察表` 判断是否继续产品化。
+3. 用 `docs/documents/trending/ai/ai-coding-audit-red-flag-triage.md` 给发现排序，先处理 P0/P1。
+4. 用 `docs/documents/trending/ai/ai-coding-audit-mock-report.md` 的 1 页报告格式复盘风险。
+5. 再回到 `docs/documents/trending/ai/ai-coding-audit-service.md` 的 `48 小时观察表` 判断是否继续产品化。
 
 这样一来，内容资产、issue 输入、PR 审查和服务交付会形成同一条证据链，而不是四份互不相干的文档。
 
