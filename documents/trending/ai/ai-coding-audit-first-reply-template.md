@@ -46,7 +46,7 @@ order: 36
 - 哪些内容绝对不能公开？
 - 是否允许我写一版匿名方法复盘，只保留脱敏后的证据形状？
 
-如果你暂时不能提供 repo 或 PR，也可以先给一段失败日志摘要和命令结果。我会先判断下一条最安全的验证命令，而不是要求你把所有代码发给我。
+如果你暂时不能提供 repo 或 PR，也可以先给一段失败日志摘要和命令结果。我会先判断下一条最安全的验证命令，而不是要求你把所有代码发给我。证据不足但风险看起来很高时，我会先标为 P1 Verify / Narrow，不会直接写成 P0 Stop。
 ```
 
 ## 结构化表单版本
@@ -59,6 +59,7 @@ order: 36
 | Current uncertainty | 当前最担心的一点 | 用它决定第一条安全命令 |
 | Scope | Included / Excluded 的模块、文件类型或命令 | 只接受相对路径、文件类别或脱敏摘要 |
 | Existing evidence | 命令、exit code、失败类型、reviewer 疑问 | 没有证据就标 `Unverified` |
+| Red flag triage | 是否已经能区分 P0 / P1 / P2 | 证据不足但风险严重时先标 `P1 Verify`，不要升级为 `P0 Stop` |
 | Public boundary | 可公开范围和禁止公开内容 | 授权不清则不写公开案例 |
 | Desired output | 只要下一条命令、1 页报告、还是匿名复盘 | 先交付最小结果，不直接升级咨询 |
 
@@ -70,7 +71,8 @@ order: 36
 2. **没有承诺修复**：第一次回复只承诺审查范围、证据和下一条安全命令，不承诺“帮你改好”。
 3. **没有模糊公开边界**：必须让对方确认哪些内容不能公开，以及是否允许匿名方法复盘。
 4. **没有跳过证据分层**：无法验证的内容先写 `Unverified / Next evidence needed`，不要急着下结论。
-5. **没有扩大范围**：如果对方的问题太大，先 `Narrow` 到一条 PR、一次 agent log 或一条失败命令。
+5. **没有误报红旗级别**：证据不足时只能 `P1 Verify / Narrow`，不能把猜测写成 `P0 Stop`。
+6. **没有扩大范围**：如果对方的问题太大，先 `Narrow` 到一条 PR、一次 agent log 或一条失败命令。
 
 ## 回复后的分流
 
@@ -86,7 +88,7 @@ order: 36
 - 样本还没出现时，先用 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md) 找到愿意提供真实场景的人。
 - 对方回复后，用本文把材料收束成可审查输入。
 - 如果回复只有痛点原话、截图或一句 agent claim，先发 [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md)，只追命令、状态、失败摘要、agent 结论和改动范围。
-- 材料足够后，进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
+- 材料足够后，先用 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 判断是否有 P0 / P1 / P2，再进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
 - 如果样本进入 PR，再用 [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md) 映射字段。
 - 如果要公开，发布前套 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 和证据边界检查。
 
