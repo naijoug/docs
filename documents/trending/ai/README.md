@@ -58,6 +58,7 @@ index: false
 - [AI 编程审查样板报告](ai-coding-audit-mock-report.md)
 - [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)
 - [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md)
+- [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md)
 - [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md)
 - [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md)
 - [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md)
