@@ -31,6 +31,7 @@ Input evidence: 脱敏失败摘要 + agent final reply 的结论摘要；没有�
 Public boundary: 只能公开证据形状；不能公开仓库名、截图、私聊原文、完整路径或业务上下文。
 Sensitive material removed: 仓库名、成员名、截图、路径前缀、业务模块名。
 Deliverable: 只交付 Next evidence needed；不写最高风险、不写修复建议、不写公开案例。
+Red flag triage: P1 Verify；“agent 说通过但 CI 仍失败”可能影响交付，但没有原始命令和 exit code，不能写成 P0 Stop。
 Decision: Narrow
 Next evidence needed: 请只补一条原始失败命令及其 exit code；如果有 CI job 链接，先确认可公开或脱敏后再发。
 Follow-up action: 发送 ai-coding-audit-evidence-request-template.md 的 5 项请求，但本轮只强制第一项“原始命令和状态”。
@@ -44,6 +45,7 @@ Asset destination: docs/documents/trending/ai/ai-coding-audit-result-log-filled-
 | 是否有具体痛点 | 有，“agent 说过了但 CI 仍失败” | 可以继续收窄 |
 | 是否有可复核命令 | 没有原始命令和 exit code | 不能进入首份报告 |
 | 是否有公开边界 | 只能公开证据形状 | 不能写案例 |
+| 是否能升级为 P0 | 暂无数据、权限、发布或密钥越界证据 | 只能标 P1 Verify |
 | 是否能 30-60 分钟只读审查 | 证据不足 | 不能 `Continue` |
 | 是否需要停止 | 对方仍可补一项证据 | 暂不 `Stop` |
 

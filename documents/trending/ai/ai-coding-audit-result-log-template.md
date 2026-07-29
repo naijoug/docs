@@ -36,6 +36,7 @@ Input evidence:
 Public boundary:
 Sensitive material removed:
 Deliverable:
+Red flag triage:
 Decision: Continue / Narrow / Stop
 Next evidence needed:
 Follow-up action:
@@ -54,6 +55,7 @@ Asset destination:
 | `Input evidence` | PR、失败命令、agent log、final report、review comment 或“只有口头描述” | 完整私有代码、密钥、生产数据 |
 | `Public boundary` | 可公开 / 只能匿名 / 只能内部 / 停止接收 | 模糊写“应该可以发” |
 | `Deliverable` | 下一条命令、最高风险、handoff、`Next evidence needed` 或 1 页报告 | 泛泛建议和营销话术 |
+| `Red flag triage` | P0 / P1 / P2 的最高层级和一句理由；多问题时链接 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) | 无优先级的问题长清单 |
 | `Decision` | `Continue / Narrow / Stop`，只选一个 | “先都做做看” |
 | `Next evidence needed` | 下一次最小需要补什么证据 | “继续观察” |
 | `Asset destination` | `docs/...`、`books/...`、`skills/...` 或“不沉淀” | 绝对路径或未授权公开位置 |
@@ -68,6 +70,7 @@ Asset destination:
 Decision: Continue
 Why: 收到公开 PR 链接和失败 CI 日志；对方确认可以公开讨论验证步骤，但不能公开公司名。
 Deliverable: 1 个最高风险 + 下一条安全命令；如果命令通过，再写 1 页只读报告。
+Red flag triage: P1 Verify；已有失败 CI 证据，但还缺 agent final report 中“已验证”段落来判断验证链断裂点。
 Next evidence needed: CI 失败命令的完整 exit code 和 agent final report 中“已验证”段落。
 Follow-up action: 进入 ai-coding-audit-intake-to-first-report.md。
 ```
@@ -80,6 +83,7 @@ Follow-up action: 进入 ai-coding-audit-intake-to-first-report.md。
 Decision: Narrow
 Why: 对方只描述“agent 改坏了”，还没有 PR、命令或日志；不能判断最高风险。
 Deliverable: 只回复 Next evidence needed，不写审查结论。
+Red flag triage: P1 Verify；风险可能严重，但当前只有二手描述，不能升级成 P0 Stop。
 Next evidence needed: 一条失败命令、一个 PR diff 或一段脱敏 final report。
 Follow-up action: 复制 ai-coding-audit-first-reply-template.md 收束范围。
 ```
@@ -92,6 +96,7 @@ Follow-up action: 复制 ai-coding-audit-first-reply-template.md 收束范围。
 Decision: Stop
 Why: 对方只能提供未脱敏私有仓库和生产日志；接收材料会越界。
 Deliverable: 拒绝接收敏感材料，并说明可以改为脱敏命令输出或公开 PR。
+Red flag triage: P0 Stop；继续接收会触碰隐私、密钥或生产数据边界。
 Next evidence needed: 无；本渠道停止。
 Follow-up action: 切换渠道或回到 ai-coding-audit-experiment-switch.md。
 ```
@@ -128,6 +133,7 @@ Next week change:
 
 - 记录里没有本机绝对路径、客户隐私、密钥或未经授权原文；
 - 每个 `Continue / Narrow / Stop` 都能被输入证据解释；
+- `Red flag triage` 没有把证据不足的猜测写成 P0 事实；
 - `Next evidence needed` 是下一条可执行动作，不是模糊计划；
 - 公开复盘前已经区分 `Fact / Inference / Unverified / Private / Stop`；
 - 如果连续多轮没有真实证据，已经停止扩写服务页。

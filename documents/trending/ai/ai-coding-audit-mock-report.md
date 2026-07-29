@@ -29,6 +29,18 @@ order: 31
 
 建议下一步不要继续扩写理论，而是围绕一个小 repo 或一次 PR 形成可公开/可匿名的审查案例。公开前先用 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 检查 Scope、脱敏规则和证据形状，再用 48 小时观察表记录真实反馈。
 
+## Red Flag Triage
+
+本样板报告先按 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 把发现压成三层，再进入 `Top Risks`。这样读者能区分“阻断交付的问题”和“后续可优化的问题”，而不是拿到一份没有顺序的建议清单。
+
+| Priority | How to read it in this report | Action rule |
+| --- | --- | --- |
+| P0 Stop | 本样本没有发现必须停止发布的证据；如果出现未授权公开、密钥或混入他人改动，应先停止 | 先隔离或回滚，不继续写案例 |
+| P1 Verify | 样板报告是否能被读者找到、是否有真实观察指标 | 先补入口、证据或下一条命令，再判断是否继续发布 |
+| P2 Improve | 报告可读性、before/after、跨资产导航 | 在 P1 有结果后沉淀为文档或模板，不阻断当前样本 |
+
+如果一份真实审查报告同时出现三条以上发现，先填这个分诊表，再删减 `Top Risks`；不要把 P2 文案问题排在 P0/P1 之前。
+
 ## Top Risks
 
 | Priority | Risk | Evidence | Recommended fix |
