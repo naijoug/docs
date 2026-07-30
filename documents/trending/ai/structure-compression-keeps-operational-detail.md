@@ -75,6 +75,50 @@ Next safe command: <只读检查或最小编辑命令>
 
 这一段尤其适合接手已有 dirty diff：它不要求修改原文，但能把“每一阶段缺什么”写成下一轮可以直接执行的拆分边界。
 
+## 压缩表字段缺口示例
+
+下面是把 90 天路线从六个小节压成六行表格时的只读标注示例。它的目的不是替正文做最终决定，而是让下一位 reviewer 先看清哪些行可以接受压缩、哪些行需要补回字段或拆出结构提交。
+
+```text
+Stage: 第 1-15 天 / 能力盘点和方向选择
+Kept: input=yes; action=yes; acceptance=yes; fallback=no; evidence=partial
+Missing: 缺“候选方向过多时如何只留一个”的回退句；能力地图作为证据被压进动作，未明确记录位置。
+Decision: restore field
+Next safe command: 只读对照原小节的能力地图代码块，决定是否把“能力地图/方向选择记录”作为关键产出补回。
+
+Stage: 第 16-30 天 / 访谈和手工验证
+Kept: input=yes; action=yes; acceptance=partial; fallback=no; evidence=yes
+Missing: 有访谈记录和手工交付证据，但缺“证据不足时继续访谈，不进入产品化”的回退。
+Decision: restore field
+Next safe command: 搜索同章外部证据闸门，把停止规则是否覆盖本阶段写成 review 结论。
+
+Stage: 第 31-45 天 / 标准化交付
+Kept: input=yes; action=yes; acceptance=yes; fallback=partial; evidence=yes
+Missing: 原文“用户只喜欢但不愿付费时重审用户/痛点/表达”的回退被压成“用户愿意付费”，失败路径不够显式。
+Decision: restore field
+Next safe command: 若接管正文，补一句“不愿付费时先重审目标用户、痛点强度或价值表达”。
+
+Stage: 第 46-60 天 / 第一版可复用资产
+Kept: input=partial; action=yes; acceptance=yes; fallback=yes; evidence=partial
+Missing: 输入只写“基于验证”，未明确真实样本或用户反馈；证据依赖下方外部证据闸门，表格内没有记录位置。
+Decision: split structure-only
+Next safe command: 保持“外部证据闸门”与本阶段相邻，避免表格移动后丢失停止条件。
+
+Stage: 第 61-75 天 / 公开输出和找渠道
+Kept: input=yes; action=yes; acceptance=yes; fallback=no; evidence=yes
+Missing: 缺“没反馈时换渠道或缩小问题”的回退；渠道记录有保留，但观察窗口未写明。
+Decision: restore field
+Next safe command: 对照发布授权或单渠道发布 preflight，补渠道与观察窗口字段。
+
+Stage: 第 76-90 天 / 复盘和选择
+Kept: input=yes; action=yes; acceptance=yes; fallback=yes; evidence=partial
+Missing: 有继续/换方向决策，但没有明确把判断写到 Continue / Narrow / Stop 记录或 notebook。
+Decision: restore field
+Next safe command: 补一个“把五问结论写成 Continue / Narrow / Stop”的证据出口。
+```
+
+如果示例里出现三个以上 `restore field`，说明这次压缩不宜直接作为“审校/精简”提交。更安全的做法是先拆 `structure-only`，再逐行恢复缺失字段。
+
 ## 推荐拆分方式
 
 ```text
