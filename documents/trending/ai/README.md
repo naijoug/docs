@@ -107,6 +107,17 @@ index: false
 
 如果要把这轮实验写进书稿，优先参考 `books/tech-cards-handbook/chapters/ai-agent/thirty-minute-route-before-productizing.md`、`books/tech-cards-handbook/chapters/ai-agent/first-report-before-consulting.md`、`books/tech-cards-handbook/chapters/ai-agent/public-case-separates-facts-inferences-unverified.md` 和 `books/tech-cards-handbook/chapters/ai-agent/publish-feedback-needs-evidence-shape.md`：先抽象原则和反馈证据形状，再决定是否公开案例。
 
+## long dirty diff review path
+
+遇到大规模既有 dirty diff 时，不要把它当成一次普通“审校”。先按下面顺序做只读分诊，再决定是否接管：
+
+1. **先划归属边界**：用 [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md) 记录启动前 dirty path、本轮拥有 path、避开的 path 和 commit scope。
+2. **隔离格式噪音**：如果 diff 里有标点、空白、换行、表格化或自动格式化，先读 [Format Churn 先隔离再审内容](format-churn-before-content-review.md)，把 format-only 与内容改写拆开。
+3. **再审结构压缩**：如果多个小节被压成表格或 checklist，用 [结构压缩不丢操作细节](structure-compression-keeps-operational-detail.md) 对照输入、动作、验收标准、失败回退和证据五字段。
+4. **最后写接力结论**：只读阶段只输出 `Observed / Kept / Missing / Next safe command`；只有能把 format-only、structure-only、content decision 拆成独立范围时，才进入实质修改。
+
+这条路径适合书稿、长 runbook、agent notebook 和 AI 生成 PR 的接手审查：目标不是阻止改动，而是避免把“看起来更整齐”的大 diff 误提交成“内容已经审完”。
+
 ## AI-assisted PR review path
 
 如果目标是审查 AI 生成的改动，不要从单篇文章随机阅读。按下面顺序走，能从工作流、验证、PR 入口、服务化样板一路串到可复用资产：

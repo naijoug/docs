@@ -40,6 +40,7 @@ order: 42
 | 有未知 dirty path | 新增不冲突文件，或只改 clean path | 格式化全仓、自动修复全部 lint |
 | 有同目录入口文件需要改 | 先确认入口文件是否本轮必须修改；如果必须，改最小段落并显式验证 | 顺手重排目录、改风格、合并既有改动 |
 | `--changed-from HEAD` 被既有 dirty 文件拖累 | 改用显式文件列表 proof | 把失败归零为“checker 不可用” |
+| 大 diff 同时有格式 churn 和内容改写 | 先只读写 `Observed / Kept / Missing / Next safe command`，并拆 format-only / structure-only / content decision | 把标点、结构压缩和内容取舍打包成“审校提交” |
 | 需要接管他人改动才有价值 | 记录 `Next evidence needed`，切到其他小任务 | 在无人值守 cron 中猜测归属 |
 
 ## 最小提交护栏
@@ -75,6 +76,8 @@ Decision: Continue / Narrow / Stop / Switch
 ```
 
 这个模板适合写进 `summaries/hermes/YYYY-MM-DD.md` 的“规划与取舍”和“执行记录”：它让下一次 agent 知道哪些改动是本轮有意推进，哪些只是被观察到但没有接管。
+
+如果 dirty diff 还混有格式替换或结构压缩，先按 [Format Churn 先隔离再审内容](format-churn-before-content-review.md) 和 [结构压缩不丢操作细节](structure-compression-keeps-operational-detail.md) 做只读审查；不要直接把“压短了、变整齐了”当作可接管理由。
 
 ## 停止条件
 
