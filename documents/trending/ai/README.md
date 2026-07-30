@@ -38,6 +38,7 @@ index: false
 - [Format Churn 先隔离再审内容](format-churn-before-content-review.md)
 - [结构压缩不丢操作细节](structure-compression-keeps-operational-detail.md)
 - [交付物打包不污染输出目录](delivery-package-output-cleanliness.md)
+- [测试契约先数据化再扩分支](test-contract-decision-table.md)
 - [Agent 交接回执模板](agent-handoff-receipt-template.md)
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
