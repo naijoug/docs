@@ -48,6 +48,7 @@ index: false
 - [先做有界探针，再写 Workaround](bounded-probe-before-workaround.md)
 - [Trigger Examples 进入 Eval 的格式规范](trigger-examples-eval-format.md)
 - [Trigger Examples JSONL 抽样质量检查](trigger-examples-jsonl-quality-check.md)
+- [Trigger Examples Adapter Score 闭环](trigger-examples-adapter-score-loop.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)（没有真实样本前先跑下面的 30 分钟实验，不要直接扩服务页）
 - [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)
 - [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md)
