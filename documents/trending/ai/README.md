@@ -46,6 +46,7 @@ index: false
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)
 - [先确认 Green Baseline，再切换资产任务](green-baseline-before-asset-switch.md)
 - [先做有界探针，再写 Workaround](bounded-probe-before-workaround.md)
+- [Trigger Examples 进入 Eval 的格式规范](trigger-examples-eval-format.md)
 - [AI 编程审查路线图](ai-coding-audit-roadmap.md)（没有真实样本前先跑下面的 30 分钟实验，不要直接扩服务页）
 - [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)
 - [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md)
