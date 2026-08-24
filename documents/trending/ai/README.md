@@ -45,6 +45,7 @@ index: false
 - [Agent 交接回执模板](agent-handoff-receipt-template.md)
 - [AI 文档改动 Proof Checker](ai-doc-change-proof-checker.md)
 - [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)
+- [Content-only 文档 Proof Gate](content-only-docs-proof-gate.md)
 - [AI 文档 Proof Checker 采纳记录](ai-doc-change-proof-adoption-log.md)
 - [先确认 Green Baseline，再切换资产任务](green-baseline-before-asset-switch.md)
 - [先做有界探针，再写 Workaround](bounded-probe-before-workaround.md)
