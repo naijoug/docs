@@ -32,6 +32,8 @@ index: false
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md)
 - [Agent Cron 交付预算卡](agent-cron-delivery-budget-card.md)
+- [Pre-publish Authorization Boundary](pre-publish-authorization-boundary.md)
+- [多 Agent 会话控制台检查卡](multi-session-agent-control-plane.md)
 - [Agent Cron 工作日志资产提取器](agent-cron-worklog-asset-extractor.md)
 - [Agent Cron 规划-执行-验证闭环](agent-cron-planning-execution-verification-loop.md)
 - [Agent Cron 未提交接力路径分诊](agent-cron-uncommitted-continuation-triage.md)
