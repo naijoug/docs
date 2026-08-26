@@ -35,6 +35,7 @@ index: false
 - [Pre-publish Authorization Boundary](pre-publish-authorization-boundary.md)
 - [多 Agent 会话控制台检查卡](multi-session-agent-control-plane.md)
 - [Agent Cron 工作日志资产提取器](agent-cron-worklog-asset-extractor.md)
+- [从项目实现到可复用资产](project-implementation-to-reusable-asset.md)
 - [Agent Cron 规划-执行-验证闭环](agent-cron-planning-execution-verification-loop.md)
 - [Agent Cron 未提交接力路径分诊](agent-cron-uncommitted-continuation-triage.md)
 - [Format Churn 先隔离再审内容](format-churn-before-content-review.md)
