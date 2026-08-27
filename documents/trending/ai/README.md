@@ -87,6 +87,7 @@ index: false
 - [Agent 上线前 90 分钟审查模板](agent-release-90-minute-review-template.md)
 - [Agent 发布证据字段映射表](agent-release-evidence-field-map.md)
 - [AI 趋势日报新鲜度门禁](ai-daily-freshness-gate.md)
+- [测试 Fixture 失败语义化](test-fixture-failure-semantics.md)
 
 ## 30-minute AI coding audit entry
 
