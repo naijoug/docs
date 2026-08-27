@@ -300,14 +300,17 @@ Minimum handoff block for agent-authored PRs:
 ## Testing and Building
 
 ### Before Changes
-1. Run `cd web/vuepress && npx -y pnpm@8.15.9 run docs:dev` to start local server
-2. Verify navigation and sidebar structure
-3. Check that new pages appear in correct order
+1. Capture the initial `git status --short` summary and decide which paths you own.
+2. For content-only edits, prefer a narrow proof first: `python3 scripts/check-markdown-proof.py <changed-markdown-or-directory>`.
+3. For renderer, sidebar, or navigation edits, run `cd web/vuepress && npx -y pnpm@8.15.9 run docs:dev` and verify the affected navigation or page order.
 
 ### After Changes
-1. Check build process: `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build`
-2. Validate no build errors
-3. Test production output if possible
+1. Run the changed-file proof gate from the repo root: `python3 scripts/check-markdown-proof.py --changed-from HEAD`.
+2. If the change touches checker logic, link handling, frontmatter rules, or broad content structure, also run the regression and full-content baseline:
+   - `python3 scripts/test-check-markdown-proof.py`
+   - `python3 scripts/check-markdown-proof.py documents`
+3. For renderer, sidebar, theme, or build-related edits, run `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build`.
+4. Report any command intentionally not run as an explicit unverified item; do not replace it with “tested”.
 
 ### CI/CD
 - Automatic deployment to `gh-pages` branch on push to `main`
