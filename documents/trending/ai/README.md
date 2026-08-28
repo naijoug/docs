@@ -89,6 +89,7 @@ index: false
 - [AI 趋势日报新鲜度门禁](ai-daily-freshness-gate.md)
 - [测试 Fixture 失败语义化](test-fixture-failure-semantics.md)
 - [解析链路测试优先级梯](parser-layer-test-ladder.md)
+- [薄 API 边界测试地图](thin-api-boundary-test-map.md)
 
 ## 30-minute AI coding audit entry
 
