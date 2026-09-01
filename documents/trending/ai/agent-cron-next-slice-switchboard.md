@@ -32,6 +32,28 @@ order: 93
 | dirty repo 有启动前改动 | 只读分诊，列 owned/avoided path | `git status --short` + path-limited diff | 不能明确归属时不 stage、不提交 |
 | 找不到安全工程切片 | 做一张可复用 preflight/模板，但必须链接到入口 | checker + catalog proof | 只能写泛泛感想，无法给下一条命令 |
 
+## 上一段接力点变 dirty 时
+
+如果上一段 notebook 建议继续某个工程 repo，但本轮启动时该 repo 已经出现未知未提交改动，不要把“接力建议”自动升级为“接管授权”。先做一次只读快照，然后把候选任务重新放回矩阵打分：
+
+```text
+Handoff target: <上一段建议继续的 repo/path>
+Startup status: <git status --short 的 path-limited 摘要>
+Ownership evidence: known / unknown / current-run-only
+Decision: Continue / Narrow / Switch / Stop
+Selected replacement: <如果 Switch，写 clean repo 或 clean-adjacent 资产>
+Next evidence needed: <如果要回到原 repo，下次需要确认什么>
+```
+
+实操规则：
+
+- `Ownership evidence=unknown` 时，最多只读 `git diff -- <path>`；不要格式化、修复、stage 或提交该路径。
+- 如果接力点必须依赖 unknown dirty path 才能推进，选择 `Stop` 或 `Switch`，不要为了保持连续性制造混合提交。
+- `Switch` 不等于放弃上一段计划；它只是把本轮产出转移到 clean repo、clean adjacent 文档、测试卡或 proof checker 上，并在 notebook 写明回到原路径所需的归属证据。
+- 替代任务仍然要满足 `Boundary=1` 和 `Verification=1`：能用 path-limited checker、测试或 diff 检查验证，而不是只写一段感想。
+
+这条规则可以直接和 [Agent Cron 未提交接力路径分诊](agent-cron-uncommitted-continuation-triage.md) 串用：先分诊接力路径归属，再用本页矩阵选择本轮小块。
+
 ## 5 分钟打分法
 
 给每个候选任务按 0/1 打分，满分 5 分：
