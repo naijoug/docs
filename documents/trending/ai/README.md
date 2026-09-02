@@ -91,6 +91,7 @@ index: false
 - [解析链路测试优先级梯](parser-layer-test-ladder.md)
 - [薄 API 边界测试地图](thin-api-boundary-test-map.md)
 - [Agent Cron 下一块选择矩阵](agent-cron-next-slice-switchboard.md)
+- [Agent Preflight 脚本测试模板](agent-preflight-script-test-template.md)
 
 ## 30-minute AI coding audit entry
 
