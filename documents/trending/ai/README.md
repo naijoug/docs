@@ -92,6 +92,7 @@ index: false
 - [薄 API 边界测试地图](thin-api-boundary-test-map.md)
 - [Agent Cron 下一块选择矩阵](agent-cron-next-slice-switchboard.md)
 - [Agent Preflight 脚本测试模板](agent-preflight-script-test-template.md)
+- [Skill Metadata Gate Before Linker](skill-metadata-gate-before-linker.md)
 
 ## 30-minute AI coding audit entry
 
