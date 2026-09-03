@@ -93,6 +93,7 @@ index: false
 - [Agent Cron 下一块选择矩阵](agent-cron-next-slice-switchboard.md)
 - [Agent Preflight 脚本测试模板](agent-preflight-script-test-template.md)
 - [Skill Metadata Gate Before Linker](skill-metadata-gate-before-linker.md)
+- [历史快照标签先于当前配置反查](historical-snapshot-labels-before-current-lookup.md)
 
 ## 30-minute AI coding audit entry
 
