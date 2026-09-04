@@ -476,6 +476,20 @@ Decision: Continue
 Next evidence needed: 下一次若看到具体 coding agent 工具变化，先用本页评分；低于 5 分只记录，不迁移默认工具。
 ```
 
+## 2026-09-04 08:31
+
+```text
+Date: 2026-09-04 08:31
+Change target: documents/trending/ai/expected-failure-contract.md + README/catalog + adoption log
+Preflight command: git status --short; python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/draft-manifest-before-release-gate.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: docs working tree clean; markdown proof ok for README / draft manifest / adoption log; AI catalog proof covered 83 sibling AI markdown page(s).
+What changed: 新增 `Expected Failure 也是交付物`，把 draft、coverage、权限、合规等阶段性红灯写成 `Scope / Reason / Allowed signal / Stop signal / Next safe command` 契约；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/expected-failure-contract.md documents/trending/ai/draft-manifest-before-release-gate.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && git diff --check -- documents/trending/ai/README.md documents/trending/ai/expected-failure-contract.md
+Signal: 本轮不接管已有 dirty 的 `study-buddy/`、`skills/`、`loom/`，而是把上午看到的 release gate / draft manifest 接力风险抽成可复核 contract，防止下一轮为追绿误改门禁。
+Decision: Continue
+Next evidence needed: 下一次若接管 `study-buddy/` 内容 draft，先跑 green validator，再把 release coverage 的 expected failure contract 写进计划；若失败形态变成 schema、重复排序或缺授权，则停止内容扩写先修 validator。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
