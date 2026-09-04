@@ -490,6 +490,20 @@ Decision: Continue
 Next evidence needed: 下一次若接管 `study-buddy/` 内容 draft，先跑 green validator，再把 release coverage 的 expected failure contract 写进计划；若失败形态变成 schema、重复排序或缺授权，则停止内容扩写先修 validator。
 ```
 
+## 2026-09-05 00:15
+
+```text
+Date: 2026-09-05 00:15
+Change target: documents/trending/ai/standalone-test-runner-auto-discovery.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/agent-cron-next-slice-switchboard.md
+Result before edit: markdown proof ok: checked 2 file(s)
+What changed: 新增 `Standalone Test Runner 自动发现清单`，把前几轮在 makemoney 测试文件中反复处理的手写 standalone runner 清单漂移，抽象成适用信号、改动模板、验证梯、接力格式和停止条件；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/standalone-test-runner-auto-discovery.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && git diff --check -- documents/trending/ai/README.md documents/trending/ai/standalone-test-runner-auto-discovery.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 工程小改动已经连续多轮证明“手写 runner 清单”是 silent skip 风险；这次不继续机械扫 makemoney，而是把可复用判断沉淀到 docs，供后续 clean repo 小切片直接复用。
+Decision: Continue
+Next evidence needed: 下一次遇到 pytest fixture、慢测试跳过或 intentionally skipped standalone 测试时，不要套用自动发现模板；先补 runner contract 注释，再决定是否扩成新清单。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
