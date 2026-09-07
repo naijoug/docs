@@ -546,6 +546,20 @@ Decision: Continue
 Next evidence needed: 下一次如继续 AI coding audit，不要再加同主题导航；优先找真实样本、渠道反馈或一条可本地验证的审查报告 fixture，再决定是否沉淀技能或书稿卡片。
 ```
 
+## 2026-09-08 00:00
+
+```text
+Date: 2026-09-08 00:00
+Change target: documents/trending/ai/agent-cron-day-rollover-handoff.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/agent-cron-next-slice-switchboard.md documents/trending/ai/agent-cron-worklog-asset-extractor.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers 86 sibling AI markdown page(s)
+What changed: 新增 `Agent Cron 日切换交接卡`，把跨零点时的 Time / Tail / Snapshot / Select 流程、日切换决策表、今日 notebook 写法和 summaries / 实质 repo 分开提交护栏写成可复用入口；README catalog 同步接入。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/agent-cron-day-rollover-handoff.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && git diff --check -- documents/trending/ai/README.md documents/trending/ai/agent-cron-day-rollover-handoff.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 今天第一轮 cron 正好发生日切换，需要从昨日最后接力点进入新 notebook；把这个重复边界资产化，比继续扩写 AI coding audit 导航更能减少下一轮决策成本。
+Decision: Continue
+Next evidence needed: 下一次跨日或跨 notebook 切换时，优先用这张卡复查是否新建了正确日期文件、重新做 repo snapshot、并把 summaries 提交与实质 repo 提交分开。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

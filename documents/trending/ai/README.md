@@ -33,6 +33,7 @@ index: false
 - [本地可验证 Proof Artifact 清单](local-verifiable-proof-artifact.md)
 - [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md)
 - [Agent Cron 交付预算卡](agent-cron-delivery-budget-card.md)
+- [Agent Cron 日切换交接卡](agent-cron-day-rollover-handoff.md)
 - [Pre-publish Authorization Boundary](pre-publish-authorization-boundary.md)
 - [Readiness Field Contract](readiness-field-contract.md)
 - [多 Agent 会话控制台检查卡](multi-session-agent-control-plane.md)
