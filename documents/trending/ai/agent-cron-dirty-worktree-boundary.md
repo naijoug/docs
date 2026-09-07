@@ -32,6 +32,28 @@ order: 42
 
 这张卡的关键不是“看到脏工作区就停止”，而是避免把无关改动当成本轮成果。真正的推进可以发生在新的、可验证的边界内。
 
+## 多 repo 快速分诊
+
+如果 workspace 下同时有产品仓库、文档仓库、书稿仓库和 summary 仓库，不要只看当前目录的状态。先用一轮只读 snapshot 把候选 repo 分成四类，再选择本轮能安全推进的最小切片：
+
+| 分组 | 判定信号 | 本轮动作 | 记录方式 |
+| --- | --- | --- | --- |
+| `clean` | `git status --short` 为空 | 可以作为首选工作池；仍需提交前复查 | 写入“候选工作”和“选择理由” |
+| `owned-dirty` | dirty path 是本轮刚创建或上一段明确交给自己的文件 | 可以继续，但只 add 这些 path | 写清 commit scope 和验证命令 |
+| `unknown-dirty` | 启动前已有未归属修改、新增目录或测试产物 | 默认不接管；转向 clean repo / safe new file | 在“上一段/当前状态”列为 avoided paths |
+| `summary-only` | 只有本轮 notebook 待写 | 不能当成本轮成果；必须先完成或明确放弃一个实质任务 | notebook 最后随 summaries repo 单独提交 |
+
+一个实用选择顺序：
+
+```text
+1. 先找 clean repo 中是否有上一段留下的 Next safe command。
+2. 如果有 unknown dirty repo，只允许做只读观察，除非用户明确授权接管。
+3. 如果所有产品 repo 都 dirty，选择 docs/books 中能沉淀当前工程经验的最小资产。
+4. 如果只能写 notebook，标记 Switch/Stop，并说明缺少哪个授权、样本或验证入口。
+```
+
+这能避免两种常见误判：把“summary repo 有待提交”误当成项目进展；或因为主项目 dirty，就直接停止，而忽略了 clean 文档/书稿仓库中仍有可验证的小资产任务。
+
 ## 选择任务时的判断
 
 | 状态 | 可以做什么 | 不要做什么 |

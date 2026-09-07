@@ -518,6 +518,20 @@ Decision: Continue
 Next evidence needed: 下一次遇到新的发布/部署脚本时，先用本页字段矩阵做缺口扫描；只有字段已存在且高风险路径未覆盖，才补最小测试，不要为了统一文案改脚本输出。
 ```
 
+## 2026-09-07 16:01
+
+```text
+Date: 2026-09-07 16:01
+Change target: documents/trending/ai/agent-cron-dirty-worktree-boundary.md + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/agent-cron-dirty-worktree-boundary.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers 86 sibling AI markdown page(s)
+What changed: 在 `Agent Cron 的脏工作区边界` 中补充多 repo 快速分诊表，把 clean / owned-dirty / unknown-dirty / summary-only 四类状态映射到动作和记录方式；强调 summary-only 不能算实质成果，主项目 dirty 时也可切到 clean 的 docs/books 做可验证资产。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/agent-cron-dirty-worktree-boundary.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && git diff --check -- documents/trending/ai/agent-cron-dirty-worktree-boundary.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 本轮没有新增同级页面，不需要改 README catalog；显式目标 proof 能覆盖既有页面的小幅增强，并继续避免 `--changed-from HEAD` 在有其他 dirty 仓库时扩大边界。
+Decision: Continue
+Next evidence needed: 下一次 cron 若面对多个 dirty 产品仓库，先按这张分诊表记录 clean / owned-dirty / unknown-dirty / summary-only，再选择一个能提交和验证的最小切片。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |
