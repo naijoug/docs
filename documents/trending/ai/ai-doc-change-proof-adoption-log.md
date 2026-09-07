@@ -532,6 +532,20 @@ Decision: Continue
 Next evidence needed: 下一次 cron 若面对多个 dirty 产品仓库，先按这张分诊表记录 clean / owned-dirty / unknown-dirty / summary-only，再选择一个能提交和验证的最小切片。
 ```
 
+## 2026-09-07 23:00
+
+```text
+Date: 2026-09-07 23:00
+Change target: documents/trending/ai/README.md AI-assisted PR review path + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-coding-audit-red-flag-triage.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 3 file(s); AI catalog proof ok: README catalog covers 86 sibling AI markdown page(s)
+What changed: 在 30-minute AI coding audit entry 和 AI-assisted PR review path 中，把 `AI 编程审查红旗分诊卡` 从“存在的参考页”升级为交付前排序动作：发现超过三条或同一样本多条发现时，先压成 P0 / P1 / P2，再写首份报告、进入 code review 或暂停合并。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/ai-coding-audit-red-flag-triage.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && git diff --check -- documents/trending/ai/README.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 上一段接力点要求把红旗分诊连接到更靠前的执行页；README 入口比继续扩写单页更能改变下一轮默认路径，并且没有新增页面或 catalog 风险。
+Decision: Continue
+Next evidence needed: 下一次如继续 AI coding audit，不要再加同主题导航；优先找真实样本、渠道反馈或一条可本地验证的审查报告 fixture，再决定是否沉淀技能或书稿卡片。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

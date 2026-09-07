@@ -106,7 +106,7 @@ index: false
 0. **先看闭环**：如果不知道该从哪里进入，先用 [AI 编程审查最小证据闭环](ai-coding-audit-minimum-evidence-loop.md) 判断当前处于找样本、补证据、交付首份报告还是停止。
 1. **找样本**：复制 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md)，只要求对方提供一个 PR、一次失败命令、一段 agent log 或一份脱敏 final report。
 2. **收束回复**：用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 把“我们也遇到过”收束成目标、范围、证据、公开边界和期望输出；如果对方只给痛点原话或截图，先发 [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md)，只追 5 个最小证据。
-3. **交付首份报告**：按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 做 30-60 分钟只读审查；证据不足时只交付 `Next evidence needed`，证据足够时交付 1 页报告。
+3. **交付首份报告**：按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 做 30-60 分钟只读审查；如果发现超过三条，先用 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 压成 P0 / P1 / P2，再写 1 页报告；证据不足时只交付 `Next evidence needed`。
 4. **判断下一步**：用 `Continue / Narrow / Stop` 记录是否进入 PR 审查、缩小样本范围或停止；公开前先走本页的 evidence boundary checkpoint。
 5. **观察信号**：先用 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 记录单轮渠道、输入证据、公开边界、交付物和 `Continue / Narrow / Stop`；如果证据请求后仍不足，照着 [AI 编程审查 Audit Result 填写样例](ai-coding-audit-result-log-filled-example.md) 写成 `Narrow`。发布后再用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 记录痛点原话、证据形状、公开边界和 `Next evidence needed`；不知道如何写第一条时，照着 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md) 先判断 `Narrow`，不要只看点赞数。
 6. **沉淀资产**：如果同类问题重复出现，再回到 [AI 编程审查路线图](ai-coding-audit-roadmap.md)、[AI 程序员资产飞轮](ai-programmer-asset-flywheel.md) 和 [AI 编程审查观察到执行技能清单](ai-coding-audit-observation-to-skill-checklist.md)，判断是否升级为文章、模板、技能、书稿卡片或服务 offer。
@@ -148,9 +148,10 @@ index: false
 1. 先读 [Agent 工作流设计](agent-workflow.md)，确认 agent 的边界、工具调用和交接格式。
 2. 再读 [AI 编程验证优先工作流](verification-first-ai-coding.md)，把验证失败、未验证项和下一条安全命令写成可接手记录。
 3. 进入 [AI 生成 PR 的最小审查入口](ai-generated-pr-review-entry.md)，把 `git status --short`、接管文件、避开的 dirty path、验证梯和 `Continue / Narrow / Stop` 固定到 PR 审查入口。
-4. 如果要把它产品化，先读 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 看完整路径，再读 [AI 编程审查服务交付指南](ai-coding-audit-service.md)，并用 [下一条安全命令梯](next-safe-command-ladder.md) 把“下一步先跑什么”写成可复核交付物。
-5. 交付前用 [AI 编程审查样板报告](ai-coding-audit-mock-report.md) 压缩成客户可读的公开报告；内部执行时把同一条命令梯复用到 `skills/skills/manual/review/next-safe-command-ladder/`，避免 agent 只产出测试清单。
-6. 如果还没有真实授权样本，先用 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md) 获取候选回复；发布后用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 记录痛点原话、证据形状和 `Continue / Narrow / Stop`。对方回复后，用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 把热情回复收束成范围、证据、公开边界和期望输出，再用 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 压缩成 30-60 分钟的只读报告。如果样本进入 PR，再用 [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md) 把 Issue 字段映射到 PR snapshot、ownership boundary、verification ladder 和 `Continue / Narrow / Stop`。最后用 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 做脱敏复盘，并回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次审查结果应该沉淀成文章、模板、技能还是书稿卡片。
+4. 如果同一份样本出现多条发现，先用 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 区分 P0 / P1 / P2，再决定是否进入普通 code review、补验证命令或暂停合并。
+5. 如果要把它产品化，先读 [AI 编程审查路线图](ai-coding-audit-roadmap.md) 看完整路径，再读 [AI 编程审查服务交付指南](ai-coding-audit-service.md)，并用 [下一条安全命令梯](next-safe-command-ladder.md) 把“下一步先跑什么”写成可复核交付物。
+6. 交付前用 [AI 编程审查样板报告](ai-coding-audit-mock-report.md) 压缩成客户可读的公开报告；内部执行时把同一条命令梯复用到 `skills/skills/manual/review/next-safe-command-ladder/`，避免 agent 只产出测试清单。
+7. 如果还没有真实授权样本，先用 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md) 获取候选回复；发布后用 [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 记录痛点原话、证据形状和 `Continue / Narrow / Stop`。对方回复后，用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 把热情回复收束成范围、证据、公开边界和期望输出，再用 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 压缩成 30-60 分钟的只读报告。如果样本进入 PR，再用 [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md) 把 Issue 字段映射到 PR snapshot、ownership boundary、verification ladder 和 `Continue / Narrow / Stop`。最后用 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 做脱敏复盘，并回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次审查结果应该沉淀成文章、模板、技能还是书稿卡片。
 
 ## evidence boundary checkpoint
 
