@@ -504,6 +504,20 @@ Decision: Continue
 Next evidence needed: 下一次遇到 pytest fixture、慢测试跳过或 intentionally skipped standalone 测试时，不要套用自动发现模板；先补 runner contract 注释，再决定是否扩成新清单。
 ```
 
+## 2026-09-07 11:00
+
+```text
+Date: 2026-09-07 11:00
+Change target: documents/trending/ai/readiness-field-contract.md + README/catalog + adoption log
+Preflight command: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/pre-publish-authorization-boundary.md documents/trending/ai/agent-release-evidence-field-map.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py
+Result before edit: markdown proof ok: checked 4 file(s); AI catalog proof ok: README catalog covers 85 sibling AI markdown page(s)
+What changed: 新增 `Readiness Field Contract`，把最近在 `makemoney/` 里连续补的发布 readiness 字段断言抽象成字段原则、最小字段集、失败/跳过/授权路径测试矩阵和 Stop 条件；README catalog 接入新页面。
+Verification after edit: python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/readiness-field-contract.md documents/trending/ai/ai-doc-change-proof-adoption-log.md && python3 scripts/check-ai-catalog.py && git diff --check -- documents/trending/ai/README.md documents/trending/ai/readiness-field-contract.md documents/trending/ai/ai-doc-change-proof-adoption-log.md
+Signal: 当 cron、publish 脚本和 checklist 已经连续多轮围绕同一组字段补断言时，继续在项目内堆测试的边际收益下降；更高价值是沉淀一份能指导后续发布门禁设计的可复用 contract。
+Decision: Continue
+Next evidence needed: 下一次遇到新的发布/部署脚本时，先用本页字段矩阵做缺口扫描；只有字段已存在且高风险路径未覆盖，才补最小测试，不要为了统一文案改脚本输出。
+```
+
 ## 采纳判断
 
 | 信号 | 处理 |

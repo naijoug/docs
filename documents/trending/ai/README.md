@@ -34,6 +34,7 @@ index: false
 - [Agent Cron 的脏工作区边界](agent-cron-dirty-worktree-boundary.md)
 - [Agent Cron 交付预算卡](agent-cron-delivery-budget-card.md)
 - [Pre-publish Authorization Boundary](pre-publish-authorization-boundary.md)
+- [Readiness Field Contract](readiness-field-contract.md)
 - [多 Agent 会话控制台检查卡](multi-session-agent-control-plane.md)
 - [Agent Cron 工作日志资产提取器](agent-cron-worklog-asset-extractor.md)
 - [从项目实现到可复用资产](project-implementation-to-reusable-asset.md)
