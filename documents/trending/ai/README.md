@@ -95,6 +95,7 @@ index: false
 - [薄 API 边界测试地图](thin-api-boundary-test-map.md)
 - [Agent Cron 下一块选择矩阵](agent-cron-next-slice-switchboard.md)
 - [Agent Preflight 脚本测试模板](agent-preflight-script-test-template.md)
+- [Agent Cron 门禁自测覆盖矩阵](agent-cron-gate-selftest-coverage-matrix.md)
 - [Skill Metadata Gate Before Linker](skill-metadata-gate-before-linker.md)
 - [历史快照标签先于当前配置反查](historical-snapshot-labels-before-current-lookup.md)
 - [Draft Manifest 先于 Release Gate](draft-manifest-before-release-gate.md)
