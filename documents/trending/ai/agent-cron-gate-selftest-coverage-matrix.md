@@ -27,6 +27,7 @@ Agent Cron 的 notebook、preflight 和交接脚本不是“辅助文档”，�
 | 时间标题格式漂移 | `summaries/scripts/test-check-hermes-notebook.sh` | `## 24:00`、`## 29:59` 或缺少 `## HH:mm` | checker 报 missing/invalid time heading，并明确期望 `00:00-23:59` |
 | 非时间二级标题混入 | `summaries/scripts/test-check-hermes-notebook.sh` | 在条目之间插入 `## 附录` | checker 报 invalid level-2 heading，防止把新二级标题当作上一条正文 |
 | 一级标题混入 | `summaries/scripts/test-check-hermes-notebook.sh` | 文件中出现 `# 2026-09-09` | checker 报 invalid level-1 heading，保持 `## HH:mm` 是唯一条目边界 |
+| 首条时间标题前存在正文 | `summaries/scripts/test-check-hermes-notebook.sh` | 文件开头先写前言或说明，再出现第一条 `## HH:mm` | checker 报 content before first time heading，确保 daily notebook 直接由时间条目开始 |
 | 单条记录字段不完整 | `summaries/scripts/test-check-hermes-notebook.sh` | 第二条记录缺 `- 后续接力：` | checker 指出具体时间块缺字段 |
 | 时间倒序或重复 | `summaries/scripts/test-check-hermes-notebook.sh` | `11:00` 后接 `10:59`，或两个 `11:00` | checker 指出相邻时间不严格递增 |
 | 日期文件名不真实 | `summaries/scripts/test-check-hermes-notebook.sh` | `summaries/hermes/2026-99-99.md` | checker 报 invalid Hermes daily notebook date |
