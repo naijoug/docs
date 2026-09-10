@@ -52,6 +52,21 @@ Next evidence needed: <如果要回到原 repo，下次需要确认什么>
 - `Switch` 不等于放弃上一段计划；它只是把本轮产出转移到 clean repo、clean adjacent 文档、测试卡或 proof checker 上，并在 notebook 写明回到原路径所需的归属证据。
 - 替代任务仍然要满足 `Boundary=1` 和 `Verification=1`：能用 path-limited checker、测试或 diff 检查验证，而不是只写一段感想。
 
+### 快速判例：接力工程 repo 已被他人继续
+
+当上一段建议继续某个工程切片，但本轮启动时该 repo 已经从 clean 变成多文件 dirty，优先把它判成 `Switch`，除非 dirty path 与上一段 owned paths 完全重合且有明确接管证据。
+
+```text
+Handoff target: study-buddy/frontend/web interaction test
+Startup status: M frontend/... + ?? new test path
+Ownership evidence: unknown
+Decision: Switch
+Selected replacement: docs/documents/trending/ai/agent-cron-next-slice-switchboard.md
+Next evidence needed: 下一轮看到 study-buddy clean，或用户明确说明这些 dirty path 可由本轮继续接管
+```
+
+这个判例的关键不是“放弃工程项目”，而是把节拍器从“沿着上一句提示机械执行”拉回到“先保护边界，再交付可验证小块”。如果要回到原工程 repo，下一轮的第一条命令仍然是 `git status --short`，而不是直接运行测试或修改 UI。
+
 这条规则可以直接和 [Agent Cron 未提交接力路径分诊](agent-cron-uncommitted-continuation-triage.md) 串用：先分诊接力路径归属，再用本页矩阵选择本轮小块。
 
 ## 5 分钟打分法
