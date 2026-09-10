@@ -59,6 +59,37 @@ git add <owned paths>
 git diff --cached --name-only
 ```
 
+## Scope proof 小例子
+
+当验证命令新增了不在本轮接管范围内的生成文件 diff，不要只写“已验证通过”。把证据压成下面这种可复核记录：
+
+```text
+Owned paths before verification:
+- documents/trending/ai/generated-diff-quarantine-after-verification.md
+
+Pre-check status:
+- clean
+
+Verification command:
+- python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/generated-diff-quarantine-after-verification.md
+
+Post-check new dirty paths:
+- documents/api/generated-schema.json
+
+Classification:
+- documents/api/generated-schema.json => generated-side-effect, outside owned paths
+
+Action:
+- git restore -- documents/api/generated-schema.json
+- git add documents/trending/ai/generated-diff-quarantine-after-verification.md
+- git diff --cached --name-only
+
+Decision:
+- Continue, because committed paths are still limited to owned paths.
+```
+
+如果 `Post-check new dirty paths` 里出现无法分类的文件，Decision 先写 `Narrow` 或 `Stop`，不要把它们混进提交。
+
 如果必须恢复验证副作用，优先使用显式 path：
 
 ```bash
