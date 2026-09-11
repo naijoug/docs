@@ -42,6 +42,7 @@ index: false
 - [从项目实现到可复用资产](project-implementation-to-reusable-asset.md)
 - [Agent Cron 规划-执行-验证闭环](agent-cron-planning-execution-verification-loop.md)
 - [Agent Cron 未提交接力路径分诊](agent-cron-uncommitted-continuation-triage.md)
+- [Unknown Dirty 时先切到安全资产](unknown-dirty-pivot-to-safe-asset.md)
 - [Format Churn 先隔离再审内容](format-churn-before-content-review.md)
 - [结构压缩不丢操作细节](structure-compression-keeps-operational-detail.md)
 - [交付物打包不污染输出目录](delivery-package-output-cleanliness.md)
