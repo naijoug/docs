@@ -28,6 +28,7 @@ index: false
 - [双角色 E2E Helper 契约](dual-role-e2e-helper-contract.md)
 - [Spec Drawer E2E Acceptance Contract](spec-drawer-e2e-acceptance-contract.md)
 - [依赖变更命令审批清单](dependency-mutation-approval-checklist.md)
+- [Role State Acceptance Checklist](role-state-acceptance-checklist.md)
 - [把 Agent 心跳沉淀成付费 Offer](heartbeat-to-paid-offer.md)
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)
