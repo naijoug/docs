@@ -26,6 +26,7 @@ index: false
 - [Standalone Test Runner 自动发现清单](standalone-test-runner-auto-discovery.md)
 - [Helper Extraction Before DOM Dependency](helper-extraction-before-dom-dependency.md)
 - [双角色 E2E Helper 契约](dual-role-e2e-helper-contract.md)
+- [Spec Drawer E2E Acceptance Contract](spec-drawer-e2e-acceptance-contract.md)
 - [把 Agent 心跳沉淀成付费 Offer](heartbeat-to-paid-offer.md)
 - [AI 程序员每周收入实验规划器](ai-programmer-weekly-experiment-planner.md)
 - [AI 程序员每周实验卡片填写样例](ai-programmer-weekly-experiment-card-proof-artifact-example.md)
