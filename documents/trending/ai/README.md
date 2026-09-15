@@ -107,6 +107,7 @@ index: false
 - [Draft Manifest 先于 Release Gate](draft-manifest-before-release-gate.md)
 - [Expected Failure 也是交付物](expected-failure-contract.md)
 - [验证后生成文件 Diff 隔离卡](generated-diff-quarantine-after-verification.md)
+- [生成验证产物先隔离再读状态](generated-artifact-quarantine-before-status.md)
 
 ## 30-minute AI coding audit entry
 
