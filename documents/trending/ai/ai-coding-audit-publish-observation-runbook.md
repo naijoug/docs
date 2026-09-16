@@ -27,17 +27,21 @@ order: 31
 
 ## 发布后 24 小时最小记录包
 
-到 24 小时时，不需要写长复盘，只需要补齐一条能决定下一步的记录。每条候选回复按下面 5 行写，缺项就标 `Missing`，不要用主观热度替代证据。
+到 24 小时时，不需要写长复盘，只需要补齐一条能决定下一步的记录。每条候选回复先保留痛点原话和授权边界，再按同一套 5 项最小证据字段写，缺项就标 `Missing`，不要用主观热度替代证据。
 
 ```text
 Pain quote: 对方的原话；没有具体问题就写 Missing
-Evidence shape: PR / diff / failed command / agent log / final report / review comment / oral-only
+Command status: 实际命令、exit code、CI 结论或 Missing
+Workspace status: git status / PR diff / 文件范围 / dirty 边界或 Missing
+Risk summary: 对方认为最危险的失败、回滚点或 reviewer 疑问
+Agent claim: agent 声称完成、验证、修复或部署了什么
+Change scope: 涉及的文件、功能、服务、prompt、配置或 Unknown
 Boundary: 可公开、需匿名、不能公开、未确认
 Next evidence needed: 下一条要补的命令、日志、文件范围或授权确认
 Decision: Continue / Narrow / Stop + 一句话理由
 ```
 
-判断顺序固定为：先看 `Pain quote` 是否具体，再看 `Evidence shape` 是否可复核，再看 `Boundary` 是否允许继续。只有三项都过关，才进入 `Continue`；只有痛点具体但证据不足，进入 `Narrow`；三项都缺或只剩点赞收藏，进入 `Stop`。
+判断顺序固定为：先看 `Pain quote` 是否具体，再看 5 项证据字段里是否至少有可复核的 `Command status` 或 `Workspace status`，再看 `Boundary` 是否允许继续。只有痛点、证据和边界都过关，才进入 `Continue`；只有痛点具体但 5 项字段不足，进入 `Narrow`；痛点、证据和边界都缺或只剩点赞收藏，进入 `Stop`。
 
 如果第一条真实回复介于“有痛点”和“证据不足”之间，先照 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md) 写成 `Narrow`：不要急着交付完整报告，只回复下一条安全命令和 `Next evidence needed`。
 
@@ -48,15 +52,19 @@ Decision: Continue / Narrow / Stop + 一句话理由
 | 发布位置 | 渠道 + 链接或可回溯位置 | `开发者社群 / 2026-07-01 thread` |
 | Hook | 原文标题或第一句话 | `你的 coding agent 真正缺的不是提示词，而是下一条安全命令` |
 | 具体痛点原话 | 复制对方的原话，必要时脱敏 | `AI 改完后 CI 挂了，但没人知道该先回滚哪块` |
-| 证据形状 | PR、失败命令、agent log、final report、review comment 或仅口头描述 | `失败命令 + exit code` |
+| Command status | 实际命令、exit code、CI 结论；没有就写 `Missing` | `pnpm test` exit 1，3 个 snapshot 失败 |
+| Workspace status | git status、PR diff、文件范围、dirty 边界；没有就写 `Missing` | `2 files changed in auth/` |
+| Risk summary | 对方眼里最危险的失败、回滚点或 reviewer 疑问 | `不知道该先回滚 prompt 还是 API wrapper` |
+| Agent claim | agent 声称完成、验证、修复或部署了什么 | `final report 写 all tests passed` |
+| Change scope | 涉及的文件、功能、服务、prompt、配置或 Unknown | `auth callback + session middleware` |
 | 公开边界 | 是否允许匿名复盘、哪些内容必须排除 | `可匿名；不能出现客户名和仓库路径` |
 | 下一步 | `Continue`、`Narrow` 或 `Stop` | `Narrow 到下一条安全命令梯` |
-| Next evidence needed | 下一条必须补的材料 | `补 CI 命令、失败片段、最近一次 agent summary` |
+| Next evidence needed | 下一条必须补的最小材料 | `先补 Command status：命令、exit code、失败片段` |
 
 ## 判断规则
 
-- `Continue`：对方愿意提供 PR、agent log、失败命令或 reviewer 疑问，并接受只读审查、匿名边界和 `Next evidence needed`。
-- `Narrow`：对方只有一个具体片段，足以判断一个单点问题，但不足以支持完整报告；下一步缩小到一条命令、一个文件或一段 handoff。
+- `Continue`：对方愿意提供 5 项字段中的足够证据（通常至少有 `Command status`、`Workspace status`、`Agent claim` 中的两项），并接受只读审查、匿名边界和 `Next evidence needed`。
+- `Narrow`：对方只有一个具体片段，足以判断一个单点问题，但不足以支持完整报告；下一步缩小到 5 项字段里最缺的一项，例如一条命令、一个文件范围或一段 handoff。
 - `Stop`：只有点赞、转发、泛泛认可，或者需要生产权限、密钥、完整私有仓库、未经授权数据才能判断。
 
 ## 回复分流模板
@@ -76,7 +84,7 @@ Decision: Continue / Narrow / Stop + 一句话理由
 ```text
 这条信息能判断一个单点，但还不足以做完整审查。我们先缩小到一个问题：下一条最安全命令是什么。
 
-请补一个最小证据：失败命令、exit code、相关文件范围，或 reviewer 的一句具体疑问。
+请先只补一个最小证据字段：Command status（命令、exit code、失败片段）。如果暂时没有命令输出，就补 Workspace status（相关文件范围或 PR diff 摘要）。
 ```
 
 ### Stop
@@ -84,14 +92,14 @@ Decision: Continue / Narrow / Stop + 一句话理由
 ```text
 目前还不能做公开案例或审查报告，因为缺少可复核证据 / 授权边界不清 / 涉及敏感数据。先不要发我生产权限、密钥或完整私有仓库。
 
-如果要继续，请改用脱敏摘要、失败命令和公开边界说明。
+如果要继续，请改用脱敏摘要，并只补 5 项字段中的最小一项：Command status、Workspace status、Risk summary、Agent claim 或 Change scope。
 ```
 
 ## 与后续文档衔接
 
 - 能 `Continue`：进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
 - 只能 `Narrow`：先用 [下一条安全命令梯](next-safe-command-ladder.md) 做单点交付。
-- 不会写第一条观察：复制 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md)，把痛点原话、证据形状、公开边界和 `Next evidence needed` 替换成真实信息。
+- 不会写第一条观察：复制 [AI 编程审查发布后观察样例](ai-coding-audit-observation-example.md)，把痛点原话、5 项证据字段、公开边界和 `Next evidence needed` 替换成真实信息。
 - 要公开复盘：先过 [匿名 AI 编程审查案例骨架](anonymous-ai-coding-audit-case-skeleton.md) 和 evidence boundary checkpoint。
 - 要沉淀资产：回到 [AI 程序员资产飞轮](ai-programmer-asset-flywheel.md)，判断这次反馈适合写文章、模板、skill、书稿卡片还是服务 offer。
 
@@ -99,4 +107,4 @@ Decision: Continue / Narrow / Stop + 一句话理由
 
 Pass means：48 小时内至少出现 1 条可复核痛点原话，且能明确下一步是 `Continue` 或 `Narrow`。
 
-Fail means：只有曝光、点赞、收藏，没有具体样本、证据形状或授权边界；下一轮不要扩写内容，先重写 hook 或换渠道。
+Fail means：只有曝光、点赞、收藏，没有具体样本、5 项证据字段或授权边界；下一轮不要扩写内容，先重写 hook 或换渠道。

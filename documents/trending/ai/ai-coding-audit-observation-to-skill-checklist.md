@@ -18,7 +18,7 @@ order: 37
 只有同时满足下面条件，才考虑写技能：
 
 - **重复问题**：至少两次观察或报告都指向同一种失败形状，例如“agent 声称已验证但没有命令输出”；
-- **输入证据明确**：能用 PR diff、失败命令、agent final report、CI 日志或 review comment 表达，而不是泛泛聊天；
+- **输入证据明确**：能落到 5 项最小字段中的至少两项（`Command status`、`Workspace status`、`Risk summary`、`Agent claim`、`Change scope`），而不是泛泛聊天；
 - **边界可执行**：技能只做只读检查、命令梯设计、证据分层或报告生成，不要求生产权限；
 - **输出可复核**：技能产物能被下一位 agent 或用户检查，例如 `highest risk`、`next safe command`、`Continue / Narrow / Stop`；
 - **隐私边界清楚**：不把客户名、私有仓库、密钥、生产路径或未经授权原文写进技能样例。
@@ -73,7 +73,7 @@ Output:
 
 | 观察到的重复问题 | 优先复用的技能 | 复用方式 |
 | --- | --- | --- |
-| 报告里写了“建议测试”，但没有说明下一条最小安全命令 | `skills/skills/manual/review/next-safe-command-ladder/` | 把观察记录里的 `Evidence shape` 改写成 `Change type`、`Main risk` 和 2-3 步命令梯 |
+| 报告里写了“建议测试”，但没有说明下一条最小安全命令 | `skills/skills/manual/review/next-safe-command-ladder/` | 从观察记录里的 `Command status`、`Workspace status`、`Risk summary`、`Change scope` 改写出 `Change type`、`Main risk` 和 2-3 步命令梯 |
 | 想把私有审查写成公开样例，但证据、授权和脱敏边界不清 | `skills/skills/manual/review/audit-evidence-boundary/` | 先把每条 claim 分成 `Fact / Inference / Unverified / Private / Stop`，再决定是否只发布方法样板 |
 | 同时缺命令梯和发布边界 | 先用 `next-safe-command-ladder`，再用 `audit-evidence-boundary` | 先证明“下一步怎么验证”，再判断“哪些内容能公开说” |
 
