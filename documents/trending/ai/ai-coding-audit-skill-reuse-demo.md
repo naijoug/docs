@@ -17,9 +17,14 @@ order: 38
 
 ```text
 Pain quote: “Agent 改完依赖和测试配置后，CI 在 lint 阶段失败；它说已经验证过，但报告里只有一句 all checks passed。”
-Evidence shape: PR diff summary + failed CI job name；缺原始失败命令、exit code、agent final report 的完整验证段落
+Evidence shape:
+- Command status: failed CI job name；缺原始 lint 命令和 exit code
+- Workspace status: PR diff summary；缺未提交状态或生成物摘要
+- Risk summary: agent 同时改依赖和测试配置，可能让 lint 失败来源不清
+- Agent claim: “all checks passed”；缺 final report 的完整 verified / not verified 段落
+- Change scope: 依赖和测试配置；缺相对路径或模块范围
 Boundary: 可以匿名讨论失败形状；不能公开公司名、仓库名、截图、完整日志或私有路径
-Next evidence needed: 失败命令、exit code、agent final report 中的 verified / not verified 段落、涉及文件范围
+Next evidence needed: 先补 Command status：原始 lint 命令和 exit code；再按需补 Agent claim 与 Change scope
 Decision: Narrow
 ```
 
@@ -31,8 +36,8 @@ Decision: Narrow
 | --- | --- |
 | Change type | Agent 修改依赖和测试配置后 CI lint 失败 |
 | Main risk | 直接让 agent 继续修可能扩大改动；直接回滚可能丢失有用 diff |
-| Known evidence | PR diff summary、失败 CI job name、agent 声称已验证 |
-| Missing evidence | 原始失败命令、exit code、完整验证段落、涉及文件范围 |
+| Known evidence | Workspace status 里有 PR diff summary；Command status 只有失败 CI job name；Agent claim 只有一句 all checks passed |
+| Missing evidence | Command status 缺原始失败命令和 exit code；Agent claim 缺完整验证段落；Change scope 缺相对路径范围 |
 
 输出只给下一条最安全命令，不给“完整修复方案”：
 
@@ -57,7 +62,7 @@ Stop condition: 如果只能拿到截图、私有路径或完整日志，先脱�
 公开版本只能保留方法样板：
 
 ```text
-一个 agent 改动后的 CI lint 失败样本里，最先要确认的不是“让 agent 继续修”，而是把失败命令、exit code、改动范围和 agent 自称验证的段落拆开。没有这些证据时，交付物应收窄为下一条安全命令和 Next evidence needed。
+一个 agent 改动后的 CI lint 失败样本里，最先要确认的不是“让 agent 继续修”，而是把 Command status、Workspace status、Risk summary、Agent claim 和 Change scope 拆开。Command status 还缺原始命令和 exit code 时，交付物应收窄为下一条安全命令和 Next evidence needed。
 ```
 
 ## 第三步：合并决策
@@ -65,7 +70,7 @@ Stop condition: 如果只能拿到截图、私有路径或完整日志，先脱�
 ```text
 Decision: Narrow
 Reason: 痛点真实且边界可匿名，但缺少原始命令、exit code 和完整验证段落；只能交付 next safe command，不能写完整审查报告或公开成功案例。
-Follow-up: 请求 4 个最小证据；若补齐，再进入首份报告；若只能提供不可脱敏材料，则 Stop。
+Follow-up: 先请求 1 个最小证据字段（Command status）；若补齐后仍需要定位，再请求 Agent claim 与 Change scope；若只能提供不可脱敏材料，则 Stop。
 Asset destination: docs/documents/trending/ai/ai-coding-audit-skill-reuse-demo.md
 ```
 
@@ -74,8 +79,11 @@ Asset destination: docs/documents/trending/ai/ai-coding-audit-skill-reuse-demo.m
 ```text
 Evidence snapshot:
 - Pain quote:
-- Known evidence:
-- Missing evidence:
+- Command status:
+- Workspace status:
+- Risk summary:
+- Agent claim:
+- Change scope:
 - Public boundary:
 
 Next safe command:

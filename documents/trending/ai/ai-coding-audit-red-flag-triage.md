@@ -46,7 +46,11 @@ order: 92
 ## Red Flag Triage
 
 ### Sample boundary
-- Input evidence:
+- Command status:
+- Workspace status:
+- Risk summary:
+- Agent claim:
+- Change scope:
 - Authorized / redacted boundary:
 - Not reviewed:
 
@@ -72,6 +76,18 @@ order: 92
 | P2 Improve | 报告里有重复解释，读者需要更短的执行摘要 | 人工阅读发现 P2 文字过长，但不影响本次发布判断 | 下轮提炼成模板或 checklist，不阻断当前交付 |
 
 这个例子的关键是：同样来自一次审查，P0 保护交付边界，P1 补验证链，P2 才进入资产化改进。不要让 P2 噪音稀释 P0/P1 的执行优先级。
+
+如果 5 项最小证据字段没有补齐，不要把缺口全部写成 P0。先按下面方式分诊：
+
+| Missing field | 默认层级 | 写法 |
+| --- | --- | --- |
+| Command status 缺最后命令或 exit code | P1 Verify | 先请求原始命令形状和退出码；没有它不能判断失败是否可复现 |
+| Workspace status 显示未归属 dirty path | P0 Stop | 停止提交或发布；只 stage 本轮明确文件，先保护用户改动 |
+| Risk summary 只有泛泛担忧 | P2 Improve | 收窄成一个最担心失败点；不足以阻断交付 |
+| Agent claim 只有“已完成” | P1 Verify | 要求 final report 中 verified / not verified 段落；不要把 agent 说法当事实 |
+| Change scope 缺相对路径范围 | P1 Verify | 先补模块或目录级范围；不要要求完整私有仓库 |
+
+这张表的作用是把“证据不足”转成下一条安全动作，而不是扩大索取材料：优先补最小字段，仍不要接收密钥、完整日志、生产数据、截图或完整私有仓库。
 
 ## 和现有资产的连接
 
