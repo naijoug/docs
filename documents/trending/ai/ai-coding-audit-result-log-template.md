@@ -9,7 +9,7 @@ order: 35
 
 # AI 编程审查 Audit Result 记录表
 
-这是一份私有记录表模板，用来承接每次 30 分钟 AI 编程审查收入实验的真实结果。它不要求你已经成交，也不要求把样本公开；它只要求把渠道、输入证据、公开边界、交付物、决策和下一条证据需求写成可复查事实。
+这是一份私有记录表模板，用来承接每次 30 分钟 AI 编程审查收入实验的真实结果。它不要求你已经成交，也不要求把样本公开；它只要求把渠道、5 项最小输入证据、公开边界、交付物、决策和下一条证据需求写成可复查事实。
 
 <!-- more -->
 
@@ -32,7 +32,11 @@ Date:
 Channel:
 Prompt / CTA sent:
 Reply summary:
-Input evidence:
+Command status:
+Workspace status:
+Risk summary:
+Agent claim:
+Change scope:
 Public boundary:
 Sensitive material removed:
 Deliverable:
@@ -52,7 +56,11 @@ Asset destination:
 | `Channel` | 发在哪个渠道、是否可再次触达 | “大家都在关注” |
 | `Prompt / CTA sent` | 贴出或链接本次样本征集短帖 | 没发出就假装已验证 |
 | `Reply summary` | 对方回复的可审查问题摘要 | 未授权原文、客户名、私聊截图 |
-| `Input evidence` | PR、失败命令、agent log、final report、review comment 或“只有口头描述” | 完整私有代码、密钥、生产数据 |
+| `Command status` | 最后一条原始命令、exit code、pass / fail / not run；没有就写 `not available` | “应该过了”、只发截图不写命令 |
+| `Workspace status` | 未提交改动、生成文件、测试产物、依赖变更的摘要或脱敏 `git status --short` | 完整私有代码、密钥、生产数据 |
+| `Risk summary` | 当前最担心的一点和影响面 | 多个泛泛担忧、没有优先级 |
+| `Agent claim` | agent final reply / commit / report 中声称完成和验证的摘要 | 只写“AI 说完成了” |
+| `Change scope` | PR、目录或文件类型范围，例如前端组件、脚本、后端接口、迁移、配置、文档 | 要求自己探索整个私有仓库 |
 | `Public boundary` | 可公开 / 只能匿名 / 只能内部 / 停止接收 | 模糊写“应该可以发” |
 | `Deliverable` | 下一条命令、最高风险、handoff、`Next evidence needed` 或 1 页报告 | 泛泛建议和营销话术 |
 | `Red flag triage` | P0 / P1 / P2 的最高层级和一句理由；多问题时链接 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) | 无优先级的问题长清单 |
@@ -69,6 +77,11 @@ Asset destination:
 ```text
 Decision: Continue
 Why: 收到公开 PR 链接和失败 CI 日志；对方确认可以公开讨论验证步骤，但不能公开公司名。
+Command status: CI `npm test` fail 1；本地未重跑。
+Workspace status: PR diff 可见；无依赖变更；无生成目录。
+Risk summary: agent 声称验证通过但 CI 失败，合并前验证链可能断裂。
+Agent claim: final report 写了 `tests passed`，没有贴命令输出。
+Change scope: 前端组件和测试 helper。
 Deliverable: 1 个最高风险 + 下一条安全命令；如果命令通过，再写 1 页只读报告。
 Red flag triage: P1 Verify；已有失败 CI 证据，但还缺 agent final report 中“已验证”段落来判断验证链断裂点。
 Next evidence needed: CI 失败命令的完整 exit code 和 agent final report 中“已验证”段落。
@@ -82,6 +95,11 @@ Follow-up action: 进入 ai-coding-audit-intake-to-first-report.md。
 ```text
 Decision: Narrow
 Why: 对方只描述“agent 改坏了”，还没有 PR、命令或日志；不能判断最高风险。
+Command status: not available；没有原始命令和 exit code。
+Workspace status: not available；只知道有未提交改动。
+Risk summary: agent 可能改坏业务逻辑，但当前仍是二手描述。
+Agent claim: not available；未提供 final reply 或 report 摘要。
+Change scope: 只知道可能涉及前端；目录和 diff 不明。
 Deliverable: 只回复 Next evidence needed，不写审查结论。
 Red flag triage: P1 Verify；风险可能严重，但当前只有二手描述，不能升级成 P0 Stop。
 Next evidence needed: 一条失败命令、一个 PR diff 或一段脱敏 final report。
