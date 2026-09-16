@@ -30,37 +30,48 @@ order: 35
 
 ## 0. 先做接收判定
 
-收到样本时，先判断它进入哪条分支，而不是直接承诺审查。
+收到样本时，先判断它进入哪条分支，而不是直接承诺审查。判定输入必须优先读取 [AI 编程审查证据收集请求模板](ai-coding-audit-evidence-request-template.md) 中的 5 项最小证据：命令状态、仓库状态、失败摘要、agent 结论和改动范围。
 
-| 输入状态 | 判定 | 下一步 |
-| --- | --- | --- |
-| 只有一句吐槽，没有 repo / PR / log / 命令 | `Narrow` | 追问一个最小证据：失败命令、PR 链接或 agent final report |
-| 有公开 PR / issue / build log | `Continue` | 进入只读审查，记录证据来源 |
-| 有私有素材但未授权公开 | `Continue privately` | 只做内部报告，不写公开案例 |
-| 包含密钥、用户数据、生产权限或无法脱敏的日志 | `Stop` | 不接收原始材料，要求重新脱敏或改成方法讨论 |
+| 输入状态 | 5 项证据读法 | 判定 | 下一步 |
+| --- | --- | --- | --- |
+| 只有一句吐槽，没有命令状态、仓库状态或 agent 结论 | 缺少可复核事实 | `Narrow` | 只追一项 `Next evidence needed`，优先要原始命令和 exit code |
+| 有命令状态和风险摘要，但缺仓库状态、agent 结论或改动范围 | 有单点证据，不能完整审查 | `Narrow` | 只补缺失字段，不扩大成完整咨询 |
+| 有公开 PR / issue / build log，且能对应 5 项证据中的大部分字段 | 可建立只读范围 | `Continue` | 进入只读审查，记录证据来源和缺口 |
+| 有私有素材但未授权公开，且可以脱敏成 5 项摘要 | 可私下审查，不可公开 | `Continue privately` | 只做内部报告，不写公开案例 |
+| 包含密钥、用户数据、生产权限或无法脱敏的日志 | 证据形状触碰敏感边界 | `Stop` | 不接收原始材料，要求重新脱敏或改成方法讨论 |
 
-第一封回复只问三件事：
+第一封回复只问 5 项证据的最小版本：
 
 ```text
-1. 这次 agent 改动的目标是什么？
-2. 你现在最不确定的失败点是什么？
-3. 哪一条命令、日志或 PR 讨论最能证明这个不确定性？
+1. Command status：最后运行的命令是什么？exit code / pass / fail / not run 分别是什么？
+2. Workspace status：当前是否有未提交改动、生成文件、测试产物或依赖变更？只给相对路径摘要即可。
+3. Risk summary：现在最担心的一个失败点是什么？
+4. Agent claim：agent 最后声称完成了什么？有没有写未验证项或失败命令？
+5. Change scope：这次主要改了什么类型的文件或模块？
 ```
 
-如果对方不能回答第 3 问，先不要写报告；把它降级为内容选题或 checklist 练习。
+如果对方不能提供第 1 项，先不要写报告；如果只缺第 2-5 项中的一项，把它降级为 `Narrow` 并只追那一项。不要为了“看起来完整”要求完整仓库、生产日志、密钥、用户数据或内部截图。
 
 ## 1. 锁定只读范围
 
-把样本压缩成一个可审查边界：
+把样本压缩成一个可审查边界，并保留 5 项证据字段。缺字段时写 `not available`，不要脑补。
 
 ```text
 Reviewed:
 Included:
 Excluded:
 Evidence inspected:
+- Command status:
+- Workspace status:
+- Risk summary:
+- Agent claim:
+- Change scope:
 Public boundary:
 Owner next action:
+Next evidence needed:
 ```
+
+`Evidence inspected` 不是素材清单，而是“我实际读到了哪些可复核证据”。如果某项只来自对方口述，先标 `Unverified`；如果某项需要敏感材料才能判断，直接走 `Stop`。
 
 范围越小，报告越容易产生价值。一个好的首份报告通常只覆盖以下之一：
 
@@ -97,7 +108,13 @@ Owner next action:
 - Included:
 - Excluded:
 - Evidence inspected:
+  - Command status:
+  - Workspace status:
+  - Risk summary:
+  - Agent claim:
+  - Change scope:
 - Public boundary:
+- Next evidence needed:
 
 ## Highest Risk
 - Risk:
