@@ -1,15 +1,15 @@
 ---
 title: AI 编程审查证据收集请求模板
-icon: list-check
+icon: clipboard-check
 
 index: true
-order: 40
+order: 35
 
 ---
 
 # AI 编程审查证据收集请求模板
 
-当样本提供者只给了痛点原话或模糊场景时，不要马上进入审查、报价或修复。先用这份模板索取 5 个最小证据，把对话从“我也遇到过”收束成可复核输入。
+当对方只有一句痛点、截图或 agent 自评时，不要立刻下结论。先用这份模板把材料收束成 5 项最小证据：命令、状态、失败摘要、agent 结论和改动范围。
 
 <!-- more -->
 
@@ -17,81 +17,68 @@ order: 40
 
 适合使用：
 
-- 对方已经表达明确痛点，但只给了截图、转述或一句 agent 结论；
-- 你已经能判断问题大概率在 PR、CI、agent final report 或 reviewer 疑问中；
-- 下一步需要决定进入 30-60 分钟只读审查，还是继续 `Narrow` 到一条命令。
+- 对方说“AI 改坏了”“Agent 跑完但我不放心”，但没有可复核命令；
+- 对方愿意提供脱敏材料，却不知道你需要什么；
+- 你只想判断是否进入一次 30-60 分钟只读审查，而不是马上接手修复。
 
 不适合使用：
 
-- 对方要求你登录生产环境、接触密钥、查看完整私有仓库或处理用户数据；
-- 对方不能接受脱敏，只能提供不可公开的截图或完整日志；
-- 这次沟通没有具体 AI 改动、失败命令、PR diff、agent log 或 reviewer 疑问。
+- 对方要求你登录生产环境、接收密钥、导出用户数据或查看完整私有仓库；
+- 对方只能提供二手转述，且不愿补任何命令、日志或 diff 摘要；
+- 你已经拿到 PR、失败命令和授权边界，此时应进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)。
 
 ## 复制即用版本
 
 ```text
-谢谢，这个场景可以先做一轮“证据收集”，我暂时不会让你发完整仓库、密钥、用户数据或内部截图。
+可以，我先不直接判断“AI 写得好不好”。为了让这次审查可复核、也避免你暴露敏感信息，请只补下面 5 项最小证据，能脱敏就脱敏：
 
-请只补 5 个最小证据，能脱敏就脱敏，不能提供就写“没有”：
+1. 原始命令和状态：你或 agent 最后运行过什么命令？exit code / pass / fail / not run 分别是什么？
+2. 当前仓库状态：是否有未提交改动、生成文件、测试产物或依赖变更？只需要文件类别或相对路径摘要，不要发密钥或完整私有代码。
+3. 失败或担心点摘要：最担心的一个问题是什么？例如测试红灯、构建失败、业务逻辑不确定、安全/数据风险、reviewer 不信任。
+4. Agent 自己的结论：agent 最后声称完成了什么？它有没有写明未验证项、失败命令或下一步？
+5. 改动范围：这次主要改了什么类型的文件？例如前端组件、脚本、后端接口、数据库迁移、配置、文档。
 
-1. 原始命令：触发问题的命令或 CI job 名称是什么？
-2. Exit code / 状态：命令是通过、失败、超时，还是没有运行？
-3. 失败摘要：最短 3-8 行即可，只保留错误类型、失败阶段和脱敏后的文件类别。
-4. Agent 结论：agent final report 或对话里怎么描述“已验证 / 未验证 / 修好了”？只贴验证段落，不贴完整日志。
-5. 改动范围：这次 AI/agent 改了哪些类型的文件？例如文档、前端组件、测试配置、CI 脚本、后端接口；不要贴私有路径。
-
-公开边界也请补一句：哪些内容绝对不能公开？是否允许我只保留证据形状，写成匿名方法复盘？
-
-拿到这些后，我会先交付下一条最安全的验证动作；证据不足时只写 Next evidence needed，并把高风险但未证实的问题标成 P1 Verify / Narrow，不会把推断包装成 P0 Stop 结论。
+请不要发送密钥、用户数据、生产日志、内部截图或完整私有仓库。如果某一项暂时没有，就写 not available。拿到这 5 项后，我只会先给一个 Continue / Narrow / Stop 判断和下一条最安全验证命令；证据不足的地方会标成 Unverified，不会包装成确定结论。
 ```
 
-## 5 项证据如何判断
+## 结构化表单版本
 
-| 证据 | 最小合格标准 | 不合格时怎么收窄 |
+| 字段 | 对方要提供什么 | 可接受证据形状 | 不接受 |
+| --- | --- | --- | --- |
+| Command status | 最后运行的命令、exit code、pass/fail/not run | `npm test -> fail 1`、`cargo test -> pass`、`not run because ...` | “应该没问题”、只发截图不写命令 |
+| Workspace status | 未提交、生成物、依赖变更的摘要 | 相对路径类别、`M src/...`、`?? reports/...` | 密钥、完整私有源码、生产数据 |
+| Risk summary | 当前最担心的一点 | 一句话风险、失败类型、reviewer 疑问 | 多个泛泛担忧、没有优先级 |
+| Agent claim | agent 最后报告的完成项和未验证项 | final report 摘要、commit hash、验证命令 | 只说“AI 说完成了” |
+| Change scope | 改动涉及的文件类型或模块 | PR 摘要、目录类别、相对路径 | 要求你自行探索整个私有仓库 |
+
+## 收到证据后的分流
+
+| 证据状态 | 判断 | 下一步 |
 | --- | --- | --- |
-| 原始命令 | 有命令文本、CI job 名称或 reviewer 指出的检查项 | 只问“哪一个 job / command 失败”，不要问完整日志 |
-| Exit code / 状态 | 能区分 passed / failed / timeout / not run | 如果没有 exit code，先记录状态来源，例如 CI UI 或 agent 口头结论 |
-| 失败摘要 | 3-8 行，能看出失败阶段和错误类型 | 要求脱敏摘要，不要接收完整私有日志 |
-| Agent 结论 | 只贴 final report 的验证段落或一句 claim | 没有 report 时标 `Unverified`，不追问完整对话 |
-| 改动范围 | 用文件类别、模块类别或相对路径摘要表达 | 私有路径不可脱敏时，只写文件类型和数量 |
-
-拿到证据后再进入 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md)：P0 Stop 需要有具体可复核证据；如果只是“看起来可能严重”，先写成 P1 Verify，并把缺失命令、日志或人工确认放进 `Next evidence needed`。
-
-## 分流规则
-
-| 收到的材料 | 决策 | 下一步 |
-| --- | --- | --- |
-| 5 项证据基本齐全，且公开边界清楚 | `Continue` | 进入 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) |
-| 有痛点，但缺命令、exit code 或失败摘要 | `Narrow` | 只回一条补证据请求，或给下一条只读验证命令 |
-| 只有截图、私有日志或不能脱敏的材料 | `Stop` | 要求对方删除敏感材料并重发证据形状；不写公开案例 |
-| 对方只想要修复，不愿提供证据 | `Stop / Switch` | 不进入审查；可转为普通咨询或放弃样本 |
+| 5 项齐全，且没有敏感信息 | `Continue` | 进入只读审查，按 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 标 P0 / P1 / P2 |
+| 有命令和风险，但缺仓库状态或 agent 结论 | `Narrow` | 只追缺失字段；不要扩大成完整咨询 |
+| 只有截图、感受或二手转述 | `Narrow` | 要求补一条原始命令和 exit code |
+| 需要生产权限、密钥或用户数据才能判断 | `Stop` | 拒绝接收敏感材料，要求重发脱敏摘要 |
+| 对方只想聊工具选型 | 转内容沟通 | 不进入 AI 编程审查交付链 |
 
 ## 发送前检查
 
-1. **不扩大权限**：没有索要完整仓库、密钥、生产数据、用户数据或内部截图。
-2. **不承诺修复**：只承诺下一条安全验证动作或 `Next evidence needed`，不承诺“帮你改好”。
-3. **不伪造结论**：没有命令输出时，把 agent 是否真的验证写成 `Unverified`。
-4. **不误报 P0**：证据不足时只写 `P1 Verify / Narrow`，不要用“可能有风险”吓成阻断结论。
-5. **不混淆公开边界**：公开内容只保留证据形状；公司名、仓库名、私有路径和完整日志默认不可公开。
-6. **可在 10 分钟内处理**：如果模板导致对方需要整理半天，说明范围仍然太大，需要继续 `Narrow`。
+1. **只要最小证据**：目标是判断下一步，不是让对方交出全部上下文。
+2. **先保护边界**：明确不要密钥、用户数据、生产日志、内部截图或完整私有仓库。
+3. **证据不足不升级结论**：没有命令或状态时，只能写 `Unverified / Next evidence needed`。
+4. **优先拿原始命令**：如果只能追一项，先追命令、exit code 和 not-run 原因。
+5. **保持可公开降级**：公开案例只保留证据形状，不保留客户名、业务细节或私有路径。
 
-## 与一页纸样例的衔接
+## 与后续文档的衔接
 
-这份模板来自 [AI 编程审查一页纸填写样例](ai-coding-audit-one-pager-filled-example.md) 的 `Next evidence needed`：
+- 证据请求前，用 [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md) 先确认目标、范围和公开边界。
+- 收到最小证据后，用 [AI 编程审查最小证据闭环](ai-coding-audit-minimum-evidence-loop.md) 判断当前处于补证据、交付首份报告还是停止。
+- 风险已经清楚时，用 [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 压成 P0 / P1 / P2。
+- 进入正式交付时，按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 做 30-60 分钟只读审查。
+- 如果仍缺关键证据，把结果写入 [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md)，并以 `Narrow` 收尾。
 
-```text
-raw command, exit code, failure summary, final report verification paragraph, changed file scope
-```
+Pass means：拿到命令状态、仓库状态、失败摘要、agent 结论和改动范围，且没有接收敏感材料。
 
-对方补齐后，把材料写回：
+Fail means：对方只能提供不可复核描述，或判断必须依赖生产权限、密钥、用户数据或完整私有仓库。
 
-- [AI 编程审查 Audit Result 记录表](ai-coding-audit-result-log-template.md) 的输入证据和公开边界；
-- [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md) 的 P0 / P1 / P2 级别；
-- [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 的只读审查范围；
-- [AI 编程审查发布后观察清单](ai-coding-audit-publish-observation-runbook.md) 的 `Pain quote / Evidence shape / Boundary / Next evidence needed / Decision`。
-
-Pass means：对方能用脱敏证据补齐命令、状态、失败摘要、agent 结论和改动范围。
-
-Fail means：材料仍然只能靠截图、私有日志、泛泛描述或无法授权的信息支撑。
-
-Next evidence needed：缺哪一项就只追哪一项，不把请求扩大成完整审查。
+Next evidence needed：优先补一条原始命令、exit code、not-run 原因或脱敏后的 `git status --short` 摘要。
