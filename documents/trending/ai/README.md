@@ -79,6 +79,7 @@ index: false
 - [下一条安全命令梯](next-safe-command-ladder.md)
 - [AI 编程审查样板报告](ai-coding-audit-mock-report.md)
 - [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md)
+- [AI 编程审查报价梯度与升级边界](ai-coding-audit-pricing-ladder.md)
 - [AI 编程审查首次回复模板](ai-coding-audit-first-reply-template.md)
 - [AI 编程审查红旗分诊卡](ai-coding-audit-red-flag-triage.md)
 - [AI 编程审查 Issue 到 PR 交接说明](ai-coding-audit-issue-to-pr-handoff.md)
