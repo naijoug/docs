@@ -17,11 +17,14 @@ order: 36
 
 先满足下面任一条件，再讨论价格：
 
+- 已按 [AI 编程审查服务交付指南](ai-coding-audit-service.md) 的固定范围 offer 做过一次只读审查，并交付过 1 页风险报告；
 - 已按 [AI 编程审查样本到首份报告清单](ai-coding-audit-intake-to-first-report.md) 交付过一份 30-60 分钟只读报告；
 - 对方明确表示某条风险、命令梯或 handoff 模板值得继续落地；
 - 已能说清 `Included`、`Excluded`、`Next evidence needed` 和停止条件。
 
 如果还没有真实样本，回到 [AI 编程审查样本征集模板](ai-coding-audit-sample-request.md) 或 [30 分钟 AI 编程审查收入实验](thirty-minute-ai-coding-audit-income-experiment.md)。没有渠道授权时，不要发布价格页；只准备本地草稿，并按 [单渠道 Offer 发布 Preflight](single-channel-offer-publish-preflight.md) 等待授权。
+
+这页是首份交付后的升级边界，不替代服务页本身。对外表达时先引用固定范围 offer，再只选择下方一档作为下一步，避免把一次报告直接包装成“长期 AI 咨询”。
 
 ## 三档报价梯度
 
