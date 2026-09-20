@@ -8,6 +8,7 @@ body:
     attributes:
       value: |
         Use this when you want a lightweight review of one AI-assisted coding workflow.
+        This form is for collecting external audit samples; ordinary repository questions and fixes do not require it.
 
         Scope guard: share only material that can be reviewed safely. Do not paste secrets, production credentials, private customer data, or unreleased business details.
         A good sample should make the first report possible without granting write access: goal, uncertainty, evidence, boundaries, and public sharing permission.

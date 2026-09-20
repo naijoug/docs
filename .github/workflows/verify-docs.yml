@@ -1,0 +1,42 @@
+name: verify-docs
+
+on:
+  pull_request:
+    paths:
+      - 'documents/**'
+      - 'scripts/**'
+      - 'AGENTS.md'
+      - 'CONTRIBUTING.md'
+      - 'README.md'
+      - 'web/vuepress/README.md'
+      - '.github/pull_request_template.md'
+      - '.github/ISSUE_TEMPLATE/ai-coding-audit.yml'
+      - '.github/workflows/verify-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Checker regressions
+        run: |
+          python3 -B scripts/test-check-markdown-proof.py
+          python3 -B scripts/test-check-ai-catalog.py
+
+      # A full lightweight baseline also catches incoming links to deleted pages.
+      # Do not compare against HEAD in a clean CI checkout: that selects no files.
+      - name: Published content and repository guides
+        run: >-
+          python3 scripts/check-markdown-proof.py
+          documents AGENTS.md CONTRIBUTING.md README.md
+          web/vuepress/README.md .github/pull_request_template.md
+
+      - name: AI catalog
+        run: python3 scripts/check-ai-catalog.py

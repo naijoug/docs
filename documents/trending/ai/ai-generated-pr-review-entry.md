@@ -34,38 +34,41 @@ AI-assisted PR 通常有三类额外风险：
 `docs/.github/pull_request_template.md` 已经把这些问题固化成入口。最小可复制版本如下：
 
 ```markdown
-## AI-assisted change snapshot
+## Problem and result
 
-- Goal:
+- Intended outcome:
+- Related issue / sample request (if applicable):
+
+## Ownership
+
 - Starting `git status --short` summary:
-- Files intentionally changed:
-- Pre-existing dirty paths not touched:
+- Owned paths:
+- Avoided dirty paths:
 
-## Verification ladder
+## Verification
 
-| Step | Command / check | Result | Evidence |
-| --- | --- | --- | --- |
-| Format / diff check |  |  |  |
-| Unit / focused test |  |  |  |
-| Build / integration |  |  |  |
-| Manual review |  |  |  |
+| Command / check | Result | Evidence |
+| --- | --- | --- |
+|  |  |  |
 
-## AI coding audit handoff
+- Not verified (reason and effect):
+- Continue / Narrow / Stop:
 
-- Verified:
-- Not verified:
-- Risk still open:
-- Next safe command:
-- Continue / Narrow / Stop recommendation:
+## Audit handoff (only for an audit or unresolved finding)
+
+- Finding and supporting evidence:
+- Next safe command / required user action:
 ```
 
 这个模板刻意不追求“完整项目治理”，而是要求每个 AI PR 至少留下可复核证据。只要 reviewer 能从这些字段复现判断，PR 就具备继续审查的入口。
+
+开头先说明问题和结果；验证表只列本次适用的检查，不必填满格式、单测、构建、人工复核四级。没有审查样本或未解决问题时省略 audit handoff。停合并与停工作应分开：被阻塞的动作暂停，其他已授权步骤继续。
 
 ## Reviewer 先看什么
 
 建议 reviewer 按下面顺序看，而不是从代码 diff 第一行开始：
 
-1. **边界**：`Files intentionally changed` 是否与目标一致？是否绕开了启动前 dirty path？
+1. **边界**：`Owned paths` 是否与目标一致？是否保留了启动前 dirty path 及暂存状态？
 2. **证据**：验证表里是否有真实命令、真实结果，而不是“应该可以”？
 3. **失败吸收**：如果有失败命令，PR 是否调整了计划，还是继续声称完成？
 4. **未验证项**：未验证项是否被明确写出，下一条命令是否足够小？
@@ -81,7 +84,7 @@ AI-assisted PR 通常有三类额外风险：
 | --- | --- | --- |
 | `Continue` | 范围清晰，关键验证已跑，未验证项不阻塞合并判断 | 进入普通 code review |
 | `Narrow` | 目标有价值，但 diff 过大、验证不完整或边界漂移 | 要求拆小 PR / 补一条验证命令 |
-| `Stop` | 接管了未知 dirty path、关键命令失败却无解释、或结论无法复现 | 暂停合并，回到任务规划 |
+| `Stop` | 接管了未知 dirty path、关键命令失败却无解释、或结论无法复现 | 暂停相关合并/发布动作，继续可独立验证的工作 |
 
 `Narrow` 是最常见、也最有价值的结论。它不是否定 agent，而是把 agent 的下一步限制到 reviewer 能验证的范围里。
 
@@ -111,7 +114,7 @@ AI-assisted PR 通常有三类额外风险：
 建议新增任何 AI-assisted workflow 资产后，都反问三句：
 
 1. `README.md` 是否用 5 行以内说明了入口和链接？
-2. `AGENTS.md` 是否把同一组字段变成 agent 的默认动作？
+2. `AGENTS.md` 是否提供准确的任务入口，而不是让所有任务都加载新流程？
 3. PR / issue template、文章、样板报告里的字段名称是否一致？
 
 如果答案是否定的，优先补入口，而不是继续写下一篇文章。没有 README / AGENTS 入口的模板，很快会变成下一轮 agent 需要翻历史 summary 才能发现的沉没资产。

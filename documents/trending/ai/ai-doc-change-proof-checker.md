@@ -19,15 +19,15 @@ AI 协作写文档时，最容易把“写完了”误判成“可交付”：�
 - cron/agent 本轮只改了少量 markdown，需要一个比“人工扫一眼”更可复核的 proof；
 - 还没有外部反馈，但希望留下下次可以重复运行的本地验证资产。
 
-它不是完整 markdown linter，也不替代 VuePress 构建；它只检查三类高频低级错误：
+它不是完整 markdown linter，也不替代 VuePress 构建；它检查以下基础问题：
 
-1. 每个 markdown 是否有 YAML frontmatter；
-2. frontmatter 是否包含 `title`；
+1. 发布源 `documents/` 下的 Markdown 是否有 YAML frontmatter；根目录指南、GitHub 模板、计划等不强制文章元数据；
+2. 发布文章的 frontmatter 是否包含 `title`；
 3. 正文中的本地 markdown 链接、图片链接和引用式链接是否能解析到真实文件、目录 `README.md` 或同名 `.md`；不会把只有目录存在但缺少 README 的链接误判为通过；引用式链接允许最多 3 个前导空格的定义写法；
 4. VuePress `<!-- @include: ... -->` 引用是否能解析到真实文件；当前只内置 `@leetcode` 别名，锚点部分只用于定位章节，不检查锚点是否存在；
 5. 内容中是否误写本机用户目录绝对路径；
 6. 指定的检查目标是否真实存在，避免 typo 造成 `checked 0 file(s)` 的假绿灯；
-7. 使用 `--changed-from` 时，只检查某个 git ref 之后变更过的 markdown 文件，并补上尚未 `git add` 的 untracked markdown；
+7. 使用 `--changed-from` 时，检查工作区相对某个 git ref 的 Markdown 差异，并补上 untracked Markdown；这包含既有脏文件，不自动识别本轮 ownership；
 8. 使用 `--exclude` 时，从检查集合中剔除匹配的 root-relative glob，避免把明确不属于本轮的脏工作区文件混入 proof。
 
 ## 使用方式
@@ -42,8 +42,10 @@ python3 scripts/check-markdown-proof.py
 
 ```bash
 python3 scripts/check-markdown-proof.py documents/trending/ai/README.md
-python3 scripts/check-markdown-proof.py documents/trending/ai docs/other/path
+python3 scripts/check-markdown-proof.py AGENTS.md README.md .github/pull_request_template.md
 ```
+
+选中的所有文件仍检查本地链接、include 文件目标和本机路径；根目录指南免除的只有文章 frontmatter/title 要求。检查器不是完整 YAML 校验器，也不验证外链、锚点和 VuePress 站点根路径的全部映射。
 
 只想检查当前分支相对某个 git ref 的 markdown 改动时，使用 `--changed-from`：
 
@@ -52,6 +54,8 @@ python3 scripts/check-markdown-proof.py --changed-from HEAD
 ```
 
 这个模式会忽略非 markdown 改动，覆盖已跟踪文件的新增、修改和重命名，也会通过 `git ls-files --others --exclude-standard` 补上未暂存的新 markdown；在没有 markdown 文件变更时以 exit 2 失败，避免“本轮其实没检查任何文档”的假绿灯。新增页面 + 修改目录入口的固定用法见 [changed-from HEAD 文档改动 Preflight](changed-from-head-docs-preflight.md)。
+
+`HEAD` 只适用于尚未提交的改动。检查已提交分支时，先确认实际目标分支，再将对应 merge-base 提交传给 `--changed-from <base-commit>`。显式文件列表与 `--changed-from` 是互斥范围，混用会以 exit 2 报错，避免文件参数被悄悄忽略。删除或重命名还应跑完整 `documents/` 检查，才能发现未修改页面指向旧路径的链接。
 
 如果仓库里有明确不属于本轮、但暂时不能接管的脏 markdown，可以追加一个或多个 `--exclude`。排除规则按仓库根目录相对 POSIX path 和文件名做 glob 匹配；它只适合“已确认不是本轮交付”的文件，不能用来隐藏本轮改坏的文档：
 
@@ -101,13 +105,14 @@ VuePress include 是另一类容易被 markdown 链接检查漏掉的引用：�
 
 ## 何时还需要 VuePress build
 
-这个 checker 只适合 30-120 分钟的小改动 proof。下面情况仍然要跑完整构建：
+按变更风险选择检查，不按任务耗时决定是否构建。下面列出追加条件：
 
 | 改动类型 | 最小 proof | 追加验证 |
 | --- | --- | --- |
 | 只改 AI 目录内一两篇文档 | `python3 scripts/check-markdown-proof.py documents/trending/ai/changed.md` | 人工检查渲染预期 |
 | 已经有明确 git 基线，只想检查本轮文档改动 | `python3 scripts/check-markdown-proof.py --changed-from HEAD --list-files` | 确认输出列出的 tracked 与 untracked markdown 就是本轮要交付的文件；若存在已确认不接管的脏 markdown，可追加 `--exclude AGENTS.md` 这类显式排除 |
-| 改 checker 规则或 CLI 行为 | `python3 scripts/test-check-markdown-proof.py` + checker 覆盖目标文档 | 必要时补一个最小 fixture，再跑 docs build |
+| 根目录指南 / GitHub Markdown 模板 | checker 覆盖本轮文件 + 人工检查规则一致性 | 不要求文章 frontmatter，也不因纯文案改动运行 build |
+| 改 checker 规则或 CLI 行为 | 对应回归 fixture + `python3 scripts/test-check-markdown-proof.py` | `python3 scripts/check-markdown-proof.py documents`；仅影响渲染时追加 build |
 | 新增目录入口、sidebar、主题配置 | checker 覆盖改动文档 | `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build` |
 | 改代码块、组件、VuePress 插件 | checker 只做路径兜底 | docs build + 页面预览 |
 | 公开案例或客户样本 | checker 只查绝对路径 | 另走 evidence boundary 和脱敏检查 |

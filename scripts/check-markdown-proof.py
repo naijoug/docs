@@ -2,8 +2,9 @@
 """Small proof checker for AI-assisted markdown changes.
 
 It is intentionally conservative and stdlib-only: run it before publishing a
-small docs change to catch missing frontmatter, local broken markdown links, and
-accidental absolute user paths.
+small docs change to catch missing article frontmatter, local broken markdown
+links, and accidental absolute user paths. Repository guides outside documents/
+share the link/path checks without requiring article metadata.
 """
 
 from __future__ import annotations
@@ -163,7 +164,7 @@ def render_file_list(files: Iterable[Path], root: Path) -> list[str]:
 
 
 def is_inside_root(path: Path, root: Path) -> bool:
-    """Return whether path resolves inside the docs repository root."""
+    """Return whether path resolves inside the given root."""
     try:
         path.resolve().relative_to(root.resolve())
     except ValueError:
@@ -254,11 +255,12 @@ def check_file(path: Path, root: Path) -> list[Issue]:
     text = path.read_text(encoding="utf-8")
     issues: list[Issue] = []
 
-    frontmatter = FRONTMATTER_RE.search(text)
-    if not frontmatter:
-        issues.append(Issue(path, "missing YAML frontmatter"))
-    elif not TITLE_RE.search(frontmatter.group(1)):
-        issues.append(Issue(path, "frontmatter missing title"))
+    if is_inside_root(path, root / "documents"):
+        frontmatter = FRONTMATTER_RE.search(text)
+        if not frontmatter:
+            issues.append(Issue(path, "missing YAML frontmatter"))
+        elif not TITLE_RE.search(frontmatter.group(1)):
+            issues.append(Issue(path, "frontmatter missing title"))
 
     for match in FORBIDDEN_ABSOLUTE_RE.finditer(text):
         issues.append(issue_at(path, text, match.start(), f"contains absolute user path `{match.group(0)}`"))
@@ -321,13 +323,12 @@ def check_file(path: Path, root: Path) -> list[Issue]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Check markdown proof basics: frontmatter title, local links, and absolute user paths.",
+        description="Check local links and absolute user paths; require frontmatter title only under documents/.",
     )
     parser.add_argument(
         "targets",
         nargs="*",
-        default=["documents/trending/ai"],
-        help="Markdown files or directories to check, relative to --root unless absolute.",
+        help="Markdown files or directories to check, relative to --root unless absolute. Defaults to documents/trending/ai.",
     )
     parser.add_argument(
         "--root",
@@ -353,6 +354,8 @@ def main() -> int:
         help="Print the checked markdown file list before reporting issues or success.",
     )
     args = parser.parse_args()
+    if args.changed_from and args.targets:
+        parser.error("explicit targets cannot be combined with --changed-from; choose one scope")
 
     root = args.root.resolve()
     if args.changed_from:
@@ -363,7 +366,7 @@ def main() -> int:
             print(f"- {git_error}")
             return 2
     else:
-        unique_files, missing_targets = collect_markdown_files(args.targets, root)
+        unique_files, missing_targets = collect_markdown_files(args.targets or ["documents/trending/ai"], root)
     unique_files = apply_excludes(unique_files, root, args.exclude)
     if missing_targets:
         print(f"markdown proof failed: {len(missing_targets)} target(s) not found")

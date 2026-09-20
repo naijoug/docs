@@ -27,7 +27,7 @@ order: 55
 | 层级 | 何时使用 | 命令 | 通过含义 |
 | --- | --- | --- | --- |
 | 窄目标 | 改前或只接管一两个文件 | `python3 scripts/check-markdown-proof.py documents/trending/ai/README.md documents/trending/ai/new-page.md` | 指定文件 frontmatter、相对链接、include 文件目标和绝对路径检查通过 |
-| 本轮范围 | 已完成本轮 markdown 改动 | `python3 scripts/check-markdown-proof.py --changed-from HEAD --list-files` | checker 自动收束到相对 `HEAD` 变更的 markdown，且输出文件集合符合本轮 ownership |
+| 工作区范围 | 本轮改动尚未提交，且已核对文件归属 | `python3 scripts/check-markdown-proof.py --changed-from HEAD --list-files` | 检查相对 `HEAD` 的 tracked 改动和 untracked Markdown；输出集合仍须与 ownership 对照 |
 | Catalog 覆盖 | 新增/删除 AI 目录页面或改 `README.md` catalog | `python3 scripts/check-ai-catalog.py` | `documents/trending/ai/README.md` 没有漏链、重复链接或指向缺失页面 |
 
 如果工作区里有明确不属于本轮的 dirty markdown，先在交接记录写清归属，再使用显式排除：
@@ -38,15 +38,19 @@ python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md 
 
 `--exclude` 不是“让红灯变绿”的捷径；它只用于已确认不接管的旧脏路径。输出文件列表必须人工核对，确认本轮新增页和入口页都被检查到了。
 
+已有无关改动时，可以直接传本轮文件列表，避免先收集整个工作区。不要将文件列表与 `--changed-from` 混用。提交后若要验证整条分支，应使用实际目标分支对应的 merge-base 提交；相对 `HEAD` 没有文件时不能声称 PR 已通过检查。非 Markdown 任务按自身验证规则执行，无须制造一个空文档 proof。
+
 ## 决策表
 
 | 改动范围 | 最小可提交 proof | 需要追加什么 |
 | --- | --- | --- |
 | 单篇 AI 方法卡 | `check-markdown-proof.py <file>` | 人工读一遍标题、适用场景、操作步骤是否闭合 |
+| AGENTS / 根 README / PR 模板 | `check-markdown-proof.py <files>` | 通用链接和路径检查、人工审查指令；无需文章 frontmatter |
 | 新增方法卡 + README catalog | `check-markdown-proof.py --changed-from HEAD --list-files` + `check-ai-catalog.py` | 确认 list-files 没漏掉新页与 README |
-| 多篇内容重组 | 窄目标 proof + `--changed-from HEAD --list-files` | 抽查重定向/旧入口是否仍可发现；必要时跑 `docs:build` |
-| 修改 checker 规则 | `python3 scripts/test-check-markdown-proof.py` + 目标文档 proof | 补最小回归 fixture，说明旧行为和新行为 |
-| 修改 VuePress/sidebar/theme/workflow | markdown proof 只能做兜底 | 必须追加 `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build` 或对应 CI 验证 |
+| 内容移动、删除或重命名 | `check-markdown-proof.py documents` | 查找入站断链；涉及路由/渲染时追加 `docs:build` 和预览 |
+| 修改 checker 规则 | 对应回归 fixture + `python3 scripts/test-check-markdown-proof.py` | `python3 scripts/check-markdown-proof.py documents`，说明旧行为和新行为 |
+| 修改 VuePress/sidebar/theme | markdown proof 只能做兜底 | `cd web/vuepress && npx -y pnpm@8.15.9 run docs:build` 和受影响页面预览 |
+| 修改 workflow | 运行其适用的本地命令并检查 workflow 结构 | 远端未运行时标为未验证；只有涉及站点构建才追加 build |
 
 ## 交付记录模板
 

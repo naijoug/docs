@@ -47,7 +47,7 @@ order: 42
 
 ```text
 1. 先找 clean repo 中是否有上一段留下的 Next safe command。
-2. 如果有 unknown dirty repo，只允许做只读观察，除非用户明确授权接管。
+2. 对 unknown dirty path 只读观察；同一 repo 中不冲突的 clean path 或新文件仍可推进。
 3. 如果所有产品 repo 都 dirty，选择 docs/books 中能沉淀当前工程经验的最小资产。
 4. 如果只能写 notebook，标记 Switch/Stop，并说明缺少哪个授权、样本或验证入口。
 ```
@@ -82,7 +82,7 @@ python3 scripts/check-markdown-proof.py <本轮 markdown 文件>
 python3 scripts/check-ai-catalog.py
 ```
 
-`git diff --cached --name-only` 是最后一道闸门：它应该只显示本轮记录里列出的文件。如果出现 `AGENTS.md`、已有实验目录、其他 agent 的 summary 或用户正在编辑的文件，先 `git restore --staged <path>`，不要把它们混进提交。
+`git diff --cached --name-only` 是最后一道闸门：提交范围应只包含本轮拥有的变更。如果暂存区含有他人的既有改动，保留其暂存状态，暂停使用整个 index 的提交动作；不要对这些路径执行 `git restore --staged`。可以继续独立的编辑与验证，并在需要提交时明确隔离范围或请求归属确认。只有自己本轮误暂存的改动才可自行撤销暂存。
 
 ## 记录模板
 

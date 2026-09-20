@@ -1,48 +1,36 @@
-## AI-assisted change snapshot
+## Problem and result
 
-- Related issue / sample request:
-- Agent or human driver:
-- Changed area:
+Describe the concrete problem and resulting behavior. Include a before/after example when useful.
+
 - Intended outcome:
+- Related issue / sample request (if applicable):
 
-## Ownership and boundaries
-
-Before asking for review, record the starting state and what must not be mixed into this PR.
+## Ownership
 
 - Starting `git status --short` summary:
-- Pre-existing dirty paths to avoid:
-- Files intentionally changed in this PR:
-- Files generated or ignored:
-- Do-not-touch paths / secrets / production data:
+- Owned paths:
+- Avoided dirty paths:
 
-## Verification ladder
+Explain generated files, dependency or lockfile changes only when present. Preserve pre-existing staged changes as well as working-tree edits.
 
-List the cheapest command that proves the change, then the next stronger checks. Mark skipped checks explicitly.
+## Verification
 
-| Level | Command / check | Result | Evidence |
-| --- | --- | --- | --- |
-| Minimal |  |  |  |
-| Focused |  |  |  |
-| Build / smoke |  |  |  |
+List checks appropriate to this change, with actual results and evidence. Add rows as needed; a small content change does not require every test/build tier.
 
-Skipped or unavailable checks:
+| Command / check | Result | Evidence |
+| --- | --- | --- |
+| | | |
 
-- 
+- Not verified (reason and effect; use “none” if applicable):
+- Continue / Narrow / Stop (scope of any remaining action):
 
-## AI coding audit handoff
+## Audit handoff (only for an audit or unresolved finding)
 
-If this PR came from an AI-assisted workflow, make the next reviewer’s first action obvious.
-
-- Main risk found while using the agent:
-- Evidence supporting that risk:
-- Next safe command for reviewer:
-- Unverified items:
-- Continue / Narrow / Stop recommendation:
+- Finding and supporting evidence:
+- Next safe command / required user action:
 
 ## Reviewer checklist
 
-- [ ] The PR separates this change from pre-existing dirty workspace state.
-- [ ] The final report names concrete commands instead of saying only “tested”.
-- [ ] Generated files, lockfiles, screenshots, and build outputs have a stated reason.
-- [ ] Unverified items are explicit and have a next owner action.
-- [ ] The next reviewer can reproduce the first validation step without extra context.
+- [ ] The change achieves the stated outcome within its owned scope.
+- [ ] Existing dirty/staged work is preserved and excluded from this PR.
+- [ ] Verification names actual commands/results; omissions have a stated reason.

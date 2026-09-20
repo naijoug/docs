@@ -9,7 +9,7 @@ order: 42
 
 # changed-from HEAD 文档改动 Preflight
 
-`python3 scripts/check-markdown-proof.py --changed-from HEAD` 适合 agent 在一次文档小改后自动收束检查范围：它应该同时覆盖已修改的目录入口、新增但未暂存的 markdown，并忽略非 markdown 杂项。
+`python3 scripts/check-markdown-proof.py --changed-from HEAD` 检查尚未提交的 tracked Markdown 改动和 untracked Markdown，忽略非 Markdown 文件。它会包含启动前已有的脏文件，文件归属仍需要显式核对。
 
 <!-- more -->
 
@@ -35,7 +35,11 @@ order: 42
 python3 scripts/check-markdown-proof.py --changed-from HEAD --exclude AGENTS.md --list-files
 ```
 
-`--exclude` 只能用于“本轮不接管”的路径；如果排除后变成 `no markdown files changed since HEAD`，说明本轮还没有可验证文档交付，不能把这个失败当作通过。
+`--exclude` 只能用于“本轮不接管”的路径；如果排除后变成 `no markdown files changed since HEAD`，说明当前检查集合为空，不能把这个失败当作通过。
+
+如果本轮文件已经提交，这条空集合提示只说明基线选择不对，不能据此判断没有交付。验证已提交分支时，确认目标分支并取其 merge-base 提交，使用 `--changed-from <base-commit>`。有无关脏文件时也可以直接检查本轮文件列表；不要同时传文件列表和 `--changed-from`，混用会被拒绝。
+
+删除或重命名页面时还要检查整个 `documents/`，因为指向旧路径的页面可能没有被修改。变更集合检查本身不覆盖这些入站链接。
 
 ## 输出判读
 
@@ -46,7 +50,7 @@ documents/trending/ai/ai-doc-change-proof-adoption-log.md
 markdown proof ok: checked 3 file(s)
 ```
 
-这表示 checker 至少读到了 3 个相对 `HEAD` 变更过的 markdown 文件，并完成 frontmatter、local link、include 文件目标和绝对路径检查。列出的文件还要人工核对：是否包含所有本轮交付文件、是否混入旧脏路径、是否漏掉未暂存的新页面。它不表示页面渲染正确，也不表示锚点存在。
+这表示 checker 至少读到了 3 个相对 `HEAD` 变更过的 Markdown 文件，并完成 local link、include 文件目标和绝对路径检查；发布文章还检查 frontmatter/title，仓库指南免除文章元数据要求。列出的文件还要人工核对：是否包含所有本轮交付文件、是否混入旧脏路径、是否漏掉未暂存的新页面。它不表示页面渲染正确，也不表示锚点存在。
 
 失败时优先修最小问题：
 

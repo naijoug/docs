@@ -57,6 +57,37 @@ def test_valid_page_and_relative_link(checker, root: Path) -> None:
     assert files == [page.resolve()]
 
 
+def test_published_pages_still_require_frontmatter_and_title(checker, root: Path) -> None:
+    page = root / "documents/README.md"
+    write(page, "# Published index\n")
+    assert [issue.message for issue in checker.check_file(page, root)] == ["missing YAML frontmatter"]
+    write(page, "---\nicon: book\n---\n\n# Published index\n")
+    assert [issue.message for issue in checker.check_file(page, root)] == ["frontmatter missing title"]
+
+
+def test_repository_guides_do_not_require_article_metadata(checker, root: Path) -> None:
+    for rel in [
+        "AGENTS.md", "README.md", "CONTRIBUTING.md",
+        ".github/pull_request_template.md", "web/vuepress/README.md", "plans/change.md",
+    ]:
+        page = root / rel
+        write(page, "# Repository guide\n")
+        assert checker.check_file(page, root) == [], rel
+    # Non-article frontmatter may describe something other than a page title.
+    skill = root / ".agents/skills/example/SKILL.md"
+    write(skill, "---\nname: example\ndescription: A scoped workflow.\n---\n")
+    assert checker.check_file(skill, root) == []
+
+
+def test_repository_guides_still_check_links_and_user_paths(checker, root: Path) -> None:
+    page = root / "AGENTS.md"
+    write(page, "# Guide\n\n[missing](missing.md)\n\n/home/example/private\n")
+    messages = [issue.message for issue in checker.check_file(page, root)]
+    assert "broken local link `missing.md`" in messages
+    assert "contains absolute user path `/home/example/private`" in messages
+    assert "missing YAML frontmatter" not in messages
+
+
 def test_reports_broken_link_and_absolute_user_path(checker, root: Path) -> None:
     page = root / "documents/trending/ai/broken.md"
     write(
@@ -590,10 +621,82 @@ def test_cli_list_files_prints_checked_files_without_excluded_paths(root: Path) 
     assert "markdown proof ok: checked 1 file(s)" in result.stdout
 
 
+def test_cli_changed_from_checks_articles_and_repository_guides(root: Path) -> None:
+    subprocess.run(["git", "init"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    subprocess.run(["git", "config", "user.name", "tester"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.email", "tester@example.com"], cwd=root, check=True)
+    write(root / "README.md", "# Baseline\n")
+    subprocess.run(["git", "add", "README.md"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "baseline"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+
+    write(root / "README.md", "# Changed guide\n")
+    write(root / "AGENTS.md", "# Instructions\n")
+    article = root / "documents/new.md"
+    write(article, "# Missing metadata\n")
+    command = [sys.executable, str(SCRIPT), "--root", str(root), "--changed-from", "HEAD", "--list-files"]
+    result = subprocess.run(command, capture_output=True, text=True, check=False)
+    assert result.returncode == 1, result
+    assert "1 issue(s) in 1 file(s); checked 3 file(s)" in result.stdout
+    assert "documents/new.md: missing YAML frontmatter" in result.stdout
+
+    write(article, "---\ntitle: New\n---\n\n# New article\n")
+    result = subprocess.run(command, capture_output=True, text=True, check=False)
+    assert result.returncode == 0, result
+    assert "checked 3 file(s)" in result.stdout
+    write(root / "AGENTS.md", "# Instructions\n\n[missing](missing.md)\n")
+    result = subprocess.run(command, capture_output=True, text=True, check=False)
+    assert result.returncode == 1, result
+    assert "AGENTS.md:3: broken local link" in result.stdout
+
+
+def test_cli_default_scope_remains_ai_content(root: Path) -> None:
+    write(root / "documents/trending/ai/README.md", valid_page("AI Index"))
+    write(root / "README.md", "# Outside default scope\n\n[missing](missing.md)\n")
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), "--root", str(root), "--list-files"],
+        capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 0, result
+    assert "- documents/trending/ai/README.md" in result.stdout
+    assert "checked 1 file(s)" in result.stdout
+
+
+def test_cli_rejects_ambiguous_scope(root: Path) -> None:
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), "--root", str(root), "README.md", "--changed-from", "HEAD"],
+        capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 2, result
+    assert "explicit targets cannot be combined with --changed-from" in result.stderr
+
+
+def test_cli_clean_head_requires_an_earlier_base_for_committed_changes(root: Path) -> None:
+    subprocess.run(["git", "init"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    subprocess.run(["git", "config", "user.name", "tester"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.email", "tester@example.com"], cwd=root, check=True)
+    write(root / "README.md", "# Guide\n")
+    subprocess.run(["git", "add", "README.md"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "baseline"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    write(root / "README.md", "# Updated guide\n")
+    subprocess.run(["git", "add", "README.md"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "update"], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+    command = [sys.executable, str(SCRIPT), "--root", str(root), "--changed-from"]
+    result = subprocess.run([*command, "HEAD"], capture_output=True, text=True, check=False)
+    assert result.returncode == 2, result
+    assert "no markdown files changed since HEAD" in result.stdout
+    result = subprocess.run([*command, "HEAD~1", "--list-files"], capture_output=True, text=True, check=False)
+    assert result.returncode == 0, result
+    assert "- README.md" in result.stdout
+    assert "checked 1 file(s)" in result.stdout
+
+
 def main() -> int:
     checker = load_checker()
     tests = [
         test_valid_page_and_relative_link,
+        test_published_pages_still_require_frontmatter_and_title,
+        test_repository_guides_do_not_require_article_metadata,
+        test_repository_guides_still_check_links_and_user_paths,
         test_reports_broken_link_and_absolute_user_path,
         test_rendered_issues_include_line_numbers,
         test_external_url_path_is_not_treated_as_absolute_user_path,
@@ -616,6 +719,10 @@ def main() -> int:
         test_cli_changed_from_includes_untracked_markdown,
         test_cli_exclude_omits_matching_changed_markdown,
         test_cli_list_files_prints_checked_files_without_excluded_paths,
+        test_cli_changed_from_checks_articles_and_repository_guides,
+        test_cli_default_scope_remains_ai_content,
+        test_cli_rejects_ambiguous_scope,
+        test_cli_clean_head_requires_an_earlier_base_for_committed_changes,
     ]
 
     for test in tests:
